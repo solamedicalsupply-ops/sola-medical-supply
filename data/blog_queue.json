@@ -41,7 +41,9 @@
       "title": "Buying Allergan 50U Wholesale: Documentation, Handling and Shipping Essentials",
       "category": "Botulinum Toxin",
       "image": "../assets/images/products/allergan50u.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "buying-allergan-50u-wholesale-documentation-handling-and-shipping-essentials",
+      "published_at": "2026-06-26T11:59:56.612911+00:00"
     },
     {
       "keyword": "olidia distributor",
@@ -1392,6 +1394,11 @@
       "title": "What to Check Before Ordering Hairna from a Wholesale Supplier",
       "slug": "what-to-check-before-ordering-hairna-from-a-wholesale-supplier",
       "published_at": "2026-06-25T12:04:21.434846+00:00"
+    },
+    {
+      "title": "Buying Allergan 50U Wholesale: Documentation, Handling and Shipping Essentials",
+      "slug": "buying-allergan-50u-wholesale-documentation-handling-and-shipping-essentials",
+      "published_at": "2026-06-26T11:59:56.612911+00:00"
     }
   ]
 }
