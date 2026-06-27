@@ -59,7 +59,20 @@
       "title": "Sourcing Sedy Fill Wholesale: A Buyer's Guide for Clinics and Distributors",
       "category": "Body Fillers",
       "image": "../assets/images/bestSeller/sedyFill.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "sourcing-sedy-fill-wholesale-a-buyer-s-guide-for-clinics-and-distributors",
+      "published_at": "2026-06-27T12:00:00+00:00",
+      "cover": "../assets/images/bestSeller/sedyFill.png"
+    },
+    {
+      "keyword": "reliable aesthetic wholesale supplier",
+      "title": "How to Choose a Reliable Aesthetic Wholesale Supplier",
+      "category": "Procurement",
+      "status": "published",
+      "format": "buyer_guide",
+      "slug": "how-to-choose-a-reliable-aesthetic-wholesale-supplier",
+      "published_at": "2026-06-27T13:00:00+00:00",
+      "cover": "../assets/images/blog/how-to-choose-a-reliable-aesthetic-wholesale-supplier.png"
     },
     {
       "keyword": "buy lemon bottle wholesale",
@@ -69,11 +82,25 @@
       "status": "pending"
     },
     {
+      "keyword": "aesthetic product shipping to Malaysia",
+      "title": "Aesthetic Product Shipping to Malaysia: Full Guide",
+      "category": "Shipping",
+      "status": "pending",
+      "format": "buyer_guide"
+    },
+    {
       "keyword": "mounjaro 2.5mg wholesale supplier",
       "title": "Mounjaro 2.5mg for Aesthetic Clinics: A Practical Wholesale Sourcing Guide",
       "category": "Weight Management",
       "image": "../assets/images/bestSeller/moujaro2.5mg.png",
       "status": "pending"
+    },
+    {
+      "keyword": "skin booster wholesale clinics spas",
+      "title": "Skin Booster Wholesale Guide for Clinics and Spas",
+      "category": "Skin Boosters",
+      "status": "pending",
+      "format": "buyer_guide"
     },
     {
       "keyword": "laroscorbine diamond e-uf for clinics",
@@ -83,11 +110,25 @@
       "status": "pending"
     },
     {
+      "keyword": "verify original aesthetic products before ordering",
+      "title": "How to Verify Original Aesthetic Products Before Ordering",
+      "category": "Product Verification",
+      "status": "pending",
+      "format": "buyer_guide"
+    },
+    {
       "keyword": "wholesale liporase sourcing",
       "title": "Buying Liporase Wholesale: Documentation, Handling and Shipping Essentials",
       "category": "Hyaluronidase",
       "image": "../assets/images/products/liporase.png",
       "status": "pending"
+    },
+    {
+      "keyword": "expiry date batch number aesthetic products",
+      "title": "Why Expiry Date and Batch Number Matter",
+      "category": "Product Verification",
+      "status": "pending",
+      "format": "buyer_guide"
     },
     {
       "keyword": "huons water numb distributor",
@@ -97,11 +138,25 @@
       "status": "pending"
     },
     {
+      "keyword": "dermal filler wholesale buyers guide",
+      "title": "Dermal Filler Wholesale: What Buyers Should Know",
+      "category": "Dermal Fillers",
+      "status": "pending",
+      "format": "buyer_guide"
+    },
+    {
       "keyword": "j-cain numbing cream 10.56% wholesale",
       "title": "Sourcing J-Cain Numbing Cream 10.56% Wholesale: A Buyer's Guide for Clinics and Distributors",
       "category": "Numbing & Supplies",
       "image": "../assets/images/products/jCainNumbingCream10.56.png",
       "status": "pending"
+    },
+    {
+      "keyword": "SOLA packs products before international shipping",
+      "title": "How SOLA Packs Products Before International Shipping",
+      "category": "Shipping",
+      "status": "pending",
+      "format": "buyer_guide"
     },
     {
       "keyword": "buy triamcinolo wholesale",
@@ -111,11 +166,25 @@
       "status": "pending"
     },
     {
+      "keyword": "minimum order quantity aesthetic wholesale buyers",
+      "title": "Minimum Order Quantity for Aesthetic Wholesale Buyers",
+      "category": "Procurement",
+      "status": "pending",
+      "format": "buyer_guide"
+    },
+    {
       "keyword": "b.braun omnican 1ml wholesale supplier",
       "title": "B.Braun Omnican 1ml for Aesthetic Clinics: A Practical Wholesale Sourcing Guide",
       "category": "Injection Supplies",
       "image": "../assets/images/products/BBraun.png",
       "status": "pending"
+    },
+    {
+      "keyword": "shipping cost higher for small orders",
+      "title": "Why Shipping Cost Is Higher for Small Orders",
+      "category": "Shipping",
+      "status": "pending",
+      "format": "buyer_guide"
     },
     {
       "keyword": "32g meso needle for clinics",
@@ -125,11 +194,25 @@
       "status": "pending"
     },
     {
+      "keyword": "Korean aesthetic products wholesale guide",
+      "title": "Korean Aesthetic Products Wholesale Guide",
+      "category": "Korean Aesthetics",
+      "status": "pending",
+      "format": "buyer_guide"
+    },
+    {
       "keyword": "wholesale linospan sourcing",
       "title": "Buying Linospan Wholesale: Documentation, Handling and Shipping Essentials",
       "category": "Dental Supplies",
       "image": "../assets/images/products/linospan.png",
       "status": "pending"
+    },
+    {
+      "keyword": "PDRN skin booster wholesale guide",
+      "title": "PDRN Skin Booster Wholesale Guide",
+      "category": "Skin Boosters",
+      "status": "pending",
+      "format": "buyer_guide"
     },
     {
       "keyword": "sardenya distributor",
@@ -139,11 +222,25 @@
       "status": "pending"
     },
     {
+      "keyword": "exosome skin booster wholesale guide",
+      "title": "Exosome Skin Booster Wholesale Guide",
+      "category": "Exosome & Meso",
+      "status": "pending",
+      "format": "buyer_guide"
+    },
+    {
       "keyword": "tmie vip wholesale",
       "title": "Sourcing TMIE VIP Wholesale: A Buyer's Guide for Clinics and Distributors",
       "category": "Skin Boosters",
       "image": "../assets/images/products/tmieVip.png",
       "status": "pending"
+    },
+    {
+      "keyword": "botulinum toxin wholesale storage shipping guide",
+      "title": "Botulinum Toxin Wholesale Storage & Shipping Guide",
+      "category": "Botulinum Toxin",
+      "status": "pending",
+      "format": "buyer_guide"
     },
     {
       "keyword": "buy exocode wholesale",
@@ -153,11 +250,25 @@
       "status": "pending"
     },
     {
+      "keyword": "skin booster vs dermal filler buyer guide",
+      "title": "Skin Booster vs Dermal Filler: Buyer Guide",
+      "category": "Buyer Guide",
+      "status": "pending",
+      "format": "buyer_guide"
+    },
+    {
       "keyword": "allergan 100u wholesale supplier",
       "title": "Allergan 100U for Aesthetic Clinics: A Practical Wholesale Sourcing Guide",
       "category": "Botulinum Toxin",
       "image": "../assets/images/products/allergan100u.png",
       "status": "pending"
+    },
+    {
+      "keyword": "popular aesthetic products clinics Malaysia",
+      "title": "Popular Aesthetic Products for Clinics in Malaysia",
+      "category": "Malaysia Market",
+      "status": "pending",
+      "format": "buyer_guide"
     },
     {
       "keyword": "gouri for clinics",
@@ -167,11 +278,25 @@
       "status": "pending"
     },
     {
+      "keyword": "how to order from SOLA Medical Supply",
+      "title": "How to Order from SOLA Medical Supply",
+      "category": "Ordering",
+      "status": "pending",
+      "format": "buyer_guide"
+    },
+    {
       "keyword": "wholesale france body sourcing",
       "title": "Buying France Body Wholesale: Documentation, Handling and Shipping Essentials",
       "category": "Body Fillers",
       "image": "../assets/images/products/franceBody.png",
       "status": "pending"
+    },
+    {
+      "keyword": "payment methods international aesthetic wholesale orders",
+      "title": "Payment Methods for International Aesthetic Wholesale Orders",
+      "category": "Payment",
+      "status": "pending",
+      "format": "buyer_guide"
     },
     {
       "keyword": "aqualyx distributor",
@@ -181,6 +306,13 @@
       "status": "pending"
     },
     {
+      "keyword": "tracking proof packing proof aesthetic wholesale",
+      "title": "Tracking Proof and Packing Proof: Why They Matter",
+      "category": "Order Proof",
+      "status": "pending",
+      "format": "buyer_guide"
+    },
+    {
       "keyword": "mounjaro 5mg wholesale",
       "title": "Sourcing Mounjaro 5mg Wholesale: A Buyer's Guide for Clinics and Distributors",
       "category": "Weight Management",
@@ -188,11 +320,25 @@
       "status": "pending"
     },
     {
+      "keyword": "wholesale aesthetic supply distributors",
+      "title": "Wholesale Aesthetic Supply for Distributors",
+      "category": "Distribution",
+      "status": "pending",
+      "format": "buyer_guide"
+    },
+    {
       "keyword": "buy samsung pharm whitening wholesale",
       "title": "How Professional Buyers Evaluate Samsung Pharm Whitening Before Ordering Wholesale",
       "category": "IV & Wellness",
       "image": "../assets/images/products/sumsungPharmWhitening.png",
       "status": "pending"
+    },
+    {
+      "keyword": "checklist first aesthetic wholesale order",
+      "title": "Checklist Before Placing Your First Aesthetic Wholesale Order",
+      "category": "Procurement",
+      "status": "pending",
+      "format": "buyer_guide"
     },
     {
       "keyword": "bm hyrunidase wholesale supplier",
@@ -1406,6 +1552,18 @@
       "title": "A Procurement Guide to Olidia for Spas, Clinics and Resellers",
       "slug": "a-procurement-guide-to-olidia-for-spas-clinics-and-resellers",
       "published_at": "2026-06-27T10:32:12.012033+00:00"
+    },
+    {
+      "title": "Sourcing Sedy Fill Wholesale: A Buyer's Guide for Clinics and Distributors",
+      "slug": "sourcing-sedy-fill-wholesale-a-buyer-s-guide-for-clinics-and-distributors",
+      "published_at": "2026-06-27T12:00:00+00:00",
+      "cover": "../assets/images/bestSeller/sedyFill.png"
+    },
+    {
+      "title": "How to Choose a Reliable Aesthetic Wholesale Supplier",
+      "slug": "how-to-choose-a-reliable-aesthetic-wholesale-supplier",
+      "published_at": "2026-06-27T13:00:00+00:00",
+      "cover": "../assets/images/blog/how-to-choose-a-reliable-aesthetic-wholesale-supplier.png"
     }
   ]
 }

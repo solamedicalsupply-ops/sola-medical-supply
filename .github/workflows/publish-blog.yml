@@ -30,12 +30,15 @@ jobs:
           BLOG_API_URL: ${{ secrets.BLOG_API_URL }}
           BLOG_API_KEY: ${{ secrets.BLOG_API_KEY }}
           BLOG_MODEL: ${{ secrets.BLOG_MODEL }}
+          BLOG_IMAGE_API_URL: ${{ secrets.BLOG_IMAGE_API_URL }}
+          BLOG_IMAGE_MODEL: ${{ secrets.BLOG_IMAGE_MODEL }}
+          BLOG_IMAGE_SIZE: ${{ secrets.BLOG_IMAGE_SIZE }}
         run: python scripts/publish_blog.py
       - name: Commit article
         run: |
           git config user.name "SOLA Journal Bot"
           git config user.email "bot@solamedicalsupply.com"
-          git add blog/ data/blog_queue.json
+          git add blog/ assets/images/blog/ data/blog_queue.json
           if git diff --cached --quiet; then
             echo "No article generated."
           else
