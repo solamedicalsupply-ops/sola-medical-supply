@@ -432,7 +432,7 @@ textarea {
     display: grid;
     place-items: center;
     overflow: hidden;
-    padding: 12px;
+    
 }
 
 .product img {
@@ -1769,12 +1769,6 @@ h3 {
     background: #fff
 }
 
-.product figure {
-    background: #f2f3ef;
-    aspect-ratio: 1/1.08;
-    padding: 16px
-}
-
 .product img {
     border-radius: 10px
 }
@@ -2426,7 +2420,7 @@ h3 {
 
 .story-card>img {
     width: 100%;
-    height: 250px;
+    height:350px;
     object-fit: cover
 }
 
