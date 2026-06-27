@@ -487,11 +487,11 @@ textarea {
     width: 100%;
     border: 1px solid #ffd4e6;
     border-radius: 14px;
-    padding: 11px 5px;
+    padding: 11px 6px;
     background: #fff;
     color: #b52f69;
     font: inherit;
-    font-size: 13px;
+    font-size: 10px;
     font-weight: 900;
     cursor: pointer
 }
