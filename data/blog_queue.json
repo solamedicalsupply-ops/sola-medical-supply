@@ -50,7 +50,9 @@
       "title": "A Procurement Guide to Olidia for Spas, Clinics and Resellers",
       "category": "Biostimulators",
       "image": "../assets/images/products/olivia.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "a-procurement-guide-to-olidia-for-spas-clinics-and-resellers",
+      "published_at": "2026-06-27T10:32:12.012033+00:00"
     },
     {
       "keyword": "sedy fill wholesale",
@@ -1399,6 +1401,11 @@
       "title": "Buying Allergan 50U Wholesale: Documentation, Handling and Shipping Essentials",
       "slug": "buying-allergan-50u-wholesale-documentation-handling-and-shipping-essentials",
       "published_at": "2026-06-26T11:59:56.612911+00:00"
+    },
+    {
+      "title": "A Procurement Guide to Olidia for Spas, Clinics and Resellers",
+      "slug": "a-procurement-guide-to-olidia-for-spas-clinics-and-resellers",
+      "published_at": "2026-06-27T10:32:12.012033+00:00"
     }
   ]
 }
