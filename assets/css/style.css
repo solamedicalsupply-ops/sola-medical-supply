@@ -2519,8 +2519,8 @@ h3 {
 }
 
 .article-cover {
-    max-width: 1120px;
-    height: 570px;
+    max-width: 850px;
+    height: 850px;
     border-radius: 24px;
     overflow: hidden
 }
