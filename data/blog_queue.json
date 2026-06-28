@@ -79,7 +79,10 @@
       "title": "How Professional Buyers Evaluate Lemon Bottle Before Ordering Wholesale",
       "category": "Lipolysis",
       "image": "../assets/images/bestSeller/lemonBottle.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "how-professional-buyers-evaluate-lemon-bottle-before-ordering-wholesale",
+      "published_at": "2026-06-28T10:54:48.842870+00:00",
+      "cover": "../assets/images/bestSeller/lemonBottle.png"
     },
     {
       "keyword": "aesthetic product shipping to Malaysia",
@@ -1564,6 +1567,12 @@
       "slug": "how-to-choose-a-reliable-aesthetic-wholesale-supplier",
       "published_at": "2026-06-27T13:00:00+00:00",
       "cover": "../assets/images/blog/how-to-choose-a-reliable-aesthetic-wholesale-supplier.png"
+    },
+    {
+      "title": "How Professional Buyers Evaluate Lemon Bottle Before Ordering Wholesale",
+      "slug": "how-professional-buyers-evaluate-lemon-bottle-before-ordering-wholesale",
+      "published_at": "2026-06-28T10:54:48.842870+00:00",
+      "cover": "../assets/images/bestSeller/lemonBottle.png"
     }
   ]
 }
