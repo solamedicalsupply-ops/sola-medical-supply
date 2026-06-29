@@ -6,10 +6,12 @@ const wa = (text = 'Hello SOLA Medical Supply, I would like to request a wholesa
 const slugify = s => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 
 function renderSiteChrome() {
-  const inBlog = location.pathname.replace(/\\/g, '/').includes('/blog/');
-  const base = inBlog ? '../' : '';
+  const path = location.pathname.replace(/\\/g, '/');
+  const inBlog = path.includes('/blog/');
+  const inProducts = path.includes('/products/');
+  const base = inBlog || inProducts ? '../' : '';
   const page = location.pathname.split(/[\\/]/).pop() || 'index.html';
-  const section = inBlog ? 'journal' : page.replace('.html', '');
+  const section = inBlog ? 'journal' : inProducts ? 'products' : page.replace('.html', '');
   const active = key => section === key ? ' class="active"' : '';
   const header = `<div class="topbar"><div class="wrap"><span>Professional aesthetic wholesale · Worldwide shipping support</span><a data-wa>Talk to a specialist →</a></div></div>
     <nav class="nav"><div class="wrap nav-inner"><a class="brand" href="${base}index.html"><img src="${base}assets/icons/logoNgang.png" alt="SOLA Medical Supply"></a><button class="menu" type="button" aria-label="Open navigation" aria-expanded="false">Menu</button><div class="links">
