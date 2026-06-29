@@ -88,8 +88,11 @@
       "keyword": "aesthetic product shipping to Malaysia",
       "title": "Aesthetic Product Shipping to Malaysia: Full Guide",
       "category": "Shipping",
-      "status": "pending",
-      "format": "buyer_guide"
+      "status": "published",
+      "format": "buyer_guide",
+      "slug": "aesthetic-product-shipping-to-malaysia-full-guide",
+      "published_at": "2026-06-29T17:38:14.976720+00:00",
+      "cover": "../assets/images/blog/aesthetic-product-shipping-to-malaysia-full-guide.png"
     },
     {
       "keyword": "mounjaro 2.5mg wholesale supplier",
@@ -1573,6 +1576,12 @@
       "slug": "how-professional-buyers-evaluate-lemon-bottle-before-ordering-wholesale",
       "published_at": "2026-06-28T10:54:48.842870+00:00",
       "cover": "../assets/images/bestSeller/lemonBottle.png"
+    },
+    {
+      "title": "Aesthetic Product Shipping to Malaysia: Full Guide",
+      "slug": "aesthetic-product-shipping-to-malaysia-full-guide",
+      "published_at": "2026-06-29T17:38:14.976720+00:00",
+      "cover": "../assets/images/blog/aesthetic-product-shipping-to-malaysia-full-guide.png"
     }
   ]
 }
