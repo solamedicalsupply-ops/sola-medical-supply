@@ -14,7 +14,21 @@ def env(name):
     return value
 
 def optional_env(name, default=""):
-    return os.getenv(name, default).strip()
+    value = os.getenv(name, "").strip()
+    return value or default
+
+def require_url(name):
+    value = env(name)
+    if not re.match(r"^https?://", value, re.I):
+        raise RuntimeError(f"Invalid GitHub secret {name}: URL must start with https://")
+    return value
+
+def optional_url(name, default=""):
+    value = optional_env(name, default).strip()
+    if value and not re.match(r"^https?://", value, re.I):
+        print(f"WARNING: Ignoring invalid {name}; URL must start with https://", file=sys.stderr)
+        return ""
+    return value
 
 def load_queue():
     try: data = json.loads(QUEUE.read_text(encoding="utf-8"))
@@ -48,7 +62,7 @@ CRITICAL LENGTH REQUIREMENT: html_body must contain AT LEAST 950 words of body t
 Avoid unsafe SEO angles such as buying prescription products without prescription, cheap toxin claims, fast fat-loss results, or whitening injection result claims.
 Return JSON only: title, meta_description (max 155 chars), excerpt (35-50 words), read_time, html_body. html_body may use only h2, h3, p, ul, li, strong and em tags.'''
     payload = json.dumps({"model":env("BLOG_MODEL"),"temperature":0.5,"max_tokens":4000,"messages":[{"role":"system","content":"You are a careful B2B editor. Return valid JSON only."},{"role":"user","content":prompt}]}).encode()
-    request = urllib.request.Request(env("BLOG_API_URL"), data=payload, headers={"Authorization":f"Bearer {env('BLOG_API_KEY')}","Content-Type":"application/json"}, method="POST")
+    request = urllib.request.Request(require_url("BLOG_API_URL"), data=payload, headers={"Authorization":f"Bearer {env('BLOG_API_KEY')}","Content-Type":"application/json"}, method="POST")
     try:
         with urllib.request.urlopen(request, timeout=120) as response: result=json.loads(response.read().decode())
     except urllib.error.HTTPError as exc:
@@ -60,6 +74,9 @@ Return JSON only: title, meta_description (max 155 chars), excerpt (35-50 words)
     except json.JSONDecodeError as exc: raise RuntimeError(f"Model returned invalid JSON: {exc}") from exc
 
 def generate_cover(topic, article, slug):
+    image_url = optional_url("BLOG_IMAGE_API_URL", "https://api.openai.com/v1/images/generations")
+    if not image_url:
+        return topic.get("image") or "../assets/images/productCatalogue.png"
     prompt = f'''Create a premium editorial cover image for a SOLA Medical Supply journal article.
 Topic: {article['title']}
 Keyword: {topic['keyword']}
@@ -73,7 +90,7 @@ Composition: square 1:1 cover image, centered subject, soft neutral background, 
         "n": 1
     }).encode()
     request = urllib.request.Request(
-        optional_env("BLOG_IMAGE_API_URL", "https://api.openai.com/v1/images/generations"),
+        image_url,
         data=payload,
         headers={"Authorization":f"Bearer {env('BLOG_API_KEY')}","Content-Type":"application/json"},
         method="POST"
@@ -113,7 +130,7 @@ def add_card(a,slug,category,image):
 
 def main():
     parser=argparse.ArgumentParser(); parser.add_argument("--check",action="store_true"); args=parser.parse_args()
-    data=load_queue(); env("BLOG_API_URL"); env("BLOG_API_KEY"); env("BLOG_MODEL")
+    data=load_queue(); require_url("BLOG_API_URL"); env("BLOG_API_KEY"); env("BLOG_MODEL")
     if START not in INDEX.read_text(encoding="utf-8"): raise RuntimeError("Automation markers missing from blog/index.html")
     if args.check: print("Configuration valid."); return
     topic=next((x for x in data["topics"] if x.get("status")=="pending"),None)
