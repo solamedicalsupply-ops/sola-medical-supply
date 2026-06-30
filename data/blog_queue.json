@@ -99,7 +99,10 @@
       "title": "Mounjaro 2.5mg for Aesthetic Clinics: A Practical Wholesale Sourcing Guide",
       "category": "Weight Management",
       "image": "../assets/images/bestSeller/moujaro2.5mg.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "mounjaro-2-5mg-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide",
+      "published_at": "2026-06-30T11:59:43.864628+00:00",
+      "cover": "../assets/images/bestSeller/moujaro2.5mg.png"
     },
     {
       "keyword": "skin booster wholesale clinics spas",
@@ -1582,6 +1585,12 @@
       "slug": "aesthetic-product-shipping-to-malaysia-full-guide",
       "published_at": "2026-06-29T17:38:14.976720+00:00",
       "cover": "../assets/images/blog/aesthetic-product-shipping-to-malaysia-full-guide.png"
+    },
+    {
+      "title": "Mounjaro 2.5mg for Aesthetic Clinics: A Practical Wholesale Sourcing Guide",
+      "slug": "mounjaro-2-5mg-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide",
+      "published_at": "2026-06-30T11:59:43.864628+00:00",
+      "cover": "../assets/images/bestSeller/moujaro2.5mg.png"
     }
   ]
 }
