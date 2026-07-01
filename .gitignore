@@ -1,3 +1,8 @@
-__pycache__/
-*.pyc
-.DS_Store
+.next
+node_modules
+.npm-cache
+.env
+.env*.local
+*.log
+scripts/__pycache__/
+.claude/settings.local.json
