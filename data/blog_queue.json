@@ -108,8 +108,11 @@
       "keyword": "skin booster wholesale clinics spas",
       "title": "Skin Booster Wholesale Guide for Clinics and Spas",
       "category": "Skin Boosters",
-      "status": "pending",
-      "format": "buyer_guide"
+      "status": "published",
+      "format": "buyer_guide",
+      "slug": "skin-booster-wholesale-guide-for-clinics-and-spas",
+      "published_at": "2026-07-01T12:26:30.769164+00:00",
+      "cover": "../assets/images/blog/skin-booster-wholesale-guide-for-clinics-and-spas.png"
     },
     {
       "keyword": "laroscorbine diamond e-uf for clinics",
@@ -1591,6 +1594,12 @@
       "slug": "mounjaro-2-5mg-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide",
       "published_at": "2026-06-30T11:59:43.864628+00:00",
       "cover": "../assets/images/bestSeller/moujaro2.5mg.png"
+    },
+    {
+      "title": "Skin Booster Wholesale Guide for Clinics and Spas",
+      "slug": "skin-booster-wholesale-guide-for-clinics-and-spas",
+      "published_at": "2026-07-01T12:26:30.769164+00:00",
+      "cover": "../assets/images/blog/skin-booster-wholesale-guide-for-clinics-and-spas.png"
     }
   ]
 }
