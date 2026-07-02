@@ -2706,6 +2706,67 @@ h3 {
     gap: 22px
 }
 
+.buyer-support-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px
+}
+
+.buyer-support-grid article {
+    position: relative;
+    overflow: hidden;
+    background:
+        linear-gradient(180deg, #fff, #fffafd),
+        radial-gradient(circle at 100% 0, rgba(232, 91, 146, .10), transparent 35%);
+    border: 1px solid rgba(232, 91, 146, .18);
+    border-radius: 26px;
+    padding: 28px;
+    min-height: 285px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 16px 48px rgba(87, 31, 56, .06);
+    transition: transform .18s ease, box-shadow .18s ease
+}
+
+.buyer-support-grid article:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 24px 65px rgba(87, 31, 56, .10)
+}
+
+.buyer-support-grid article>span {
+    width: 44px;
+    height: 44px;
+    border-radius: 16px;
+    display: grid;
+    place-items: center;
+    background: rgba(232, 91, 146, .10);
+    color: var(--coral);
+    font-weight: 900;
+    font-size: 13px;
+    margin-bottom: 26px
+}
+
+.buyer-support-grid h3 {
+    font-size: 21px;
+    margin: 0 0 12px;
+    color: var(--forest)
+}
+
+.buyer-support-grid p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 0 0 24px
+}
+
+.buyer-support-grid a {
+    margin-top: auto;
+    color: var(--coral);
+    font-weight: 900;
+    font-size: 13px;
+    cursor: pointer
+}
+
 .testimonial-card {
     background:
         linear-gradient(180deg, #fff, #fffafd),
@@ -2855,6 +2916,10 @@ h3 {
         grid-template-columns: 1fr 1fr
     }
 
+    .buyer-support-grid {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
     .trust-stats {
         grid-template-columns: repeat(2, 1fr)
     }
@@ -2866,6 +2931,10 @@ h3 {
     }
 
     .testimonial-grid {
+        grid-template-columns: 1fr
+    }
+
+    .buyer-support-grid {
         grid-template-columns: 1fr
     }
 
