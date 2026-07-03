@@ -128,8 +128,11 @@
       "keyword": "verify original aesthetic products before ordering",
       "title": "How to Verify Original Aesthetic Products Before Ordering",
       "category": "Product Verification",
-      "status": "pending",
-      "format": "buyer_guide"
+      "status": "published",
+      "format": "buyer_guide",
+      "slug": "how-to-verify-original-aesthetic-products-before-ordering",
+      "published_at": "2026-07-03T11:44:05.729720+00:00",
+      "cover": "../assets/images/blog/how-to-verify-original-aesthetic-products-before-ordering.png"
     },
     {
       "keyword": "wholesale liporase sourcing",
@@ -1609,6 +1612,12 @@
       "slug": "what-to-check-before-ordering-laroscorbine-diamond-e-uf-from-a-wholesale-suppl",
       "published_at": "2026-07-02T11:45:13.493762+00:00",
       "cover": "../assets/images/products/laros.png"
+    },
+    {
+      "title": "How to Verify Original Aesthetic Products Before Ordering",
+      "slug": "how-to-verify-original-aesthetic-products-before-ordering",
+      "published_at": "2026-07-03T11:44:05.729720+00:00",
+      "cover": "../assets/images/blog/how-to-verify-original-aesthetic-products-before-ordering.png"
     }
   ]
 }
