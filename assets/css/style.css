@@ -3930,6 +3930,26 @@ h3 {
     padding: 18px 0 72px;
 }
 
+.telegram-channel-section-top {
+    padding: 34px 0 26px;
+    background: linear-gradient(180deg, #fff8fb, #fff)
+}
+
+.telegram-channel-section-top .telegram-channel-card {
+    border-radius: 28px;
+    padding: 28px 34px;
+    box-shadow: 0 24px 70px rgba(43, 151, 224, .10), 0 14px 45px rgba(232, 91, 146, .09)
+}
+
+.telegram-channel-section-top .telegram-channel-copy h2 {
+    font-size: clamp(28px, 3vw, 42px);
+    max-width: 620px
+}
+
+.telegram-channel-section-top .telegram-channel-copy p {
+    font-size: 15px
+}
+
 .telegram-channel-card {
     position: relative;
     overflow: hidden;
@@ -4022,6 +4042,10 @@ h3 {
 }
 
 @media(max-width:700px) {
+    .telegram-channel-section-top {
+        padding: 22px 0 18px
+    }
+
     .telegram-channel-card {
         grid-template-columns: 1fr;
         padding: 28px 20px;
