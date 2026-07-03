@@ -53,10 +53,45 @@
               </div>
               <a class="moq-banner-cta" data-wa="Hello SOLA Medical Supply, I would like to request a wholesale quotation.">Get a quote →</a>
             </div>
-            <div class="product-tools"><input class="input" data-search
-                    placeholder="Search product, brand or category..."><select value="Aqll" class="select"
-                    data-category-filter></select><select class="select" value="All" data-brand-filter></select></div>
-            <div class="results-bar"><span data-results-count></span><button class="clear-filters" data-clear-filters>Clear filters</button></div>
+            <div class="product-filter-panel">
+                <div class="filter-panel-head">
+                    <div>
+                        <span class="eyebrow">Smart catalogue filter</span>
+                        <h2>Find the right product faster</h2>
+                    </div>
+                    <button class="clear-filters" data-clear-filters type="button">Reset all</button>
+                </div>
+                <div class="product-tools">
+                    <label class="search-field">
+                        <span>Search</span>
+                        <input class="input" data-search placeholder="Search product, brand, category or origin...">
+                    </label>
+                    <label>
+                        <span>Category</span>
+                        <select class="select" value="All" data-category-filter></select>
+                    </label>
+                    <label>
+                        <span>Brand</span>
+                        <select class="select" value="All" data-brand-filter></select>
+                    </label>
+                    <label>
+                        <span>Origin</span>
+                        <select class="select" value="All" data-origin-filter></select>
+                    </label>
+                </div>
+                <div class="quick-filters" aria-label="Quick filters">
+                    <button type="button" data-quick-filter="All">All products</button>
+                    <button type="button" data-quick-filter="Dermal Fillers">Dermal fillers</button>
+                    <button type="button" data-quick-filter="Skin Boosters / PN">Skin boosters</button>
+                    <button type="button" data-quick-filter="Toxin">Toxins</button>
+                    <button type="button" data-quick-filter="Exosome / Meso">Exosome / Meso</button>
+                    <button type="button" data-quick-filter="Injection Supplies">Injection supplies</button>
+                </div>
+                <div class="results-bar">
+                    <span data-results-count></span>
+                    <div class="active-filters" data-active-filters></div>
+                </div>
+            </div>
             <div class="products-grid" data-products-grid data-mode="all"></div>
             <div class="load-more-wrap"><button class="btn" data-load-more>Load more products</button></div>
         </div>

@@ -4,6 +4,7 @@ const $$ = (s, r = document) => [...r.querySelectorAll(s)];
 const allProducts = window.SOLA_PRODUCTS || [];
 const wa = (text = 'Hello SOLA Medical Supply, I would like to request a wholesale quotation.') => `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
 const slugify = s => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+const escapeHTML = s => String(s).replace(/[&<>"']/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]));
 
 function renderSiteChrome() {
   const path = location.pathname.replace(/\\/g, '/');
@@ -56,7 +57,7 @@ function renderGrid(grid, list) {
   const shown = isFull ? list.slice(0, visibleCount) : list;
   grid.innerHTML = shown.map(productCard).join('') || '<p>No products found. Try another search.</p>';
   const count = $('[data-results-count]');
-  if (count && isFull) count.textContent = `${list.length} products found`;
+  if (count && isFull) count.textContent = `${list.length} products found · showing ${shown.length}`;
   const more = $('[data-load-more]');
   if (more) more.hidden = visibleCount >= list.length;
 }
@@ -91,21 +92,43 @@ function setupProductSections() {
 }
 
 function setupFilters() {
-  const cat = $('[data-category-filter]'), brand = $('[data-brand-filter]'), search = $('[data-search]');
+  const cat = $('[data-category-filter]'), brand = $('[data-brand-filter]'), origin = $('[data-origin-filter]'), search = $('[data-search]');
   const grid = $('[data-products-grid][data-mode="all"]');
   if (!grid) return;
   const options = list => ['All', ...[...new Set(list)].sort((a, b) => a.localeCompare(b))].map(v => `<option value="${v}">${v}</option>`).join('');
   cat.innerHTML = options(allProducts.map(p => p.category));
   brand.innerHTML = options(allProducts.map(p => p.brand));
+  if (origin) origin.innerHTML = options(allProducts.map(p => p.origin || 'International'));
   cat.value = 'All';
   brand.value = 'All';
+  if (origin) origin.value = 'All';
+  const activeFilters = $('[data-active-filters]');
+  const quickButtons = $$('[data-quick-filter]');
+  const setQuickState = () => quickButtons.forEach(btn => btn.classList.toggle('active', btn.dataset.quickFilter === cat.value || (btn.dataset.quickFilter === 'All' && cat.value === 'All')));
+  const renderActiveFilters = () => {
+    if (!activeFilters) return;
+    const chips = [];
+    if (search.value.trim()) chips.push(`Search: ${search.value.trim()}`);
+    if (cat.value !== 'All') chips.push(`Category: ${cat.value}`);
+    if (brand.value !== 'All') chips.push(`Brand: ${brand.value}`);
+    if (origin?.value && origin.value !== 'All') chips.push(`Origin: ${origin.value}`);
+    activeFilters.innerHTML = chips.length ? chips.map(chip => `<span>${escapeHTML(chip)}</span>`).join('') : '<span>All products</span>';
+  };
   const apply = () => {
     const q = search.value.toLowerCase().trim(); visibleCount = 24;
-    filteredProducts = allProducts.filter(p => (cat.value === 'All' || p.category === cat.value) && (brand.value === 'All' || p.brand === brand.value) && (!q || `${p.name} ${p.brand} ${p.category}`.toLowerCase().includes(q)));
+    filteredProducts = allProducts.filter(p =>
+      (cat.value === 'All' || p.category === cat.value) &&
+      (brand.value === 'All' || p.brand === brand.value) &&
+      (!origin || origin.value === 'All' || (p.origin || 'International') === origin.value) &&
+      (!q || `${p.name} ${p.brand} ${p.category} ${p.origin || ''} ${p.tag || ''}`.toLowerCase().includes(q))
+    );
     renderGrid(grid, filteredProducts);
+    renderActiveFilters();
+    setQuickState();
   };
-  [cat, brand, search].forEach(el => el.addEventListener('input', apply));
-  $('[data-clear-filters]')?.addEventListener('click', () => { search.value = ''; cat.value = 'All'; brand.value = 'All'; apply(); });
+  [cat, brand, origin, search].filter(Boolean).forEach(el => el.addEventListener('input', apply));
+  quickButtons.forEach(btn => btn.addEventListener('click', () => { search.value = ''; cat.value = btn.dataset.quickFilter; brand.value = 'All'; if (origin) origin.value = 'All'; apply(); }));
+  $('[data-clear-filters]')?.addEventListener('click', () => { search.value = ''; cat.value = 'All'; brand.value = 'All'; if (origin) origin.value = 'All'; apply(); });
   $('[data-load-more]')?.addEventListener('click', () => { visibleCount += 24; renderGrid(grid, filteredProducts); });
   apply();
 }
