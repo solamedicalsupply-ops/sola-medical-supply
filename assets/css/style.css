@@ -3860,3 +3860,61 @@ h3 {
         justify-content: center;
     }
 }
+
+/* === Premium Motion Layer === */
+.js-enhanced [data-reveal] {
+    opacity: 0;
+    transform: translateY(28px);
+    filter: blur(8px);
+    transition:
+        opacity .72s ease var(--reveal-delay, 0ms),
+        transform .72s cubic-bezier(.2, .8, .2, 1) var(--reveal-delay, 0ms),
+        filter .72s ease var(--reveal-delay, 0ms);
+    will-change: opacity, transform, filter
+}
+
+.js-enhanced [data-reveal].is-visible {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0)
+}
+
+.lux-hero .hero-slide {
+    transform: translate3d(var(--hero-x, 0), var(--hero-y, 0), 0) scale(1.035);
+    transition: opacity 1s ease-in-out, transform .45s ease
+}
+
+.magnetic-btn {
+    transform: translate3d(var(--mx, 0), var(--my, 0), 0);
+    transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+    will-change: transform
+}
+
+.product,
+.buyer-support-grid article,
+.channel-card,
+.story-card,
+.home-journal-grid a,
+.brand-card {
+    will-change: transform
+}
+
+.product:hover,
+.buyer-support-grid article:hover,
+.channel-card:hover,
+.story-card:hover,
+.home-journal-grid a:hover {
+    transform: translateY(-6px)
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .js-enhanced [data-reveal],
+    .lux-hero .hero-slide,
+    .magnetic-btn {
+        opacity: 1 !important;
+        transform: none !important;
+        filter: none !important;
+        transition: none !important;
+        animation: none !important
+    }
+}

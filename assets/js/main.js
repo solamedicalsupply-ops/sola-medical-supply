@@ -122,3 +122,127 @@ function setupForm() {
 }
 
 setupProductSections(); setupFilters(); renderBrands(); setupForm();
+
+function loadMotionLibrary() {
+  if (window.gsap || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    return Promise.resolve(window.gsap || null);
+  }
+  return new Promise(resolve => {
+    const script = document.createElement('script');
+    script.src = 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js';
+    script.defer = true;
+    script.onload = () => resolve(window.gsap || null);
+    script.onerror = () => resolve(null);
+    document.head.appendChild(script);
+  });
+}
+
+function setupPremiumMotion(gsap) {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.documentElement.classList.add('js-enhanced');
+
+  const revealTargets = [
+    '.section-head',
+    '.catalogue-feature .product',
+    '.proof-photo',
+    '.proof-copy',
+    '.process-grid article',
+    '.buyer-support-grid article',
+    '.pricelist-teaser-inner',
+    '.telegram-channel-card',
+    '.home-journal-grid a',
+    '.cta-panel',
+    '.contact-channel-grid .channel-card',
+    '.story-card',
+    '.brand-card',
+    '.article-cover',
+    '.article-body h2',
+    '.article-body p'
+  ].join(',');
+
+  $$(revealTargets).forEach((el, index) => {
+    el.dataset.reveal = '';
+    el.style.setProperty('--reveal-delay', `${Math.min(index % 6, 5) * 70}ms`);
+  });
+
+  const reveal = entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      el.classList.add('is-visible');
+      if (gsap) {
+        gsap.fromTo(el,
+          { y: 34, opacity: 0, filter: 'blur(8px)' },
+          { y: 0, opacity: 1, filter: 'blur(0px)', duration: .78, ease: 'power3.out', overwrite: true }
+        );
+      }
+      observer.unobserve(el);
+    });
+  };
+
+  const observer = new IntersectionObserver(reveal, { threshold: .14, rootMargin: '0px 0px -8% 0px' });
+  $$('[data-reveal]').forEach(el => observer.observe(el));
+
+  const statObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const item = entry.target;
+      const number = item.querySelector('b');
+      if (!number || number.dataset.counted) return;
+      number.dataset.counted = 'true';
+      const raw = number.textContent.trim();
+      const value = parseFloat(raw);
+      if (!Number.isFinite(value)) return;
+      const suffix = raw.replace(String(value), '');
+      const state = { value: 0 };
+      const render = v => number.textContent = `${Math.round(v)}${suffix}`;
+      if (gsap) {
+        gsap.to(state, { value, duration: 1.35, ease: 'power2.out', onUpdate: () => render(state.value) });
+      } else {
+        const start = performance.now();
+        const tick = now => {
+          const p = Math.min((now - start) / 1200, 1);
+          render(value * (1 - Math.pow(1 - p, 3)));
+          if (p < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+      }
+      statObserver.unobserve(item);
+    });
+  }, { threshold: .4 });
+  $$('.trust-stats>div').forEach(el => statObserver.observe(el));
+
+  const hero = $('.lux-hero');
+  if (hero) {
+    let raf = 0;
+    hero.addEventListener('pointermove', e => {
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(() => {
+        const rect = hero.getBoundingClientRect();
+        const x = ((e.clientX - rect.left) / rect.width - .5) * 18;
+        const y = ((e.clientY - rect.top) / rect.height - .5) * 18;
+        hero.style.setProperty('--hero-x', `${x}px`);
+        hero.style.setProperty('--hero-y', `${y}px`);
+      });
+    });
+    hero.addEventListener('pointerleave', () => {
+      hero.style.setProperty('--hero-x', '0px');
+      hero.style.setProperty('--hero-y', '0px');
+    });
+  }
+
+  $$('.btn.primary, .cta-btn, .telegram-btn').forEach(btn => {
+    btn.classList.add('magnetic-btn');
+    btn.addEventListener('pointermove', e => {
+      const rect = btn.getBoundingClientRect();
+      btn.style.setProperty('--mx', `${(e.clientX - rect.left - rect.width / 2) * .16}px`);
+      btn.style.setProperty('--my', `${(e.clientY - rect.top - rect.height / 2) * .16}px`);
+    });
+    btn.addEventListener('pointerleave', () => {
+      btn.style.setProperty('--mx', '0px');
+      btn.style.setProperty('--my', '0px');
+    });
+  });
+}
+
+loadMotionLibrary().then(setupPremiumMotion);
