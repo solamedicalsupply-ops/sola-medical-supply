@@ -2322,12 +2322,12 @@ h3 {
 }
 
 .catalogue-page .catalogue-hero {
-    padding: 75px 0 62px;
+    padding: 46px 0 34px;
     background: radial-gradient(circle at 85% 15%, var(--sage), transparent 32%), var(--paper)
 }
 
 .catalogue-page .catalogue-hero h1 {
-    font-size: clamp(48px, 6vw, 78px);
+    font-size: clamp(42px, 5vw, 62px);
     max-width: 850px
 }
 
@@ -2337,7 +2337,7 @@ h3 {
 }
 
 .catalogue-page section:not(.catalogue-hero) {
-    padding: 65px 0
+    padding: 32px 0 60px
 }
 
 .catalogue-page .product-filter-panel {
@@ -2351,7 +2351,10 @@ h3 {
 }
 
 .catalogue-page .products-grid {
-    grid-template-columns: repeat(4, 1fr)
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 18px;
+    position: relative;
+    z-index: 1
 }
 
 .quote-drawer {
@@ -3850,12 +3853,12 @@ h3 {
 .moq-banner {
     background: var(--forest);
     border-radius: 22px;
-    padding: 28px 34px;
+    padding: 22px 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 24px;
-    margin-bottom: 36px;
+    margin-bottom: 24px;
     color: #fff
 }
 
@@ -3878,7 +3881,7 @@ h3 {
 .moq-banner h3 {
     font-size: 18px;
     color: #fff;
-    margin: 0 0 12px;
+    margin: 0 0 10px;
     font-family: Manrope, sans-serif
 }
 
