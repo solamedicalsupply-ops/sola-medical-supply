@@ -139,7 +139,10 @@
       "title": "Buying Liporase Wholesale: Documentation, Handling and Shipping Essentials",
       "category": "Hyaluronidase",
       "image": "../assets/images/products/liporase.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "buying-liporase-wholesale-documentation-handling-and-shipping-essentials",
+      "published_at": "2026-07-04T10:32:09.789823+00:00",
+      "cover": "../assets/images/products/liporase.png"
     },
     {
       "keyword": "expiry date batch number aesthetic products",
@@ -1618,6 +1621,12 @@
       "slug": "how-to-verify-original-aesthetic-products-before-ordering",
       "published_at": "2026-07-03T11:44:05.729720+00:00",
       "cover": "../assets/images/blog/how-to-verify-original-aesthetic-products-before-ordering.png"
+    },
+    {
+      "title": "Buying Liporase Wholesale: Documentation, Handling and Shipping Essentials",
+      "slug": "buying-liporase-wholesale-documentation-handling-and-shipping-essentials",
+      "published_at": "2026-07-04T10:32:09.789823+00:00",
+      "cover": "../assets/images/products/liporase.png"
     }
   ]
 }
