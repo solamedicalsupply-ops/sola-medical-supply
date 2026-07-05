@@ -4081,6 +4081,113 @@ h3 {
     line-height: 1.6
 }
 
+.partner-brands-section {
+    padding: 76px 0 88px;
+    background:
+        radial-gradient(circle at 12% 8%, rgba(232, 91, 146, .08), transparent 34%),
+        #fff
+}
+
+.center-head {
+    text-align: center;
+    display: block
+}
+
+.center-head .kicker {
+    justify-content: center
+}
+
+.center-head h2 {
+    margin-left: auto;
+    margin-right: auto
+}
+
+.center-head p {
+    max-width: 760px;
+    margin: 14px auto 0
+}
+
+.partner-brand-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 18px
+}
+
+.partner-brand-card {
+    position: relative;
+    overflow: hidden;
+    min-height: 152px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 22px 16px 18px;
+    border-radius: 6px;
+    border: 1px solid rgba(232, 91, 146, .12);
+    background: linear-gradient(180deg, #fff, #fffafd);
+    box-shadow: 0 18px 50px rgba(87, 31, 56, .06);
+    transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease
+}
+
+.partner-brand-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(232, 91, 146, .32);
+    box-shadow: 0 28px 76px rgba(87, 31, 56, .11)
+}
+
+.partner-brand-card::before {
+    content: "";
+    position: absolute;
+    inset: 18px;
+    border: 1px solid rgba(232, 91, 146, .06);
+    background: rgba(255, 255, 255, .62)
+}
+
+.partner-brand-card strong {
+    position: relative;
+    z-index: 1;
+    color: #273042;
+    font-family: Manrope, sans-serif;
+    font-size: clamp(18px, 1.7vw, 25px);
+    font-weight: 900;
+    letter-spacing: -.035em
+}
+
+.partner-brand-card em {
+    position: relative;
+    z-index: 1;
+    align-self: end;
+    margin-top: 12px;
+    color: var(--muted);
+    font-style: normal;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .08em
+}
+
+.partner-brand-card small {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    z-index: 1;
+    color: rgba(123, 39, 77, .28);
+    font-weight: 900
+}
+
+.partner-plus {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    width: 38px;
+    height: 38px;
+    display: grid;
+    place-items: center;
+    color: #fff;
+    font-size: 22px;
+    background: linear-gradient(135deg, #81b8ff, #f15f9f)
+}
+
 .fast-moving-section {
     padding: 74px 0 86px;
     background:
@@ -4096,6 +4203,10 @@ h3 {
     .category-hub-grid,
     .market-pulse-grid {
         grid-template-columns: repeat(2, 1fr)
+    }
+
+    .partner-brand-grid {
+        grid-template-columns: repeat(3, 1fr)
     }
 
     .market-pulse-grid article:nth-child(2) {
@@ -4134,6 +4245,19 @@ h3 {
 
     .market-pulse-grid article:last-child {
         border-bottom: 0
+    }
+
+    .partner-brands-section {
+        padding: 52px 0 62px
+    }
+
+    .partner-brand-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px
+    }
+
+    .partner-brand-card {
+        min-height: 130px
     }
 
     .fast-moving-section {

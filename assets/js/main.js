@@ -16,6 +16,10 @@ const homeCategories = [
 const fastProductNames = [
   'Ultrafill', 'Sardenya', 'Rejuran HB', 'Profhilo', 'Asce', 'Botulax 100 Unit', 'Lemon Bottle', 'Mounjaro 2.5mg'
 ];
+const partnerBrands = [
+  'Juvederm', 'Profhilo', 'Teoxane', 'Jalupro', 'Restylane', 'Allergan',
+  'Rejuran', 'Botulax', 'Nabota', 'Meditoxin', 'Melsmon', 'White Fill Pro'
+];
 
 function renderSiteChrome() {
   const path = location.pathname.replace(/\\/g, '/');
@@ -136,6 +140,21 @@ function renderHomeCategories() {
   }).join('');
 }
 
+function renderPartnerBrands() {
+  const el = $('[data-partner-brands]');
+  if (!el) return;
+  el.innerHTML = partnerBrands.map((brand, index) => {
+    const count = allProducts.filter(p => p.brand === brand).length;
+    const href = `products.html?brand=${encodeURIComponent(brand)}`;
+    return `<a class="partner-brand-card" href="${href}" aria-label="View ${escapeHTML(brand)} products">
+      <span class="partner-plus">+</span>
+      <small>${String(index + 1).padStart(2, '0')}</small>
+      <strong>${escapeHTML(brand)}</strong>
+      <em>${count || 'On request'} ${count === 1 ? 'item' : count ? 'items' : ''}</em>
+    </a>`;
+  }).join('');
+}
+
 function setupFilters() {
   const cat = $('[data-category-filter]'), brand = $('[data-brand-filter]'), origin = $('[data-origin-filter]'), search = $('[data-search]');
   const grid = $('[data-products-grid][data-mode="all"]');
@@ -195,7 +214,7 @@ function setupForm() {
   f.addEventListener('submit', e => { e.preventDefault(); const d = new FormData(f); window.open(wa(`Hello SOLA Medical Supply,\nName: ${d.get('name') || ''}\nCountry: ${d.get('country') || ''}\nProducts: ${d.get('products') || ''}\nQuantity: ${d.get('quantity') || ''}\nMessage: ${d.get('message') || ''}`), '_blank'); });
 }
 
-setupProductSections(); setupFilters(); renderBrands(); renderHomeCategories(); setupForm();
+setupProductSections(); setupFilters(); renderBrands(); renderHomeCategories(); renderPartnerBrands(); setupForm();
 
 function setupPremiumMotion() {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
@@ -208,6 +227,7 @@ function setupPremiumMotion() {
     '.process-grid article',
     '.category-hub-card',
     '.market-pulse-grid article',
+    '.partner-brand-card',
     '.fast-moving-grid .product',
     '.buyer-support-grid article',
     '.pricelist-teaser-inner',
