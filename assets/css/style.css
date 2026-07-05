@@ -2369,7 +2369,8 @@ h3 {
 }
 
 .catalogue-page .product-filter-panel {
-    top: 92px
+    top: auto;
+    margin-bottom: 24px
 }
 
 .catalogue-page .input,
@@ -2380,7 +2381,7 @@ h3 {
 
 .catalogue-page .products-grid {
     grid-template-columns: repeat(4, 1fr);
-    margin-top: 18px;
+    margin-top: 0;
     position: relative;
     z-index: 1
 }
