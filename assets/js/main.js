@@ -17,23 +17,19 @@ const fastProductNames = [
   'Ultrafill', 'Sardenya', 'Rejuran HB', 'Profhilo', 'Asce', 'Botulax 100 Unit', 'Lemon Bottle', 'Mounjaro 2.5mg'
 ];
 const partnerBrands = [
-  'Juvederm', 'Profhilo', 'Teoxane', 'Jalupro', 'Restylane', 'Allergan',
-  'Rejuran', 'Botulax', 'Nabota', 'Meditoxin', 'Melsmon', 'White Fill Pro'
+  { name: 'Juvederm', logo: 'assets/images/brand-logos/juvederm.png', filter: 'Juvederm' },
+  { name: 'Profhilo', logo: 'assets/images/brand-logos/profhilo.png', filter: 'Profhilo' },
+  { name: 'Teoxane', logo: 'assets/images/brand-logos/teoxane.png', filter: 'Teoxane' },
+  { name: 'Jalupro', logo: 'assets/images/brand-logos/jalupro.png', filter: 'Jalupro' },
+  { name: 'Jetema', logo: 'assets/images/brand-logos/jetema.png', query: 'Jetema' },
+  { name: 'Hugel', logo: 'assets/images/brand-logos/hugel.png', filter: 'Botulax' },
+  { name: 'White Medience', logo: 'assets/images/brand-logos/white-medience.png', filter: 'White Fill Pro' },
+  { name: 'Melsmon', logo: 'assets/images/brand-logos/melsmon.png', filter: 'Melsmon' },
+  { name: 'Daewoong', logo: 'assets/images/brand-logos/daewoong.png', filter: 'Nabota' },
+  { name: 'Humedix', logo: 'assets/images/brand-logos/humedix.png', query: 'Humedix' },
+  { name: 'Medytox', logo: 'assets/images/brand-logos/medytox.png', filter: 'Meditoxin' },
+  { name: 'ExoCoBio', logo: 'assets/images/brand-logos/exocobio.png', filter: 'ASCE' }
 ];
-const partnerBrandLogos = {
-  Juvederm: 'https://www.sweye.com/wp-content/uploads/2019/05/gem20170813juvederm-5.png',
-  Profhilo: 'https://shop.ibsaderma.de/images/thumbs/0000624_profhilo.svg',
-  Teoxane: 'https://www.teoxane-event.de/wp-content/uploads/2022/11/tpi-logo-black-o-500.png',
-  Jalupro: 'assets/images/products/jalupro.png',
-  Restylane: 'https://www.conceptdermo.com/wp-content/uploads/2020/05/176-1760346_restylane-l-rgb-restylane-logo-png-clipart.jpg',
-  Allergan: 'https://cdn.prod.website-files.com/64e8f4d701b9e5823df6b23e/6630f0b90eba44538e98a5d6_allergan-aesthetics-an-abbvie-company-fi5th-client-logo-01.png',
-  Rejuran: 'https://www.cosmo-korea.com/web/image/product.brand.ept/26/logo/Rejuran?unique=e826a78',
-  Botulax: 'https://www.cosmo-korea.com/web/image/product.brand.ept/3/logo/Botulax?unique=592e43b',
-  Nabota: 'assets/images/products/nabota100.png',
-  Meditoxin: 'https://www.cosmo-korea.com/web/image/product.brand.ept/42/logo/Meditoxin?unique=4d7092f',
-  Melsmon: 'assets/images/products/melsmon.png',
-  'White Fill Pro': 'assets/images/products/whiteFillPro.png'
-};
 
 function renderSiteChrome() {
   const path = location.pathname.replace(/\\/g, '/');
@@ -157,17 +153,16 @@ function renderHomeCategories() {
 function renderPartnerBrands() {
   const el = $('[data-partner-brands]');
   if (!el) return;
+  const searchCount = term => allProducts.filter(p => `${p.name} ${p.brand} ${p.category} ${p.origin || ''} ${p.tag || ''}`.toLowerCase().includes(term.toLowerCase())).length;
   el.innerHTML = partnerBrands.map((brand, index) => {
-    const count = allProducts.filter(p => p.brand === brand).length;
-    const href = `products.html?brand=${encodeURIComponent(brand)}`;
-    const logo = partnerBrandLogos[brand];
-    const logoHTML = logo ? `<img class="partner-logo" src="${logo}" alt="${escapeHTML(brand)} logo" loading="lazy" referrerpolicy="no-referrer" onerror="this.closest('.partner-brand-card').classList.remove('has-logo');this.remove()">` : '';
-    return `<a class="partner-brand-card ${logo ? 'has-logo' : ''}" href="${href}" aria-label="View ${escapeHTML(brand)} products">
+    const count = brand.filter ? allProducts.filter(p => p.brand === brand.filter).length : searchCount(brand.query || brand.name);
+    const href = brand.filter ? `products.html?brand=${encodeURIComponent(brand.filter)}` : `products.html?q=${encodeURIComponent(brand.query || brand.name)}`;
+    return `<a class="partner-brand-card has-logo" href="${href}" aria-label="View ${escapeHTML(brand.name)} products">
       <span class="partner-plus">+</span>
       <small>${String(index + 1).padStart(2, '0')}</small>
-      ${logoHTML}
-      <strong>${escapeHTML(brand)}</strong>
-      <em>${count || 'On request'} ${count === 1 ? 'item' : count ? 'items' : ''}</em>
+      <img class="partner-logo" src="${brand.logo}" alt="${escapeHTML(brand.name)} logo" loading="lazy" onerror="this.closest('.partner-brand-card').classList.remove('has-logo');this.remove()">
+      <strong>${escapeHTML(brand.name)}</strong>
+      <em>${count ? `${count} ${count === 1 ? 'item' : 'items'}` : 'Buyer request'}</em>
     </a>`;
   }).join('');
 }
