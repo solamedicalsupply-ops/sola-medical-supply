@@ -148,8 +148,11 @@
       "keyword": "expiry date batch number aesthetic products",
       "title": "Why Expiry Date and Batch Number Matter",
       "category": "Product Verification",
-      "status": "pending",
-      "format": "buyer_guide"
+      "status": "published",
+      "format": "buyer_guide",
+      "slug": "why-expiry-date-and-batch-number-matter",
+      "published_at": "2026-07-05T10:52:22.849837+00:00",
+      "cover": "../assets/images/blog/why-expiry-date-and-batch-number-matter.png"
     },
     {
       "keyword": "huons water numb distributor",
@@ -1627,6 +1630,12 @@
       "slug": "buying-liporase-wholesale-documentation-handling-and-shipping-essentials",
       "published_at": "2026-07-04T10:32:09.789823+00:00",
       "cover": "../assets/images/products/liporase.png"
+    },
+    {
+      "title": "Why Expiry Date and Batch Number Matter",
+      "slug": "why-expiry-date-and-batch-number-matter",
+      "published_at": "2026-07-05T10:52:22.849837+00:00",
+      "cover": "../assets/images/blog/why-expiry-date-and-batch-number-matter.png"
     }
   ]
 }
