@@ -4120,7 +4120,7 @@ h3 {
     display: grid;
     place-items: center;
     text-align: center;
-    padding: 22px 16px 18px;
+    padding: 24px 16px 18px;
     border-radius: 6px;
     border: 1px solid rgba(232, 91, 146, .12);
     background: linear-gradient(180deg, #fff, #fffafd);
@@ -4142,6 +4142,16 @@ h3 {
     background: rgba(255, 255, 255, .62)
 }
 
+.partner-logo {
+    position: relative;
+    z-index: 1;
+    width: min(78%, 190px);
+    max-height: 74px;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+    filter: saturate(.95) contrast(1.03)
+}
+
 .partner-brand-card strong {
     position: relative;
     z-index: 1;
@@ -4150,6 +4160,14 @@ h3 {
     font-size: clamp(18px, 1.7vw, 25px);
     font-weight: 900;
     letter-spacing: -.035em
+}
+
+.partner-brand-card.has-logo strong {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0)
 }
 
 .partner-brand-card em {
@@ -4163,6 +4181,10 @@ h3 {
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: .08em
+}
+
+.partner-brand-card.has-logo em {
+    margin-top: 16px
 }
 
 .partner-brand-card small {
@@ -4186,6 +4208,15 @@ h3 {
     color: #fff;
     font-size: 22px;
     background: linear-gradient(135deg, #81b8ff, #f15f9f)
+}
+
+.brand-disclaimer {
+    max-width: 860px;
+    margin: 24px auto 0;
+    color: var(--muted);
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.6
 }
 
 .fast-moving-section {
