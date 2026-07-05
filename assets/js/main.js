@@ -165,6 +165,49 @@ function renderPartnerBrands() {
   el.innerHTML = `<div class="partner-brand-track">${primary}${duplicate}</div>`;
 }
 
+function normalizeBlogLink(href = '') {
+  if (!href) return 'blog/index.html';
+  if (/^(https?:|mailto:|tel:|#)/i.test(href) || href.startsWith('/')) return href;
+  if (href.startsWith('blog/')) return href;
+  if (href.startsWith('../')) return href.replace(/^\.\.\//, '');
+  return `blog/${href}`;
+}
+
+function normalizeBlogImage(src = '') {
+  if (!src) return 'assets/images/productCatalogue.png';
+  if (/^https?:/i.test(src) || src.startsWith('/')) return src;
+  if (src.startsWith('../assets/')) return src.replace('../', '');
+  if (src.startsWith('assets/')) return src;
+  return `blog/${src}`;
+}
+
+async function renderLatestJournalPosts() {
+  const grid = $('[data-home-journal]');
+  if (!grid) return;
+  try {
+    const response = await fetch('blog/index.html', { cache: 'no-store' });
+    if (!response.ok) return;
+    const html = await response.text();
+    const doc = new DOMParser().parseFromString(html, 'text/html');
+    const posts = [...doc.querySelectorAll('.posts-grid-new .story-card')].slice(0, 3);
+    if (posts.length < 3) return;
+    grid.innerHTML = posts.map(post => {
+      const img = post.querySelector('img');
+      const meta = post.querySelector('span')?.textContent.trim() || 'SOLA JOURNAL';
+      const title = post.querySelector('h3')?.textContent.trim() || 'SOLA buyer insight';
+      const cta = post.querySelector('b')?.textContent.trim() || 'Read article →';
+      return `<a href="${escapeHTML(normalizeBlogLink(post.getAttribute('href') || ''))}">
+        <figure><img src="${escapeHTML(normalizeBlogImage(img?.getAttribute('src') || ''))}" alt="${escapeHTML(img?.getAttribute('alt') || title)}" loading="lazy"></figure>
+        <span>${escapeHTML(meta)}</span>
+        <h3>${escapeHTML(title)}</h3>
+        <b>${escapeHTML(cta)}</b>
+      </a>`;
+    }).join('');
+  } catch (error) {
+    /* Keep the static fallback posts when local file preview blocks fetch. */
+  }
+}
+
 function setupFilters() {
   const cat = $('[data-category-filter]'), brand = $('[data-brand-filter]'), origin = $('[data-origin-filter]'), search = $('[data-search]');
   const grid = $('[data-products-grid][data-mode="all"]');
@@ -224,7 +267,7 @@ function setupForm() {
   f.addEventListener('submit', e => { e.preventDefault(); const d = new FormData(f); window.open(wa(`Hello SOLA Medical Supply,\nName: ${d.get('name') || ''}\nCountry: ${d.get('country') || ''}\nProducts: ${d.get('products') || ''}\nQuantity: ${d.get('quantity') || ''}\nMessage: ${d.get('message') || ''}`), '_blank'); });
 }
 
-setupProductSections(); setupFilters(); renderBrands(); renderHomeCategories(); renderPartnerBrands(); setupForm();
+setupProductSections(); setupFilters(); renderBrands(); renderHomeCategories(); renderPartnerBrands(); renderLatestJournalPosts(); setupForm();
 
 function setupPremiumMotion() {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
