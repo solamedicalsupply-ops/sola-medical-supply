@@ -5,6 +5,17 @@ const allProducts = window.SOLA_PRODUCTS || [];
 const wa = (text = 'Hello SOLA Medical Supply, I would like to request a wholesale quotation.') => `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
 const slugify = s => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const escapeHTML = s => String(s).replace(/[&<>"']/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]));
+const homeCategories = [
+  { name: 'Dermal Fillers', label: 'Dermal fillers', note: 'Korean and international filler options', icon: 'DF' },
+  { name: 'Skin Boosters / PN', label: 'Skin boosters / PN', note: 'PN, HA and hydration-focused products', icon: 'SB' },
+  { name: 'Toxin', label: 'Toxins', note: 'Popular professional toxin requests', icon: 'TX' },
+  { name: 'Exosome / Meso', label: 'Exosome / Meso', note: 'Meso and regenerative buyer requests', icon: 'EX' },
+  { name: 'Lipolysis / Body', label: 'Lipolysis / Body', note: 'Body contouring and lipolysis picks', icon: 'LB' },
+  { name: 'Injection Supplies', label: 'Injection supplies', note: 'Clinic essentials for order planning', icon: 'IS' }
+];
+const fastProductNames = [
+  'Ultrafill', 'Sardenya', 'Rejuran HB', 'Profhilo', 'Asce', 'Botulax 100 Unit', 'Lemon Bottle', 'Mounjaro 2.5mg'
+];
 
 function renderSiteChrome() {
   const path = location.pathname.replace(/\\/g, '/');
@@ -38,6 +49,13 @@ const quoteList = new Map();
 let visibleCount = 24;
 let filteredProducts = allProducts;
 
+function productFlag(p) {
+  if (['Toxin', 'Skin Boosters / PN', 'Exosome / Meso', 'Lipolysis / Body', 'Weight Management'].includes(p.category)) return 'Fast-moving SKU';
+  if ((p.origin || '').toLowerCase() === 'korea') return 'Korean supply';
+  if ((p.category || '').toLowerCase().includes('injection')) return 'Clinic essential';
+  return 'Wholesale quote';
+}
+
 function productCard(p) {
   const selected = quoteList.has(p.name);
   const action = $('[data-quote-drawer]')
@@ -46,7 +64,7 @@ function productCard(p) {
   const url = `products/${slugify(p.name)}.html`;
   return `<article class="product">
     <figure><a href="${url}"><img src="${p.image}" alt="${p.name}" loading="lazy" decoding="async"></a></figure>
-    <div class="product-body"><h3><a href="${url}">${p.name}</a></h3><div class="meta"><span class="badge">${p.category}</span><span class="badge">${p.brand}</span></div>
+    <div class="product-body"><div class="product-flags"><span>${productFlag(p)}</span><span>${p.origin || 'Global'}</span></div><h3><a href="${url}">${p.name}</a></h3><div class="meta"><span class="badge">${p.category}</span><span class="badge">${p.brand}</span></div>
     <p>${p.origin || 'International'} supply • ${p.tag || 'Available on request'}</p>
     ${action}</div>
   </article>`;
@@ -88,7 +106,34 @@ $('[data-send-quote]')?.addEventListener('click', () => {
 });
 
 function setupProductSections() {
-  $$('[data-products-grid]').forEach(grid => renderGrid(grid, grid.dataset.mode === 'featured' ? allProducts.filter(p => p.featured) : allProducts));
+  const fastProducts = fastProductNames
+    .map(name => allProducts.find(p => p.name === name))
+    .filter(Boolean);
+  $$('[data-products-grid]').forEach(grid => {
+    const mode = grid.dataset.mode;
+    const list = mode === 'featured'
+      ? allProducts.filter(p => p.featured)
+      : mode === 'fast'
+        ? fastProducts
+        : allProducts;
+    renderGrid(grid, list);
+  });
+}
+
+function renderHomeCategories() {
+  const el = $('[data-category-hub]');
+  if (!el) return;
+  el.innerHTML = homeCategories.map((cat, index) => {
+    const count = allProducts.filter(p => p.category === cat.name).length;
+    const href = `products.html?category=${encodeURIComponent(cat.name)}`;
+    return `<a class="category-hub-card" href="${href}">
+      <span>${cat.icon}</span>
+      <small>0${index + 1}</small>
+      <h3>${cat.label}</h3>
+      <p>${cat.note}</p>
+      <b>${count} products &rarr;</b>
+    </a>`;
+  }).join('');
 }
 
 function setupFilters() {
@@ -99,9 +144,15 @@ function setupFilters() {
   cat.innerHTML = options(allProducts.map(p => p.category));
   brand.innerHTML = options(allProducts.map(p => p.brand));
   if (origin) origin.innerHTML = options(allProducts.map(p => p.origin || 'International'));
-  cat.value = 'All';
-  brand.value = 'All';
-  if (origin) origin.value = 'All';
+  const params = new URLSearchParams(location.search);
+  const setSelectValue = (select, value) => {
+    if (!select) return;
+    select.value = [...select.options].some(option => option.value === value) ? value : 'All';
+  };
+  setSelectValue(cat, params.get('category') || 'All');
+  setSelectValue(brand, params.get('brand') || 'All');
+  setSelectValue(origin, params.get('origin') || 'All');
+  search.value = params.get('q') || '';
   const activeFilters = $('[data-active-filters]');
   const quickButtons = $$('[data-quick-filter]');
   const setQuickState = () => quickButtons.forEach(btn => btn.classList.toggle('active', btn.dataset.quickFilter === cat.value || (btn.dataset.quickFilter === 'All' && cat.value === 'All')));
@@ -144,7 +195,7 @@ function setupForm() {
   f.addEventListener('submit', e => { e.preventDefault(); const d = new FormData(f); window.open(wa(`Hello SOLA Medical Supply,\nName: ${d.get('name') || ''}\nCountry: ${d.get('country') || ''}\nProducts: ${d.get('products') || ''}\nQuantity: ${d.get('quantity') || ''}\nMessage: ${d.get('message') || ''}`), '_blank'); });
 }
 
-setupProductSections(); setupFilters(); renderBrands(); setupForm();
+setupProductSections(); setupFilters(); renderBrands(); renderHomeCategories(); setupForm();
 
 function setupPremiumMotion() {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
@@ -155,6 +206,9 @@ function setupPremiumMotion() {
     '.proof-photo',
     '.proof-copy',
     '.process-grid article',
+    '.category-hub-card',
+    '.market-pulse-grid article',
+    '.fast-moving-grid .product',
     '.buyer-support-grid article',
     '.pricelist-teaser-inner',
     '.telegram-channel-card',
