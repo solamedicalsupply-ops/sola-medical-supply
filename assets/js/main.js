@@ -153,18 +153,16 @@ function renderHomeCategories() {
 function renderPartnerBrands() {
   const el = $('[data-partner-brands]');
   if (!el) return;
-  const searchCount = term => allProducts.filter(p => `${p.name} ${p.brand} ${p.category} ${p.origin || ''} ${p.tag || ''}`.toLowerCase().includes(term.toLowerCase())).length;
-  el.innerHTML = partnerBrands.map((brand, index) => {
-    const count = brand.filter ? allProducts.filter(p => p.brand === brand.filter).length : searchCount(brand.query || brand.name);
+  const card = (brand, hidden = false) => {
     const href = brand.filter ? `products.html?brand=${encodeURIComponent(brand.filter)}` : `products.html?q=${encodeURIComponent(brand.query || brand.name)}`;
-    return `<a class="partner-brand-card has-logo" href="${href}" aria-label="View ${escapeHTML(brand.name)} products">
-      <span class="partner-plus">+</span>
-      <small>${String(index + 1).padStart(2, '0')}</small>
+    return `<a class="partner-brand-card has-logo" href="${href}" aria-label="View ${escapeHTML(brand.name)} products"${hidden ? ' aria-hidden="true" tabindex="-1"' : ''}>
       <img class="partner-logo" src="${brand.logo}" alt="${escapeHTML(brand.name)} logo" loading="lazy" onerror="this.closest('.partner-brand-card').classList.remove('has-logo');this.remove()">
       <strong>${escapeHTML(brand.name)}</strong>
-      <em>${count ? `${count} ${count === 1 ? 'item' : 'items'}` : 'Buyer request'}</em>
     </a>`;
-  }).join('');
+  };
+  const primary = partnerBrands.map(brand => card(brand)).join('');
+  const duplicate = partnerBrands.map(brand => card(brand, true)).join('');
+  el.innerHTML = `<div class="partner-brand-track">${primary}${duplicate}</div>`;
 }
 
 function setupFilters() {

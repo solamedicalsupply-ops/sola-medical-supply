@@ -4296,6 +4296,72 @@ h3 {
     }
 }
 
+/* Partner logo carousel */
+.partner-brand-grid {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    padding: 8px 0 14px;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent)
+}
+
+.partner-brand-track {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    width: max-content;
+    animation: partnerLogoCarousel 34s linear infinite
+}
+
+.partner-brand-grid:hover .partner-brand-track {
+    animation-play-state: paused
+}
+
+.partner-brand-card {
+    flex: 0 0 318px;
+    min-height: 188px;
+    border-radius: 8px;
+    padding: 20px 26px;
+    box-shadow: 0 14px 42px rgba(87, 31, 56, .055)
+}
+
+.partner-brand-card:hover {
+    transform: translateY(-2px)
+}
+
+.partner-logo {
+    width: min(96%, 285px);
+    max-height: 112px
+}
+
+@keyframes partnerLogoCarousel {
+    from {
+        transform: translateX(0)
+    }
+
+    to {
+        transform: translateX(calc(-50% - 9px))
+    }
+}
+
+@media(max-width:700px) {
+    .partner-brand-card {
+        flex-basis: 250px;
+        min-height: 150px;
+        padding: 18px
+    }
+
+    .partner-logo {
+        width: min(98%, 230px);
+        max-height: 92px
+    }
+
+    .partner-brand-track {
+        animation-duration: 28s
+    }
+}
+
 /* === Telegram Channel CTA === */
 .telegram-channel-section {
     padding: 18px 0 72px;
