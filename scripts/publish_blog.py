@@ -76,7 +76,7 @@ Writing style: practical, clear and commercially useful. The article should feel
 {article_format(topic)} Do not summarise, do not stop early, do not write a short article. Audience: clinics, spas, resellers and distributors. This is procurement education, not medical advice. Never invent certifications, partnerships, prices, stock, approvals or customer results. Do not claim SOLA is an authorised distributor. Mention SOLA only in buyer-support and closing CTA context.
 Avoid unsafe SEO angles such as buying prescription products without prescription, cheap toxin claims, fast fat-loss results, or whitening injection result claims.
 Do not provide dosage, injection technique, treatment protocol, patient selection advice or guaranteed results. For regulated or prescription-sensitive products, tell buyers to confirm local requirements with qualified professionals and local authorities.
-Return JSON only: title, meta_description (max 155 chars), excerpt (35-50 words), read_time, html_body. html_body may use only h2, h3, p, ul, li, strong and em tags.'''
+Return JSON only: title, meta_description (max 155 chars), excerpt (35-50 words), read_time, html_body. html_body may use only h2, h3, p, ul, li, strong and em tags. Do not include image tags, figure tags, links, tables or markdown; SOLA will insert article illustrations automatically.'''
     payload = json.dumps({"model":env("BLOG_MODEL"),"temperature":0.5,"max_tokens":4000,"messages":[{"role":"system","content":"You are a careful B2B editor. Return valid JSON only."},{"role":"user","content":prompt}]}).encode()
     request = urllib.request.Request(require_url("BLOG_API_URL"), data=payload, headers={"Authorization":f"Bearer {env('BLOG_API_KEY')}","Content-Type":"application/json"}, method="POST")
     try:
@@ -142,10 +142,62 @@ def validate(a):
     for phrase in ("key takeaways","what this guide covers","faq"):
         if phrase not in plain: raise RuntimeError(f"Missing required section: {phrase}")
 
-def page(a,slug,category,date,image):
+def normalize_article_image(src):
+    src=(src or "").strip()
+    if not src: return ""
+    if src.startswith("assets/"): return f"../{src}"
+    return src
+
+def article_illustration(src,alt,caption):
+    src=html.escape(normalize_article_image(src),quote=True)
+    alt=html.escape(alt,quote=True)
+    caption=html.escape(caption)
+    return f'''<figure class="article-illustration"><img src="{src}" alt="{alt}" loading="lazy"><figcaption>{caption}</figcaption></figure>'''
+
+def article_visual_grid(items):
+    cards="".join(article_illustration(src,alt,caption) for src,alt,caption in items if src)
+    return f'''<div class="article-visual-grid">{cards}</div>''' if cards else ""
+
+def insert_after_nth_h2(body,n,block):
+    if not block: return body
+    matches=list(re.finditer(r"</h2>",body,re.I))
+    if len(matches)>=n:
+        idx=matches[n-1].end()
+        return body[:idx]+block+body[idx:]
+    return body+block
+
+def support_visuals_for(category):
+    c=(category or "").lower()
+    if "shipping" in c:
+        return [
+            ("../assets/images/shipping.png","International shipping planning","Shipping illustration: prepare destination details, packing expectations and tracking questions before dispatch."),
+            ("../assets/images/tracking-proof-1.png","Tracking and dispatch proof","Dispatch proof illustration: confirm what packing or tracking evidence can be shared for wholesale orders.")
+        ]
+    if "verification" in c or "proof" in c:
+        return [
+            ("../assets/images/tracking-proof-1.png","Batch and tracking proof","Verification illustration: ask for clear batch, expiry and dispatch information before confirming an order."),
+            ("../assets/images/productCatalogue.png","Product catalogue planning","Catalogue illustration: keep product names, variants and quantities organised before requesting a quote.")
+        ]
+    return [
+        ("../assets/images/warehouse-2.png","Wholesale supplier evaluation","Supplier illustration: compare communication, documentation, packing and reorder support before buying."),
+        ("../assets/images/shipping.png","Wholesale shipping planning","Logistics illustration: confirm packing, destination and tracking expectations before shipment.")
+    ]
+
+def inject_inline_illustrations(body,topic,cover):
+    topic=topic or {}
+    title=topic.get("title") or "SOLA buyer guide"
+    keyword=topic.get("keyword") or title
+    primary=normalize_article_image(topic.get("image") or cover)
+    if primary:
+        body=insert_after_nth_h2(body,3,article_illustration(primary,f"{title} visual reference",f"Visual reference for {keyword}: use product names, packaging details and destination needs together when preparing a wholesale quotation."))
+    body=insert_after_nth_h2(body,6,article_visual_grid(support_visuals_for(topic.get("category"))))
+    return body
+
+def page(a,slug,category,date,image,topic=None):
+    body=inject_inline_illustrations(a["html_body"],topic or {},image)
     title,desc=html.escape(a["title"]),html.escape(a["meta_description"],quote=True)
     image=html.escape(image,quote=True)
-    return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{title} | SOLA</title><meta name="description" content="{desc}"><link rel="canonical" href="https://www.solamedicalsupply.com/blog/{slug}.html"><link rel="icon" href="../assets/icons/logo.png"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets/css/style.css"></head><body class="article-page"><nav class="nav"><div class="wrap nav-inner"><a class="brand" href="../index.html"><img src="../assets/icons/logoNgang.png" alt="SOLA Medical Supply"></a><div class="article-nav"><a href="index.html">← Journal</a><a class="btn primary" href="../products.html">Build a quote list</a></div></div></nav><main><header class="article-hero"><div class="wrap article-wrap"><span>{html.escape(category.upper())} · {html.escape(a['read_time'])}</span><h1>{title}</h1><p>{desc}</p><div class="article-meta">SOLA Knowledge Team · {date}</div></div></header><div class="article-cover wrap"><img src="{image}" alt="{title}" loading="lazy"></div><article class="article-body article-wrap"><p class="article-intro">{html.escape(a['excerpt'])}</p>{a['html_body']}<div class="article-end"><h2>Planning a wholesale request?</h2><p>Send product names, quantities and destination for a tailored discussion.</p><a class="btn primary" href="https://wa.me/84981778670">Contact SOLA on WhatsApp →</a></div><p class="disclaimer">General educational content for professional buyers. Not medical, legal, regulatory or import advice.</p></article></main><footer class="footer new-footer"><div class="wrap"><div class="footer-top"><div><img src="../assets/icons/logoNgang.png" alt="SOLA"><p>Professional aesthetic wholesale supply for clinics, spas, resellers and distributors worldwide.</p></div><div><b>Explore</b><a href="../products.html">Products</a><a href="../brands.html">Brands</a><a href="index.html">Journal</a></div><div><b>Company</b><a href="../about.html">About SOLA</a><a href="../faq.html">FAQ</a><a href="../contact.html">Contact</a></div><div><b>Connect</b><a href="https://wa.me/84981778670">WhatsApp</a><a href="mailto:sales@solamedicalsupply.com">Email sales</a></div></div><div class="footer-bottom"><span>© 2026 SOLA Medical Supply</span><span>Educational content for professional buyers</span></div></div></footer><script src="../assets/js/main.js"></script></body></html>'''
+    return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{title} | SOLA</title><meta name="description" content="{desc}"><link rel="canonical" href="https://www.solamedicalsupply.com/blog/{slug}.html"><link rel="icon" href="../assets/icons/logo.png"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets/css/style.css"></head><body class="article-page"><nav class="nav"><div class="wrap nav-inner"><a class="brand" href="../index.html"><img src="../assets/icons/logoNgang.png" alt="SOLA Medical Supply"></a><div class="article-nav"><a href="index.html">← Journal</a><a class="btn primary" href="../products.html">Build a quote list</a></div></div></nav><main><header class="article-hero"><div class="wrap article-wrap"><span>{html.escape(category.upper())} · {html.escape(a['read_time'])}</span><h1>{title}</h1><p>{desc}</p><div class="article-meta">SOLA Knowledge Team · {date}</div></div></header><div class="article-cover wrap"><img src="{image}" alt="{title}" loading="lazy"></div><article class="article-body article-wrap"><p class="article-intro">{html.escape(a['excerpt'])}</p>{body}<div class="article-end"><h2>Planning a wholesale request?</h2><p>Send product names, quantities and destination for a tailored discussion.</p><a class="btn primary" href="https://wa.me/84981778670">Contact SOLA on WhatsApp →</a></div><p class="disclaimer">General educational content for professional buyers. Not medical, legal, regulatory or import advice.</p></article></main><footer class="footer new-footer"><div class="wrap"><div class="footer-top"><div><img src="../assets/icons/logoNgang.png" alt="SOLA"><p>Professional aesthetic wholesale supply for clinics, spas, resellers and distributors worldwide.</p></div><div><b>Explore</b><a href="../products.html">Products</a><a href="../brands.html">Brands</a><a href="index.html">Journal</a></div><div><b>Company</b><a href="../about.html">About SOLA</a><a href="../faq.html">FAQ</a><a href="../contact.html">Contact</a></div><div><b>Connect</b><a href="https://wa.me/84981778670">WhatsApp</a><a href="mailto:sales@solamedicalsupply.com">Email sales</a></div></div><div class="footer-bottom"><span>© 2026 SOLA Medical Supply</span><span>Educational content for professional buyers</span></div></div></footer><script src="../assets/js/main.js"></script></body></html>'''
 
 def add_card(a,slug,category,image):
     source=INDEX.read_text(encoding="utf-8")
@@ -163,7 +215,7 @@ def main():
     article=generate(topic); validate(article); slug=slugify(article["title"]); target=BLOG/f"{slug}.html"
     if target.exists(): raise RuntimeError(f"Refusing to overwrite {target.name}")
     cover=topic.get("image") or generate_cover(topic,article,slug)
-    now=datetime.now(timezone.utc); target.write_text(page(article,slug,topic["category"],now.strftime("%B %d, %Y"),cover),encoding="utf-8"); add_card(article,slug,topic["category"],cover)
+    now=datetime.now(timezone.utc); target.write_text(page(article,slug,topic["category"],now.strftime("%B %d, %Y"),cover,topic),encoding="utf-8"); add_card(article,slug,topic["category"],cover)
     topic.update({"status":"published","slug":slug,"published_at":now.isoformat(),"cover":cover}); data["published"].append({"title":article["title"],"slug":slug,"published_at":now.isoformat(),"cover":cover})
     QUEUE.write_text(json.dumps(data,ensure_ascii=False,indent=2)+"\n",encoding="utf-8"); print(f"Published {target.name}")
 
