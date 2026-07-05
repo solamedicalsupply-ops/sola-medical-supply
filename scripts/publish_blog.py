@@ -109,6 +109,7 @@ def generate_ai_image(topic, article, slug, role, suffix="", fallback=""):
     image_url = optional_url("BLOG_IMAGE_API_URL", "https://api.openai.com/v1/images/generations")
     if not image_url:
         return fallback
+    image_key = optional_env("BLOG_IMAGE_API_KEY") or env("BLOG_API_KEY")
     payload = json.dumps({
         "model": optional_env("BLOG_IMAGE_MODEL", "gpt-image-1"),
         "prompt": image_role_prompt(topic, article, role),
@@ -118,7 +119,7 @@ def generate_ai_image(topic, article, slug, role, suffix="", fallback=""):
     request = urllib.request.Request(
         image_url,
         data=payload,
-        headers={"Authorization":f"Bearer {env('BLOG_API_KEY')}","Content-Type":"application/json"},
+        headers={"Authorization":f"Bearer {image_key}","Content-Type":"application/json"},
         method="POST"
     )
     try:
