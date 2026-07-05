@@ -41,25 +41,41 @@ def slugify(value):
     return re.sub(r"[^a-z0-9]+", "-", value.lower()).strip("-")[:78]
 
 def article_format(topic):
-    if topic.get("format") != "buyer_guide":
-        return "Write 6 to 8 H2 sections, each with 2-3 full paragraphs of 3-5 sentences, plus one checklist (ul/li)."
-    return '''Use this exact article structure:
-Intro: 2-3 short lines that directly address the buyer's problem.
-H2: What is it?
-H2: Who usually orders it?
-H2: What buyers should check
-H2: Shipping / packing / storage notes
-H2: MOQ / quotation / how to order
+    topic_type = "category buyer guide" if topic.get("format") == "buyer_guide" else "product sourcing guide"
+    return f'''Use a polished ecommerce education style inspired by premium product blogs: direct opening, useful takeaways, problem-led sections, scannable bullets, and confident buyer guidance. Do not copy any competitor wording.
+Article type: {topic_type}.
+Use this exact article structure:
+Intro: 2 short paragraphs that immediately explain the buyer problem and why the topic matters.
+H2: Key Takeaways
+Include 5 concise bullet points. Each bullet should give a practical buying insight, not generic filler.
+H2: What this guide covers
+Include a short, non-clickable table-of-contents style bullet list with 5-7 items.
+H2: What buyers should understand first
+Explain the product/category in plain English for clinics, spas, resellers and distributors. Avoid treatment instructions.
+H2: Which buyers is this most relevant for?
+Describe buyer scenarios, order planning needs and how different business types may evaluate the topic.
+H2: How to compare options before ordering
+Give practical comparison criteria such as product type, brand, packaging, batch/expiry visibility, supplier communication and destination requirements.
+H2: Buyer checklist before requesting a quote
+Include a strong checklist using ul/li. Make it specific enough for a real wholesale buyer.
+H2: Shipping, packing and documentation questions
+Cover realistic logistics questions without inventing guaranteed delivery times, approvals or customs outcomes.
+H2: MOQ, quotation and reorder planning
+Explain how to prepare quantities, variants and destination details. Mention that SOLA can help confirm current availability and wholesale quotation.
 H2: FAQ
-Under FAQ, include 4-6 common buyer questions and concise answers using h3 headings.
-CTA wording near the end must include: Contact SOLA for wholesale quotation via WhatsApp.'''
+Under FAQ, include 5 common buyer questions using h3 headings and concise answers.
+Near the end, include this exact sentence once: Contact SOLA for wholesale quotation via WhatsApp.'''
 
 def generate(topic):
     prompt = f'''Write an original English article for SOLA Medical Supply's professional buyer journal.
 Title brief: {topic['title']}
 Keyword: {topic['keyword']}; Category: {topic['category']}.
-CRITICAL LENGTH REQUIREMENT: html_body must contain AT LEAST 950 words of body text (excluding HTML tags). {article_format(topic)} Do not summarise, do not stop early, do not write a short article. Aim for 1000-1200 words. Audience: clinics, spas, resellers and distributors. This is procurement education, not medical advice. Never invent certifications, partnerships, prices, stock, approvals or customer results. Do not claim SOLA is an authorised distributor. Mention SOLA only in the closing CTA.
+CRITICAL SEO AND LENGTH REQUIREMENT: html_body must contain AT LEAST 950 words of body text (excluding HTML tags). Aim for 1000-1300 words.
+SEO requirements: use the exact keyword naturally in the intro, one H2 or H3, and 2-4 additional places. Include close variants and buyer-intent phrases such as wholesale supplier, sourcing guide, professional buyers, documentation, packing, shipping, quotation, MOQ and reorder planning where relevant.
+Writing style: practical, clear and commercially useful. The article should feel like a premium ecommerce education guide: direct, buyer-focused, scannable and confident. Avoid academic filler and avoid vague phrases like "in today's market" or "unlock the secrets". Do not mention competitor websites or describe the style source.
+{article_format(topic)} Do not summarise, do not stop early, do not write a short article. Audience: clinics, spas, resellers and distributors. This is procurement education, not medical advice. Never invent certifications, partnerships, prices, stock, approvals or customer results. Do not claim SOLA is an authorised distributor. Mention SOLA only in buyer-support and closing CTA context.
 Avoid unsafe SEO angles such as buying prescription products without prescription, cheap toxin claims, fast fat-loss results, or whitening injection result claims.
+Do not provide dosage, injection technique, treatment protocol, patient selection advice or guaranteed results. For regulated or prescription-sensitive products, tell buyers to confirm local requirements with qualified professionals and local authorities.
 Return JSON only: title, meta_description (max 155 chars), excerpt (35-50 words), read_time, html_body. html_body may use only h2, h3, p, ul, li, strong and em tags.'''
     payload = json.dumps({"model":env("BLOG_MODEL"),"temperature":0.5,"max_tokens":4000,"messages":[{"role":"system","content":"You are a careful B2B editor. Return valid JSON only."},{"role":"user","content":prompt}]}).encode()
     request = urllib.request.Request(require_url("BLOG_API_URL"), data=payload, headers={"Authorization":f"Bearer {env('BLOG_API_KEY')}","Content-Type":"application/json"}, method="POST")
@@ -114,8 +130,17 @@ def validate(a):
     if len(a["meta_description"])>160: raise RuntimeError("Meta description exceeds 160 characters")
     bad=re.search(r"<(script|style|iframe|img|a|form)\b",a["html_body"],re.I)
     if bad: raise RuntimeError(f"Forbidden generated tag: {bad.group(1)}")
+    allowed={"h2","h3","p","ul","li","strong","em"}
+    tags={t.lower() for t in re.findall(r"</?\s*([a-z0-9]+)\b",a["html_body"],re.I)}
+    extra=tags-allowed
+    if extra: raise RuntimeError(f"Unsupported generated tag(s): {', '.join(sorted(extra))}")
     words=len(re.sub(r"<[^>]+>"," ",a["html_body"]).split())
-    if words<600: raise RuntimeError(f"Article too short: {words} words")
+    if words<850: raise RuntimeError(f"Article too short: {words} words")
+    h2_count=len(re.findall(r"<h2\b",a["html_body"],re.I))
+    if h2_count<7: raise RuntimeError(f"Article structure too thin: {h2_count} H2 sections")
+    plain=re.sub(r"<[^>]+>"," ",a["html_body"]).lower()
+    for phrase in ("key takeaways","what this guide covers","faq"):
+        if phrase not in plain: raise RuntimeError(f"Missing required section: {phrase}")
 
 def page(a,slug,category,date,image):
     title,desc=html.escape(a["title"]),html.escape(a["meta_description"],quote=True)

@@ -2777,6 +2777,35 @@ h3 {
     color: #4f544f
 }
 
+.article-body h3 {
+    margin: 30px 0 10px;
+    font-size: 22px;
+    line-height: 1.25;
+    letter-spacing: -.035em
+}
+
+.article-body ul {
+    margin: 24px 0 34px;
+    padding: 22px 24px 22px 30px;
+    background:
+        radial-gradient(circle at 12% 10%, rgba(232, 79, 142, .10), transparent 32%),
+        #fff8fb;
+    border: 1px solid #f3c9da;
+    border-radius: 20px;
+    box-shadow: 0 16px 42px rgba(123, 39, 77, .06)
+}
+
+.article-body li {
+    margin: 9px 0;
+    color: #4f544f;
+    padding-left: 4px
+}
+
+.article-body li::marker {
+    color: var(--pink);
+    font-weight: 900
+}
+
 .article-callout {
     margin: 45px 0;
     padding: 32px;
