@@ -6,12 +6,12 @@ const wa = (text = 'Hello SOLA Medical Supply, I would like to request a wholesa
 const slugify = s => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const escapeHTML = s => String(s).replace(/[&<>"']/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]));
 const homeCategories = [
-  { name: 'Dermal Fillers', label: 'Dermal fillers', note: 'Korean and international filler options', icon: 'DF' },
-  { name: 'Skin Boosters / PN', label: 'Skin boosters / PN', note: 'PN, HA and hydration-focused products', icon: 'SB' },
-  { name: 'Toxin', label: 'Toxins', note: 'Popular professional toxin requests', icon: 'TX' },
-  { name: 'Exosome / Meso', label: 'Exosome / Meso', note: 'Meso and regenerative buyer requests', icon: 'EX' },
-  { name: 'Lipolysis / Body', label: 'Lipolysis / Body', note: 'Body contouring and lipolysis picks', icon: 'LB' },
-  { name: 'Injection Supplies', label: 'Injection supplies', note: 'Clinic essentials for order planning', icon: 'IS' }
+  { name: 'Dermal Fillers', label: 'Dermal fillers', note: 'Korean and international filler options', icon: 'DF', bg: 'cat-bg-fillers' },
+  { name: 'Skin Boosters / PN', label: 'Skin boosters / PN', note: 'PN, HA and hydration-focused products', icon: 'SB', bg: 'cat-bg-skin' },
+  { name: 'Toxin', label: 'Toxins', note: 'Popular professional toxin requests', icon: 'TX', bg: 'cat-bg-toxins' },
+  { name: 'Exosome / Meso', label: 'Exosome / Meso', note: 'Meso and regenerative buyer requests', icon: 'EX', bg: 'cat-bg-exosome' },
+  { name: 'Lipolysis / Body', label: 'Lipolysis / Body', note: 'Body contouring and lipolysis picks', icon: 'LB', bg: 'cat-bg-body' },
+  { name: 'Injection Supplies', label: 'Injection supplies', note: 'Clinic essentials for order planning', icon: 'IS', bg: 'cat-bg-supplies' }
 ];
 const fastProductNames = [
   'Ultrafill', 'Sardenya', 'Rejuran HB', 'Profhilo', 'Asce', 'Botulax 100 Unit', 'Lemon Bottle', 'Mounjaro 2.5mg'
@@ -140,7 +140,7 @@ function renderHomeCategories() {
   el.innerHTML = homeCategories.map((cat, index) => {
     const count = allProducts.filter(p => p.category === cat.name).length;
     const href = `products.html?category=${encodeURIComponent(cat.name)}`;
-    return `<a class="category-hub-card" href="${href}">
+    return `<a class="category-hub-card ${cat.bg}" href="${href}">
       <span>${cat.icon}</span>
       <small>0${index + 1}</small>
       <h3>${cat.label}</h3>

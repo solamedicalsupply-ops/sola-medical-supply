@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="560" viewBox="0 0 900 560" fill="none">
+  <defs>
+    <linearGradient id="a" x1="260" y1="80" x2="720" y2="470" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E8F8FF"/>
+      <stop offset=".5" stop-color="#FFC6DE"/>
+      <stop offset="1" stop-color="#E85B92"/>
+    </linearGradient>
+    <radialGradient id="g" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(610 250) scale(340)">
+      <stop stop-color="#FDE7F1"/>
+      <stop offset="1" stop-color="#FDE7F1" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="900" height="560" fill="white"/>
+  <circle cx="610" cy="250" r="330" fill="url(#g)"/>
+  <g opacity=".5">
+    <path d="M596 134c0 44-36 80-80 80s-80-36-80-80c0-51 60-106 80-145 20 39 80 94 80 145z" fill="url(#a)" opacity=".65"/>
+    <path d="M734 274c0 54-44 98-98 98s-98-44-98-98c0-63 74-132 98-181 24 49 98 118 98 181z" fill="#FFE0EF"/>
+    <path d="M700 278c0 36-29 65-65 65s-65-29-65-65c0-43 46-87 65-126 19 39 65 83 65 126z" fill="#F49EC3" opacity=".42"/>
+    <path d="M460 384c0 34-28 62-62 62s-62-28-62-62c0-40 46-82 62-116 16 34 62 76 62 116z" fill="#DDF5FF" opacity=".9"/>
+  </g>
+  <g stroke="#B52F69" stroke-width="3" opacity=".2">
+    <circle cx="270" cy="218" r="54"/>
+    <circle cx="270" cy="218" r="88"/>
+    <circle cx="270" cy="218" r="126"/>
+    <path d="M178 402c120-72 248-90 410-42"/>
+    <path d="M194 436c118-62 255-70 400-25"/>
+  </g>
+  <g opacity=".28" fill="#E85B92">
+    <circle cx="736" cy="140" r="12"/>
+    <circle cx="775" cy="178" r="8"/>
+    <circle cx="744" cy="430" r="18"/>
+    <circle cx="374" cy="160" r="10"/>
+  </g>
+</svg>
