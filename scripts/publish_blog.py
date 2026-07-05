@@ -89,19 +89,29 @@ Return JSON only: title, meta_description (max 155 chars), excerpt (35-50 words)
     try: return json.loads(text)
     except json.JSONDecodeError as exc: raise RuntimeError(f"Model returned invalid JSON: {exc}") from exc
 
-def generate_cover(topic, article, slug):
-    image_url = optional_url("BLOG_IMAGE_API_URL", "https://api.openai.com/v1/images/generations")
-    if not image_url:
-        return topic.get("image") or "../assets/images/productCatalogue.png"
-    prompt = f'''Create a premium editorial cover image for a SOLA Medical Supply journal article.
-Topic: {article['title']}
+def image_role_prompt(topic, article, role):
+    base = f'''SOLA Medical Supply journal article visual.
+Article title: {article['title']}
 Keyword: {topic['keyword']}
 Category: {topic['category']}
-Style: clean professional B2B medical procurement editorial, bright clinical lighting, elegant product-sourcing desk scene, subtle wholesale logistics cues, no people, no readable text, no logos, no brand labels, no fake certificates, no claims, high-end aesthetic medical supply mood.
-Composition: square 1:1 cover image, centered subject, soft neutral background, suitable for a website article card and article cover.'''
+Audience: professional aesthetic clinics, medical spas, resellers and distributors.
+Create an original AI-generated image that reflects the article's procurement theme, not a generic stock image.
+Style: premium B2B medical procurement editorial, clean clinical lighting, soft pink-white SOLA mood, elegant, trustworthy, no people, no readable text, no logos, no brand labels, no fake certificates, no price tags, no medical claims, no before/after results.'''
+    roles = {
+        "cover": "Role: article cover. Show the overall idea of the article as a polished editorial hero image with product sourcing, catalogue planning, and subtle wholesale logistics cues. Square 1:1 composition, centered subject, suitable for a blog card and article cover.",
+        "concept": "Role: main concept illustration. Visualize the central buyer problem of the article: comparing product categories, choosing professional sourcing options, and preparing a smarter wholesale request. Make it distinct from the cover image.",
+        "checklist": "Role: buyer checklist illustration. Show a premium procurement desk scene with organized product cards, batch/expiry check symbols, quantity planning, and quotation preparation. No readable words or numbers.",
+        "logistics": "Role: logistics and documentation illustration. Show careful packing, shipment planning, tracking proof, document folders, and international wholesale dispatch cues. No readable words, no country flags, no courier brand."
+    }
+    return f"{base}\n{roles.get(role, roles['concept'])}"
+
+def generate_ai_image(topic, article, slug, role, suffix="", fallback=""):
+    image_url = optional_url("BLOG_IMAGE_API_URL", "https://api.openai.com/v1/images/generations")
+    if not image_url:
+        return fallback
     payload = json.dumps({
         "model": optional_env("BLOG_IMAGE_MODEL", "gpt-image-1"),
-        "prompt": prompt,
+        "prompt": image_role_prompt(topic, article, role),
         "size": optional_env("BLOG_IMAGE_SIZE", "1024x1024"),
         "n": 1
     }).encode()
@@ -117,12 +127,16 @@ Composition: square 1:1 cover image, centered subject, soft neutral background, 
         image_data=result["data"][0].get("b64_json")
         if not image_data: raise RuntimeError("Image API did not return b64_json")
         BLOG_IMAGES.mkdir(parents=True, exist_ok=True)
-        target=BLOG_IMAGES/f"{slug}.png"
+        target=BLOG_IMAGES/f"{slug}{('-' + suffix) if suffix else ''}.png"
         target.write_bytes(base64.b64decode(image_data))
-        return f"../assets/images/blog/{slug}.png"
+        return f"../assets/images/blog/{target.name}"
     except Exception as exc:
-        print(f"WARNING: AI cover image generation failed; using queue image. {exc}", file=sys.stderr)
-        return topic.get("image") or "../assets/images/productCatalogue.png"
+        print(f"WARNING: AI {role} image generation failed; using fallback image. {exc}", file=sys.stderr)
+        return fallback
+
+def generate_cover(topic, article, slug):
+    fallback=topic.get("image") or "../assets/images/productCatalogue.png"
+    return generate_ai_image(topic, article, slug, "cover", "", fallback)
 
 def validate(a):
     for key in ("title","meta_description","excerpt","read_time","html_body"):
@@ -166,35 +180,60 @@ def insert_after_nth_h2(body,n,block):
         return body[:idx]+block+body[idx:]
     return body+block
 
-def support_visuals_for(category):
-    c=(category or "").lower()
-    if "shipping" in c:
-        return [
-            ("../assets/images/shipping.png","International shipping planning","Shipping illustration: prepare destination details, packing expectations and tracking questions before dispatch."),
-            ("../assets/images/tracking-proof-1.png","Tracking and dispatch proof","Dispatch proof illustration: confirm what packing or tracking evidence can be shared for wholesale orders.")
-        ]
-    if "verification" in c or "proof" in c:
-        return [
-            ("../assets/images/tracking-proof-1.png","Batch and tracking proof","Verification illustration: ask for clear batch, expiry and dispatch information before confirming an order."),
-            ("../assets/images/productCatalogue.png","Product catalogue planning","Catalogue illustration: keep product names, variants and quantities organised before requesting a quote.")
-        ]
-    return [
-        ("../assets/images/warehouse-2.png","Wholesale supplier evaluation","Supplier illustration: compare communication, documentation, packing and reorder support before buying."),
-        ("../assets/images/shipping.png","Wholesale shipping planning","Logistics illustration: confirm packing, destination and tracking expectations before shipment.")
+def unique_image_pool(topic,cover):
+    candidates=[
+        topic.get("image"),
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png",
+        "../assets/images/tracking-proof-1.png"
     ]
+    used={normalize_article_image(cover)}
+    pool=[]
+    for item in candidates:
+        item=normalize_article_image(item)
+        if item and item not in used:
+            used.add(item); pool.append(item)
+    return pool
 
-def inject_inline_illustrations(body,topic,cover):
+def fallback_from_pool(pool,used):
+    while pool:
+        item=pool.pop(0)
+        key=normalize_article_image(item)
+        if key not in used:
+            used.add(key); return item
+    return ""
+
+def generate_inline_images(topic,article,slug,cover):
+    pool=unique_image_pool(topic,cover)
+    used={normalize_article_image(cover)}
+    roles=[
+        ("concept","concept",f"{article['title']} concept visual",f"Article concept image for {topic['keyword']}: a visual summary of the buyer problem and sourcing decision."),
+        ("checklist","buyer-checklist",f"{article['title']} buyer checklist",f"Buyer checklist image for {topic['keyword']}: product details, quantities and quotation preparation in one professional workflow."),
+        ("logistics","logistics-documentation",f"{article['title']} logistics and documentation",f"Logistics image for {topic['keyword']}: packing, documentation and tracking questions before international dispatch.")
+    ]
+    images=[]
+    for role,suffix,alt,caption in roles:
+        fallback=fallback_from_pool(pool,used)
+        src=generate_ai_image(topic,article,slug,role,suffix,fallback)
+        key=normalize_article_image(src)
+        if src and key not in {normalize_article_image(x[0]) for x in images} and key != normalize_article_image(cover):
+            images.append((src,alt,caption))
+        elif fallback:
+            images.append((fallback,alt,caption))
+    return images
+
+def inject_inline_illustrations(body,topic,cover,illustrations=None):
     topic=topic or {}
-    title=topic.get("title") or "SOLA buyer guide"
-    keyword=topic.get("keyword") or title
-    primary=normalize_article_image(topic.get("image") or cover)
-    if primary:
-        body=insert_after_nth_h2(body,3,article_illustration(primary,f"{title} visual reference",f"Visual reference for {keyword}: use product names, packaging details and destination needs together when preparing a wholesale quotation."))
-    body=insert_after_nth_h2(body,6,article_visual_grid(support_visuals_for(topic.get("category"))))
+    illustrations=illustrations or []
+    if illustrations:
+        body=insert_after_nth_h2(body,3,article_illustration(*illustrations[0]))
+    if len(illustrations)>1:
+        body=insert_after_nth_h2(body,6,article_visual_grid(illustrations[1:3]))
     return body
 
-def page(a,slug,category,date,image,topic=None):
-    body=inject_inline_illustrations(a["html_body"],topic or {},image)
+def page(a,slug,category,date,image,topic=None,illustrations=None):
+    body=inject_inline_illustrations(a["html_body"],topic or {},image,illustrations)
     title,desc=html.escape(a["title"]),html.escape(a["meta_description"],quote=True)
     image=html.escape(image,quote=True)
     return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{title} | SOLA</title><meta name="description" content="{desc}"><link rel="canonical" href="https://www.solamedicalsupply.com/blog/{slug}.html"><link rel="icon" href="../assets/icons/logo.png"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets/css/style.css"></head><body class="article-page"><nav class="nav"><div class="wrap nav-inner"><a class="brand" href="../index.html"><img src="../assets/icons/logoNgang.png" alt="SOLA Medical Supply"></a><div class="article-nav"><a href="index.html">← Journal</a><a class="btn primary" href="../products.html">Build a quote list</a></div></div></nav><main><header class="article-hero"><div class="wrap article-wrap"><span>{html.escape(category.upper())} · {html.escape(a['read_time'])}</span><h1>{title}</h1><p>{desc}</p><div class="article-meta">SOLA Knowledge Team · {date}</div></div></header><div class="article-cover wrap"><img src="{image}" alt="{title}" loading="lazy"></div><article class="article-body article-wrap"><p class="article-intro">{html.escape(a['excerpt'])}</p>{body}<div class="article-end"><h2>Planning a wholesale request?</h2><p>Send product names, quantities and destination for a tailored discussion.</p><a class="btn primary" href="https://wa.me/84981778670">Contact SOLA on WhatsApp →</a></div><p class="disclaimer">General educational content for professional buyers. Not medical, legal, regulatory or import advice.</p></article></main><footer class="footer new-footer"><div class="wrap"><div class="footer-top"><div><img src="../assets/icons/logoNgang.png" alt="SOLA"><p>Professional aesthetic wholesale supply for clinics, spas, resellers and distributors worldwide.</p></div><div><b>Explore</b><a href="../products.html">Products</a><a href="../brands.html">Brands</a><a href="index.html">Journal</a></div><div><b>Company</b><a href="../about.html">About SOLA</a><a href="../faq.html">FAQ</a><a href="../contact.html">Contact</a></div><div><b>Connect</b><a href="https://wa.me/84981778670">WhatsApp</a><a href="mailto:sales@solamedicalsupply.com">Email sales</a></div></div><div class="footer-bottom"><span>© 2026 SOLA Medical Supply</span><span>Educational content for professional buyers</span></div></div></footer><script src="../assets/js/main.js"></script></body></html>'''
@@ -214,9 +253,11 @@ def main():
     if not topic: print("No pending topics."); return
     article=generate(topic); validate(article); slug=slugify(article["title"]); target=BLOG/f"{slug}.html"
     if target.exists(): raise RuntimeError(f"Refusing to overwrite {target.name}")
-    cover=topic.get("image") or generate_cover(topic,article,slug)
-    now=datetime.now(timezone.utc); target.write_text(page(article,slug,topic["category"],now.strftime("%B %d, %Y"),cover,topic),encoding="utf-8"); add_card(article,slug,topic["category"],cover)
-    topic.update({"status":"published","slug":slug,"published_at":now.isoformat(),"cover":cover}); data["published"].append({"title":article["title"],"slug":slug,"published_at":now.isoformat(),"cover":cover})
+    cover=generate_cover(topic,article,slug)
+    illustrations=generate_inline_images(topic,article,slug,cover)
+    now=datetime.now(timezone.utc); target.write_text(page(article,slug,topic["category"],now.strftime("%B %d, %Y"),cover,topic,illustrations),encoding="utf-8"); add_card(article,slug,topic["category"],cover)
+    illustration_paths=[src for src,_,_ in illustrations]
+    topic.update({"status":"published","slug":slug,"published_at":now.isoformat(),"cover":cover,"illustrations":illustration_paths}); data["published"].append({"title":article["title"],"slug":slug,"published_at":now.isoformat(),"cover":cover,"illustrations":illustration_paths})
     QUEUE.write_text(json.dumps(data,ensure_ascii=False,indent=2)+"\n",encoding="utf-8"); print(f"Published {target.name}")
 
 if __name__=="__main__":
