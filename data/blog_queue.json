@@ -159,7 +159,15 @@
       "title": "A Procurement Guide to Huons Water Numb for Spas, Clinics and Resellers",
       "category": "Numbing & Supplies",
       "image": "../assets/images/products/huonsWaterNumb.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "a-procurement-guide-to-huons-water-numb-for-spas-clinics-and-resellers",
+      "published_at": "2026-07-08T10:39:23.093902+00:00",
+      "cover": "../assets/images/blog/a-procurement-guide-to-huons-water-numb-for-spas-clinics-and-resellers.png",
+      "illustrations": [
+        "../assets/images/blog/a-procurement-guide-to-huons-water-numb-for-spas-clinics-and-resellers-concept.png",
+        "../assets/images/blog/a-procurement-guide-to-huons-water-numb-for-spas-clinics-and-resellers-buyer-checklist.png",
+        "../assets/images/blog/a-procurement-guide-to-huons-water-numb-for-spas-clinics-and-resellers-logistics-documentation.png"
+      ]
     },
     {
       "keyword": "dermal filler wholesale buyers guide",
@@ -1636,6 +1644,17 @@
       "slug": "why-expiry-date-and-batch-number-matter",
       "published_at": "2026-07-05T10:52:22.849837+00:00",
       "cover": "../assets/images/blog/why-expiry-date-and-batch-number-matter.png"
+    },
+    {
+      "title": "A Procurement Guide to Huons Water Numb for Spas, Clinics and Resellers",
+      "slug": "a-procurement-guide-to-huons-water-numb-for-spas-clinics-and-resellers",
+      "published_at": "2026-07-08T10:39:23.093902+00:00",
+      "cover": "../assets/images/blog/a-procurement-guide-to-huons-water-numb-for-spas-clinics-and-resellers.png",
+      "illustrations": [
+        "../assets/images/blog/a-procurement-guide-to-huons-water-numb-for-spas-clinics-and-resellers-concept.png",
+        "../assets/images/blog/a-procurement-guide-to-huons-water-numb-for-spas-clinics-and-resellers-buyer-checklist.png",
+        "../assets/images/blog/a-procurement-guide-to-huons-water-numb-for-spas-clinics-and-resellers-logistics-documentation.png"
+      ]
     }
   ]
 }
