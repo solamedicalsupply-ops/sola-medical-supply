@@ -173,8 +173,16 @@
       "keyword": "dermal filler wholesale buyers guide",
       "title": "Dermal Filler Wholesale: What Buyers Should Know",
       "category": "Dermal Fillers",
-      "status": "pending",
-      "format": "buyer_guide"
+      "status": "published",
+      "format": "buyer_guide",
+      "slug": "dermal-filler-wholesale-what-buyers-should-know",
+      "published_at": "2026-07-10T12:20:20.426372+00:00",
+      "cover": "../assets/images/blog/dermal-filler-wholesale-what-buyers-should-know.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/blog/dermal-filler-wholesale-what-buyers-should-know-buyer-checklist.png",
+        "../assets/images/blog/dermal-filler-wholesale-what-buyers-should-know-logistics-documentation.png"
+      ]
     },
     {
       "keyword": "j-cain numbing cream 10.56% wholesale",
@@ -1654,6 +1662,17 @@
         "../assets/images/blog/a-procurement-guide-to-huons-water-numb-for-spas-clinics-and-resellers-concept.png",
         "../assets/images/blog/a-procurement-guide-to-huons-water-numb-for-spas-clinics-and-resellers-buyer-checklist.png",
         "../assets/images/blog/a-procurement-guide-to-huons-water-numb-for-spas-clinics-and-resellers-logistics-documentation.png"
+      ]
+    },
+    {
+      "title": "Dermal Filler Wholesale: What Buyers Should Know",
+      "slug": "dermal-filler-wholesale-what-buyers-should-know",
+      "published_at": "2026-07-10T12:20:20.426372+00:00",
+      "cover": "../assets/images/blog/dermal-filler-wholesale-what-buyers-should-know.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/blog/dermal-filler-wholesale-what-buyers-should-know-buyer-checklist.png",
+        "../assets/images/blog/dermal-filler-wholesale-what-buyers-should-know-logistics-documentation.png"
       ]
     }
   ]
