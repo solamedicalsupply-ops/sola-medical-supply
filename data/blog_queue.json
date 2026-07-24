@@ -203,8 +203,16 @@
       "keyword": "SOLA packs products before international shipping",
       "title": "How SOLA Packs Products Before International Shipping",
       "category": "Shipping",
-      "status": "pending",
-      "format": "buyer_guide"
+      "status": "published",
+      "format": "buyer_guide",
+      "slug": "how-sola-packs-products-before-international-shipping",
+      "published_at": "2026-07-24T05:38:57.848561+00:00",
+      "cover": "../assets/images/blog/how-sola-packs-products-before-international-shipping.png",
+      "illustrations": [
+        "../assets/images/blog/how-sola-packs-products-before-international-shipping-concept.png",
+        "../assets/images/blog/how-sola-packs-products-before-international-shipping-buyer-checklist.png",
+        "../assets/images/blog/how-sola-packs-products-before-international-shipping-logistics-documentation.png"
+      ]
     },
     {
       "keyword": "buy triamcinolo wholesale",
@@ -1692,6 +1700,17 @@
         "../assets/images/blog/sourcing-j-cain-numbing-cream-10-56-wholesale-a-buyer-s-guide-for-clinics-and--concept.png",
         "../assets/images/blog/sourcing-j-cain-numbing-cream-10-56-wholesale-a-buyer-s-guide-for-clinics-and--buyer-checklist.png",
         "../assets/images/blog/sourcing-j-cain-numbing-cream-10-56-wholesale-a-buyer-s-guide-for-clinics-and--logistics-documentation.png"
+      ]
+    },
+    {
+      "title": "How SOLA Packs Products Before International Shipping",
+      "slug": "how-sola-packs-products-before-international-shipping",
+      "published_at": "2026-07-24T05:38:57.848561+00:00",
+      "cover": "../assets/images/blog/how-sola-packs-products-before-international-shipping.png",
+      "illustrations": [
+        "../assets/images/blog/how-sola-packs-products-before-international-shipping-concept.png",
+        "../assets/images/blog/how-sola-packs-products-before-international-shipping-buyer-checklist.png",
+        "../assets/images/blog/how-sola-packs-products-before-international-shipping-logistics-documentation.png"
       ]
     }
   ]
