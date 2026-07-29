@@ -1,6 +1,113 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/a-procurement-guide-to-olidia-for-spas-clinics-and-resellers",
+      "destination": "/blog/a-procurement-guide-to-olidia-for-spas-clinics-and-resellers",
+      "permanent": true
+    },
+    {
+      "source": "/aesthetic-product-shipping-to-malaysia-full-guide",
+      "destination": "/blog/aesthetic-product-shipping-to-malaysia-full-guide",
+      "permanent": true
+    },
+    {
+      "source": "/asce-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide",
+      "destination": "/blog/asce-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide",
+      "permanent": true
+    },
+    {
+      "source": "/building-a-wholesale-product-list",
+      "destination": "/blog/building-a-wholesale-product-list",
+      "permanent": true
+    },
+    {
+      "source": "/buying-allergan-50u-wholesale-documentation-handling-and-shipping-essentials",
+      "destination": "/blog/buying-allergan-50u-wholesale-documentation-handling-and-shipping-essentials",
+      "permanent": true
+    },
+    {
+      "source": "/buying-liporase-wholesale-documentation-handling-and-shipping-essentials",
+      "destination": "/blog/buying-liporase-wholesale-documentation-handling-and-shipping-essentials",
+      "permanent": true
+    },
+    {
+      "source": "/how-professional-buyers-evaluate-lemon-bottle-before-ordering-wholesale",
+      "destination": "/blog/how-professional-buyers-evaluate-lemon-bottle-before-ordering-wholesale",
+      "permanent": true
+    },
+    {
+      "source": "/how-professional-buyers-evaluate-senorita-before-ordering-wholesale",
+      "destination": "/blog/how-professional-buyers-evaluate-senorita-before-ordering-wholesale",
+      "permanent": true
+    },
+    {
+      "source": "/how-to-choose-a-reliable-aesthetic-wholesale-supplier",
+      "destination": "/blog/how-to-choose-a-reliable-aesthetic-wholesale-supplier",
+      "permanent": true
+    },
+    {
+      "source": "/how-to-evaluate-an-aesthetic-wholesale-supplier-before-ordering",
+      "destination": "/blog/how-to-evaluate-an-aesthetic-wholesale-supplier-before-ordering",
+      "permanent": true
+    },
+    {
+      "source": "/how-to-verify-original-aesthetic-products-before-ordering",
+      "destination": "/blog/how-to-verify-original-aesthetic-products-before-ordering",
+      "permanent": true
+    },
+    {
+      "source": "/mounjaro-2-5mg-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide",
+      "destination": "/blog/mounjaro-2-5mg-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide",
+      "permanent": true
+    },
+    {
+      "source": "/seo-sample-korean-aesthetic-products-wholesale-guide",
+      "destination": "/blog/seo-sample-korean-aesthetic-products-wholesale-guide",
+      "permanent": true
+    },
+    {
+      "source": "/shipping-aesthetic-products-internationally",
+      "destination": "/blog/shipping-aesthetic-products-internationally",
+      "permanent": true
+    },
+    {
+      "source": "/skin-booster-wholesale-guide-for-clinics-and-spas",
+      "destination": "/blog/skin-booster-wholesale-guide-for-clinics-and-spas",
+      "permanent": true
+    },
+    {
+      "source": "/sourcing-sedy-fill-wholesale-a-buyer-s-guide-for-clinics-and-distributors",
+      "destination": "/blog/sourcing-sedy-fill-wholesale-a-buyer-s-guide-for-clinics-and-distributors",
+      "permanent": true
+    },
+    {
+      "source": "/sourcing-ultrafill-wholesale-a-buyer-s-guide-for-clinics-and-distributors",
+      "destination": "/blog/sourcing-ultrafill-wholesale-a-buyer-s-guide-for-clinics-and-distributors",
+      "permanent": true
+    },
+    {
+      "source": "/what-to-check-before-ordering-hairna-from-a-wholesale-supplier",
+      "destination": "/blog/what-to-check-before-ordering-hairna-from-a-wholesale-supplier",
+      "permanent": true
+    },
+    {
+      "source": "/what-to-check-before-ordering-laroscorbine-diamond-e-uf-from-a-wholesale-suppl",
+      "destination": "/blog/what-to-check-before-ordering-laroscorbine-diamond-e-uf-from-a-wholesale-suppl",
+      "permanent": true
+    },
+    {
+      "source": "/wholesale-dermal-filler-malaysia-b2b-buyers-guide",
+      "destination": "/blog/wholesale-dermal-filler-malaysia-b2b-buyers-guide",
+      "permanent": true
+    },
+    {
+      "source": "/why-expiry-date-and-batch-number-matter",
+      "destination": "/blog/why-expiry-date-and-batch-number-matter",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/track/:trackingCode",
@@ -11,16 +118,31 @@
     {
       "source": "/track.html",
       "headers": [
-        { "key": "Cache-Control", "value": "private, no-store, max-age=0" },
-        { "key": "X-Robots-Tag", "value": "noindex, nofollow, noarchive" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+        {
+          "key": "Cache-Control",
+          "value": "private, no-store, max-age=0"
+        },
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow, noarchive"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
       ]
     },
     {
       "source": "/api/tracking/:path*",
       "headers": [
-        { "key": "Cache-Control", "value": "private, no-store, max-age=0" },
-        { "key": "X-Content-Type-Options", "value": "nosniff" }
+        {
+          "key": "Cache-Control",
+          "value": "private, no-store, max-age=0"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        }
       ]
     }
   ]
