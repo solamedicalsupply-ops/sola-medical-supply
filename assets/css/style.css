@@ -5014,6 +5014,7 @@ h3 {
     .sola-navbar { gap: 8px; }
     .sola-brand img { width: 114px; }
     .sola-nav-actions { gap: 4px; }
+    .sola-nav-actions > [data-sola-search-toggle] { display: none; }
     .sola-icon-button, .sola-mobile-menu-button { width: 42px; height: 42px; }
 }
 
