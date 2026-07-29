@@ -31,7 +31,7 @@ const partnerBrands = [
   { name: 'ExoCoBio', logo: 'assets/images/brand-logos/exocobio.png', filter: 'ASCE' }
 ];
 
-function renderSiteChrome() {
+function renderLegacySiteChrome() {
   const path = location.pathname.replace(/\\/g, '/');
   const inBlog = path.includes('/blog/');
   const inProducts = path.includes('/products/');
@@ -41,11 +41,62 @@ function renderSiteChrome() {
   const active = key => section === key ? ' class="active"' : '';
   const header = `<div class="topbar"><div class="wrap"><span>Professional aesthetic wholesale · Worldwide shipping support</span><a data-wa>Talk to a specialist →</a></div></div>
     <nav class="nav"><div class="wrap nav-inner"><a class="brand" href="${base}index.html"><img src="${base}assets/icons/logoNgang.png" alt="SOLA Medical Supply"></a><button class="menu" type="button" aria-label="Open navigation" aria-expanded="false">Menu</button><div class="links">
-    <a${active('index')} href="${base}index.html">Home</a><a${active('products')} href="${base}products.html">Products</a><a${active('brands')} href="${base}brands.html">Brands</a><a${active('shipping')} href="${base}shipping.html">Shipping</a><a${active('about')} href="${base}about.html">About</a><a${active('faq')} href="${base}faq.html">FAQ</a><a${active('journal')} href="${base}blog/index.html">Journal</a><a${active('contact')} href="${base}contact.html">Contact</a><a class="btn primary" data-wa>Request a quote</a></div></div></nav>`;
+    <a${active('index')} href="${base}index.html">Home</a><a${active('products')} href="${base}products.html">Products</a><a${active('brands')} href="${base}brands.html">Brands</a><a${active('shipping')} href="${base}shipping.html">Shipping</a><a href="${base}track">Tracking</a><a${active('about')} href="${base}about.html">About</a><a${active('faq')} href="${base}faq.html">FAQ</a><a${active('journal')} href="${base}blog/index.html">Journal</a><a${active('contact')} href="${base}contact.html">Contact</a><a class="btn primary" data-wa>Request a quote</a></div></div></nav>`;
   document.querySelector('.topbar')?.remove();
   document.querySelector('.nav')?.remove();
   document.body.insertAdjacentHTML('afterbegin', header);
 
+  const footer = `<footer class="footer new-footer"><div class="wrap"><div class="footer-top"><div><img src="${base}assets/icons/logoNgang.png" alt="SOLA"><p>Professional aesthetic wholesale supply for clinics, spas, resellers and distributors worldwide.</p></div><div><b>Explore</b><a href="${base}products.html">Products</a><a href="${base}brands.html">Brands</a><a href="${base}shipping.html">Shipping</a><a href="${base}track">Tracking</a><a href="${base}blog/index.html">Journal</a></div><div><b>Company</b><a href="${base}about.html">About SOLA</a><a href="${base}faq.html">FAQ</a><a href="${base}contact.html">Contact</a></div><div><b>Contact</b><a data-wa>WhatsApp: +84 98 177 86 70</a><a href="mailto:sales@solamedicalsupply.com">Email: sales@solamedicalsupply.com</a></div></div><div class="footer-bottom"><span>© 2026 SOLA Medical Supply</span><span>Professional buyers only · Product availability varies by market</span></div></div></footer>`;
+  document.querySelector('.footer')?.remove();
+  document.body.insertAdjacentHTML('beforeend', footer);
+}
+
+function navIcon(name, size = 20) {
+  const icons = {
+    arrow: '<path d="M5 12h14M13 6l6 6-6 6"/>',
+    box: '<path d="m4 7 8-4 8 4-8 4-8-4Zm0 0v10l8 4 8-4V7m-8 4v10"/>',
+    chevron: '<path d="m6 9 6 6 6-6"/>',
+    close: '<path d="m6 6 12 12M18 6 6 18"/>',
+    globe: '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.2 2.5 3.3 5.5 3.3 9S14.2 18.5 12 21c-2.2-2.5-3.3-5.5-3.3-9S9.8 5.5 12 3Z"/>',
+    menu: '<path d="M4 7h16M4 12h16M4 17h16"/>',
+    message: '<path d="M20 11.5a7.5 7.5 0 0 1-8 7.5 8.6 8.6 0 0 1-3.6-.8L4 19l.9-4A7.5 7.5 0 1 1 20 11.5Z"/><path d="M8 11h.01M12 11h.01M16 11h.01"/>',
+    search: '<circle cx="10.8" cy="10.8" r="6.6"/><path d="m16 16 4.2 4.2"/>',
+    support: '<path d="M4 13a8 8 0 0 1 16 0"/><path d="M4 13v3a2 2 0 0 0 2 2h1v-6H6a2 2 0 0 0-2 2Zm16 0v3a2 2 0 0 1-2 2h-1v-6h1a2 2 0 0 1 2 2ZM12 21h3"/>'
+  };
+  return `<svg aria-hidden="true" width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${icons[name] || icons.arrow}</svg>`;
+}
+
+function basePathForCurrentPage() {
+  const path = location.pathname.replace(/\\/g, '/');
+  return path.includes('/blog/') || path.includes('/products/') ? '../' : '';
+}
+
+function renderSiteChrome() {
+  const base = basePathForCurrentPage();
+  const path = location.pathname.replace(/\\/g, '/');
+  const page = location.pathname.split(/[\\/]/).pop() || 'index.html';
+  const section = path.includes('/blog/') ? 'journal' : path.includes('/products/') ? 'products' : page.replace('.html', '');
+  const active = key => section === key ? ' active' : '';
+  const productGroups = [
+    ['Skin Boosters', 'Skin Boosters / PN'], ['Dermal Fillers', 'Dermal Fillers'], ['Botulinum Toxin', 'Toxin'],
+    ['Weight Management', 'Weight Management'], ['IV & Wellness', 'Whitening IV / Wellness'], ['Hair Treatments', 'Hair / Meso'], ['Lipolysis', 'Lipolysis / Body']
+  ];
+  const productLinks = productGroups.map(([label, category]) => `<a href="${base}products.html?category=${encodeURIComponent(category)}"><span>${label}</span>${navIcon('arrow', 16)}</a>`).join('');
+  const dynamicBrands = [...new Set(allProducts.map(product => product.brand).filter(Boolean))].sort((a, b) => a.localeCompare(b)).slice(0, 8);
+  const brands = dynamicBrands.length ? dynamicBrands : partnerBrands.slice(0, 8).map(brand => brand.name);
+  const brandLinks = brands.map(brand => `<a href="${base}products.html?brand=${encodeURIComponent(brand)}"><span>${escapeHTML(brand)}</span>${navIcon('arrow', 16)}</a>`).join('');
+  const dropdown = (name, label, content, extra = '') => `<div class="sola-menu-item ${extra}"><button class="sola-nav-link${active(name)}" type="button" data-sola-dropdown="${name}" aria-expanded="false" aria-controls="sola-${name}-menu">${label} ${navIcon('chevron', 15)}</button><div class="sola-mega sola-${name}-mega" id="sola-${name}-menu" role="region" aria-label="${label}">${content}</div></div>`;
+  const productMenu = `<div class="sola-dropdown-heading"><span>Browse products</span><a href="${base}products.html">View all products ${navIcon('arrow', 15)}</a></div><div class="sola-dropdown-grid">${productLinks}<a class="sola-view-all" href="${base}products.html"><span>View all products</span>${navIcon('arrow', 16)}</a></div>`;
+  const brandsMenu = `<div class="sola-dropdown-heading"><span>Featured brands</span><a href="${base}brands.html">View all brands ${navIcon('arrow', 15)}</a></div><div class="sola-dropdown-grid">${brandLinks}<a class="sola-view-all" href="${base}brands.html"><span>View all brands</span>${navIcon('arrow', 16)}</a></div>`;
+  const moreMenu = `<a class="sola-more-optional" href="${base}shipping.html">Shipping</a><a class="sola-more-optional" href="${base}about.html">About SOLA</a><a href="${base}faq.html">FAQ</a><a href="${base}contact.html">Contact</a>`;
+  const header = `<header class="sola-site-header" data-sola-header>
+    <div class="sola-topbar"><div class="wrap sola-topbar-inner"><span class="sola-topbar-primary">${navIcon('box', 15)} Professional B2B Aesthetic Supply</span><span class="sola-topbar-meta"><span>${navIcon('globe', 14)} Worldwide Shipping</span><span>${navIcon('support', 14)} Fast, Direct Support</span></span><a class="sola-topbar-wa" data-wa>${navIcon('message', 14)} WhatsApp Support</a></div></div>
+    <div class="sola-nav-sticky"><nav class="sola-navbar wrap" aria-label="Primary navigation"><a class="sola-brand" href="${base}index.html" aria-label="SOLA Medical Supply home"><img src="${base}assets/icons/logoNgang.png" alt="SOLA Medical Supply"></a><div class="sola-desktop-nav"><a class="sola-nav-link${active('index')}" href="${base}index.html">Home</a>${dropdown('products', 'Products', productMenu)}${dropdown('brands', 'Brands', brandsMenu)}<a class="sola-nav-link" href="${base}catalogue.html">Solutions</a><a class="sola-nav-link sola-collapse-at-medium${active('shipping')}" href="${base}shipping.html">Shipping</a><a class="sola-nav-link${active('journal')}" href="${base}blog/index.html">Journal</a><a class="sola-nav-link sola-collapse-at-medium${active('about')}" href="${base}about.html">About</a>${dropdown('more', 'More', moreMenu, 'sola-more-item')}</div><div class="sola-nav-actions"><button class="sola-icon-button" type="button" data-sola-search-toggle aria-expanded="false" aria-controls="sola-search-panel" aria-label="Search products">${navIcon('search')}</button><a class="sola-icon-button sola-whatsapp-button" data-wa aria-label="Message SOLA on WhatsApp">${navIcon('message')}</a><a class="sola-quote-cta" data-wa><span>Get Wholesale Quote</span>${navIcon('arrow', 17)}</a><button class="sola-mobile-menu-button" type="button" data-sola-drawer-open aria-expanded="false" aria-controls="sola-mobile-drawer" aria-label="Open navigation">${navIcon('menu', 25)}</button></div></nav><div class="sola-search-panel" id="sola-search-panel" hidden><form class="sola-search-form" data-sola-search-form role="search"><label for="sola-global-search">Search the catalogue</label><div><span>${navIcon('search', 18)}</span><input id="sola-global-search" name="q" type="search" autocomplete="off" placeholder="Search products or brands..."><button type="submit">Search</button><button class="sola-search-close" type="button" data-sola-search-close aria-label="Close search">${navIcon('close', 19)}</button></div></form></div></div>
+    <button class="sola-drawer-overlay" type="button" data-sola-drawer-close tabindex="-1" aria-label="Close navigation"></button><aside class="sola-mobile-drawer" id="sola-mobile-drawer" aria-label="Mobile navigation" aria-hidden="true"><div class="sola-drawer-top"><a class="sola-brand" href="${base}index.html" aria-label="SOLA Medical Supply home"><img src="${base}assets/icons/logoNgang.png" alt="SOLA Medical Supply"></a><button class="sola-icon-button" type="button" data-sola-drawer-close aria-label="Close navigation">${navIcon('close')}</button></div><nav class="sola-drawer-links" aria-label="Mobile primary navigation"><a href="${base}index.html">Home</a><a href="${base}products.html">Products</a><button type="button" data-sola-accordion aria-expanded="false" aria-controls="sola-mobile-products">Product categories ${navIcon('chevron', 17)}</button><div id="sola-mobile-products" class="sola-drawer-submenu" hidden>${productLinks}</div><a href="${base}brands.html">Brands</a><button type="button" data-sola-accordion aria-expanded="false" aria-controls="sola-mobile-brands">Featured brands ${navIcon('chevron', 17)}</button><div id="sola-mobile-brands" class="sola-drawer-submenu" hidden>${brandLinks}</div><a href="${base}catalogue.html">Solutions</a><a href="${base}shipping.html">Shipping</a><a href="${base}blog/index.html">Journal</a><a href="${base}about.html">About SOLA</a><a href="${base}faq.html">FAQ</a><a href="${base}contact.html">Contact</a></nav><div class="sola-drawer-actions"><a class="sola-quote-cta" data-wa><span>Get Wholesale Quote</span>${navIcon('arrow', 17)}</a><a class="sola-drawer-wa" data-wa>${navIcon('message', 18)} WhatsApp Support</a></div></aside>
+  </header>`;
+  document.querySelector('.topbar')?.remove();
+  document.querySelector('.nav')?.remove();
+  document.body.insertAdjacentHTML('afterbegin', header);
   const footer = `<footer class="footer new-footer"><div class="wrap"><div class="footer-top"><div><img src="${base}assets/icons/logoNgang.png" alt="SOLA"><p>Professional aesthetic wholesale supply for clinics, spas, resellers and distributors worldwide.</p></div><div><b>Explore</b><a href="${base}products.html">Products</a><a href="${base}brands.html">Brands</a><a href="${base}shipping.html">Shipping</a><a href="${base}blog/index.html">Journal</a></div><div><b>Company</b><a href="${base}about.html">About SOLA</a><a href="${base}faq.html">FAQ</a><a href="${base}contact.html">Contact</a></div><div><b>Contact</b><a data-wa>WhatsApp: +84 98 177 86 70</a><a href="mailto:sales@solamedicalsupply.com">Email: sales@solamedicalsupply.com</a></div></div><div class="footer-bottom"><span>© 2026 SOLA Medical Supply</span><span>Professional buyers only · Product availability varies by market</span></div></div></footer>`;
   document.querySelector('.footer')?.remove();
   document.body.insertAdjacentHTML('beforeend', footer);
@@ -53,10 +104,95 @@ function renderSiteChrome() {
 
 renderSiteChrome();
 
-$('.menu')?.addEventListener('click', e => {
-  $('.links')?.classList.toggle('open');
-  e.currentTarget.setAttribute('aria-expanded', $('.links')?.classList.contains('open') ? 'true' : 'false');
-});
+function setupSiteHeader() {
+  const header = $('[data-sola-header]');
+  if (!header) return;
+  const drawer = $('#sola-mobile-drawer');
+  const drawerToggle = $('[data-sola-drawer-open]', header);
+  const searchPanel = $('#sola-search-panel');
+  const searchToggle = $('[data-sola-search-toggle]', header);
+  const searchInput = $('#sola-global-search');
+  const closeDropdowns = except => $$('[data-sola-dropdown]', header).forEach(button => {
+    if (button !== except) {
+      button.setAttribute('aria-expanded', 'false');
+      button.closest('.sola-menu-item')?.classList.remove('is-open');
+    }
+  });
+  const closeSearch = () => {
+    searchPanel.hidden = true;
+    searchToggle.setAttribute('aria-expanded', 'false');
+  };
+  const closeDrawer = () => {
+    drawer.classList.remove('is-open');
+    drawer.setAttribute('aria-hidden', 'true');
+    drawerToggle.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('sola-nav-locked');
+  };
+  const openDrawer = () => {
+    closeDropdowns();
+    closeSearch();
+    drawer.classList.add('is-open');
+    drawer.setAttribute('aria-hidden', 'false');
+    drawerToggle.setAttribute('aria-expanded', 'true');
+    document.body.classList.add('sola-nav-locked');
+    drawer.querySelector('a, button')?.focus();
+  };
+  $$('[data-sola-dropdown]', header).forEach(button => button.addEventListener('click', () => {
+    const isOpen = button.getAttribute('aria-expanded') === 'true';
+    closeDropdowns(button);
+    button.setAttribute('aria-expanded', String(!isOpen));
+    button.closest('.sola-menu-item')?.classList.toggle('is-open', !isOpen);
+  }));
+  searchToggle.addEventListener('click', () => {
+    const isOpen = !searchPanel.hidden;
+    closeDropdowns();
+    searchPanel.hidden = isOpen;
+    searchToggle.setAttribute('aria-expanded', String(!isOpen));
+    if (!isOpen) window.setTimeout(() => searchInput?.focus(), 30);
+  });
+  $('[data-sola-search-close]', header)?.addEventListener('click', closeSearch);
+  $('[data-sola-search-form]', header)?.addEventListener('submit', event => {
+    event.preventDefault();
+    const query = searchInput?.value.trim();
+    location.href = `${basePathForCurrentPage()}products.html${query ? `?q=${encodeURIComponent(query)}` : ''}`;
+  });
+  drawerToggle.addEventListener('click', openDrawer);
+  $$('[data-sola-drawer-close]', header).forEach(button => button.addEventListener('click', closeDrawer));
+  $$('a', drawer).forEach(link => link.addEventListener('click', closeDrawer));
+  $$('[data-sola-accordion]', drawer).forEach(button => button.addEventListener('click', () => {
+    const panel = document.getElementById(button.getAttribute('aria-controls'));
+    const isOpen = button.getAttribute('aria-expanded') === 'true';
+    button.setAttribute('aria-expanded', String(!isOpen));
+    panel.hidden = isOpen;
+  }));
+  document.addEventListener('click', event => {
+    if (!header.contains(event.target)) {
+      closeDropdowns();
+      closeSearch();
+    }
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') {
+      closeDropdowns();
+      closeSearch();
+      closeDrawer();
+    }
+  });
+  let ticking = false;
+  const setScrolled = () => {
+    header.classList.toggle('is-scrolled', window.scrollY > 24);
+    ticking = false;
+  };
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(setScrolled);
+      ticking = true;
+    }
+  }, { passive: true });
+  setScrolled();
+}
+
+setupSiteHeader();
 $$('[data-wa]').forEach(a => a.href = wa(a.dataset.wa || undefined));
 
 const quoteList = new Map();
