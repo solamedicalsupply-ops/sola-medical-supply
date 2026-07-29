@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Track your order | SOLA Medical Supply</title>
+  <meta name="description" content="Check the latest progress of your SOLA shipment.">
+  <link rel="icon" href="/assets/icons/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/tracking.css">
+</head>
+<body class="tracking-page">
+  <a class="tracking-skip" href="#tracking-main">Skip to tracking</a>
+  <header class="tracking-header">
+    <div class="tracking-wrap">
+      <a href="/" aria-label="SOLA Medical Supply home"><img src="/assets/icons/logoNgang.png" alt="SOLA Medical Supply"></a>
+      <a class="tracking-header-link" href="/shipping.html">Shipping support</a>
+    </div>
+  </header>
+  <main class="tracking-main tracking-wrap" id="tracking-main">
+    <section class="tracking-intro">
+      <span class="tracking-kicker">SOLA SHIPMENT UPDATES</span>
+      <h1>Track your order</h1>
+      <p>Enter your SOLA tracking code or open the private tracking link sent by our team.</p>
+      <form class="tracking-search" data-tracking-search novalidate>
+        <label for="tracking-code">SOLA tracking code</label>
+        <div>
+          <input id="tracking-code" name="trackingCode" placeholder="SOLA-7XK29P4M" maxlength="13" autocomplete="off" autocapitalize="characters" spellcheck="false">
+          <button type="submit">Track order</button>
+        </div>
+        <p class="tracking-field-help" data-search-help>The code starts with SOLA- and contains 8 letters or numbers.</p>
+      </form>
+    </section>
+
+    <section class="tracking-state" data-loading hidden aria-live="polite">
+      <span class="tracking-spinner" aria-hidden="true"></span>
+      <p>Loading the latest shipment update…</p>
+    </section>
+    <section class="tracking-state tracking-error" data-error hidden role="alert">
+      <div class="tracking-state-icon" aria-hidden="true">!</div>
+      <h2>We couldn’t load this tracking</h2>
+      <p data-error-message>Please check the code and try again.</p>
+      <button type="button" data-retry>Try again</button>
+    </section>
+    <section data-result hidden aria-live="polite">
+      <article class="tracking-current">
+        <div class="tracking-code-row">
+          <div><span>Tracking code</span><strong data-code></strong></div>
+          <button type="button" data-copy-code>Copy code</button>
+        </div>
+        <div class="tracking-status">
+          <div class="tracking-status-icon" aria-hidden="true">✓</div>
+          <div><span>Current status</span><h2 data-status></h2><p data-note></p></div>
+        </div>
+        <dl class="tracking-facts">
+          <div><dt>Last updated</dt><dd data-updated></dd></div>
+          <div data-destination-wrap><dt>Destination</dt><dd data-destination></dd></div>
+          <div data-estimate-wrap><dt>Estimated delivery</dt><dd data-estimate></dd></div>
+        </dl>
+      </article>
+      <article class="tracking-carrier" data-carrier hidden>
+        <h2>Local courier</h2>
+        <dl><div><dt>Courier</dt><dd data-carrier-name></dd></div><div><dt>Tracking number</dt><dd data-carrier-code></dd></div></dl>
+        <a data-carrier-link target="_blank" rel="noopener noreferrer">Track with carrier</a>
+      </article>
+      <section class="tracking-progress">
+        <h2>Shipment progress</h2>
+        <ol data-events></ol>
+        <p class="tracking-empty" data-events-empty hidden>No public tracking updates are available yet.</p>
+      </section>
+    </section>
+    <aside class="tracking-privacy"><strong>Your privacy matters.</strong><p>This page only shows delivery updates. Payment details, prices and personal information are never displayed.</p></aside>
+  </main>
+  <footer class="tracking-footer">
+    <div class="tracking-wrap"><p>Need help with your shipment?</p><a data-wa href="https://wa.me/84981778670">Contact SOLA on WhatsApp</a></div>
+  </footer>
+  <script src="/assets/js/tracking.js"></script>
+</body>
+</html>
