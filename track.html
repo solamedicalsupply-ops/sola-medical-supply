@@ -16,25 +16,37 @@
 </head>
 <body class="tracking-page">
   <a class="tracking-skip" href="#tracking-main">Skip to tracking</a>
-  <header class="tracking-header">
-    <div class="tracking-wrap">
-      <a href="/" aria-label="SOLA Medical Supply home"><img src="/assets/icons/logoNgang.png" alt="SOLA Medical Supply"></a>
-      <a class="tracking-header-link" href="/shipping.html">Shipping support</a>
-    </div>
-  </header>
   <main class="tracking-main tracking-wrap" id="tracking-main">
-    <section class="tracking-intro">
-      <span class="tracking-kicker">SOLA SHIPMENT UPDATES</span>
-      <h1>Track your order</h1>
-      <p>Enter your SOLA tracking code or open the private tracking link sent by our team.</p>
-      <form class="tracking-search" data-tracking-search novalidate>
-        <label for="tracking-code">SOLA tracking code</label>
-        <div>
-          <input id="tracking-code" name="trackingCode" placeholder="SOLA-7XK29P4M" maxlength="13" autocomplete="off" autocapitalize="characters" spellcheck="false">
-          <button type="submit">Track order</button>
+    <section class="tracking-hero">
+      <div class="tracking-intro">
+        <span class="tracking-kicker">SOLA SHIPMENT UPDATES</span>
+        <h1>Your shipment,<br><em>clearly tracked.</em></h1>
+        <p>See the latest progress of your SOLA order using the private tracking code sent by our team.</p>
+        <ul class="tracking-trust-list">
+          <li><span aria-hidden="true">✓</span> Private and secure updates</li>
+          <li><span aria-hidden="true">✓</span> Latest shipment status</li>
+          <li><span aria-hidden="true">✓</span> Direct support when needed</li>
+        </ul>
+      </div>
+      <div class="tracking-search-card">
+        <span class="tracking-card-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><path d="m4 7 8-4 8 4-8 4-8-4Zm0 0v10l8 4 8-4V7m-8 4v10"/><path d="M17 14.5h4M19 12.5v4"/></svg>
+        </span>
+        <h2>Track your order</h2>
+        <p>Enter your SOLA tracking code below.</p>
+        <form class="tracking-search" data-tracking-search novalidate>
+          <label for="tracking-code">Tracking code</label>
+          <div>
+            <input id="tracking-code" name="trackingCode" placeholder="SOLA-7XK29P4M" maxlength="13" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-describedby="tracking-code-help">
+            <button type="submit">Track order <span aria-hidden="true">→</span></button>
+          </div>
+          <p class="tracking-field-help" id="tracking-code-help" data-search-help>Format: SOLA- followed by 8 letters or numbers.</p>
+        </form>
+        <div class="tracking-help-line">
+          <span>Can’t find your code?</span>
+          <a data-wa href="https://wa.me/84981778670">Ask our support team</a>
         </div>
-        <p class="tracking-field-help" data-search-help>The code starts with SOLA- and contains 8 letters or numbers.</p>
-      </form>
+      </div>
     </section>
 
     <section class="tracking-state" data-loading hidden aria-live="polite">
@@ -74,11 +86,14 @@
         <p class="tracking-empty" data-events-empty hidden>No public tracking updates are available yet.</p>
       </section>
     </section>
-    <aside class="tracking-privacy"><strong>Your privacy matters.</strong><p>This page only shows delivery updates. Payment details, prices and personal information are never displayed.</p></aside>
+    <aside class="tracking-privacy">
+      <span class="tracking-privacy-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M7 10V7a5 5 0 0 1 10 0v3"/><rect x="4" y="10" width="16" height="11" rx="3"/><path d="M12 14v3"/></svg>
+      </span>
+      <div><strong>Your privacy matters</strong><p>Only delivery updates are shown here. Payment details, prices and personal information are never displayed.</p></div>
+    </aside>
   </main>
-  <footer class="tracking-footer">
-    <div class="tracking-wrap"><p>Need help with your shipment?</p><a data-wa href="https://wa.me/84981778670">Contact SOLA on WhatsApp</a></div>
-  </footer>
+  <script src="/assets/js/main.js"></script>
   <script src="/assets/js/tracking.js"></script>
 </body>
 </html>

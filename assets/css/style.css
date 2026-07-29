@@ -4724,7 +4724,7 @@ h3 {
 .sola-site-header *::after { box-sizing: border-box; }
 
 .sola-site-header a { color: inherit; text-decoration: none; }
-.sola-site-header button { font: inherit; }
+.sola-site-header button { font-family: inherit; }
 
 .sola-topbar {
     height: 34px;
