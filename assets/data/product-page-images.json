@@ -1,0 +1,846 @@
+{
+  "cannula-23g": {
+    "name": "Cannula 23G",
+    "page": "https://accessgudid.nlm.nih.gov/devices/13700773721358",
+    "downloaded": false,
+    "tokenMatch": 1.0,
+    "error": "no social image"
+  },
+  "cannula-18g": {
+    "name": "Cannula 18G",
+    "page": "https://bolpatra.gov.np/egp/download?alfId=cm%3ABidding_Documentsnull%2Fcm%3AY2021%2Fcm%3AM5%40%40%40%40%40305b79b8-0b0d-42a7-b8a0-06bf54483da7&docId=68186010",
+    "downloaded": false,
+    "error": "HTTPSConnectionPool(host='bolpatra.gov.np', port=443): Max retries exceeded with url: /egp/download?alfId=cm%3ABidding_Documentsnull%2Fcm%3AY2021%2Fcm%3AM5%40%40%40%40%40305b79b8-0b0d-42a7-b8a0-06bf54483da7&docId=68186010 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))"
+  },
+  "zishel-xomage-pur33": {
+    "name": "Zishel Xomage pur33",
+    "page": "https://fliphtml5.com/ZISHELAESTHETICS/ylbt/%5BTESS_ZISHEL%5D_Product_Catalogue_2025_20250417/",
+    "downloaded": false,
+    "error": "403 Client Error: Forbidden for url: https://fliphtml5.com/ZISHELAESTHETICS/ylbt/%5BTESS_ZISHEL%5D_Product_Catalogue_2025_20250417/"
+  },
+  "curenex-lipo": {
+    "name": "Curenex Lipo",
+    "page": "https://www.curenex.us/product/curenex-lipo-solution/",
+    "downloaded": false,
+    "tokenMatch": 1.0,
+    "error": "no social image"
+  },
+  "curenex-snow-peel": {
+    "name": "Curenex snow peel",
+    "page": "https://www.curenex.us/product/curenex-snowpeel/",
+    "downloaded": false,
+    "tokenMatch": 1.0,
+    "error": "no social image"
+  },
+  "curenex-intense-glow-shine": {
+    "name": "Curenex Intense Glow & Shine",
+    "page": "https://wedermglobal.com/products/details?product_id=32",
+    "downloaded": true,
+    "tokenMatch": 1.0,
+    "dimensions": [
+      370,
+      370
+    ],
+    "image": "https://cdn.wedermglobal.com/products/CURENEX/251126_32_CURENEX__thumbnail.webp"
+  },
+  "glutaone-inj-1200mg": {
+    "name": "Glutaone Inj 1200mg",
+    "page": "https://www.health.kr/searchDrug/result_drug.asp?drug_cd=2014112400002",
+    "downloaded": true,
+    "tokenMatch": 1.0,
+    "dimensions": [
+      1200,
+      630
+    ],
+    "image": "https://www.health.kr/images/og_image.png"
+  },
+  "mesocartin": {
+    "name": "Mesocartin",
+    "page": "https://mobile.dhnp.co.kr/common/images/common/210216_%EB%8C%80%ED%95%9C%EB%89%B4%ED%8C%9C_%EC%A3%BC%EC%82%AC%EC%A0%9C_%EC%B5%9C%EC%A2%85.pdf",
+    "downloaded": false,
+    "error": "HTTPSConnectionPool(host='mobile.dhnp.co.kr', port=443): Max retries exceeded with url: /common/images/common/210216_%EB%8C%80%ED%95%9C%EB%89%B4%ED%8C%9C_%EC%A3%BC%EC%82%AC%EC%A0%9C_%EC%B5%9C%EC%A2%85.pdf (Caused by SSLError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'mobile.dhnp.co.kr'. (_ssl.c:1010)\")))"
+  },
+  "lipotocin-inj": {
+    "name": "Lipotocin Inj.",
+    "page": "https://en.shineworld.kr/beauty/?bmode=view&idx=24218482",
+    "downloaded": true,
+    "tokenMatch": 1.0,
+    "dimensions": [
+      500,
+      500
+    ],
+    "image": "https://cdn.imweb.me/thumbnail/20250111/5b573626339e8.jpg"
+  },
+  "zinc-s-inj": {
+    "name": "Zinc-S Inj",
+    "page": "https://www.kneopharm.co.kr/product/index.php",
+    "downloaded": true,
+    "tokenMatch": 1.0,
+    "dimensions": [
+      400,
+      400
+    ],
+    "image": "https://www.kneopharm.co.kr/images/sns_link.png"
+  },
+  "gc-arginine-inj-10ml": {
+    "name": "GC-Arginine Inj. 10ml",
+    "page": "https://aukofiller.com/product/gc-arginine-injection-25ml-10amp-buy-online/",
+    "downloaded": true,
+    "tokenMatch": 1.0,
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "image": "https://aukofiller.com/wp-content/uploads/2024/11/GC-ARGININE-buy-online.webp"
+  },
+  "amino-acid-96-9": {
+    "name": "Amino Acid 96.9",
+    "page": "https://www.u-buy.com.ng/product/1AEN8FDEW-nightingale-daily-derma-cleansing-foam-mild-acid-low-ph-foaming-cleanser-for-oily-dry-sensitive-acne-prone-skin-moisture-facial-wash-140ml",
+    "downloaded": false,
+    "error": "403 Client Error: Forbidden for url: https://www.u-buy.com.ng/product/1AEN8FDEW-nightingale-daily-derma-cleansing-foam-mild-acid-low-ph-foaming-cleanser-for-oily-dry-sensitive-acne-prone-skin-moisture-facial-wash-140ml"
+  },
+  "multivitamin-iv": {
+    "name": "Multivitamin iv",
+    "page": "https://www.merckmanuals.com/professional/special-subjects/dietary-supplements/intravenous-vitamin-therapy-myers-cocktail",
+    "downloaded": true,
+    "tokenMatch": 1.0,
+    "dimensions": [
+      1600,
+      840
+    ],
+    "image": "https://edge.sitecorecloud.io/mmanual-ssq1ci05/media/manual/seo/promotional_share_msd.jpg"
+  },
+  "tan-hong": {
+    "name": "Tan hong",
+    "page": "https://tanthanhdong.com/en/industries/technology-electronics-packaging.html",
+    "downloaded": false,
+    "tokenMatch": 1.0,
+    "error": "cannot identify image file 'C:\\\\Users\\\\Admin\\\\Documents\\\\Web\\\\SOLA_PREMIUM_PINK\\\\assets\\\\images\\\\product-sources-pages\\\\tan-hong.img'"
+  },
+  "cannula-needle-30g": {
+    "name": "Cannula Needle — 30G",
+    "page": "https://www.gobizkorea.com/user/goods/frontGoodsDetail.do?goods_no=GS20180317177726",
+    "downloaded": true,
+    "tokenMatch": 1.0,
+    "dimensions": [
+      498,
+      498
+    ],
+    "image": "https://www.gobizkorea.com/image/goodsImage.do?goods_no=GS20180317177726&image_se_code=MAIN_THUMB498"
+  },
+  "zishel-xomage": {
+    "name": "Zishel Xomage",
+    "page": "https://www.zishelmedical.com/%EB%B3%B5%EC%A0%9C-xomage",
+    "downloaded": true,
+    "tokenMatch": 1.0,
+    "dimensions": [
+      1110,
+      644
+    ],
+    "image": "https://static.wixstatic.com/media/d8200f_c0440a225c2a4f609d7681a387809089%7Emv2.png/v1/fit/w_2500,h_1330,al_c/d8200f_c0440a225c2a4f609d7681a387809089%7Emv2.png"
+  },
+  "rejuva-nad": {
+    "name": "Rejuva NAD",
+    "page": "https://rejuva-penmix.com/",
+    "downloaded": true,
+    "tokenMatch": 1.0,
+    "dimensions": [
+      1680,
+      825
+    ],
+    "image": "https://static.tildacdn.com/tild6462-3330-4138-b838-643566366635/2026-06-02_20-54-09.png"
+  },
+  "lapuroon-aurora-super-pdrn": {
+    "name": "Lapuroon Aurora Super PDRN",
+    "page": "https://www.neesmedical.com/blog/lapuron-aurora-super-pdrn-pakistan-clinic-guide",
+    "downloaded": false,
+    "tokenMatch": 1.0,
+    "error": "image too small"
+  },
+  "medisco-meso-pdrn": {
+    "name": "Medisco Meso PDRN",
+    "page": "https://eu.drpen.co/products/medisco-meso-pdrn",
+    "downloaded": false,
+    "tokenMatch": 1.0,
+    "error": "HTTPSConnectionPool(host='eu.drpen.co', port=443): Read timed out. (read timeout=30)"
+  },
+  "remedium-pdrn": {
+    "name": "ReMedium PDRN",
+    "page": "https://www.remediumamerica.com/",
+    "downloaded": false,
+    "error": "HTTPSConnectionPool(host='www.remediumamerica.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.remediumamerica.com', port=443): Failed to resolve 'www.remediumamerica.com' ([Errno 11001] getaddrinfo failed)\"))"
+  },
+  "vom": {
+    "name": "VOM",
+    "page": "https://www.mondigroup.com/de/produkte-und-loesungen/wellpappenloesungen/regalfertige-verpackungen/",
+    "downloaded": true,
+    "tokenMatch": 1.0,
+    "dimensions": [
+      1200,
+      630
+    ],
+    "image": "https://www.mondigroup.com/cdn-cgi/image/f=auto,fit=cover,w=1200,h=630,g=auto,sharpen=1/AdaptiveImages/celum/371297/iStock-1095504764.jpg?stamp=30199e686d7bb7bb056aec936f747b7ac8d2d022"
+  },
+  "juvederm-super-mau-moi-voluma-ultra3-ultra4": {
+    "name": "Juvederm Super mau moi (Voluma/Ultra3/Ultra4)",
+    "page": null,
+    "downloaded": false
+  },
+  "junier": {
+    "name": "Junier",
+    "page": "https://www.junier.co/",
+    "downloaded": true,
+    "tokenMatch": 1.0,
+    "dimensions": [
+      1200,
+      630
+    ],
+    "image": "https://www.junier.co/junier_og.png"
+  },
+  "yvoire": {
+    "name": "Yvoire",
+    "page": "https://www.dermadream.com.br/digital/PREENCHEDORES_GUIA_DE_APLICA%C3%87%C3%83O.pdf",
+    "downloaded": false,
+    "tokenMatch": 0.0,
+    "error": "page name mismatch"
+  },
+  "youthfill-deep": {
+    "name": "Youthfill Deep",
+    "page": "https://www.youthfill.co.kr/",
+    "downloaded": true,
+    "tokenMatch": 1.0,
+    "dimensions": [
+      800,
+      400
+    ],
+    "image": "http://youthfill.co.kr/youthfill/images/ogimage.jpg"
+  },
+  "youthfill-fine": {
+    "name": "Youthfill Fine",
+    "page": "https://www.youthfill.co.kr/",
+    "downloaded": true,
+    "tokenMatch": 1.0,
+    "dimensions": [
+      800,
+      400
+    ],
+    "image": "http://youthfill.co.kr/youthfill/images/ogimage.jpg"
+  },
+  "vitaran-hb": {
+    "name": "Vitaran HB",
+    "page": "https://drcristina.co.uk/treatments/polynucleotides-north-london/",
+    "downloaded": true,
+    "tokenMatch": 1.0,
+    "dimensions": [
+      605,
+      384
+    ],
+    "image": "https://drcristina.co.uk/wp-content/uploads/2026/07/doctify-badge.png"
+  },
+  "vitaran-s": {
+    "name": "Vitaran S",
+    "page": "https://www.brpharm.com/product/medical_device?category_code=1910&code=634&tpf=product%2Fview",
+    "downloaded": true,
+    "tokenMatch": 1.0,
+    "dimensions": [
+      800,
+      400
+    ],
+    "image": "https://www.brpharm.com/user/meta_logo.jpg?dummy=1785510212"
+  },
+  "vitaran-i": {
+    "name": "Vitaran I",
+    "page": "https://wavelayedu.gobizkorea.com/mobile/mobileGoodsDetail.do?ctgryCode=&goodsNms=HP-VITARAN-I--Korean-PN-Skin-Booster&goods_no=GS2026070152180&upperCode=M0800100000000",
+    "downloaded": true,
+    "tokenMatch": 1.0,
+    "dimensions": [
+      498,
+      498
+    ],
+    "image": "https://www.gobizkorea.com/image/goodsImage.do?goods_no=GS2026070152180&image_se_code=MAIN_THUMB498"
+  },
+  "curenex": {
+    "name": "Curenex",
+    "page": "https://shop.curenex.jp/products/curenex-snowpeel",
+    "downloaded": false,
+    "error": "404 Client Error: Not Found for url: https://curenex.jp/products/curenex-snowpeel"
+  },
+  "glutathione-tad-600": {
+    "name": "Glutathione TAD-600",
+    "page": "https://verification.fda.gov.ph/drug_productsview.php?export=pdf&registration_number=DR-XY39072",
+    "downloaded": false,
+    "error": "403 Client Error: Forbidden for url: https://verification.fda.gov.ph/drug_productsview.php?export=pdf&registration_number=DR-XY39072"
+  },
+  "saxenda-3-pens": {
+    "name": "Saxenda (3 pens)",
+    "page": "https://www.shop-apotheke.com/arzneimittel/19645892/saxenda-6-mg-ml-injektionslsg-i-e-fertigpen.htm",
+    "downloaded": false,
+    "tokenMatch": 1.0,
+    "error": "cannot identify image file 'C:\\\\Users\\\\Admin\\\\Documents\\\\Web\\\\SOLA_PREMIUM_PINK\\\\assets\\\\images\\\\product-sources-pages\\\\saxenda-3-pens.img'"
+  },
+  "lipo-lab-v-line": {
+    "name": "Lipo lab V line",
+    "page": "https://www.lipolab.us/lipo-lab-v-line/",
+    "downloaded": true,
+    "tokenMatch": 1.0,
+    "dimensions": [
+      640,
+      640
+    ],
+    "image": "https://www.lipolab.us/wp-content/uploads/2024/10/lipo-lab-v-line-08.png"
+  },
+  "xeomin-100": {
+    "name": "Xeomin 100",
+    "page": "https://www.xeominaesthetic.com/wp-content/uploads/2026/02/xeomin-pi-med-guide.pdf",
+    "downloaded": false,
+    "tokenMatch": 1.0,
+    "error": "no social image"
+  },
+  "belotero-volume": {
+    "name": "Belotero Volume",
+    "page": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/P250020D.pdf",
+    "downloaded": false,
+    "tokenMatch": 0.0,
+    "error": "page name mismatch"
+  },
+  "belotero-hydro-revive": {
+    "name": "Belotero Hydro / Revive",
+    "page": "https://neo-clinic.com/media/cabinet/2026/04/price_26_03_2026_%D0%BD%D0%B0_%D1%81%D0%B0%D0%B8%D1%82.pdf",
+    "downloaded": false,
+    "tokenMatch": 0.0,
+    "error": "page name mismatch"
+  },
+  "belotero-intense": {
+    "name": "Belotero Intense",
+    "page": "https://kinamihealth.com/es/producto/belotero-intense/",
+    "downloaded": true,
+    "tokenMatch": 1.0,
+    "dimensions": [
+      800,
+      800
+    ],
+    "image": "https://kinamihealth.com/wp-content/uploads/2025/02/BELOTERO-INTENSE-02.jpg"
+  },
+  "belotero-balance": {
+    "name": "Belotero Balance",
+    "page": "https://www.belotero.com/",
+    "downloaded": true,
+    "tokenMatch": 1.0,
+    "dimensions": [
+      378,
+      457
+    ],
+    "image": "https://www.belotero.com/ap/wp-content/uploads/2025/12/Screenshot-2025-08-25-at-1.49.45-PM-1.png"
+  },
+  "belotero-soft": {
+    "name": "Belotero Soft",
+    "page": "https://accessgudid.nlm.nih.gov/devices/05060457760204",
+    "downloaded": false,
+    "tokenMatch": 1.0,
+    "error": "no social image"
+  },
+  "belotero-lips": {
+    "name": "Belotero lips",
+    "page": "https://belotero.co.uk/product/lips/",
+    "downloaded": true,
+    "tokenMatch": 1.0,
+    "dimensions": [
+      1920,
+      970
+    ],
+    "image": "https://belotero.co.uk/wp-content/uploads/2023/04/soft-banner_2.jpg"
+  },
+  "hanheal-hair-filler": {
+    "name": "Hanheal hair filler",
+    "page": "https://koreanfillers.com/product/hanheal-hair-filler/",
+    "downloaded": true,
+    "tokenMatch": 1.0,
+    "dimensions": [
+      483,
+      484
+    ],
+    "image": "https://koreanfillers.com/wp-content/uploads/2026/03/Screenshot-2026-03-28-141025.png"
+  },
+  "glutax-80000000": {
+    "name": "Glutax 80000000",
+    "page": null,
+    "downloaded": false
+  },
+  "gfccell-exo-scalp-kit": {
+    "name": "GFCCELL EXO SCALP KIT",
+    "page": "https://fo.buykorea.org/ec/prd/selectGoodsDetail.do?goodsSn=3697198",
+    "downloaded": true,
+    "tokenMatch": 1.0,
+    "dimensions": [
+      256,
+      256
+    ],
+    "image": "https://focdn.gcdn.samsungsdscloud.com//images/files_new/mp/gd/2025/07/17//PRDI20250717161929A500001B001_256x256.png"
+  },
+  "sapphire-hair-rich": {
+    "name": "SAPPHIRE Hair Rich",
+    "page": "https://www.exportersindia.com/us/peptide-vera/hair-care-cosmetics.htm",
+    "downloaded": false,
+    "tokenMatch": 1.0,
+    "error": "no social image"
+  },
+  "traminex": {
+    "name": "Traminex",
+    "page": "https://traminex.com/terms-and-conditions.html",
+    "downloaded": false,
+    "tokenMatch": 1.0,
+    "error": "cannot identify image file 'C:\\\\Users\\\\Admin\\\\Documents\\\\Web\\\\SOLA_PREMIUM_PINK\\\\assets\\\\images\\\\product-sources-pages\\\\traminex.img'"
+  },
+  "cytocare-532": {
+    "name": "Cytocare 532",
+    "page": "https://www.lyrangroup.com/cytocare-532-kinetic-element/",
+    "downloaded": false,
+    "tokenMatch": 1.0,
+    "error": "no social image"
+  },
+  "lipo-vela-v-line": {
+    "name": "Lipo vela V-line",
+    "page": "https://www.madeinchina.com/mall/show-Lipo-Vela-V-for-V-Line-Contour-Whitening-Ppc-Injection-Lipolysis-Solution-and-Glutathione-Whitening-Sodium-Deoxycholate-L-Carnitine-and-Vitamin-B12_976919.html",
+    "downloaded": false,
+    "tokenMatch": 1.0,
+    "error": "no social image"
+  },
+  "miracle-white-90000mg": {
+    "name": "Miracle White 90000mg",
+    "page": "https://www.tradeindia.com/products/miracle-white-90000mg-c11147965.html",
+    "downloaded": true,
+    "tokenMatch": 1.0,
+    "dimensions": [
+      500,
+      500
+    ],
+    "image": "https://cpimg.tistatic.com/11147965/b/4/Miracle-White-90000mg..jpg"
+  },
+  "lipovela": {
+    "name": "Lipovela",
+    "page": "https://kstations.com/collections/body-contour-and-fat-reduction/products/lipovela",
+    "downloaded": true,
+    "tokenMatch": 1.0,
+    "dimensions": [
+      864,
+      864
+    ],
+    "image": "http://kstations.com/cdn/shop/files/LIPOVELA_PPC_Solution_10mL_10_Vials.webp?v=1764748727"
+  },
+  "omnican-syringe-with-built-in-needle-b-braun": {
+    "name": "Omnican syringe with built-in needle (B.Braun)",
+    "page": "https://www.volza.com/p/disposable-syringes/import/import-in-uzbekistan/hsn-code-9018/",
+    "downloaded": false,
+    "error": "403 Client Error: Forbidden for url: https://www.volza.com/p/disposable-syringes/import/import-in-uzbekistan/hsn-code-9018/"
+  },
+  "diabetic-needles": {
+    "name": "Diabetic needles",
+    "page": "https://syringewithneedle.com/",
+    "downloaded": false,
+    "tokenMatch": 1.0,
+    "error": "no social image"
+  },
+  "cannula-needle-27g": {
+    "name": "Cannula Needle — 27G",
+    "page": "https://www.yastridaesthetics.com/products/27-gauge-cannula",
+    "downloaded": true,
+    "tokenMatch": 1.0,
+    "dimensions": [
+      900,
+      1140
+    ],
+    "image": "http://www.yastridaesthetics.com/cdn/shop/files/Yastrid_27_Gauge_Cannula.png?v=1770887574"
+  },
+  "cannula-needle-25g": {
+    "name": "Cannula Needle — 25G",
+    "page": "https://kstations.com/products/aesthefill",
+    "downloaded": true,
+    "tokenMatch": 1.0,
+    "dimensions": [
+      850,
+      850
+    ],
+    "image": "http://kstations.com/cdn/shop/files/AESTHE_FILL_200mg.jpg?v=1764807452"
+  },
+  "cannula-needle-23g": {
+    "name": "Cannula Needle — 23G",
+    "page": "https://www.ibeautymachine.com/professional/juvelook-volume-200mg-pdlla-hybrid-dermal-filler.html",
+    "downloaded": false,
+    "tokenMatch": 1.0,
+    "error": "no social image"
+  },
+  "chaeum-cream-10-56": {
+    "name": "Chaeum Cream 10.56%",
+    "page": "https://beautyofaztlan.squarespace.com/dermalfillers/p/fuq72awduey6v54kvqmsdpindz5mo1",
+    "downloaded": false,
+    "error": "404 Client Error: Not Found for url: https://beautyofaztlan.squarespace.com/dermalfillers/p/fuq72awduey6v54kvqmsdpindz5mo1"
+  },
+  "tktx": {
+    "name": "TKTX",
+    "page": "https://www.tktx.fr/contact/faq",
+    "downloaded": false,
+    "error": "403 Client Error: Forbidden for url: https://www.tktx.fr/contact/faq"
+  },
+  "jade-caine-cream-10-56": {
+    "name": "Jade Caine Cream 10.56%",
+    "page": "https://en.jdbio.com/products/jade-caine-cream",
+    "downloaded": false,
+    "tokenMatch": 1.0,
+    "error": "HTTPSConnectionPool(host='en.jdbio.com', port=443): Read timed out."
+  },
+  "purose": {
+    "name": "Purose",
+    "page": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=f8740314-7e1f-815e-e053-6294a90a6eae&type=display",
+    "downloaded": false,
+    "tokenMatch": 1.0,
+    "error": "no social image"
+  },
+  "huons-lidocaine-epineprin-inj": {
+    "name": "Huons Lidocaine Epineprin Inj",
+    "page": "https://sptmconghoan.myharavan.com/products/te-nuoc-huons-lidocaine-epineprin-inj",
+    "downloaded": true,
+    "tokenMatch": 1.0,
+    "dimensions": [
+      450,
+      600
+    ],
+    "image": "http://product.hstatic.net/200000413343/product/311597129_1752271338466887_2723093773264505678_n_9207902cc8f64b6e8c753ac783667380_grande.jpg"
+  },
+  "pharmacort": {
+    "name": "Pharmacort",
+    "page": "https://verification.fda.gov.ph/drug_productsview.php?registration_number=DR-XY36986&showdetail=",
+    "downloaded": false,
+    "error": "403 Client Error: Forbidden for url: https://verification.fda.gov.ph/drug_productsview.php?registration_number=DR-XY36986&showdetail="
+  },
+  "lisanolona": {
+    "name": "Lisanolona",
+    "page": "https://www.tradeindia.com/products/lisanolona-triamcinolone-acetonide-injectable-suspension-10207694.html",
+    "downloaded": true,
+    "tokenMatch": 1.0,
+    "dimensions": [
+      400,
+      400
+    ],
+    "image": "https://tiimg.tistatic.com/fp/0/010/207/lisanolona-triamcinolone-acetonide-injectable-suspension-694.jpg"
+  },
+  "biotine-hair": {
+    "name": "Biotine hair",
+    "page": "https://www.notino.nl/dr-sante/anti-hair-loss-versterkend-masker-voor-zwak-haar-met-de-neiging-om-uit-te-vallen/",
+    "downloaded": false,
+    "error": "403 Client Error: Forbidden for url: https://www.notino.nl/dr-sante/anti-hair-loss-versterkend-masker-voor-zwak-haar-met-de-neiging-om-uit-te-vallen/"
+  },
+  "jalupro-eye-premium": {
+    "name": "Jalupro Eye — Premium",
+    "page": "https://hermosaclinica.pl/mezoterapia-prozniowa/",
+    "downloaded": true,
+    "tokenMatch": 1.0,
+    "dimensions": [
+      768,
+      1024
+    ],
+    "image": "https://hermosaclinica.pl/wp-content/uploads/2024/06/masaz-kobido-bielsko-biala-hermosa-clinica-2.webp"
+  },
+  "ceret-eyes": {
+    "name": "Ceret Eyes",
+    "page": "https://www.natalieseroussi.com/artists/120-salvador-dali/works/1978-salvador-dali-la-femme-visible-la-chasse-aux-papillons-1930/",
+    "downloaded": false,
+    "tokenMatch": 0.0,
+    "error": "page name mismatch"
+  },
+  "jalupro-eye-standard": {
+    "name": "Jalupro Eye — Standard",
+    "page": "https://www.sadiasbeautylounge.co.uk/price/",
+    "downloaded": false,
+    "tokenMatch": 1.0,
+    "error": "no social image"
+  },
+  "rejuran-healer-new-packaging": {
+    "name": "Rejuran Healer — New Packaging",
+    "page": null,
+    "downloaded": false
+  },
+  "rejuran-healer-previous-packaging": {
+    "name": "Rejuran Healer — Previous Packaging",
+    "page": null,
+    "downloaded": false
+  },
+  "rejuran-tone-up": {
+    "name": "Rejuran Tone Up",
+    "page": "https://pharmaresearch.com/en/product/view.html?code=4&curpage=1&idx=58&srh_cate=1",
+    "downloaded": true,
+    "tokenMatch": 1.0,
+    "dimensions": [
+      800,
+      400
+    ],
+    "image": "https://pharmaresearch.com/pharma.jpg"
+  },
+  "hanheal-pdrn-booster": {
+    "name": "HANHEAL PDRN Booster",
+    "page": "https://fliphtml5.com/kyfvi/xcwk/BNC%C3%89RA_Catalog_2026_01/35/",
+    "downloaded": false,
+    "error": "403 Client Error: Forbidden for url: https://fliphtml5.com/kyfvi/xcwk/BNC%C3%89RA_Catalog_2026_01/35/"
+  },
+  "pdrn": {
+    "name": "PDRN",
+    "page": "https://www.marieclaire.co.uk/beauty/skincare/best-pdrn-skincare",
+    "downloaded": true,
+    "tokenMatch": 1.0,
+    "dimensions": [
+      1200,
+      630
+    ],
+    "image": "https://cdn.mos.cms.futurecdn.net/i5FkhAJMNnT6PbGeVjALe7-1200-80.png"
+  },
+  "nad-complex": {
+    "name": "NAD Complex",
+    "page": "https://neuminanutrition.com/products/nad",
+    "downloaded": true,
+    "tokenMatch": 1.0,
+    "dimensions": [
+      1600,
+      2000
+    ],
+    "image": "http://neuminanutrition.com/cdn/shop/files/Neumina-NAD-Plus-Complex-920mg-Anti-Aging-Formula-with-Resveratrol-and-Quercetin.png?v=1776847564&width=2048"
+  },
+  "nadigo-nad-pen": {
+    "name": "Nadigo NAD pen",
+    "page": "https://intravitglobal.com/shop/",
+    "downloaded": false,
+    "tokenMatch": 1.0,
+    "error": "no social image"
+  },
+  "vs-collagen-nad": {
+    "name": "VS Collagen NAD",
+    "page": "https://kekalcantik.com/",
+    "downloaded": false,
+    "tokenMatch": 1.0,
+    "error": "no social image"
+  },
+  "vs-toxnad": {
+    "name": "VS ToxNAD",
+    "page": "https://botoxfillersupply.com/collections/mesotherapy",
+    "downloaded": false,
+    "tokenMatch": 1.0,
+    "error": "no social image"
+  },
+  "vs-pnad": {
+    "name": "VS PNAD",
+    "page": "https://www.sciencedirect.com/science/article/pii/S2405844023008678",
+    "downloaded": false,
+    "error": "403 Client Error: Forbidden for url: https://www.sciencedirect.com/science/article/pii/S2405844023008678"
+  },
+  "vs-vitathione-nad": {
+    "name": "VS Vitathione NAD",
+    "page": "https://botoxfillersupply.com/collections/mesotherapy",
+    "downloaded": false,
+    "tokenMatch": 1.0,
+    "error": "no social image"
+  },
+  "vs-nad": {
+    "name": "VS NAD+",
+    "page": "https://jiaoyanliu.en.made-in-china.com/product/aUKpEezXOqWx/China-Victoria-Sun-Nad-Is-a-Premium-Grade-Anti-Aging-Skin-Booster.html",
+    "downloaded": true,
+    "tokenMatch": 1.0,
+    "dimensions": [
+      800,
+      800
+    ],
+    "image": "https://image.made-in-china.com/2f0j00kFrvQJeMfRcP/Victoria-Sun-Nad-Is-a-Premium-Grade-Anti-Aging-Skin-Booster.jpg"
+  },
+  "puri": {
+    "name": "Puri",
+    "page": "https://asset-downloads.zeiss.com/catalogs/download/med2/86bb8932-e646-4381-8732-353cbfa915ae/IFU_PURI_CLEAR_003500-0071-690_Rev000_EN.pdf",
+    "downloaded": false,
+    "tokenMatch": 0.0,
+    "error": "page name mismatch"
+  },
+  "bacio": {
+    "name": "Bacio",
+    "page": "https://www.nestle.com/brands/chocolate-confectionery/baci-perugina",
+    "downloaded": false,
+    "error": "403 Client Error: Forbidden for url: https://www.nestle.com/brands/chocolate-confectionery/baci-perugina"
+  },
+  "luthione-1200mg": {
+    "name": "Luthione 1200mg",
+    "page": "https://velkorea.com/65",
+    "downloaded": true,
+    "tokenMatch": 1.0,
+    "dimensions": [
+      682,
+      368
+    ],
+    "image": "https://cdn.imweb.me/upload/S20241218c5831c3fd9699/e347eeed3cb11.png"
+  },
+  "strong-snow-white-set": {
+    "name": "Strong snow white set",
+    "page": "https://www.scribd.com/document/986341509/%EC%8A%A4%EB%85%B8%EC%9A%B0%ED%99%94%EC%9D%B4%ED%8A%B8%EB%93%9C%EB%A6%BD-%EC%84%B8%ED%8A%B8-%ED%81%90%EC%95%8Cx",
+    "downloaded": false,
+    "tokenMatch": 0.25,
+    "error": "page name mismatch"
+  },
+  "collagen": {
+    "name": "Collagen",
+    "page": "https://www.nothingfishy.co/blogs/nothing-fishy-blog/why-we-changed-our-collagen-packaging-and-what-it-means-for-you",
+    "downloaded": true,
+    "tokenMatch": 1.0,
+    "dimensions": [
+      1895,
+      1422
+    ],
+    "image": "http://www.nothingfishy.co/cdn/shop/articles/Blog_13.png?v=1770305093"
+  },
+  "glutanex-drip-set-1200mg": {
+    "name": "Glutanex Drip Set 1200mg",
+    "page": "https://www.tradeindia.com/products/glutathione-injection-1200mg-7054213.html",
+    "downloaded": true,
+    "tokenMatch": 1.0,
+    "dimensions": [
+      500,
+      377
+    ],
+    "image": "https://tiimg.tistatic.com/fp/1/007/054/glutathione-injection-1200mg-213.jpg"
+  },
+  "retatrutide-bioaminolabs-60mg": {
+    "name": "Retatrutide BioaminoLabs 60mg",
+    "page": null,
+    "downloaded": false
+  },
+  "retatrutide-bioaminolabs-30mg": {
+    "name": "Retatrutide BioaminoLabs 30mg",
+    "page": null,
+    "downloaded": false
+  },
+  "retatrutide-bioaminolabs-10mg": {
+    "name": "Retatrutide BioaminoLabs 10mg",
+    "page": null,
+    "downloaded": false
+  },
+  "tirzepatide-bioaminolabs-30mg": {
+    "name": "Tirzepatide BioaminoLabs 30mg",
+    "page": null,
+    "downloaded": false
+  },
+  "tirzepatide-bioaminolabs-10mg": {
+    "name": "Tirzepatide BioaminoLabs 10mg",
+    "page": null,
+    "downloaded": false
+  },
+  "tirzepatide-regenlab-60mg": {
+    "name": "Tirzepatide regenlab  60mg",
+    "page": "https://fillerbotoxsupply.com/san-pham/tirzepatide-regenlab/",
+    "downloaded": true,
+    "tokenMatch": 1.0,
+    "dimensions": [
+      1774,
+      887
+    ],
+    "image": "https://fillerbotoxsupply.com/wp-content/uploads/2026/05/Tirzepatide-Regenlab.png"
+  },
+  "tirzepatide-regenlab-30mg": {
+    "name": "Tirzepatide regenlab 30mg",
+    "page": "https://tdd.mydigitalpublication.com/articles/psoriasis?article_id=4950897&i=843384",
+    "downloaded": false,
+    "error": "403 Client Error: Forbidden for url: https://tdd.mydigitalpublication.com/articles/psoriasis?article_id=4950897&i=843384"
+  },
+  "tirzepatide-regenlab-20mg": {
+    "name": "Tirzepatide regenlab 20mg",
+    "page": "https://fillerbotoxsupply.com/san-pham/tirzepatide-regenlab/",
+    "downloaded": true,
+    "tokenMatch": 1.0,
+    "dimensions": [
+      1774,
+      887
+    ],
+    "image": "https://fillerbotoxsupply.com/wp-content/uploads/2026/05/Tirzepatide-Regenlab.png"
+  },
+  "tirzepatide-regenlab-10mg": {
+    "name": "Tirzepatide regenlab 10mg",
+    "page": "https://fillerbotoxsupply.com/san-pham/tirzepatide-regenlab/",
+    "downloaded": true,
+    "tokenMatch": 1.0,
+    "dimensions": [
+      1774,
+      887
+    ],
+    "image": "https://fillerbotoxsupply.com/wp-content/uploads/2026/05/Tirzepatide-Regenlab.png"
+  },
+  "tirzepatide-regenlab-5mg": {
+    "name": "Tirzepatide regenlab 5mg",
+    "page": "https://fillerbotoxsupply.com/san-pham/tirzepatide-regenlab/",
+    "downloaded": true,
+    "tokenMatch": 1.0,
+    "dimensions": [
+      1774,
+      887
+    ],
+    "image": "https://fillerbotoxsupply.com/wp-content/uploads/2026/05/Tirzepatide-Regenlab.png"
+  },
+  "wuondertox-200": {
+    "name": "Wuondertox 200",
+    "page": null,
+    "downloaded": false
+  },
+  "vesar": {
+    "name": "Vesar",
+    "page": "https://faerder.kommune.no/tjenester/vann-avlop-renovasjon-natur-klima-og-forurensing/renovasjon/",
+    "downloaded": true,
+    "tokenMatch": 1.0,
+    "dimensions": [
+      1200,
+      630
+    ],
+    "image": "https://faerder.kommune.no/handlers/bv.ashx/e1/i234f313f-534d-4d52-9146-6eedf6100fa0/w1200/h630/q8181/k6e9f98a53783/renovasjonbil-og-renovtoer.png"
+  },
+  "amans": {
+    "name": "Amans",
+    "page": "https://saintamans.com/en",
+    "downloaded": true,
+    "tokenMatch": 1.0,
+    "dimensions": [
+      2500,
+      1119
+    ],
+    "image": "http://saintamans.com/cdn/shop/files/Saint_Amans_French_Gin_Homepage_Banner_fbf494c6-e872-44cf-8f45-51a570efee59.jpg?v=1609942587"
+  },
+  "celine": {
+    "name": "Celine",
+    "page": "https://sulapac.com/app/uploads/2024/01/Sulapac-x-Albea-x-Verescence.pdf",
+    "downloaded": false,
+    "tokenMatch": 0.0,
+    "error": "page name mismatch"
+  },
+  "at-filler": {
+    "name": "AT Filler",
+    "page": "https://www.foodprotection.org/upl/downloads/journal-archive/journal-of-milk-and-food-technology-1964-volume-27-issue-3.pdf",
+    "downloaded": false,
+    "tokenMatch": 0.0,
+    "error": "page name mismatch"
+  },
+  "hyaleca": {
+    "name": "Hyaleca",
+    "page": null,
+    "downloaded": false
+  },
+  "restylane-super": {
+    "name": "Restylane Super",
+    "page": "https://doctormekclinic.com/en/filler-brand/",
+    "downloaded": false,
+    "error": "403 Client Error: Forbidden for url: https://doctormekclinic.com/en/filler-brand/"
+  },
+  "juvederm-ultra-4-previous-packaging": {
+    "name": "Juvéderm Ultra 4 — Previous Packaging",
+    "page": null,
+    "downloaded": false
+  },
+  "juvederm-expiry-2026": {
+    "name": "Juvéderm — Expiry 2026",
+    "page": null,
+    "downloaded": false
+  },
+  "juvederm-ultra-4-new-packaging": {
+    "name": "Juvéderm Ultra 4 — New Packaging",
+    "page": null,
+    "downloaded": false
+  }
+}

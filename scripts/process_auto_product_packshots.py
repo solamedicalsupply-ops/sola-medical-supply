@@ -9,14 +9,10 @@ SOURCES = ROOT / "assets/images/product-sources-auto"
 CUTOUTS = ROOT / "assets/images/product-cutouts-auto"
 CARDS = ROOT / "assets/images/generated/products"
 APPROVED_SLUGS = {
-    "botulax-100u", "hutox-100", "laennec-japan", "neuramis-dermal-filler",
-    "ozempic-2-pens", "pdrn", "rejuran-healer-new-packaging",
-    "rejuran-healer-previous-packaging", "retatrutide-bioaminolabs-10mg",
-    "retatrutide-bioaminolabs-30mg", "retatrutide-bioaminolabs-60mg",
-    "tirzepatide-regenlab-5mg", "tirzepatide-regenlab-10mg",
-    "tirzepatide-regenlab-20mg", "tirzepatide-regenlab-30mg",
-    "tirzepatide-regenlab-60mg", "vitaran-hb", "vitaran-i", "vitaran-s",
-    "xeomin-100",
+    "belotero-intense", "curenex-intense-glow-shine", "gc-arginine-inj-10ml",
+    "gfccell-exo-scalp-kit", "glutanex-drip-set-1200mg", "hanheal-hair-filler",
+    "lipo-lab-v-line", "lipotocin-inj", "lipovela", "lisanolona",
+    "nad-complex", "vs-nad", "youthfill-deep",
 }
 
 
