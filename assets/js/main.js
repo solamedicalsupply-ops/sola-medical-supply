@@ -2,6 +2,10 @@ const WHATSAPP_NUMBER = '84981778670';
 const $ = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => [...r.querySelectorAll(s)];
 const allProducts = window.SOLA_PRODUCTS || [];
+
+$$('[data-product-count]').forEach(element => {
+  element.textContent = String(allProducts.length);
+});
 const wa = (text = 'Hello SOLA Medical Supply, I would like to request a wholesale quotation.') => `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
 const slugify = s => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const escapeHTML = s => String(s).replace(/[&<>"']/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]));
