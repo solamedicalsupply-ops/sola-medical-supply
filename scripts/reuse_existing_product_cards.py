@@ -1,0 +1,29 @@
+"""Reconnect imported products to verified SOLA cards already in the repository."""
+from pathlib import Path
+
+ROOT=Path(__file__).resolve().parents[1]
+PRODUCTS=ROOT/'assets/data/products.js'
+
+MAPPING={
+'30G mesotherapy needle':'assets/images/products/34GMesoNeedle.png','34G × 4 mm Meso Needle — Premium':'assets/images/products/34GMesoNeedle.png','34G × 4 mm Meso Needle — Standard':'assets/images/products/34GMesoNeedle.png','32G × 4 mm Meso Needle — Premium':'assets/images/products/32gMesoNeedle.png','32G × 4 mm Meso Needle — Standard':'assets/images/products/32gMesoNeedle.png',
+'MI-CAINE PRO':'assets/images/products/miCainpro.png','Medicaine 2%':'assets/images/products/medicain2.png','J-Cain Cream 15.6%':'assets/images/products/jCainNumbingCream15.6.png','J Cain Cream 10.56%':'assets/images/products/jCainNumbingCream10.56.png','J Cain Cream 29.9%':'assets/images/products/jCainNumbingCream29.9.png','J Cain Cream 59.9%':'assets/images/products/jCainNumbingCream59.9.png',
+'Laennec Japan':'assets/images/products/leannec.png','NCTF — 10 Vials':'assets/images/bestSeller/nctf.png','NCTF — 5 Vials':'assets/images/bestSeller/nctf.png','Luhilo snow':'assets/images/products/luhilo.png','CINDELLA SET 1200MG':'assets/images/products/cindellaSet.png','Gluthion 1200':'assets/images/products/gluthione.png','Glutax 3500000':'assets/images/products/glutax35m.png','Glutax 2200000':'assets/images/products/glutax22m.png','Glutax 1000000':'assets/images/products/glutax10m.png','Sadenya (3 pens)':'assets/images/products/Sardenya.png',
+'Ozempic ( 2 pens)':'assets/images/products/ozempic.png','Mounjaro 15mg ( 2 pens)':'assets/images/products/mounjaro15mg.png','Mounjaro 12.5mg ( 2 pens)':'assets/images/products/mounjaro15mg.png','Mounjaro 10mg ( 2 pens)':'assets/images/bestSeller/moujaro10mg.png','Mounjaro 7.5mg ( 2 pens)':'assets/images/bestSeller/moujaro7.5mg.png','Mounjaro 5mg ( 2 pens)':'assets/images/products/mounjaro15mg.png','Mounjaro 2.5mg ( 2 pens)':'assets/images/bestSeller/moujaro2.5mg.png',
+'Slimqeen':'assets/images/products/slimqueen.png','Dehantox 200':'assets/images/products/dehantox.png','Extox 100':'assets/images/products/extox100u.png','Rubytoxin 100':'assets/images/products/rubytoxin100u.png','Bienox 100':'assets/images/products/bienox100U.png','Coretox 100':'assets/images/products/coretox100u.png','Neuronox 100':'assets/images/products/Neuronox100U.png','Hutox 100':'assets/images/products/hutox100U.png','Kaimax 200':'assets/images/products/kaimax200u.png','Wuondertox 100':'assets/images/products/wuondertox100u.png','Daxxify small':'assets/images/products/daxxify.png','Daxxify big':'assets/images/products/daxxify.png','Dysport small':'assets/images/products/Dysport.png','Dysport big':'assets/images/products/Dysport.png','Botox Allergan 50 unit':'assets/images/products/allergan50u.png','Botox Allergan 100U':'assets/images/products/allergan100u.png','Botulax 100U':'assets/images/products/botulax100.png',
+'Sedy Fill Body':'assets/images/products/sedyFill.png','White Filler Pro':'assets/images/products/whiteFillPro.png','Stylage XXL by Vivacy':'assets/images/products/stylageXXL.png','Stylage L by Vivacy':'assets/images/products/stylageL.png','Stylage M by Vivacy':'assets/images/products/stylageM.png','Stylage S by Vivacy':'assets/images/products/stylageS.png','Chaeum (2cc)':'assets/images/products/chaeum.png','Radiesse 1.5ml':'assets/images/products/radiesse.png','Radiesse 1.5ml tieng Anh':'assets/images/products/radiesse.png','Sculptra white':'assets/images/bestSeller/Sculptra.png','Priere lips':'assets/images/products/priere.png','Elasty (1cc)':'assets/images/products/elasty.png','Tmce VIP':'assets/images/products/tmieVip.png',
+'Dermalax Lidocaine':'assets/images/products/dermalax.png','Dermalax Shape':'assets/images/products/dermalax.png','Dermalax Implant':'assets/images/products/dermalax.png','Dermalax Fine':'assets/images/products/dermalax.png','Dermalax Deep':'assets/images/products/dermalax.png','Restylane Skinbooster 2ml':'assets/images/products/restylaneSkinbooster.png','Rejeunesse Lidocaine':'assets/images/products/rejeunesse.png','Rejeunesse Shape':'assets/images/products/rejeunesse.png','Rejeunesse Implant':'assets/images/products/rejeunesse.png','Rejeunesse Fine':'assets/images/products/rejeunesse.png','Rejeunesse Deep':'assets/images/products/rejeunesse.png','Neuramis Dermal Filler':'assets/images/products/neuramis.png','Revolax Dermal Filler':'assets/images/products/revolax.png',
+'Juvéderm XC Plus — Korean Market':'assets/images/bestSeller/juvedermXcPlus.png','Juvéderm XC — Korean Market':'assets/images/products/juvedermXC.png','Juvéderm Volift — Korean Market':'assets/images/products/juvedermVolift.png','Juvéderm Volbella — Korean Market':'assets/images/products/juvedermVolbella.png','Juvéderm Voluma — Korean Market':'assets/images/bestSeller/juvedermVoluma.png','Juvéderm Voluma — Previous Packaging':'assets/images/bestSeller/juvedermVoluma.png','Juvéderm Voluma — New Packaging':'assets/images/bestSeller/juvedermVoluma.png',
+}
+
+text=PRODUCTS.read_text(encoding='utf8'); changed=0
+for name,image in MAPPING.items():
+    marker=f"{{ name: '{name}',"
+    pos=text.find(marker)
+    if pos<0: continue
+    end=text.find(' },',pos)
+    row=text[pos:end]
+    import re
+    updated=re.sub(r"image: '[^']+'",f"image: '{image}'",row)
+    if updated!=row: text=text[:pos]+updated+text[end:]; changed+=1
+PRODUCTS.write_text(text,encoding='utf8')
+print(f'Reconnected {changed} product cards')
