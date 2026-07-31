@@ -1,0 +1,25 @@
+{
+  "youthfill-fine": {
+    "product": "Youthfill Fine",
+    "sourcePage": "https://skindermalfiller.com/products/youthfill-1-1cc-x-1",
+    "sourceImage": "https://skindermalfiller.com/cdn/shop/files/Youthfill-Fine-Lidocaine-thumbnail.jpg?v=1774502993&width=1445",
+    "status": "verified-and-composited"
+  },
+  "curenex-lipo": {
+    "product": "Curenex Lipo",
+    "sourcePage": "https://konepharma.co.kr/curenex-lipo-injection",
+    "secondaryVerification": "https://buykorea.org/ec/prd/selectSvcDetail.do?goodsSn=3566555",
+    "sourceImage": "https://bizweb.dktcdn.net/thumb/1024x1024/100/480/050/products/curenex-lipo-injection.jpg?v=1688639190153",
+    "status": "verified-and-composited"
+  },
+  "lipolab": {
+    "product": "Lipolab",
+    "localAsset": "assets/images/products/lipolab.png",
+    "status": "existing-approved-card-reused"
+  },
+  "richese-eyes": {
+    "product": "Richese Eyes",
+    "localAsset": "assets/images/products/richeseeyes.png",
+    "status": "existing-approved-card-reused"
+  }
+}
