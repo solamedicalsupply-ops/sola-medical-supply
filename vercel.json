@@ -3,6 +3,11 @@
   "trailingSlash": false,
   "redirects": [
     {
+      "source": "/a-procurement-guide-to-huons-water-numb-for-spas-clinics-and-resellers",
+      "destination": "/blog/a-procurement-guide-to-huons-water-numb-for-spas-clinics-and-resellers",
+      "permanent": true
+    },
+    {
       "source": "/a-procurement-guide-to-olidia-for-spas-clinics-and-resellers",
       "destination": "/blog/a-procurement-guide-to-olidia-for-spas-clinics-and-resellers",
       "permanent": true
@@ -33,6 +38,11 @@
       "permanent": true
     },
     {
+      "source": "/dermal-filler-wholesale-what-buyers-should-know",
+      "destination": "/blog/dermal-filler-wholesale-what-buyers-should-know",
+      "permanent": true
+    },
+    {
       "source": "/how-professional-buyers-evaluate-lemon-bottle-before-ordering-wholesale",
       "destination": "/blog/how-professional-buyers-evaluate-lemon-bottle-before-ordering-wholesale",
       "permanent": true
@@ -40,6 +50,11 @@
     {
       "source": "/how-professional-buyers-evaluate-senorita-before-ordering-wholesale",
       "destination": "/blog/how-professional-buyers-evaluate-senorita-before-ordering-wholesale",
+      "permanent": true
+    },
+    {
+      "source": "/how-sola-packs-products-before-international-shipping",
+      "destination": "/blog/how-sola-packs-products-before-international-shipping",
       "permanent": true
     },
     {
@@ -75,6 +90,11 @@
     {
       "source": "/skin-booster-wholesale-guide-for-clinics-and-spas",
       "destination": "/blog/skin-booster-wholesale-guide-for-clinics-and-spas",
+      "permanent": true
+    },
+    {
+      "source": "/sourcing-j-cain-numbing-cream-10-56-wholesale-a-buyer-s-guide-for-clinics-and-",
+      "destination": "/blog/sourcing-j-cain-numbing-cream-10-56-wholesale-a-buyer-s-guide-for-clinics-and-",
       "permanent": true
     },
     {

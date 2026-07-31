@@ -4,6 +4,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 QUEUE, BLOG = ROOT / "data" / "blog_queue.json", ROOT / "blog"
+VERCEL = ROOT / "vercel.json"
 BLOG_IMAGES = ROOT / "assets" / "images" / "blog"
 INDEX = BLOG / "index.html"
 START, END = "<!-- AUTO_POSTS_START -->", "<!-- AUTO_POSTS_END -->"
@@ -66,7 +67,7 @@ H2: FAQ
 Under FAQ, include 5 common buyer questions using h3 headings and concise answers.
 Near the end, include this exact sentence once: Contact SOLA for wholesale quotation via WhatsApp.'''
 
-def generate(topic):
+def generate(topic, correction=""):
     prompt = f'''Write an original English article for SOLA Medical Supply's professional buyer journal.
 Title brief: {topic['title']}
 Keyword: {topic['keyword']}; Category: {topic['category']}.
@@ -76,8 +77,9 @@ Writing style: practical, clear and commercially useful. The article should feel
 {article_format(topic)} Do not summarise, do not stop early, do not write a short article. Audience: clinics, spas, resellers and distributors. This is procurement education, not medical advice. Never invent certifications, partnerships, prices, stock, approvals or customer results. Do not claim SOLA is an authorised distributor. Mention SOLA only in buyer-support and closing CTA context.
 Avoid unsafe SEO angles such as buying prescription products without prescription, cheap toxin claims, fast fat-loss results, or whitening injection result claims.
 Do not provide dosage, injection technique, treatment protocol, patient selection advice or guaranteed results. For regulated or prescription-sensitive products, tell buyers to confirm local requirements with qualified professionals and local authorities.
-Return JSON only: title, meta_description (max 155 chars), excerpt (35-50 words), read_time, html_body. html_body may use only h2, h3, p, ul, li, strong and em tags. Do not include image tags, figure tags, links, tables or markdown; SOLA will insert article illustrations automatically.'''
-    payload = json.dumps({"model":env("BLOG_MODEL"),"temperature":0.5,"max_tokens":4000,"messages":[{"role":"system","content":"You are a careful B2B editor. Return valid JSON only."},{"role":"user","content":prompt}]}).encode()
+Return JSON only: title, meta_description (max 155 chars), excerpt (35-50 words), read_time, html_body. html_body may use only h2, h3, p, ul, li, strong and em tags. Do not include image tags, figure tags, links, tables or markdown; SOLA will insert article illustrations automatically.
+{correction}'''
+    payload = json.dumps({"model":env("BLOG_MODEL"),"temperature":0.35,"max_tokens":6500,"messages":[{"role":"system","content":"You are a careful B2B editor. Return one complete valid JSON object only."},{"role":"user","content":prompt}]}).encode()
     request = urllib.request.Request(require_url("BLOG_API_URL"), data=payload, headers={"Authorization":f"Bearer {env('BLOG_API_KEY')}","Content-Type":"application/json"}, method="POST")
     try:
         with urllib.request.urlopen(request, timeout=120) as response: result=json.loads(response.read().decode())
@@ -88,6 +90,38 @@ Return JSON only: title, meta_description (max 155 chars), excerpt (35-50 words)
     text=re.sub(r"^```(?:json)?\s*|\s*```$","",text,flags=re.I)
     try: return json.loads(text)
     except json.JSONDecodeError as exc: raise RuntimeError(f"Model returned invalid JSON: {exc}") from exc
+
+def generate_valid_article(topic, attempts=3):
+    correction=""
+    errors=[]
+    for attempt in range(1,attempts+1):
+        try:
+            article=generate(topic,correction)
+            validate(article)
+            return article
+        except RuntimeError as exc:
+            errors.append(str(exc))
+            if attempt == attempts: break
+            correction=f"IMPORTANT CORRECTION: the previous response failed validation ({exc}). Return a complete article that fixes this exact issue."
+            print(f"WARNING: Article attempt {attempt} failed validation; retrying. {exc}",file=sys.stderr)
+    raise RuntimeError(f"Article generation failed after {attempts} attempts. Last error: {errors[-1]}")
+
+def sync_blog_redirects():
+    config=json.loads(VERCEL.read_text(encoding="utf-8"))
+    redirects=config.setdefault("redirects",[])
+    existing={item.get("source") for item in redirects}
+    additions=[]
+    for target in sorted(BLOG.glob("*.html")):
+        if target.name == "index.html": continue
+        slug=target.stem
+        source=f"/{slug}"
+        if source not in existing:
+            additions.append({"source":source,"destination":f"/blog/{slug}","permanent":True})
+    if additions:
+        redirects.extend(additions)
+        redirects.sort(key=lambda item:item.get("source", ""))
+        VERCEL.write_text(json.dumps(config,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+    return len(additions)
 
 def image_role_prompt(topic, article, role):
     base = f'''SOLA Medical Supply journal article visual.
@@ -252,14 +286,16 @@ def main():
     if args.check: print("Configuration valid."); return
     topic=next((x for x in data["topics"] if x.get("status")=="pending"),None)
     if not topic: print("No pending topics."); return
-    article=generate(topic); validate(article); slug=slugify(article["title"]); target=BLOG/f"{slug}.html"
+    article=generate_valid_article(topic); slug=slugify(topic["title"]); target=BLOG/f"{slug}.html"
     if target.exists(): raise RuntimeError(f"Refusing to overwrite {target.name}")
     cover=generate_cover(topic,article,slug)
     illustrations=generate_inline_images(topic,article,slug,cover)
     now=datetime.now(timezone.utc); target.write_text(page(article,slug,topic["category"],now.strftime("%B %d, %Y"),cover,topic,illustrations),encoding="utf-8"); add_card(article,slug,topic["category"],cover)
     illustration_paths=[src for src,_,_ in illustrations]
     topic.update({"status":"published","slug":slug,"published_at":now.isoformat(),"cover":cover,"illustrations":illustration_paths}); data["published"].append({"title":article["title"],"slug":slug,"published_at":now.isoformat(),"cover":cover,"illustrations":illustration_paths})
-    QUEUE.write_text(json.dumps(data,ensure_ascii=False,indent=2)+"\n",encoding="utf-8"); print(f"Published {target.name}")
+    QUEUE.write_text(json.dumps(data,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+    redirect_count=sync_blog_redirects()
+    print(f"Published {target.name}; synchronized {redirect_count} blog redirect(s)")
 
 if __name__=="__main__":
     try: main()

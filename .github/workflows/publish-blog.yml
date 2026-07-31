@@ -13,10 +13,10 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           fetch-depth: 0
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
       - name: Validate configuration
@@ -39,7 +39,7 @@ jobs:
         run: |
           git config user.name "SOLA Journal Bot"
           git config user.email "bot@solamedicalsupply.com"
-          git add blog/ assets/images/blog/ data/blog_queue.json
+          git add blog/ assets/images/blog/ data/blog_queue.json vercel.json
           if git diff --cached --quiet; then
             echo "No article generated."
           else
