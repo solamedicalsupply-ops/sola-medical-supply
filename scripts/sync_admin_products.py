@@ -79,7 +79,6 @@ for item in source:
     category = CATEGORY_MAP[admin_category]
     previous = old_products.get(key, {})
     image = previous.get("image") or "assets/icons/logo.png"
-    detail = bool(previous.get("detail")) and image != "assets/icons/logo.png"
     products.append({
         "name": name,
         "category": category,
@@ -87,7 +86,6 @@ for item in source:
         "origin": item.get("origin", "").strip(),
         "tag": TAG_MAP[category],
         "image": image,
-        "detail": detail,
     })
     seen.add(key)
 
@@ -101,8 +99,7 @@ for product in products:
         f"{key}: '{js_string(product[key])}'"
         for key in ("name", "category", "brand", "origin", "tag", "image")
     )
-    suffix = "" if product["detail"] else ", detail: false"
-    lines.append(f"  {{ {fields}{suffix} }},")
+    lines.append(f"  {{ {fields} }},")
 lines.append("];")
 CATALOGUE.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
