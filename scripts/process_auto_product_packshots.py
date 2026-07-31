@@ -1,0 +1,64 @@
+"""Remove backgrounds and composite all sourced packshots onto SOLA cards."""
+
+from pathlib import Path
+from PIL import Image, ImageFilter
+from rembg import new_session, remove
+
+ROOT = Path(__file__).resolve().parents[1]
+SOURCES = ROOT / "assets/images/product-sources-auto"
+CUTOUTS = ROOT / "assets/images/product-cutouts-auto"
+CARDS = ROOT / "assets/images/generated/products"
+APPROVED_SLUGS = {
+    "botulax-100u", "hutox-100", "laennec-japan", "neuramis-dermal-filler",
+    "ozempic-2-pens", "pdrn", "rejuran-healer-new-packaging",
+    "rejuran-healer-previous-packaging", "retatrutide-bioaminolabs-10mg",
+    "retatrutide-bioaminolabs-30mg", "retatrutide-bioaminolabs-60mg",
+    "tirzepatide-regenlab-5mg", "tirzepatide-regenlab-10mg",
+    "tirzepatide-regenlab-20mg", "tirzepatide-regenlab-30mg",
+    "tirzepatide-regenlab-60mg", "vitaran-hb", "vitaran-i", "vitaran-s",
+    "xeomin-100",
+}
+
+
+def fit(image, box):
+    bounds = image.getchannel("A").getbbox()
+    if not bounds:
+        raise ValueError("empty cutout")
+    image = image.crop(bounds)
+    x1, y1, x2, y2 = box
+    scale = min((x2 - x1) / image.width, (y2 - y1) / image.height)
+    size = (max(1, round(image.width * scale)), max(1, round(image.height * scale)))
+    image = image.resize(size, Image.Resampling.LANCZOS)
+    return image, x1 + (x2 - x1 - size[0]) // 2, y1 + (y2 - y1 - size[1]) // 2
+
+
+def main():
+    CUTOUTS.mkdir(parents=True, exist_ok=True)
+    session = new_session("u2net")
+    files = sorted(path for path in SOURCES.glob("*.img") if path.stem in APPROVED_SLUGS)
+    for index, source in enumerate(files, 1):
+        slug = source.stem
+        card_path = CARDS / f"{slug}.webp"
+        if not card_path.exists():
+            continue
+        cutout_path = CUTOUTS / f"{slug}.png"
+        if cutout_path.exists():
+            cutout = Image.open(cutout_path).convert("RGBA")
+        else:
+            original = Image.open(source).convert("RGB")
+            original.thumbnail((1400, 1400), Image.Resampling.LANCZOS)
+            cutout = remove(original, session=session, alpha_matting=False).convert("RGBA")
+            cutout.save(cutout_path, optimize=True)
+        card = Image.open(card_path).convert("RGBA")
+        packshot, x, y = fit(cutout, (520, 250, 975, 745))
+        alpha = packshot.getchannel("A").filter(ImageFilter.GaussianBlur(10))
+        shadow = Image.new("RGBA", packshot.size, (90, 50, 70, 0))
+        shadow.putalpha(alpha.point(lambda a: round(a * .18)))
+        card.alpha_composite(shadow, (x + 7, y + 11))
+        card.alpha_composite(packshot, (x, y))
+        card.convert("RGB").save(card_path, "WEBP", quality=93, method=6)
+        print(f"[{index}/{len(files)}] {slug}", flush=True)
+
+
+if __name__ == "__main__":
+    main()
