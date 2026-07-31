@@ -9,8 +9,10 @@ SOURCES = ROOT / "assets/images/product-sources-auto"
 CUTOUTS = ROOT / "assets/images/product-cutouts-auto"
 CARDS = ROOT / "assets/images/generated/products"
 APPROVED_SLUGS = {
-    "belotero-volume", "belotero-balance", "belotero-soft", "belotero-lips",
-    "juvederm-ultra-4-previous-packaging", "juvederm-ultra-4-new-packaging",
+    "amino-acid-96-9", "bacio", "biotine-hair", "cannula-18g",
+    "curenex", "hanheal-pdrn-booster",
+    "miracle-white-90000mg", "multivitamin-iv", "rejuva-nad",
+    "strong-snow-white-set", "zishel-xomage",
 }
 
 

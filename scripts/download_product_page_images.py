@@ -5,8 +5,10 @@ from urllib.parse import urljoin
 import requests
 from PIL import Image
 ROOT=Path(__file__).resolve().parents[1]
-SRC=json.loads((ROOT/'assets/data/product-page-sources.json').read_text(encoding='utf8'))
-OUT=ROOT/'assets/images/product-sources-pages'; OUT.mkdir(parents=True,exist_ok=True)
+manifest_name=os.environ.get('SOLA_SOURCE_MANIFEST','product-page-sources.json')
+SRC=json.loads((ROOT/'assets/data'/manifest_name).read_text(encoding='utf8'))
+output_name=os.environ.get('SOLA_SOURCE_OUTPUT','product-sources-pages')
+OUT=ROOT/'assets/images'/output_name; OUT.mkdir(parents=True,exist_ok=True)
 REPORT={}; session=requests.Session(); headers={'User-Agent':'Mozilla/5.0'}
 stop={'product','packaging','new','previous','korean','market','pens','vials','small','big'}
 only={x for x in os.environ.get('SOLA_ONLY_SLUGS','').split(',') if x}
@@ -49,4 +51,5 @@ for i,(raw,v) in enumerate(SRC.items(),1):
  except Exception as e:
   (OUT/f'{slug}.img').unlink(missing_ok=True); entry['error']=str(e)
  REPORT[slug]=entry; print(f'[{i}/{len(SRC)}] {slug}: {"ok" if entry["downloaded"] else "missing"}',flush=True)
-(ROOT/'assets/data/product-page-images.json').write_text(json.dumps(REPORT,ensure_ascii=False,indent=2),encoding='utf8')
+report_name=os.environ.get('SOLA_SOURCE_REPORT','product-page-images.json')
+(ROOT/'assets/data'/report_name).write_text(json.dumps(REPORT,ensure_ascii=False,indent=2),encoding='utf8')
