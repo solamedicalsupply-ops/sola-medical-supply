@@ -13,10 +13,24 @@ for m in re.finditer(r"\{ name: '([^']+)'.*?image: 'assets/images/generated/prod
 OUT=ROOT/'assets/images/product-sources-yandex';OUT.mkdir(parents=True,exist_ok=True)
 stop={'product','packaging','cream','needle','small','big','pens','vials','korean','market','previous','new'}
 s=requests.Session();report={}
+query_by_slug={
+ 'tan-hong':'"Tan Hong" medical consumable Korea aesthetic',
+ 'junier':'"Junier JR7" dermal filler box',
+ 'purose':'"Purose" numbing cream topical anaesthetic',
+ 'pharmacort':'"Pharmacort" triamcinolone injection box ampoules',
+ 'ceret-eyes':'"CERES Premium Dark Circle Essence"',
+ 'vs-toxnad':'"VS NAD+" skin booster vial Victoria Sun',
+ 'vs-pnad':'"PNAD" NAD+ PN skin booster box',
+ 'puri':'"PURI PDRN" skin booster syringe box',
+ 'vesar':'"Vesar" hyaluronic dermal filler syringe',
+ 'amans':'"Amans" hyaluronic dermal filler syringe',
+ 'celine':'"Celine" hyaluronic dermal filler syringe Korea',
+ 'hyaleca':'"Hyalace" skin booster box syringe Korea',
+}
 for i,(name,slug) in enumerate(rows,1):
  entry={'name':name,'downloaded':False};toks=[x for x in re.findall('[a-z0-9]+',name.lower()) if len(x)>2 and x not in stop]
  try:
-  raw=s.get('https://yandex.com/images/search',params={'text':f'"{name}" product box vial syringe'},headers={'User-Agent':'Mozilla/5.0'},timeout=25).text
+  raw=s.get('https://yandex.com/images/search',params={'text':query_by_slug.get(slug,f'"{name}" Korea aesthetic medicine')},headers={'User-Agent':'Mozilla/5.0'},timeout=25).text
   page=html.unescape(raw); items=[]
   for match in re.finditer(r'"origUrl":"(.*?)".*?"snippet":\{"title":"(.*?)".*?"url":"(.*?)"',page,re.S):
    url,title,source=[html.unescape(x.replace('\\/','/')) for x in match.groups()]

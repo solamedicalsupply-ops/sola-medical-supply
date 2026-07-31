@@ -87,7 +87,7 @@ window.SOLA_PRODUCTS = [
   { name: 'Roya Eyes', category: 'Meso / Skin Boosters', brand: 'Roya Eyes', origin: 'Korea', tag: 'Skin Booster', image: 'assets/images/products/roya.png' },
   { name: 'Jalupro Eye — Premium', category: 'Meso / Skin Boosters', brand: 'Jalupro', origin: 'Korea', tag: 'Skin Booster', image: 'assets/images/products/jaluproHMW.png' },
   { name: 'Eve Eyes', category: 'Meso / Skin Boosters', brand: 'Eve Eyes', origin: 'Korea', tag: 'Skin Booster', image: 'assets/images/products/eveEyes.png' },
-  { name: 'Ceret Eyes', category: 'Meso / Skin Boosters', brand: 'Ceret Eyes', origin: 'Korea', tag: 'Skin Booster', image: 'assets/images/generated/products/ceret-eyes.webp' },
+  { name: 'Ceret Eyes', category: 'Meso / Skin Boosters', brand: 'Ceret Eyes', origin: 'Korea', tag: 'Skin Booster', image: 'assets/images/products/ceres.png' },
   { name: 'Luna Eyes', category: 'Meso / Skin Boosters', brand: 'Luna Eyes', origin: 'Korea', tag: 'Skin Booster', image: 'assets/images/products/lunaeyes.png' },
   { name: 'Teoxan Eyes', category: 'Meso / Skin Boosters', brand: 'Teoxan Eyes', origin: 'Korea', tag: 'Skin Booster', image: 'assets/images/products/teoxaneRedensity2.png' },
   { name: 'Richese Eyes', category: 'Meso / Skin Boosters', brand: 'Richese Eyes', origin: 'Korea', tag: 'Skin Booster', image: 'assets/images/products/richeseeyes.png' },

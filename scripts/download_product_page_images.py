@@ -17,16 +17,18 @@ for i,(raw,v) in enumerate(SRC.items(),1):
  if only and slug not in only: continue
  if not page_url: REPORT[slug]=entry; continue
  try:
+  direct_image=v.get('directImage')
   r=session.get(page_url,headers=headers,timeout=25); r.raise_for_status(); page=r.text
   plain=re.sub('<[^>]+>',' ',html.unescape(page)).lower()
   toks=[x for x in re.findall('[a-z0-9]+',v['name'].lower()) if len(x)>2 and x not in stop]
   entry['tokenMatch']=sum(x in plain for x in toks)/max(1,len(toks))
   if entry['tokenMatch']<.67: raise ValueError('page name mismatch')
   patterns=[r'<meta[^>]+property=["\']og:image["\'][^>]+content=["\']([^"\']+)',r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+property=["\']og:image',r'<meta[^>]+name=["\']twitter:image["\'][^>]+content=["\']([^"\']+)']
-  image_url=None
-  for p in patterns:
-   m=re.search(p,page,re.I)
-   if m: image_url=urljoin(page_url,html.unescape(m.group(1))); break
+  image_url=direct_image
+  if not image_url:
+   for p in patterns:
+    m=re.search(p,page,re.I)
+    if m: image_url=urljoin(page_url,html.unescape(m.group(1))); break
   candidates=[]
   if image_url: candidates.append(image_url)
   for tag in re.findall(r'<img\b[^>]*>',page,re.I):

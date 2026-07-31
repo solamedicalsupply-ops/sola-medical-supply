@@ -1,5 +1,6 @@
 """Remove backgrounds and composite all sourced packshots onto SOLA cards."""
 
+import os
 from pathlib import Path
 from PIL import Image, ImageFilter
 from rembg import new_session, remove
@@ -9,16 +10,10 @@ SOURCES = ROOT / "assets/images/product-sources-auto"
 CUTOUTS = ROOT / "assets/images/product-cutouts-auto"
 CARDS = ROOT / "assets/images/generated/products"
 APPROVED_SLUGS = {
-    "at-filler", "belotero-hydro-revive", "cannula-23g", "cannula-needle-23g",
-    "cannula-needle-25g", "cannula-needle-27g", "cannula-needle-30g", "collagen",
-    "diabetic-needles", "glutaone-inj-1200mg", "glutathione-tad-600",
-    "glutax-80000000", "huons-lidocaine-epineprin-inj", "juvederm-expiry-2026",
-    "juvederm-super-mau-moi-voluma-ultra3-ultra4", "luthione-1200mg", "mesocartin",
-    "rejuran-tone-up", "remedium-pdrn", "restylane-super", "saxenda-3-pens",
-    "tirzepatide-bioaminolabs-10mg", "tirzepatide-bioaminolabs-30mg", "tktx",
-    "traminex", "vom", "vs-collagen-nad", "vs-vitathione-nad", "yvoire",
-    "zinc-s-inj", "zishel-xomage-pur33",
+    "amans", "celine", "hyaleca", "junier", "pharmacort", "puri", "purose",
+    "tan-hong", "vesar", "vs-pnad", "vs-toxnad",
 }
+REFRESH_CUTOUTS = {slug for slug in os.environ.get("SOLA_REFRESH_CUTOUTS", "").split(",") if slug}
 
 
 def fit(image, box):
@@ -43,7 +38,7 @@ def main():
         if not card_path.exists():
             continue
         cutout_path = CUTOUTS / f"{slug}.png"
-        if cutout_path.exists():
+        if cutout_path.exists() and slug not in REFRESH_CUTOUTS:
             cutout = Image.open(cutout_path).convert("RGBA")
         else:
             original = Image.open(source).convert("RGB")
