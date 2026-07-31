@@ -208,9 +208,13 @@ function productCard(p) {
     ? `<button class="add-quote ${selected ? 'selected' : ''}" data-add-quote="${p.name.replace(/"/g, '&quot;')}">${selected ? 'Added ✓' : '+ Add to quote'}</button>`
     : `<a class="add-quote" href="${wa('Hello SOLA Medical Supply, please quote: ' + p.name)}" target="_blank">Request quotation →</a>`;
   const url = `products/${slugify(p.name)}.html`;
+  const media = p.detail === false
+    ? `<span><img src="${p.image}" alt="${p.name}" loading="lazy" decoding="async"></span>`
+    : `<a href="${url}"><img src="${p.image}" alt="${p.name}" loading="lazy" decoding="async"></a>`;
+  const title = p.detail === false ? p.name : `<a href="${url}">${p.name}</a>`;
   return `<article class="product">
-    <figure><a href="${url}"><img src="${p.image}" alt="${p.name}" loading="lazy" decoding="async"></a></figure>
-    <div class="product-body"><div class="product-flags"><span>${productFlag(p)}</span><span>${p.origin || 'Global'}</span></div><h3><a href="${url}">${p.name}</a></h3><div class="meta"><span class="badge">${p.category}</span><span class="badge">${p.brand}</span></div>
+    <figure>${media}</figure>
+    <div class="product-body"><div class="product-flags"><span>${productFlag(p)}</span><span>${p.origin || 'Global'}</span></div><h3>${title}</h3><div class="meta"><span class="badge">${p.category}</span><span class="badge">${p.brand}</span></div>
     <p>${p.origin || 'International'} supply • ${p.tag || 'Available on request'}</p>
     ${action}</div>
   </article>`;
