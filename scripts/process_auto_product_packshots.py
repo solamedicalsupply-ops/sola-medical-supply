@@ -9,10 +9,15 @@ SOURCES = ROOT / "assets/images/product-sources-auto"
 CUTOUTS = ROOT / "assets/images/product-cutouts-auto"
 CARDS = ROOT / "assets/images/generated/products"
 APPROVED_SLUGS = {
-    "amino-acid-96-9", "bacio", "biotine-hair", "cannula-18g",
-    "curenex", "hanheal-pdrn-booster",
-    "miracle-white-90000mg", "multivitamin-iv", "rejuva-nad",
-    "strong-snow-white-set", "zishel-xomage",
+    "at-filler", "belotero-hydro-revive", "cannula-23g", "cannula-needle-23g",
+    "cannula-needle-25g", "cannula-needle-27g", "cannula-needle-30g", "collagen",
+    "diabetic-needles", "glutaone-inj-1200mg", "glutathione-tad-600",
+    "glutax-80000000", "huons-lidocaine-epineprin-inj", "juvederm-expiry-2026",
+    "juvederm-super-mau-moi-voluma-ultra3-ultra4", "luthione-1200mg", "mesocartin",
+    "rejuran-tone-up", "remedium-pdrn", "restylane-super", "saxenda-3-pens",
+    "tirzepatide-bioaminolabs-10mg", "tirzepatide-bioaminolabs-30mg", "tktx",
+    "traminex", "vom", "vs-collagen-nad", "vs-vitathione-nad", "yvoire",
+    "zinc-s-inj", "zishel-xomage-pur33",
 }
 
 

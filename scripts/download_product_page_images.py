@@ -36,6 +36,15 @@ for i,(raw,v) in enumerate(SRC.items(),1):
    label=(tag+' '+url).lower()
    score=sum(t in label for t in toks)-sum(x in label for x in ('logo','icon','avatar','flag','payment'))
    candidates.append((score,url))
+  for raw_url in re.findall(r'(?:contentUrl|image|src|data-lazy-src)["\']?\s*[:=]\s*["\'](https?[^"\']+)',page,re.I):
+   url=html.unescape(raw_url.replace('\\/','/')); label=url.lower()
+   score=sum(t in label for t in toks)-sum(x in label for x in ('logo','icon','avatar','flag','payment'))
+   candidates.append((score,url))
+  for srcset in re.findall(r'(?:srcset|data-srcset)=["\']([^"\']+)',page,re.I):
+   for part in html.unescape(srcset).split(','):
+    url=urljoin(page_url,part.strip().split()[0]); label=url.lower()
+    score=sum(t in label for t in toks)-sum(x in label for x in ('logo','icon','avatar'))
+    candidates.append((score,url))
   candidates=[x for _,x in sorted((x if isinstance(x,tuple) else (10,x) for x in candidates),reverse=True)]
   target=OUT/f'{slug}.img'
   for candidate in candidates[:12]:
