@@ -2755,6 +2755,21 @@ h3 {
     object-fit: cover
 }
 
+/* Product artwork contains edge-to-edge information and must never be cropped. */
+.product-detail-page .article-cover {
+    width: min(850px, calc(100% - 32px));
+    height: auto;
+    aspect-ratio: 1 / 1;
+    background: #fff8fb;
+}
+
+.product-detail-page .article-cover img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
 .article-body {
     padding: 75px 28px 110px;
     font-size: 17px;
@@ -2914,6 +2929,11 @@ h3 {
         border-radius: 0
     }
 
+    .product-detail-page .article-cover {
+        height: auto;
+        border-radius: 18px;
+    }
+
     .journal-newsletter .wrap>div {
         padding: 42px 22px
     }
@@ -2956,6 +2976,10 @@ h3 {
 
     .article-cover {
         height: 300px
+    }
+
+    .product-detail-page .article-cover {
+        height: auto
     }
 
     .article-body {

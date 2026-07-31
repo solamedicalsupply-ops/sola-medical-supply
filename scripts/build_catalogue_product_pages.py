@@ -61,7 +61,7 @@ def page(product):
 <meta property="og:image" content="{SITE}/{html.escape(product['image'], quote=True)}">
 <link rel="icon" href="../assets/icons/logo.png"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets/css/style.css">
 <script type="application/ld+json">{schema}</script></head>
-<body class="article-page"><main>
+<body class="article-page product-detail-page"><main>
 <header class="article-hero"><div class="wrap article-wrap"><span>{category.upper()} · WHOLESALE</span><h1>{name}</h1><p>{description}</p><div class="article-meta"><a href="../index.html">Home</a> › <a href="../products.html">Products</a> › {name}</div></div></header>
 <div class="article-cover wrap"><img src="{image}" alt="{name}" loading="eager"></div>
 <article class="article-body article-wrap"><p class="article-intro">{name} is listed in SOLA Medical Supply's professional wholesale catalogue. Availability, packaging and shipping options are confirmed for each request.</p>
@@ -81,6 +81,10 @@ def main():
     for slug, item in expected.items():
         target = OUT / f"{slug}.html"
         if target.exists() and MARKER not in target.read_text(encoding="utf-8", errors="ignore"):
+            existing = target.read_text(encoding="utf-8", errors="ignore")
+            if 'product-detail-page' not in existing:
+                existing = existing.replace('class="article-page"', 'class="article-page product-detail-page"', 1)
+                target.write_text(existing, encoding="utf-8")
             continue
         existed = target.exists()
         target.write_text(page(item), encoding="utf-8")
