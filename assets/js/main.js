@@ -11,11 +11,11 @@ const slugify = s => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/
 const escapeHTML = s => String(s).replace(/[&<>"']/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]));
 const homeCategories = [
   { name: 'Dermal Fillers', label: 'Dermal fillers', note: 'Korean and international filler options', icon: 'DF', bg: 'cat-bg-fillers' },
-  { name: 'Skin Boosters / PN', label: 'Skin boosters / PN', note: 'PN, HA and hydration-focused products', icon: 'SB', bg: 'cat-bg-skin' },
-  { name: 'Toxin', label: 'Toxins', note: 'Popular professional toxin requests', icon: 'TX', bg: 'cat-bg-toxins' },
-  { name: 'Exosome / Meso', label: 'Exosome / Meso', note: 'Meso and regenerative buyer requests', icon: 'EX', bg: 'cat-bg-exosome' },
-  { name: 'Lipolysis / Body', label: 'Lipolysis / Body', note: 'Body contouring and lipolysis picks', icon: 'LB', bg: 'cat-bg-body' },
-  { name: 'Injection Supplies', label: 'Injection supplies', note: 'Clinic essentials for order planning', icon: 'IS', bg: 'cat-bg-supplies' }
+  { name: 'Meso / Skin Boosters', label: 'Meso / skin boosters', note: 'PN, HA and hydration-focused products', icon: 'SB', bg: 'cat-bg-skin' },
+  { name: 'Botulinum Toxin', label: 'Botulinum toxin', note: 'Popular professional toxin requests', icon: 'TX', bg: 'cat-bg-toxins' },
+  { name: 'Collagen Stimulator / Biostimulator', label: 'Biostimulators', note: 'Collagen stimulator and biostimulator requests', icon: 'BI', bg: 'cat-bg-exosome' },
+  { name: 'Fat Dissolving / Weight Loss', label: 'Fat dissolving / weight loss', note: 'Body contouring and weight management options', icon: 'FW', bg: 'cat-bg-body' },
+  { name: 'Accessories & Consumables', label: 'Accessories & consumables', note: 'Professional supplies for order planning', icon: 'AC', bg: 'cat-bg-supplies' }
 ];
 const fastProductNames = [
   'Ultrafill', 'Sardenya', 'Rejuran HB', 'Profhilo', 'Asce', 'Botulax 100 Unit', 'Lemon Bottle', 'Mounjaro 2.5mg'
@@ -200,7 +200,7 @@ let visibleCount = 24;
 let filteredProducts = allProducts;
 
 function productFlag(p) {
-  if (['Toxin', 'Skin Boosters / PN', 'Exosome / Meso', 'Lipolysis / Body', 'Weight Management'].includes(p.category)) return 'Fast-moving SKU';
+  if (['Botulinum Toxin', 'Meso / Skin Boosters', 'Fat Dissolving / Weight Loss', 'Hair Booster / Scalp Booster'].includes(p.category)) return 'Fast-moving SKU';
   if ((p.origin || '').toLowerCase() === 'korea') return 'Korean supply';
   if ((p.category || '').toLowerCase().includes('injection')) return 'Clinic essential';
   return 'Wholesale quote';
