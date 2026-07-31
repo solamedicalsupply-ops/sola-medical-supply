@@ -23,12 +23,26 @@ for i,(raw,v) in enumerate(SRC.items(),1):
   for p in patterns:
    m=re.search(p,page,re.I)
    if m: image_url=urljoin(page_url,html.unescape(m.group(1))); break
-  if not image_url: raise ValueError('no social image')
-  data=session.get(image_url,headers={**headers,'Referer':page_url},timeout=30).content
-  target=OUT/f'{slug}.img'; target.write_bytes(data)
-  with Image.open(target) as im:
-   if min(im.size)<220: raise ValueError('image too small')
-   entry['dimensions']=list(im.size)
+  candidates=[]
+  if image_url: candidates.append(image_url)
+  for tag in re.findall(r'<img\b[^>]*>',page,re.I):
+   sm=re.search(r'(?:src|data-src)=["\']([^"\']+)',tag,re.I)
+   if not sm: continue
+   url=urljoin(page_url,html.unescape(sm.group(1)))
+   label=(tag+' '+url).lower()
+   score=sum(t in label for t in toks)-sum(x in label for x in ('logo','icon','avatar','flag','payment'))
+   candidates.append((score,url))
+  candidates=[x for _,x in sorted((x if isinstance(x,tuple) else (10,x) for x in candidates),reverse=True)]
+  target=OUT/f'{slug}.img'
+  for candidate in candidates[:12]:
+   try:
+    data=session.get(candidate,headers={**headers,'Referer':page_url},timeout=30).content; target.write_bytes(data)
+    with Image.open(target) as im:
+     if min(im.size)<220: raise ValueError('image too small')
+     entry['dimensions']=list(im.size)
+    image_url=candidate; break
+   except Exception: target.unlink(missing_ok=True)
+  else: raise ValueError('no usable page image')
   entry.update(downloaded=True,image=image_url)
  except Exception as e:
   (OUT/f'{slug}.img').unlink(missing_ok=True); entry['error']=str(e)

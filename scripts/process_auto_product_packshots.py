@@ -9,10 +9,9 @@ SOURCES = ROOT / "assets/images/product-sources-auto"
 CUTOUTS = ROOT / "assets/images/product-cutouts-auto"
 CARDS = ROOT / "assets/images/generated/products"
 APPROVED_SLUGS = {
-    "belotero-intense", "curenex-intense-glow-shine", "gc-arginine-inj-10ml",
-    "gfccell-exo-scalp-kit", "glutanex-drip-set-1200mg", "hanheal-hair-filler",
-    "lipo-lab-v-line", "lipotocin-inj", "lipovela", "lisanolona",
-    "nad-complex", "vs-nad", "youthfill-deep",
+    "curenex-snow-peel", "cytocare-532", "lapuroon-aurora-super-pdrn",
+    "medisco-meso-pdrn", "jade-caine-cream-10-56", "nadigo-nad-pen",
+    "sapphire-hair-rich",
 }
 
 

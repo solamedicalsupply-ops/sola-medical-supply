@@ -2,9 +2,13 @@
   "cannula-23g": {
     "name": "Cannula 23G",
     "page": "https://accessgudid.nlm.nih.gov/devices/13700773721358",
-    "downloaded": false,
+    "downloaded": true,
     "tokenMatch": 1.0,
-    "error": "no social image"
+    "dimensions": [
+      1000,
+      304
+    ],
+    "image": "https://accessgudid.nlm.nih.gov/assets/usagov-af63f480f249cc59d08d0cdda0662e4e0445a8816f2df738a41f08b811b98531.png"
   },
   "cannula-18g": {
     "name": "Cannula 18G",
@@ -21,16 +25,24 @@
   "curenex-lipo": {
     "name": "Curenex Lipo",
     "page": "https://www.curenex.us/product/curenex-lipo-solution/",
-    "downloaded": false,
+    "downloaded": true,
     "tokenMatch": 1.0,
-    "error": "no social image"
+    "dimensions": [
+      600,
+      600
+    ],
+    "image": "https://www.curenex.us/wp-content/uploads/2024/10/CURENEX-LIPO-600x600.jpg"
   },
   "curenex-snow-peel": {
     "name": "Curenex snow peel",
     "page": "https://www.curenex.us/product/curenex-snowpeel/",
-    "downloaded": false,
+    "downloaded": true,
     "tokenMatch": 1.0,
-    "error": "no social image"
+    "dimensions": [
+      600,
+      600
+    ],
+    "image": "https://www.curenex.us/wp-content/uploads/2024/10/CURENEX-SNOWPEEL-600x600.png"
   },
   "curenex-intense-glow-shine": {
     "name": "Curenex Intense Glow & Shine",
@@ -88,10 +100,10 @@
     "downloaded": true,
     "tokenMatch": 1.0,
     "dimensions": [
-      1536,
-      1024
+      1000,
+      667
     ],
-    "image": "https://aukofiller.com/wp-content/uploads/2024/11/GC-ARGININE-buy-online.webp"
+    "image": "https://aukofiller.com/wp-content/uploads/2024/11/GC-ARGININE-buy-online-1000x667.webp"
   },
   "amino-acid-96-9": {
     "name": "Amino Acid 96.9",
@@ -113,9 +125,13 @@
   "tan-hong": {
     "name": "Tan hong",
     "page": "https://tanthanhdong.com/en/industries/technology-electronics-packaging.html",
-    "downloaded": false,
+    "downloaded": true,
     "tokenMatch": 1.0,
-    "error": "cannot identify image file 'C:\\\\Users\\\\Admin\\\\Documents\\\\Web\\\\SOLA_PREMIUM_PINK\\\\assets\\\\images\\\\product-sources-pages\\\\tan-hong.img'"
+    "dimensions": [
+      600,
+      450
+    ],
+    "image": "https://tanthanhdong.com/uploads/industries/images/hop-mau-boi-song-10.jpg"
   },
   "cannula-needle-30g": {
     "name": "Cannula Needle — 30G",
@@ -153,16 +169,24 @@
   "lapuroon-aurora-super-pdrn": {
     "name": "Lapuroon Aurora Super PDRN",
     "page": "https://www.neesmedical.com/blog/lapuron-aurora-super-pdrn-pakistan-clinic-guide",
-    "downloaded": false,
+    "downloaded": true,
     "tokenMatch": 1.0,
-    "error": "image too small"
+    "dimensions": [
+      3375,
+      3375
+    ],
+    "image": "https://res.cloudinary.com/dvfjsntz8/image/upload/v1777043049/bsv2pup3qxr9ikopwwja.png"
   },
   "medisco-meso-pdrn": {
     "name": "Medisco Meso PDRN",
     "page": "https://eu.drpen.co/products/medisco-meso-pdrn",
-    "downloaded": false,
+    "downloaded": true,
     "tokenMatch": 1.0,
-    "error": "HTTPSConnectionPool(host='eu.drpen.co', port=443): Read timed out. (read timeout=30)"
+    "dimensions": [
+      720,
+      720
+    ],
+    "image": "https://eu.drpen.co/cdn/shop/files/e7abf277-6ac1-4ea8-95e2-fe51383ab91c.jpg?v=1777882968&width=720"
   },
   "remedium-pdrn": {
     "name": "ReMedium PDRN",
@@ -246,7 +270,7 @@
       800,
       400
     ],
-    "image": "https://www.brpharm.com/user/meta_logo.jpg?dummy=1785510212"
+    "image": "https://www.brpharm.com/user/meta_logo.jpg?dummy=1785510647"
   },
   "vitaran-i": {
     "name": "Vitaran I",
@@ -274,9 +298,13 @@
   "saxenda-3-pens": {
     "name": "Saxenda (3 pens)",
     "page": "https://www.shop-apotheke.com/arzneimittel/19645892/saxenda-6-mg-ml-injektionslsg-i-e-fertigpen.htm",
-    "downloaded": false,
+    "downloaded": true,
     "tokenMatch": 1.0,
-    "error": "cannot identify image file 'C:\\\\Users\\\\Admin\\\\Documents\\\\Web\\\\SOLA_PREMIUM_PINK\\\\assets\\\\images\\\\product-sources-pages\\\\saxenda-3-pens.img'"
+    "dimensions": [
+      294,
+      330
+    ],
+    "image": "https://static.shop-apotheke.com/pix/grossebilder/prohibition-pregnancy.png"
   },
   "lipo-lab-v-line": {
     "name": "Lipo lab V line",
@@ -294,7 +322,7 @@
     "page": "https://www.xeominaesthetic.com/wp-content/uploads/2026/02/xeomin-pi-med-guide.pdf",
     "downloaded": false,
     "tokenMatch": 1.0,
-    "error": "no social image"
+    "error": "no usable page image"
   },
   "belotero-volume": {
     "name": "Belotero Volume",
@@ -313,13 +341,8 @@
   "belotero-intense": {
     "name": "Belotero Intense",
     "page": "https://kinamihealth.com/es/producto/belotero-intense/",
-    "downloaded": true,
-    "tokenMatch": 1.0,
-    "dimensions": [
-      800,
-      800
-    ],
-    "image": "https://kinamihealth.com/wp-content/uploads/2025/02/BELOTERO-INTENSE-02.jpg"
+    "downloaded": false,
+    "error": "525 Server Error: <none> for url: https://kinamihealth.com/es/producto/belotero-intense/"
   },
   "belotero-balance": {
     "name": "Belotero Balance",
@@ -335,9 +358,13 @@
   "belotero-soft": {
     "name": "Belotero Soft",
     "page": "https://accessgudid.nlm.nih.gov/devices/05060457760204",
-    "downloaded": false,
+    "downloaded": true,
     "tokenMatch": 1.0,
-    "error": "no social image"
+    "dimensions": [
+      1000,
+      304
+    ],
+    "image": "https://accessgudid.nlm.nih.gov/assets/usagov-af63f480f249cc59d08d0cdda0662e4e0445a8816f2df738a41f08b811b98531.png"
   },
   "belotero-lips": {
     "name": "Belotero lips",
@@ -380,30 +407,42 @@
   "sapphire-hair-rich": {
     "name": "SAPPHIRE Hair Rich",
     "page": "https://www.exportersindia.com/us/peptide-vera/hair-care-cosmetics.htm",
-    "downloaded": false,
+    "downloaded": true,
     "tokenMatch": 1.0,
-    "error": "no social image"
+    "dimensions": [
+      500,
+      500
+    ],
+    "image": "https://img500.exportersindia.com/product_images/bc-500/2025/12/15340548/sapphire-hair-rich-1766006496-8488347.jpg"
   },
   "traminex": {
     "name": "Traminex",
     "page": "https://traminex.com/terms-and-conditions.html",
-    "downloaded": false,
+    "downloaded": true,
     "tokenMatch": 1.0,
-    "error": "cannot identify image file 'C:\\\\Users\\\\Admin\\\\Documents\\\\Web\\\\SOLA_PREMIUM_PINK\\\\assets\\\\images\\\\product-sources-pages\\\\traminex.img'"
+    "dimensions": [
+      899,
+      238
+    ],
+    "image": "https://traminex.com/assets/images/logo/logo.png"
   },
   "cytocare-532": {
     "name": "Cytocare 532",
     "page": "https://www.lyrangroup.com/cytocare-532-kinetic-element/",
-    "downloaded": false,
+    "downloaded": true,
     "tokenMatch": 1.0,
-    "error": "no social image"
+    "dimensions": [
+      771,
+      647
+    ],
+    "image": "https://www.lyrangroup.com/wp-content/uploads/2026/06/CYTOCARE-532WA-86-13173055371.png"
   },
   "lipo-vela-v-line": {
     "name": "Lipo vela V-line",
     "page": "https://www.madeinchina.com/mall/show-Lipo-Vela-V-for-V-Line-Contour-Whitening-Ppc-Injection-Lipolysis-Solution-and-Glutathione-Whitening-Sodium-Deoxycholate-L-Carnitine-and-Vitamin-B12_976919.html",
     "downloaded": false,
     "tokenMatch": 1.0,
-    "error": "no social image"
+    "error": "no usable page image"
   },
   "miracle-white-90000mg": {
     "name": "Miracle White 90000mg",
@@ -436,9 +475,13 @@
   "diabetic-needles": {
     "name": "Diabetic needles",
     "page": "https://syringewithneedle.com/",
-    "downloaded": false,
+    "downloaded": true,
     "tokenMatch": 1.0,
-    "error": "no social image"
+    "dimensions": [
+      600,
+      400
+    ],
+    "image": "https://syringewithneedle.com/cdn/shop/files/shutterstock_538892041-e1541112159576-600x400.jpg?v=1735893879&width=1500"
   },
   "cannula-needle-27g": {
     "name": "Cannula Needle — 27G",
@@ -467,7 +510,7 @@
     "page": "https://www.ibeautymachine.com/professional/juvelook-volume-200mg-pdlla-hybrid-dermal-filler.html",
     "downloaded": false,
     "tokenMatch": 1.0,
-    "error": "no social image"
+    "error": "no usable page image"
   },
   "chaeum-cream-10-56": {
     "name": "Chaeum Cream 10.56%",
@@ -484,16 +527,24 @@
   "jade-caine-cream-10-56": {
     "name": "Jade Caine Cream 10.56%",
     "page": "https://en.jdbio.com/products/jade-caine-cream",
-    "downloaded": false,
+    "downloaded": true,
     "tokenMatch": 1.0,
-    "error": "HTTPSConnectionPool(host='en.jdbio.com', port=443): Read timed out."
+    "dimensions": [
+      760,
+      760
+    ],
+    "image": "http://en.jdbio.com/cdn/shop/products/Jade-Cain-Cream-1.jpg?v=1695605222"
   },
   "purose": {
     "name": "Purose",
     "page": "https://dailymed.nlm.nih.gov/dailymed/fda/fdaDrugXsl.cfm?setid=f8740314-7e1f-815e-e053-6294a90a6eae&type=display",
-    "downloaded": false,
+    "downloaded": true,
     "tokenMatch": 1.0,
-    "error": "no social image"
+    "dimensions": [
+      2211,
+      1275
+    ],
+    "image": "https://dailymed.nlm.nih.gov/dailymed/image.cfm?name=CS93373_Hydrocortisone25+ct+Safetec+10-30-25.jpg&id=914991"
   },
   "huons-lidocaine-epineprin-inj": {
     "name": "Huons Lidocaine Epineprin Inj",
@@ -550,9 +601,13 @@
   "jalupro-eye-standard": {
     "name": "Jalupro Eye — Standard",
     "page": "https://www.sadiasbeautylounge.co.uk/price/",
-    "downloaded": false,
+    "downloaded": true,
     "tokenMatch": 1.0,
-    "error": "no social image"
+    "dimensions": [
+      266,
+      252
+    ],
+    "image": "https://www.sadiasbeautylounge.co.uk/_webedit/cached-images/53-0-6745-0-1407-10000-266.png"
   },
   "rejuran-healer-new-packaging": {
     "name": "Rejuran Healer — New Packaging",
@@ -606,23 +661,31 @@
   "nadigo-nad-pen": {
     "name": "Nadigo NAD pen",
     "page": "https://intravitglobal.com/shop/",
-    "downloaded": false,
+    "downloaded": true,
     "tokenMatch": 1.0,
-    "error": "no social image"
+    "dimensions": [
+      300,
+      300
+    ],
+    "image": "https://intravitglobal.com/wp-content/uploads/2025/10/NADIGO-300x300.webp"
   },
   "vs-collagen-nad": {
     "name": "VS Collagen NAD",
     "page": "https://kekalcantik.com/",
-    "downloaded": false,
+    "downloaded": true,
     "tokenMatch": 1.0,
-    "error": "no social image"
+    "dimensions": [
+      675,
+      675
+    ],
+    "image": "https://kekalcantik.com/wp-content/uploads/elementor/thumbs/Puan-Nadirah-50-ratsaohkpxuujlw990kb7q1glgu9jvdv6xkh3tkgf2.png"
   },
   "vs-toxnad": {
     "name": "VS ToxNAD",
     "page": "https://botoxfillersupply.com/collections/mesotherapy",
     "downloaded": false,
     "tokenMatch": 1.0,
-    "error": "no social image"
+    "error": "no usable page image"
   },
   "vs-pnad": {
     "name": "VS PNAD",
@@ -635,7 +698,7 @@
     "page": "https://botoxfillersupply.com/collections/mesotherapy",
     "downloaded": false,
     "tokenMatch": 1.0,
-    "error": "no social image"
+    "error": "no usable page image"
   },
   "vs-nad": {
     "name": "VS NAD+",
