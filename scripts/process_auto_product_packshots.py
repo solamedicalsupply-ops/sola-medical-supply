@@ -9,9 +9,8 @@ SOURCES = ROOT / "assets/images/product-sources-auto"
 CUTOUTS = ROOT / "assets/images/product-cutouts-auto"
 CARDS = ROOT / "assets/images/generated/products"
 APPROVED_SLUGS = {
-    "curenex-snow-peel", "cytocare-532", "lapuroon-aurora-super-pdrn",
-    "medisco-meso-pdrn", "jade-caine-cream-10-56", "nadigo-nad-pen",
-    "sapphire-hair-rich",
+    "belotero-volume", "belotero-balance", "belotero-soft", "belotero-lips",
+    "juvederm-ultra-4-previous-packaging", "juvederm-ultra-4-new-packaging",
 }
 
 

@@ -1,5 +1,5 @@
 """Download representative product images from reviewed source pages."""
-import html,json,re
+import html,json,re,os
 from pathlib import Path
 from urllib.parse import urljoin
 import requests
@@ -9,8 +9,10 @@ SRC=json.loads((ROOT/'assets/data/product-page-sources.json').read_text(encoding
 OUT=ROOT/'assets/images/product-sources-pages'; OUT.mkdir(parents=True,exist_ok=True)
 REPORT={}; session=requests.Session(); headers={'User-Agent':'Mozilla/5.0'}
 stop={'product','packaging','new','previous','korean','market','pens','vials','small','big'}
+only={x for x in os.environ.get('SOLA_ONLY_SLUGS','').split(',') if x}
 for i,(raw,v) in enumerate(SRC.items(),1):
  slug=raw.removesuffix('.webp'); page_url=v.get('page'); entry={**v,'downloaded':False}
+ if only and slug not in only: continue
  if not page_url: REPORT[slug]=entry; continue
  try:
   r=session.get(page_url,headers=headers,timeout=25); r.raise_for_status(); page=r.text
