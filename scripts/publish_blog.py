@@ -8,6 +8,8 @@ VERCEL = ROOT / "vercel.json"
 BLOG_IMAGES = ROOT / "assets" / "images" / "blog"
 INDEX = BLOG / "index.html"
 START, END = "<!-- AUTO_POSTS_START -->", "<!-- AUTO_POSTS_END -->"
+MIN_ARTICLE_WORDS = 850
+MIN_PUBLISHABLE_WORDS = 700
 
 def env(name):
     value = os.getenv(name, "").strip()
@@ -67,18 +69,7 @@ H2: FAQ
 Under FAQ, include 5 common buyer questions using h3 headings and concise answers.
 Near the end, include this exact sentence once: Contact SOLA for wholesale quotation via WhatsApp.'''
 
-def generate(topic, correction=""):
-    prompt = f'''Write an original English article for SOLA Medical Supply's professional buyer journal.
-Title brief: {topic['title']}
-Keyword: {topic['keyword']}; Category: {topic['category']}.
-CRITICAL SEO AND LENGTH REQUIREMENT: html_body must contain AT LEAST 950 words of body text (excluding HTML tags). Aim for 1000-1300 words.
-SEO requirements: use the exact keyword naturally in the intro, one H2 or H3, and 2-4 additional places. Include close variants and buyer-intent phrases such as wholesale supplier, sourcing guide, professional buyers, documentation, packing, shipping, quotation, MOQ and reorder planning where relevant.
-Writing style: practical, clear and commercially useful. The article should feel like a premium ecommerce education guide: direct, buyer-focused, scannable and confident. Avoid academic filler and avoid vague phrases like "in today's market" or "unlock the secrets". Do not mention competitor websites or describe the style source.
-{article_format(topic)} Do not summarise, do not stop early, do not write a short article. Audience: clinics, spas, resellers and distributors. This is procurement education, not medical advice. Never invent certifications, partnerships, prices, stock, approvals or customer results. Do not claim SOLA is an authorised distributor. Mention SOLA only in buyer-support and closing CTA context.
-Avoid unsafe SEO angles such as buying prescription products without prescription, cheap toxin claims, fast fat-loss results, or whitening injection result claims.
-Do not provide dosage, injection technique, treatment protocol, patient selection advice or guaranteed results. For regulated or prescription-sensitive products, tell buyers to confirm local requirements with qualified professionals and local authorities.
-Return JSON only: title, meta_description (max 155 chars), excerpt (35-50 words), read_time, html_body. html_body may use only h2, h3, p, ul, li, strong and em tags. Do not include image tags, figure tags, links, tables or markdown; SOLA will insert article illustrations automatically.
-{correction}'''
+def request_article(prompt):
     payload = json.dumps({"model":env("BLOG_MODEL"),"temperature":0.35,"max_tokens":6500,"messages":[{"role":"system","content":"You are a careful B2B editor. Return one complete valid JSON object only."},{"role":"user","content":prompt}]}).encode()
     request = urllib.request.Request(require_url("BLOG_API_URL"), data=payload, headers={"Authorization":f"Bearer {env('BLOG_API_KEY')}","Content-Type":"application/json"}, method="POST")
     try:
@@ -91,19 +82,65 @@ Return JSON only: title, meta_description (max 155 chars), excerpt (35-50 words)
     try: return json.loads(text)
     except json.JSONDecodeError as exc: raise RuntimeError(f"Model returned invalid JSON: {exc}") from exc
 
+def generate(topic, correction=""):
+    prompt = f'''Write an original English article for SOLA Medical Supply's professional buyer journal.
+Title brief: {topic['title']}
+Keyword: {topic['keyword']}; Category: {topic['category']}.
+CRITICAL SEO AND LENGTH REQUIREMENT: html_body must contain AT LEAST 950 words of body text (excluding HTML tags). Aim for 1000-1300 words.
+SEO requirements: use the exact keyword naturally in the intro, one H2 or H3, and 2-4 additional places. Include close variants and buyer-intent phrases such as wholesale supplier, sourcing guide, professional buyers, documentation, packing, shipping, quotation, MOQ and reorder planning where relevant.
+Writing style: practical, clear and commercially useful. The article should feel like a premium ecommerce education guide: direct, buyer-focused, scannable and confident. Avoid academic filler and avoid vague phrases like "in today's market" or "unlock the secrets". Do not mention competitor websites or describe the style source.
+{article_format(topic)} Do not summarise, do not stop early, do not write a short article. Audience: clinics, spas, resellers and distributors. This is procurement education, not medical advice. Never invent certifications, partnerships, prices, stock, approvals or customer results. Do not claim SOLA is an authorised distributor. Mention SOLA only in buyer-support and closing CTA context.
+Avoid unsafe SEO angles such as buying prescription products without prescription, cheap toxin claims, fast fat-loss results, or whitening injection result claims.
+Do not provide dosage, injection technique, treatment protocol, patient selection advice or guaranteed results. For regulated or prescription-sensitive products, tell buyers to confirm local requirements with qualified professionals and local authorities.
+Return JSON only: title, meta_description (max 155 chars), excerpt (35-50 words), read_time, html_body. html_body may use only h2, h3, p, ul, li, strong and em tags. Do not include image tags, figure tags, links, tables or markdown; SOLA will insert article illustrations automatically.
+{correction}'''
+    return request_article(prompt)
+
+def repair_article(topic, article, reason):
+    prompt = f'''Expand and repair the existing SOLA Medical Supply journal draft below. Return the full revised JSON object, not a patch and not commentary.
+The draft failed validation because: {reason}
+Title brief: {topic['title']}
+Keyword: {topic['keyword']}; Category: {topic['category']}.
+Keep accurate, useful material from the draft, but substantially expand thin sections with practical procurement detail. The revised html_body must contain at least 950 words and follow every required section below.
+{article_format(topic)}
+Preserve the safety rules: do not invent certifications, partnerships, prices, stock, approvals, customer results, dosage, injection technique, treatment protocols or guaranteed results. Use only h2, h3, p, ul, li, strong and em in html_body. Keep meta_description at 155 characters or fewer and excerpt at 35-50 words.
+EXISTING DRAFT JSON:
+{json.dumps(article, ensure_ascii=False)}'''
+    return request_article(prompt)
+
+def article_word_count(article):
+    if not isinstance(article, dict) or not isinstance(article.get("html_body"), str): return 0
+    return len(re.sub(r"<[^>]+>"," ",article["html_body"]).split())
+
 def generate_valid_article(topic, attempts=3):
     correction=""
     errors=[]
+    article=None
+    best_publishable=None
     for attempt in range(1,attempts+1):
         try:
-            article=generate(topic,correction)
+            if article is None:
+                article=generate(topic,correction)
+            else:
+                article=repair_article(topic,article,correction)
             validate(article)
             return article
         except RuntimeError as exc:
             errors.append(str(exc))
+            try:
+                validate(article, minimum_words=MIN_PUBLISHABLE_WORDS)
+                if best_publishable is None or article_word_count(article)>article_word_count(best_publishable):
+                    best_publishable=article
+            except RuntimeError:
+                pass
             if attempt == attempts: break
-            correction=f"IMPORTANT CORRECTION: the previous response failed validation ({exc}). Return a complete article that fixes this exact issue."
-            print(f"WARNING: Article attempt {attempt} failed validation; retrying. {exc}",file=sys.stderr)
+            correction=str(exc)
+            action="expanding the existing draft" if article is not None else "regenerating"
+            print(f"WARNING: Article attempt {attempt} failed validation; {action}. {exc}",file=sys.stderr)
+    if best_publishable is not None:
+        words=article_word_count(best_publishable)
+        print(f"WARNING: Publishing the best structurally valid draft after {attempts} attempts ({words} words; preferred minimum is {MIN_ARTICLE_WORDS}).",file=sys.stderr)
+        return best_publishable
     raise RuntimeError(f"Article generation failed after {attempts} attempts. Last error: {errors[-1]}")
 
 def sync_blog_redirects():
@@ -173,7 +210,7 @@ def generate_cover(topic, article, slug):
     fallback=topic.get("image") or "../assets/images/productCatalogue.png"
     return generate_ai_image(topic, article, slug, "cover", "", fallback)
 
-def validate(a):
+def validate(a, minimum_words=MIN_ARTICLE_WORDS):
     for key in ("title","meta_description","excerpt","read_time","html_body"):
         if not isinstance(a.get(key),str) or not a[key].strip(): raise RuntimeError(f"Missing generated field: {key}")
     if len(a["meta_description"])>160: raise RuntimeError("Meta description exceeds 160 characters")
@@ -183,8 +220,8 @@ def validate(a):
     tags={t.lower() for t in re.findall(r"</?\s*([a-z0-9]+)\b",a["html_body"],re.I)}
     extra=tags-allowed
     if extra: raise RuntimeError(f"Unsupported generated tag(s): {', '.join(sorted(extra))}")
-    words=len(re.sub(r"<[^>]+>"," ",a["html_body"]).split())
-    if words<850: raise RuntimeError(f"Article too short: {words} words")
+    words=article_word_count(a)
+    if words<minimum_words: raise RuntimeError(f"Article too short: {words} words")
     h2_count=len(re.findall(r"<h2\b",a["html_body"],re.I))
     if h2_count<7: raise RuntimeError(f"Article structure too thin: {h2_count} H2 sections")
     plain=re.sub(r"<[^>]+>"," ",a["html_body"]).lower()
