@@ -219,7 +219,15 @@
       "title": "How Professional Buyers Evaluate Triamcinolo Before Ordering Wholesale",
       "category": "Injectables",
       "image": "../assets/images/products/triamcinolo.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "how-professional-buyers-evaluate-triamcinolo-before-ordering-wholesale",
+      "published_at": "2026-08-01T11:14:01.644917+00:00",
+      "cover": "../assets/images/blog/how-professional-buyers-evaluate-triamcinolo-before-ordering-wholesale.png",
+      "illustrations": [
+        "../assets/images/blog/how-professional-buyers-evaluate-triamcinolo-before-ordering-wholesale-concept.png",
+        "../assets/images/blog/how-professional-buyers-evaluate-triamcinolo-before-ordering-wholesale-buyer-checklist.png",
+        "../assets/images/blog/how-professional-buyers-evaluate-triamcinolo-before-ordering-wholesale-logistics-documentation.png"
+      ]
     },
     {
       "keyword": "minimum order quantity aesthetic wholesale buyers",
@@ -1711,6 +1719,17 @@
         "../assets/images/blog/how-sola-packs-products-before-international-shipping-concept.png",
         "../assets/images/blog/how-sola-packs-products-before-international-shipping-buyer-checklist.png",
         "../assets/images/blog/how-sola-packs-products-before-international-shipping-logistics-documentation.png"
+      ]
+    },
+    {
+      "title": "How Professional Buyers Evaluate Triamcinolo Before Ordering Wholesale",
+      "slug": "how-professional-buyers-evaluate-triamcinolo-before-ordering-wholesale",
+      "published_at": "2026-08-01T11:14:01.644917+00:00",
+      "cover": "../assets/images/blog/how-professional-buyers-evaluate-triamcinolo-before-ordering-wholesale.png",
+      "illustrations": [
+        "../assets/images/blog/how-professional-buyers-evaluate-triamcinolo-before-ordering-wholesale-concept.png",
+        "../assets/images/blog/how-professional-buyers-evaluate-triamcinolo-before-ordering-wholesale-buyer-checklist.png",
+        "../assets/images/blog/how-professional-buyers-evaluate-triamcinolo-before-ordering-wholesale-logistics-documentation.png"
       ]
     }
   ]
