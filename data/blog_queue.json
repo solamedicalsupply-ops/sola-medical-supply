@@ -233,8 +233,16 @@
       "keyword": "minimum order quantity aesthetic wholesale buyers",
       "title": "Minimum Order Quantity for Aesthetic Wholesale Buyers",
       "category": "Procurement",
-      "status": "pending",
-      "format": "buyer_guide"
+      "status": "published",
+      "format": "buyer_guide",
+      "slug": "minimum-order-quantity-for-aesthetic-wholesale-buyers",
+      "published_at": "2026-08-02T05:44:38.216903+00:00",
+      "cover": "../assets/images/blog/minimum-order-quantity-for-aesthetic-wholesale-buyers.png",
+      "illustrations": [
+        "../assets/images/blog/minimum-order-quantity-for-aesthetic-wholesale-buyers-concept.png",
+        "../assets/images/blog/minimum-order-quantity-for-aesthetic-wholesale-buyers-buyer-checklist.png",
+        "../assets/images/blog/minimum-order-quantity-for-aesthetic-wholesale-buyers-logistics-documentation.png"
+      ]
     },
     {
       "keyword": "b.braun omnican 1ml wholesale supplier",
@@ -1730,6 +1738,17 @@
         "../assets/images/blog/how-professional-buyers-evaluate-triamcinolo-before-ordering-wholesale-concept.png",
         "../assets/images/blog/how-professional-buyers-evaluate-triamcinolo-before-ordering-wholesale-buyer-checklist.png",
         "../assets/images/blog/how-professional-buyers-evaluate-triamcinolo-before-ordering-wholesale-logistics-documentation.png"
+      ]
+    },
+    {
+      "title": "Minimum Order Quantity for Aesthetic Wholesale Buyers",
+      "slug": "minimum-order-quantity-for-aesthetic-wholesale-buyers",
+      "published_at": "2026-08-02T05:44:38.216903+00:00",
+      "cover": "../assets/images/blog/minimum-order-quantity-for-aesthetic-wholesale-buyers.png",
+      "illustrations": [
+        "../assets/images/blog/minimum-order-quantity-for-aesthetic-wholesale-buyers-concept.png",
+        "../assets/images/blog/minimum-order-quantity-for-aesthetic-wholesale-buyers-buyer-checklist.png",
+        "../assets/images/blog/minimum-order-quantity-for-aesthetic-wholesale-buyers-logistics-documentation.png"
       ]
     }
   ]
