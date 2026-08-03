@@ -249,7 +249,15 @@
       "title": "B.Braun Omnican 1ml for Aesthetic Clinics: A Practical Wholesale Sourcing Guide",
       "category": "Injection Supplies",
       "image": "../assets/images/products/BBraun.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "b-braun-omnican-1ml-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide",
+      "published_at": "2026-08-03T06:01:24.887203+00:00",
+      "cover": "../assets/images/blog/b-braun-omnican-1ml-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide.png",
+      "illustrations": [
+        "../assets/images/blog/b-braun-omnican-1ml-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide-concept.png",
+        "../assets/images/blog/b-braun-omnican-1ml-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide-buyer-checklist.png",
+        "../assets/images/blog/b-braun-omnican-1ml-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide-logistics-documentation.png"
+      ]
     },
     {
       "keyword": "shipping cost higher for small orders",
@@ -1749,6 +1757,17 @@
         "../assets/images/blog/minimum-order-quantity-for-aesthetic-wholesale-buyers-concept.png",
         "../assets/images/blog/minimum-order-quantity-for-aesthetic-wholesale-buyers-buyer-checklist.png",
         "../assets/images/blog/minimum-order-quantity-for-aesthetic-wholesale-buyers-logistics-documentation.png"
+      ]
+    },
+    {
+      "title": "B.Braun Omnican 1ml for Aesthetic Clinics: A Practical Wholesale Sourcing Guide",
+      "slug": "b-braun-omnican-1ml-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide",
+      "published_at": "2026-08-03T06:01:24.887203+00:00",
+      "cover": "../assets/images/blog/b-braun-omnican-1ml-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide.png",
+      "illustrations": [
+        "../assets/images/blog/b-braun-omnican-1ml-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide-concept.png",
+        "../assets/images/blog/b-braun-omnican-1ml-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide-buyer-checklist.png",
+        "../assets/images/blog/b-braun-omnican-1ml-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide-logistics-documentation.png"
       ]
     }
   ]
