@@ -10,6 +10,14 @@
   const normalize = value => String(value || '').trim().toUpperCase();
   const text = (selector, value) => { const node = $(selector); if (node) node.textContent = value || ''; };
   const escapeHtml = value => String(value || '').replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char]);
+  const safeImageUrl = value => {
+    try {
+      const url = new URL(String(value || ''));
+      return url.protocol === 'https:' ? url.href : '';
+    } catch {
+      return '';
+    }
+  };
   const formatDate = (value, dateOnly = false) => {
     if (!value) return '';
     const date = new Date(value);
@@ -46,6 +54,16 @@
       carrierLink.href = data.localTrackingUrl;
       carrierLink.hidden = false;
     } else carrierLink.hidden = true;
+    const handoverMedia = (Array.isArray(data.handoverMedia) ? data.handoverMedia : [])
+      .map(item => ({ id: String(item?.id || ''), url: safeImageUrl(item?.url) }))
+      .filter(item => item.id && item.url)
+      .slice(0, 12);
+    const handover = $('[data-handover]');
+    handover.hidden = handoverMedia.length === 0;
+    $('[data-handover-gallery]').innerHTML = handoverMedia.map((item, index) => `<a class="tracking-handover-photo" href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer" aria-label="Open carrier handover photo ${index + 1} in full size">
+      <img src="${escapeHtml(item.url)}" alt="Carrier handover photo ${index + 1}" loading="lazy" decoding="async" referrerpolicy="no-referrer">
+      <span>View full size</span>
+    </a>`).join('');
     const events = Array.isArray(data.events) ? data.events : [];
     $('[data-events-empty]').hidden = events.length > 0;
     $('[data-events]').innerHTML = events.map((event, index) => `<li class="tracking-event">
