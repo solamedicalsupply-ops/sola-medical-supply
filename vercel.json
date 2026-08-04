@@ -141,6 +141,11 @@
       "source": "/why-expiry-date-and-batch-number-matter",
       "destination": "/blog/why-expiry-date-and-batch-number-matter",
       "permanent": true
+    },
+    {
+      "source": "/why-shipping-cost-is-higher-for-small-orders",
+      "destination": "/blog/why-shipping-cost-is-higher-for-small-orders",
+      "permanent": true
     }
   ],
   "rewrites": [

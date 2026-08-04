@@ -263,8 +263,16 @@
       "keyword": "shipping cost higher for small orders",
       "title": "Why Shipping Cost Is Higher for Small Orders",
       "category": "Shipping",
-      "status": "pending",
-      "format": "buyer_guide"
+      "status": "published",
+      "format": "buyer_guide",
+      "slug": "why-shipping-cost-is-higher-for-small-orders",
+      "published_at": "2026-08-04T05:35:49.697508+00:00",
+      "cover": "../assets/images/blog/why-shipping-cost-is-higher-for-small-orders.png",
+      "illustrations": [
+        "../assets/images/blog/why-shipping-cost-is-higher-for-small-orders-concept.png",
+        "../assets/images/blog/why-shipping-cost-is-higher-for-small-orders-buyer-checklist.png",
+        "../assets/images/blog/why-shipping-cost-is-higher-for-small-orders-logistics-documentation.png"
+      ]
     },
     {
       "keyword": "32g meso needle for clinics",
@@ -1768,6 +1776,17 @@
         "../assets/images/blog/b-braun-omnican-1ml-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide-concept.png",
         "../assets/images/blog/b-braun-omnican-1ml-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide-buyer-checklist.png",
         "../assets/images/blog/b-braun-omnican-1ml-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide-logistics-documentation.png"
+      ]
+    },
+    {
+      "title": "Why Shipping Cost Is Higher for Small Orders",
+      "slug": "why-shipping-cost-is-higher-for-small-orders",
+      "published_at": "2026-08-04T05:35:49.697508+00:00",
+      "cover": "../assets/images/blog/why-shipping-cost-is-higher-for-small-orders.png",
+      "illustrations": [
+        "../assets/images/blog/why-shipping-cost-is-higher-for-small-orders-concept.png",
+        "../assets/images/blog/why-shipping-cost-is-higher-for-small-orders-buyer-checklist.png",
+        "../assets/images/blog/why-shipping-cost-is-higher-for-small-orders-logistics-documentation.png"
       ]
     }
   ]
