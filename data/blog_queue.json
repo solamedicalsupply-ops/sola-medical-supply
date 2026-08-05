@@ -279,7 +279,15 @@
       "title": "What to Check Before Ordering 32g Meso Needle from a Wholesale Supplier",
       "category": "Meso & Needles",
       "image": "../assets/images/products/32gMesoNeedle.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "what-to-check-before-ordering-32g-meso-needle-from-a-wholesale-supplier",
+      "published_at": "2026-08-05T05:35:10.686277+00:00",
+      "cover": "../assets/images/blog/what-to-check-before-ordering-32g-meso-needle-from-a-wholesale-supplier.png",
+      "illustrations": [
+        "../assets/images/blog/what-to-check-before-ordering-32g-meso-needle-from-a-wholesale-supplier-concept.png",
+        "../assets/images/blog/what-to-check-before-ordering-32g-meso-needle-from-a-wholesale-supplier-buyer-checklist.png",
+        "../assets/images/blog/what-to-check-before-ordering-32g-meso-needle-from-a-wholesale-supplier-logistics-documentation.png"
+      ]
     },
     {
       "keyword": "Korean aesthetic products wholesale guide",
@@ -1787,6 +1795,17 @@
         "../assets/images/blog/why-shipping-cost-is-higher-for-small-orders-concept.png",
         "../assets/images/blog/why-shipping-cost-is-higher-for-small-orders-buyer-checklist.png",
         "../assets/images/blog/why-shipping-cost-is-higher-for-small-orders-logistics-documentation.png"
+      ]
+    },
+    {
+      "title": "What to Check Before Ordering 32g Meso Needle from a Wholesale Supplier",
+      "slug": "what-to-check-before-ordering-32g-meso-needle-from-a-wholesale-supplier",
+      "published_at": "2026-08-05T05:35:10.686277+00:00",
+      "cover": "../assets/images/blog/what-to-check-before-ordering-32g-meso-needle-from-a-wholesale-supplier.png",
+      "illustrations": [
+        "../assets/images/blog/what-to-check-before-ordering-32g-meso-needle-from-a-wholesale-supplier-concept.png",
+        "../assets/images/blog/what-to-check-before-ordering-32g-meso-needle-from-a-wholesale-supplier-buyer-checklist.png",
+        "../assets/images/blog/what-to-check-before-ordering-32g-meso-needle-from-a-wholesale-supplier-logistics-documentation.png"
       ]
     }
   ]
