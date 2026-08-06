@@ -10,7 +10,7 @@
   const normalize = value => String(value || '').trim().toUpperCase();
   const text = (selector, value) => { const node = $(selector); if (node) node.textContent = value || ''; };
   const escapeHtml = value => String(value || '').replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char]);
-  const safeImageUrl = value => {
+  const safeHttpsUrl = value => {
     try {
       const url = new URL(String(value || ''));
       return url.protocol === 'https:' ? url.href : '';
@@ -46,16 +46,20 @@
     $('[data-estimate-wrap]').hidden = !from;
     text('[data-estimate]', from ? `${formatDate(from, true)}${to ? ` – ${formatDate(to, true)}` : ''}` : '');
     const carrier = $('[data-carrier]');
-    carrier.hidden = !(data.localCarrier || data.localTrackingNumber);
-    text('[data-carrier-name]', data.localCarrier || 'To be confirmed');
-    text('[data-carrier-code]', data.localTrackingNumber || 'Not available yet');
+    const carrierUrl = safeHttpsUrl(data.localTrackingUrl);
+    carrier.hidden = !(data.localCarrier || data.localTrackingNumber || carrierUrl);
+    $('[data-carrier-details]').hidden = !(data.localCarrier || data.localTrackingNumber);
+    $('[data-carrier-name-wrap]').hidden = !data.localCarrier;
+    $('[data-carrier-code-wrap]').hidden = !data.localTrackingNumber;
+    text('[data-carrier-name]', data.localCarrier);
+    text('[data-carrier-code]', data.localTrackingNumber);
     const carrierLink = $('[data-carrier-link]');
-    if (data.localTrackingUrl && /^https:\/\//i.test(data.localTrackingUrl)) {
-      carrierLink.href = data.localTrackingUrl;
+    if (carrierUrl) {
+      carrierLink.href = carrierUrl;
       carrierLink.hidden = false;
     } else carrierLink.hidden = true;
     const handoverMedia = (Array.isArray(data.handoverMedia) ? data.handoverMedia : [])
-      .map(item => ({ id: String(item?.id || ''), url: safeImageUrl(item?.url) }))
+      .map(item => ({ id: String(item?.id || ''), url: safeHttpsUrl(item?.url) }))
       .filter(item => item.id && item.url)
       .slice(0, 12);
     const handover = $('[data-handover]');
