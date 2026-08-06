@@ -293,8 +293,16 @@
       "keyword": "Korean aesthetic products wholesale guide",
       "title": "Korean Aesthetic Products Wholesale Guide",
       "category": "Korean Aesthetics",
-      "status": "pending",
-      "format": "buyer_guide"
+      "status": "published",
+      "format": "buyer_guide",
+      "slug": "korean-aesthetic-products-wholesale-guide",
+      "published_at": "2026-08-06T05:37:45.405304+00:00",
+      "cover": "../assets/images/blog/korean-aesthetic-products-wholesale-guide.png",
+      "illustrations": [
+        "../assets/images/blog/korean-aesthetic-products-wholesale-guide-concept.png",
+        "../assets/images/blog/korean-aesthetic-products-wholesale-guide-buyer-checklist.png",
+        "../assets/images/blog/korean-aesthetic-products-wholesale-guide-logistics-documentation.png"
+      ]
     },
     {
       "keyword": "wholesale linospan sourcing",
@@ -1806,6 +1814,17 @@
         "../assets/images/blog/what-to-check-before-ordering-32g-meso-needle-from-a-wholesale-supplier-concept.png",
         "../assets/images/blog/what-to-check-before-ordering-32g-meso-needle-from-a-wholesale-supplier-buyer-checklist.png",
         "../assets/images/blog/what-to-check-before-ordering-32g-meso-needle-from-a-wholesale-supplier-logistics-documentation.png"
+      ]
+    },
+    {
+      "title": "Korean Aesthetic Products Wholesale Guide",
+      "slug": "korean-aesthetic-products-wholesale-guide",
+      "published_at": "2026-08-06T05:37:45.405304+00:00",
+      "cover": "../assets/images/blog/korean-aesthetic-products-wholesale-guide.png",
+      "illustrations": [
+        "../assets/images/blog/korean-aesthetic-products-wholesale-guide-concept.png",
+        "../assets/images/blog/korean-aesthetic-products-wholesale-guide-buyer-checklist.png",
+        "../assets/images/blog/korean-aesthetic-products-wholesale-guide-logistics-documentation.png"
       ]
     }
   ]
