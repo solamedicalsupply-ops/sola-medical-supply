@@ -309,7 +309,15 @@
       "title": "Buying Linospan Wholesale: Documentation, Handling and Shipping Essentials",
       "category": "Dental Supplies",
       "image": "../assets/images/products/linospan.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "buying-linospan-wholesale-documentation-handling-and-shipping-essentials",
+      "published_at": "2026-08-07T04:40:10.312652+00:00",
+      "cover": "../assets/images/blog/buying-linospan-wholesale-documentation-handling-and-shipping-essentials.png",
+      "illustrations": [
+        "../assets/images/blog/buying-linospan-wholesale-documentation-handling-and-shipping-essentials-concept.png",
+        "../assets/images/blog/buying-linospan-wholesale-documentation-handling-and-shipping-essentials-buyer-checklist.png",
+        "../assets/images/blog/buying-linospan-wholesale-documentation-handling-and-shipping-essentials-logistics-documentation.png"
+      ]
     },
     {
       "keyword": "PDRN skin booster wholesale guide",
@@ -1825,6 +1833,17 @@
         "../assets/images/blog/korean-aesthetic-products-wholesale-guide-concept.png",
         "../assets/images/blog/korean-aesthetic-products-wholesale-guide-buyer-checklist.png",
         "../assets/images/blog/korean-aesthetic-products-wholesale-guide-logistics-documentation.png"
+      ]
+    },
+    {
+      "title": "Buying Linospan Wholesale: Documentation, Handling and Shipping Essentials",
+      "slug": "buying-linospan-wholesale-documentation-handling-and-shipping-essentials",
+      "published_at": "2026-08-07T04:40:10.312652+00:00",
+      "cover": "../assets/images/blog/buying-linospan-wholesale-documentation-handling-and-shipping-essentials.png",
+      "illustrations": [
+        "../assets/images/blog/buying-linospan-wholesale-documentation-handling-and-shipping-essentials-concept.png",
+        "../assets/images/blog/buying-linospan-wholesale-documentation-handling-and-shipping-essentials-buyer-checklist.png",
+        "../assets/images/blog/buying-linospan-wholesale-documentation-handling-and-shipping-essentials-logistics-documentation.png"
       ]
     }
   ]
