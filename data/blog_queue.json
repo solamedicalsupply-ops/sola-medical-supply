@@ -323,8 +323,16 @@
       "keyword": "PDRN skin booster wholesale guide",
       "title": "PDRN Skin Booster Wholesale Guide",
       "category": "Skin Boosters",
-      "status": "pending",
-      "format": "buyer_guide"
+      "status": "published",
+      "format": "buyer_guide",
+      "slug": "pdrn-skin-booster-wholesale-guide",
+      "published_at": "2026-08-08T03:56:16.982219+00:00",
+      "cover": "../assets/images/blog/pdrn-skin-booster-wholesale-guide.png",
+      "illustrations": [
+        "../assets/images/blog/pdrn-skin-booster-wholesale-guide-concept.png",
+        "../assets/images/blog/pdrn-skin-booster-wholesale-guide-buyer-checklist.png",
+        "../assets/images/blog/pdrn-skin-booster-wholesale-guide-logistics-documentation.png"
+      ]
     },
     {
       "keyword": "sardenya distributor",
@@ -1844,6 +1852,17 @@
         "../assets/images/blog/buying-linospan-wholesale-documentation-handling-and-shipping-essentials-concept.png",
         "../assets/images/blog/buying-linospan-wholesale-documentation-handling-and-shipping-essentials-buyer-checklist.png",
         "../assets/images/blog/buying-linospan-wholesale-documentation-handling-and-shipping-essentials-logistics-documentation.png"
+      ]
+    },
+    {
+      "title": "PDRN Skin Booster Wholesale Guide",
+      "slug": "pdrn-skin-booster-wholesale-guide",
+      "published_at": "2026-08-08T03:56:16.982219+00:00",
+      "cover": "../assets/images/blog/pdrn-skin-booster-wholesale-guide.png",
+      "illustrations": [
+        "../assets/images/blog/pdrn-skin-booster-wholesale-guide-concept.png",
+        "../assets/images/blog/pdrn-skin-booster-wholesale-guide-buyer-checklist.png",
+        "../assets/images/blog/pdrn-skin-booster-wholesale-guide-logistics-documentation.png"
       ]
     }
   ]
