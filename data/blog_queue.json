@@ -339,7 +339,15 @@
       "title": "A Procurement Guide to Sardenya for Spas, Clinics and Resellers",
       "category": "Dermal Fillers",
       "image": "../assets/images/products/Sardenya.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "a-procurement-guide-to-sardenya-for-spas-clinics-and-resellers",
+      "published_at": "2026-08-09T04:05:18.608523+00:00",
+      "cover": "../assets/images/blog/a-procurement-guide-to-sardenya-for-spas-clinics-and-resellers.png",
+      "illustrations": [
+        "../assets/images/blog/a-procurement-guide-to-sardenya-for-spas-clinics-and-resellers-concept.png",
+        "../assets/images/blog/a-procurement-guide-to-sardenya-for-spas-clinics-and-resellers-buyer-checklist.png",
+        "../assets/images/blog/a-procurement-guide-to-sardenya-for-spas-clinics-and-resellers-logistics-documentation.png"
+      ]
     },
     {
       "keyword": "exosome skin booster wholesale guide",
@@ -1863,6 +1871,17 @@
         "../assets/images/blog/pdrn-skin-booster-wholesale-guide-concept.png",
         "../assets/images/blog/pdrn-skin-booster-wholesale-guide-buyer-checklist.png",
         "../assets/images/blog/pdrn-skin-booster-wholesale-guide-logistics-documentation.png"
+      ]
+    },
+    {
+      "title": "A Procurement Guide to Sardenya for Spas, Clinics and Resellers",
+      "slug": "a-procurement-guide-to-sardenya-for-spas-clinics-and-resellers",
+      "published_at": "2026-08-09T04:05:18.608523+00:00",
+      "cover": "../assets/images/blog/a-procurement-guide-to-sardenya-for-spas-clinics-and-resellers.png",
+      "illustrations": [
+        "../assets/images/blog/a-procurement-guide-to-sardenya-for-spas-clinics-and-resellers-concept.png",
+        "../assets/images/blog/a-procurement-guide-to-sardenya-for-spas-clinics-and-resellers-buyer-checklist.png",
+        "../assets/images/blog/a-procurement-guide-to-sardenya-for-spas-clinics-and-resellers-logistics-documentation.png"
       ]
     }
   ]
