@@ -353,8 +353,16 @@
       "keyword": "exosome skin booster wholesale guide",
       "title": "Exosome Skin Booster Wholesale Guide",
       "category": "Exosome & Meso",
-      "status": "pending",
-      "format": "buyer_guide"
+      "status": "published",
+      "format": "buyer_guide",
+      "slug": "exosome-skin-booster-wholesale-guide",
+      "published_at": "2026-08-10T04:19:21.959683+00:00",
+      "cover": "../assets/images/blog/exosome-skin-booster-wholesale-guide.png",
+      "illustrations": [
+        "../assets/images/blog/exosome-skin-booster-wholesale-guide-concept.png",
+        "../assets/images/blog/exosome-skin-booster-wholesale-guide-buyer-checklist.png",
+        "../assets/images/blog/exosome-skin-booster-wholesale-guide-logistics-documentation.png"
+      ]
     },
     {
       "keyword": "tmie vip wholesale",
@@ -1882,6 +1890,17 @@
         "../assets/images/blog/a-procurement-guide-to-sardenya-for-spas-clinics-and-resellers-concept.png",
         "../assets/images/blog/a-procurement-guide-to-sardenya-for-spas-clinics-and-resellers-buyer-checklist.png",
         "../assets/images/blog/a-procurement-guide-to-sardenya-for-spas-clinics-and-resellers-logistics-documentation.png"
+      ]
+    },
+    {
+      "title": "Exosome Skin Booster Wholesale Guide",
+      "slug": "exosome-skin-booster-wholesale-guide",
+      "published_at": "2026-08-10T04:19:21.959683+00:00",
+      "cover": "../assets/images/blog/exosome-skin-booster-wholesale-guide.png",
+      "illustrations": [
+        "../assets/images/blog/exosome-skin-booster-wholesale-guide-concept.png",
+        "../assets/images/blog/exosome-skin-booster-wholesale-guide-buyer-checklist.png",
+        "../assets/images/blog/exosome-skin-booster-wholesale-guide-logistics-documentation.png"
       ]
     }
   ]
