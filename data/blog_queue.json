@@ -369,7 +369,15 @@
       "title": "Sourcing TMIE VIP Wholesale: A Buyer's Guide for Clinics and Distributors",
       "category": "Skin Boosters",
       "image": "../assets/images/products/tmieVip.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "sourcing-tmie-vip-wholesale-a-buyer-s-guide-for-clinics-and-distributors",
+      "published_at": "2026-08-11T04:06:41.449645+00:00",
+      "cover": "../assets/images/blog/sourcing-tmie-vip-wholesale-a-buyer-s-guide-for-clinics-and-distributors.png",
+      "illustrations": [
+        "../assets/images/blog/sourcing-tmie-vip-wholesale-a-buyer-s-guide-for-clinics-and-distributors-concept.png",
+        "../assets/images/blog/sourcing-tmie-vip-wholesale-a-buyer-s-guide-for-clinics-and-distributors-buyer-checklist.png",
+        "../assets/images/blog/sourcing-tmie-vip-wholesale-a-buyer-s-guide-for-clinics-and-distributors-logistics-documentation.png"
+      ]
     },
     {
       "keyword": "botulinum toxin wholesale storage shipping guide",
@@ -1901,6 +1909,17 @@
         "../assets/images/blog/exosome-skin-booster-wholesale-guide-concept.png",
         "../assets/images/blog/exosome-skin-booster-wholesale-guide-buyer-checklist.png",
         "../assets/images/blog/exosome-skin-booster-wholesale-guide-logistics-documentation.png"
+      ]
+    },
+    {
+      "title": "Sourcing TMIE VIP Wholesale: A Buyer's Guide for Clinics and Distributors",
+      "slug": "sourcing-tmie-vip-wholesale-a-buyer-s-guide-for-clinics-and-distributors",
+      "published_at": "2026-08-11T04:06:41.449645+00:00",
+      "cover": "../assets/images/blog/sourcing-tmie-vip-wholesale-a-buyer-s-guide-for-clinics-and-distributors.png",
+      "illustrations": [
+        "../assets/images/blog/sourcing-tmie-vip-wholesale-a-buyer-s-guide-for-clinics-and-distributors-concept.png",
+        "../assets/images/blog/sourcing-tmie-vip-wholesale-a-buyer-s-guide-for-clinics-and-distributors-buyer-checklist.png",
+        "../assets/images/blog/sourcing-tmie-vip-wholesale-a-buyer-s-guide-for-clinics-and-distributors-logistics-documentation.png"
       ]
     }
   ]
