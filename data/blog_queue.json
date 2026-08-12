@@ -383,8 +383,16 @@
       "keyword": "botulinum toxin wholesale storage shipping guide",
       "title": "Botulinum Toxin Wholesale Storage & Shipping Guide",
       "category": "Botulinum Toxin",
-      "status": "pending",
-      "format": "buyer_guide"
+      "status": "published",
+      "format": "buyer_guide",
+      "slug": "botulinum-toxin-wholesale-storage-shipping-guide",
+      "published_at": "2026-08-12T04:26:25.963252+00:00",
+      "cover": "../assets/images/productCatalogue.png",
+      "illustrations": [
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png",
+        "../assets/images/tracking-proof-1.png"
+      ]
     },
     {
       "keyword": "buy exocode wholesale",
@@ -1920,6 +1928,17 @@
         "../assets/images/blog/sourcing-tmie-vip-wholesale-a-buyer-s-guide-for-clinics-and-distributors-concept.png",
         "../assets/images/blog/sourcing-tmie-vip-wholesale-a-buyer-s-guide-for-clinics-and-distributors-buyer-checklist.png",
         "../assets/images/blog/sourcing-tmie-vip-wholesale-a-buyer-s-guide-for-clinics-and-distributors-logistics-documentation.png"
+      ]
+    },
+    {
+      "title": "Botulinum Toxin Wholesale Storage & Shipping Guide",
+      "slug": "botulinum-toxin-wholesale-storage-shipping-guide",
+      "published_at": "2026-08-12T04:26:25.963252+00:00",
+      "cover": "../assets/images/productCatalogue.png",
+      "illustrations": [
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png",
+        "../assets/images/tracking-proof-1.png"
       ]
     }
   ]
