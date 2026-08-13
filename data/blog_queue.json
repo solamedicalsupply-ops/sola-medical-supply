@@ -399,7 +399,15 @@
       "title": "How Professional Buyers Evaluate Exocode Before Ordering Wholesale",
       "category": "Exosome & Meso",
       "image": "../assets/images/products/excode.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "how-professional-buyers-evaluate-exocode-before-ordering-wholesale",
+      "published_at": "2026-08-13T04:30:59.217183+00:00",
+      "cover": "../assets/images/blog/how-professional-buyers-evaluate-exocode-before-ordering-wholesale.png",
+      "illustrations": [
+        "../assets/images/blog/how-professional-buyers-evaluate-exocode-before-ordering-wholesale-concept.png",
+        "../assets/images/blog/how-professional-buyers-evaluate-exocode-before-ordering-wholesale-buyer-checklist.png",
+        "../assets/images/blog/how-professional-buyers-evaluate-exocode-before-ordering-wholesale-logistics-documentation.png"
+      ]
     },
     {
       "keyword": "skin booster vs dermal filler buyer guide",
@@ -1939,6 +1947,17 @@
         "../assets/images/warehouse-2.png",
         "../assets/images/shipping.png",
         "../assets/images/tracking-proof-1.png"
+      ]
+    },
+    {
+      "title": "How Professional Buyers Evaluate Exocode Before Ordering Wholesale",
+      "slug": "how-professional-buyers-evaluate-exocode-before-ordering-wholesale",
+      "published_at": "2026-08-13T04:30:59.217183+00:00",
+      "cover": "../assets/images/blog/how-professional-buyers-evaluate-exocode-before-ordering-wholesale.png",
+      "illustrations": [
+        "../assets/images/blog/how-professional-buyers-evaluate-exocode-before-ordering-wholesale-concept.png",
+        "../assets/images/blog/how-professional-buyers-evaluate-exocode-before-ordering-wholesale-buyer-checklist.png",
+        "../assets/images/blog/how-professional-buyers-evaluate-exocode-before-ordering-wholesale-logistics-documentation.png"
       ]
     }
   ]
