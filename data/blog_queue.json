@@ -413,8 +413,16 @@
       "keyword": "skin booster vs dermal filler buyer guide",
       "title": "Skin Booster vs Dermal Filler: Buyer Guide",
       "category": "Buyer Guide",
-      "status": "pending",
-      "format": "buyer_guide"
+      "status": "published",
+      "format": "buyer_guide",
+      "slug": "skin-booster-vs-dermal-filler-buyer-guide",
+      "published_at": "2026-08-14T04:27:44.237002+00:00",
+      "cover": "../assets/images/blog/skin-booster-vs-dermal-filler-buyer-guide.png",
+      "illustrations": [
+        "../assets/images/blog/skin-booster-vs-dermal-filler-buyer-guide-concept.png",
+        "../assets/images/blog/skin-booster-vs-dermal-filler-buyer-guide-buyer-checklist.png",
+        "../assets/images/blog/skin-booster-vs-dermal-filler-buyer-guide-logistics-documentation.png"
+      ]
     },
     {
       "keyword": "allergan 100u wholesale supplier",
@@ -1958,6 +1966,17 @@
         "../assets/images/blog/how-professional-buyers-evaluate-exocode-before-ordering-wholesale-concept.png",
         "../assets/images/blog/how-professional-buyers-evaluate-exocode-before-ordering-wholesale-buyer-checklist.png",
         "../assets/images/blog/how-professional-buyers-evaluate-exocode-before-ordering-wholesale-logistics-documentation.png"
+      ]
+    },
+    {
+      "title": "Skin Booster vs Dermal Filler: Buyer Guide",
+      "slug": "skin-booster-vs-dermal-filler-buyer-guide",
+      "published_at": "2026-08-14T04:27:44.237002+00:00",
+      "cover": "../assets/images/blog/skin-booster-vs-dermal-filler-buyer-guide.png",
+      "illustrations": [
+        "../assets/images/blog/skin-booster-vs-dermal-filler-buyer-guide-concept.png",
+        "../assets/images/blog/skin-booster-vs-dermal-filler-buyer-guide-buyer-checklist.png",
+        "../assets/images/blog/skin-booster-vs-dermal-filler-buyer-guide-logistics-documentation.png"
       ]
     }
   ]
