@@ -429,7 +429,15 @@
       "title": "Allergan 100U for Aesthetic Clinics: A Practical Wholesale Sourcing Guide",
       "category": "Botulinum Toxin",
       "image": "../assets/images/products/allergan100u.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "allergan-100u-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide",
+      "published_at": "2026-08-15T03:23:05.705689+00:00",
+      "cover": "../assets/images/blog/allergan-100u-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide.png",
+      "illustrations": [
+        "../assets/images/blog/allergan-100u-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide-concept.png",
+        "../assets/images/blog/allergan-100u-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide-buyer-checklist.png",
+        "../assets/images/blog/allergan-100u-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide-logistics-documentation.png"
+      ]
     },
     {
       "keyword": "popular aesthetic products clinics Malaysia",
@@ -1977,6 +1985,17 @@
         "../assets/images/blog/skin-booster-vs-dermal-filler-buyer-guide-concept.png",
         "../assets/images/blog/skin-booster-vs-dermal-filler-buyer-guide-buyer-checklist.png",
         "../assets/images/blog/skin-booster-vs-dermal-filler-buyer-guide-logistics-documentation.png"
+      ]
+    },
+    {
+      "title": "Allergan 100U for Aesthetic Clinics: A Practical Wholesale Sourcing Guide",
+      "slug": "allergan-100u-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide",
+      "published_at": "2026-08-15T03:23:05.705689+00:00",
+      "cover": "../assets/images/blog/allergan-100u-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide.png",
+      "illustrations": [
+        "../assets/images/blog/allergan-100u-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide-concept.png",
+        "../assets/images/blog/allergan-100u-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide-buyer-checklist.png",
+        "../assets/images/blog/allergan-100u-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide-logistics-documentation.png"
       ]
     }
   ]
