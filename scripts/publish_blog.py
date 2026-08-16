@@ -1,4 +1,4 @@
-import argparse, base64, html, json, os, re, sys, urllib.error, urllib.request
+import argparse, html, json, os, re, sys, urllib.error, urllib.parse, urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -10,27 +10,20 @@ INDEX = BLOG / "index.html"
 START, END = "<!-- AUTO_POSTS_START -->", "<!-- AUTO_POSTS_END -->"
 MIN_ARTICLE_WORDS = 850
 MIN_PUBLISHABLE_WORDS = 700
+COMMONS_API = "https://commons.wikimedia.org/w/api.php"
+COMMONS_MIN_WIDTH = 1600
+COMMONS_MAX_BYTES = 8 * 1024 * 1024
+COMMONS_USER_AGENT = "SOLA-Journal/1.0 (sales@solamedicalsupply.com)"
 
 def env(name):
     value = os.getenv(name, "").strip()
     if not value: raise RuntimeError(f"Missing GitHub secret: {name}")
     return value
 
-def optional_env(name, default=""):
-    value = os.getenv(name, "").strip()
-    return value or default
-
 def require_url(name):
     value = env(name)
     if not re.match(r"^https?://", value, re.I):
         raise RuntimeError(f"Invalid GitHub secret {name}: URL must start with https://")
-    return value
-
-def optional_url(name, default=""):
-    value = optional_env(name, default).strip()
-    if value and not re.match(r"^https?://", value, re.I):
-        print(f"WARNING: Ignoring invalid {name}; URL must start with https://", file=sys.stderr)
-        return ""
     return value
 
 def load_queue():
@@ -160,55 +153,107 @@ def sync_blog_redirects():
         VERCEL.write_text(json.dumps(config,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     return len(additions)
 
-def image_role_prompt(topic, article, role):
-    base = f'''SOLA Medical Supply journal article visual.
-Article title: {article['title']}
-Keyword: {topic['keyword']}
-Category: {topic['category']}
-Audience: professional aesthetic clinics, medical spas, resellers and distributors.
-Create an original AI-generated image that reflects the article's procurement theme, not a generic stock image.
-Style: premium B2B medical procurement editorial, clean clinical lighting, soft pink-white SOLA mood, elegant, trustworthy, no people, no readable text, no logos, no brand labels, no fake certificates, no price tags, no medical claims, no before/after results.'''
-    roles = {
-        "cover": "Role: article cover. Show the overall idea of the article as a polished editorial hero image with product sourcing, catalogue planning, and subtle wholesale logistics cues. Square 1:1 composition, centered subject, suitable for a blog card and article cover.",
-        "concept": "Role: main concept illustration. Visualize the central buyer problem of the article: comparing product categories, choosing professional sourcing options, and preparing a smarter wholesale request. Make it distinct from the cover image.",
-        "checklist": "Role: buyer checklist illustration. Show a premium procurement desk scene with organized product cards, batch/expiry check symbols, quantity planning, and quotation preparation. No readable words or numbers.",
-        "logistics": "Role: logistics and documentation illustration. Show careful packing, shipment planning, tracking proof, document folders, and international wholesale dispatch cues. No readable words, no country flags, no courier brand."
-    }
-    return f"{base}\n{roles.get(role, roles['concept'])}"
+def plain_metadata(value):
+    return html.unescape(re.sub(r"<[^>]+>", " ", value or "")).strip()
 
-def generate_ai_image(topic, article, slug, role, suffix="", fallback=""):
-    image_url = optional_url("BLOG_IMAGE_API_URL", "https://api.openai.com/v1/images/generations")
-    if not image_url:
-        return fallback
-    image_key = optional_env("BLOG_IMAGE_API_KEY") or env("BLOG_API_KEY")
-    payload = json.dumps({
-        "model": optional_env("BLOG_IMAGE_MODEL", "gpt-image-1"),
-        "prompt": image_role_prompt(topic, article, role),
-        "size": optional_env("BLOG_IMAGE_SIZE", "1024x1024"),
-        "n": 1
-    }).encode()
-    request = urllib.request.Request(
-        image_url,
-        data=payload,
-        headers={"Authorization":f"Bearer {image_key}","Content-Type":"application/json"},
-        method="POST"
+def allowed_commons_license(value):
+    normalized=plain_metadata(value).lower()
+    return (
+        normalized.startswith("cc0") or "public domain" in normalized or normalized == "pdm"
+        or normalized.startswith("cc by") or normalized.startswith("cc-by")
     )
-    try:
-        with urllib.request.urlopen(request, timeout=180) as response:
-            result=json.loads(response.read().decode())
-        image_data=result["data"][0].get("b64_json")
-        if not image_data: raise RuntimeError("Image API did not return b64_json")
-        BLOG_IMAGES.mkdir(parents=True, exist_ok=True)
-        target=BLOG_IMAGES/f"{slug}{('-' + suffix) if suffix else ''}.png"
-        target.write_bytes(base64.b64decode(image_data))
-        return f"../assets/images/blog/{target.name}"
-    except Exception as exc:
-        print(f"WARNING: AI {role} image generation failed; using fallback image. {exc}", file=sys.stderr)
-        return fallback
 
-def generate_cover(topic, article, slug):
+def commons_queries(topic, role):
+    category=re.sub(r"[^a-z0-9 ]+", " ", topic.get("category", "").lower()).strip()
+    role_queries={
+        "cover": ["modern medical office interior", "aesthetic clinic interior", f"{category} medical supplies"],
+        "concept": ["bright modern beauty treatment room", "skin care clinic interior", f"{category} clinic equipment"],
+        "checklist": ["medicine storage container", "medical supplies inventory", "sorting medical supplies"],
+        "logistics": ["sorting medical supplies", "medical supplies warehouse", "pharmaceutical warehouse"]
+    }
+    queries=[]
+    for query in role_queries.get(role, role_queries["concept"]):
+        query=re.sub(r"\s+", " ", query).strip()
+        if query and query not in queries: queries.append(query)
+    return queries
+
+def search_commons(query):
+    params=urllib.parse.urlencode({
+        "action":"query", "generator":"search", "gsrsearch":query,
+        "gsrnamespace":6, "gsrlimit":15, "prop":"imageinfo",
+        "iiprop":"url|size|mime|extmetadata", "format":"json", "formatversion":2
+    })
+    request=urllib.request.Request(f"{COMMONS_API}?{params}",headers={"User-Agent":COMMONS_USER_AGENT})
+    with urllib.request.urlopen(request,timeout=30) as response:
+        result=json.loads(response.read().decode())
+    return result.get("query",{}).get("pages",[])
+
+def commons_candidate(page, used_sources):
+    info=(page.get("imageinfo") or [{}])[0]
+    metadata=info.get("extmetadata") or {}
+    source_url=info.get("descriptionurl") or metadata.get("CanonicalPageURL",{}).get("value","")
+    license_name=plain_metadata(metadata.get("LicenseShortName",{}).get("value",""))
+    title=plain_metadata(page.get("title","").removeprefix("File:"))
+    unsuitable=("navy","army","military","dvids","air force","marine corps","guardsmen","afghanistan","iraq","ukraine","war ")
+    if any(term in title.lower() for term in unsuitable): return None
+    if source_url in used_sources or not allowed_commons_license(license_name): return None
+    if info.get("mime") not in {"image/jpeg","image/png","image/webp"}: return None
+    if int(info.get("width") or 0)<COMMONS_MIN_WIDTH: return None
+    if int(info.get("size") or 0)>COMMONS_MAX_BYTES: return None
+    width,height=int(info.get("width") or 0),int(info.get("height") or 0)
+    if not height or width/height<0.6 or width/height>2.2: return None
+    original_url=info.get("url","")
+    if not original_url.startswith("https://upload.wikimedia.org/"): return None
+    return {
+        "title":title,
+        "source_url":source_url,
+        "original_url":original_url,
+        "creator":plain_metadata(metadata.get("Artist",{}).get("value",""))[:180],
+        "license":license_name or "Public domain",
+        "license_url":plain_metadata(metadata.get("LicenseUrl",{}).get("value","")),
+        "width":width,
+        "height":height,
+        "mime":info["mime"]
+    }
+
+def download_commons_original(candidate,slug,suffix):
+    extensions={"image/jpeg":"jpg","image/png":"png","image/webp":"webp"}
+    target=BLOG_IMAGES/f"{slug}-{suffix}.{extensions[candidate['mime']]}"
+    request=urllib.request.Request(candidate["original_url"],headers={"User-Agent":COMMONS_USER_AGENT})
+    with urllib.request.urlopen(request,timeout=90) as response:
+        content=response.read(COMMONS_MAX_BYTES+1)
+    if len(content)>COMMONS_MAX_BYTES: raise RuntimeError("Original image exceeds download size limit")
+    BLOG_IMAGES.mkdir(parents=True,exist_ok=True)
+    target.write_bytes(content)
+    result=dict(candidate)
+    result["src"]=f"../assets/images/blog/{target.name}"
+    return result
+
+def find_real_image(topic,slug,role,suffix,used_sources):
+    try:
+        for query in commons_queries(topic,role):
+            for page in search_commons(query):
+                candidate=commons_candidate(page,used_sources)
+                if not candidate: continue
+                result=download_commons_original(candidate,slug,suffix)
+                used_sources.add(result["source_url"])
+                print(f"Downloaded real {role} image: {result['width']}x{result['height']} from Wikimedia Commons")
+                return result
+    except Exception as exc:
+        print(f"WARNING: Real {role} image lookup failed; using local fallback. {exc}",file=sys.stderr)
+    return None
+
+def used_image_sources(data):
+    sources=set()
+    for item in [*(data.get("topics") or []),*(data.get("published") or [])]:
+        for source in item.get("image_sources") or []:
+            if isinstance(source,dict) and source.get("source_url"): sources.add(source["source_url"])
+    return sources
+
+def generate_cover(topic,slug,used_sources):
     fallback=topic.get("image") or "../assets/images/productCatalogue.png"
-    return generate_ai_image(topic, article, slug, "cover", "", fallback)
+    source=find_real_image(topic,slug,"cover","cover",used_sources)
+    return (source["src"],source) if source else (fallback,None)
 
 def validate(a, minimum_words=MIN_ARTICLE_WORDS):
     for key in ("title","meta_description","excerpt","read_time","html_body"):
@@ -276,7 +321,7 @@ def fallback_from_pool(pool,used):
             used.add(key); return item
     return ""
 
-def generate_inline_images(topic,article,slug,cover):
+def generate_inline_images(topic,article,slug,cover,used_sources):
     pool=unique_image_pool(topic,cover)
     used={normalize_article_image(cover)}
     roles=[
@@ -284,16 +329,32 @@ def generate_inline_images(topic,article,slug,cover):
         ("checklist","buyer-checklist",f"{article['title']} buyer checklist",f"Buyer checklist image for {topic['keyword']}: product details, quantities and quotation preparation in one professional workflow."),
         ("logistics","logistics-documentation",f"{article['title']} logistics and documentation",f"Logistics image for {topic['keyword']}: packing, documentation and tracking questions before international dispatch.")
     ]
-    images=[]
+    images=[]; sources=[]
     for role,suffix,alt,caption in roles:
         fallback=fallback_from_pool(pool,used)
-        src=generate_ai_image(topic,article,slug,role,suffix,fallback)
+        source=find_real_image(topic,slug,role,suffix,used_sources)
+        src=source["src"] if source else fallback
         key=normalize_article_image(src)
         if src and key not in {normalize_article_image(x[0]) for x in images} and key != normalize_article_image(cover):
             images.append((src,alt,caption))
+            if source: sources.append(source)
         elif fallback:
             images.append((fallback,alt,caption))
-    return images
+    return images,sources
+
+def image_credits(sources):
+    if not sources: return ""
+    links=[]
+    for source in sources:
+        label=html.escape(source.get("title") or "Wikimedia Commons image")
+        url=html.escape(source.get("source_url", ""),quote=True)
+        license_name=html.escape(source.get("license") or "Public domain")
+        license_url=html.escape(source.get("license_url", ""),quote=True)
+        creator=html.escape(source.get("creator") or "Wikimedia Commons contributor")
+        dimensions=f"{source.get('width')}x{source.get('height')} px"
+        license_credit=f'''<a href="{license_url}" rel="nofollow noopener" target="_blank">{license_name}</a>''' if license_url else license_name
+        links.append(f'''<a href="{url}" rel="nofollow noopener" target="_blank">{label}</a> by {creator} ({license_credit}, {dimensions})''')
+    return f'''<p class="disclaimer">Image sources: {'; '.join(links)}.</p>'''
 
 def inject_inline_illustrations(body,topic,cover,illustrations=None):
     topic=topic or {}
@@ -304,11 +365,12 @@ def inject_inline_illustrations(body,topic,cover,illustrations=None):
         body=insert_after_nth_h2(body,6,article_visual_grid(illustrations[1:3]))
     return body
 
-def page(a,slug,category,date,image,topic=None,illustrations=None):
+def page(a,slug,category,date,image,topic=None,illustrations=None,image_sources=None):
     body=inject_inline_illustrations(a["html_body"],topic or {},image,illustrations)
     title,desc=html.escape(a["title"]),html.escape(a["meta_description"],quote=True)
     image=html.escape(image,quote=True)
-    return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{title} | SOLA</title><meta name="description" content="{desc}"><link rel="canonical" href="https://www.solamedicalsupply.com/blog/{slug}.html"><link rel="icon" href="../assets/icons/logo.png"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets/css/style.css"></head><body class="article-page"><nav class="nav"><div class="wrap nav-inner"><a class="brand" href="../index.html"><img src="../assets/icons/logoNgang.png" alt="SOLA Medical Supply"></a><div class="article-nav"><a href="index.html">← Journal</a><a class="btn primary" href="../products.html">Build a quote list</a></div></div></nav><main><header class="article-hero"><div class="wrap article-wrap"><span>{html.escape(category.upper())} · {html.escape(a['read_time'])}</span><h1>{title}</h1><p>{desc}</p><div class="article-meta">SOLA Knowledge Team · {date}</div></div></header><div class="article-cover wrap"><img src="{image}" alt="{title}" loading="lazy"></div><article class="article-body article-wrap"><p class="article-intro">{html.escape(a['excerpt'])}</p>{body}<div class="article-end"><h2>Planning a wholesale request?</h2><p>Send product names, quantities and destination for a tailored discussion.</p><a class="btn primary" href="https://wa.me/84981778670">Contact SOLA on WhatsApp →</a></div><p class="disclaimer">General educational content for professional buyers. Not medical, legal, regulatory or import advice.</p></article></main><footer class="footer new-footer"><div class="wrap"><div class="footer-top"><div><img src="../assets/icons/logoNgang.png" alt="SOLA"><p>Professional aesthetic wholesale supply for clinics, spas, resellers and distributors worldwide.</p></div><div><b>Explore</b><a href="../products.html">Products</a><a href="../brands.html">Brands</a><a href="index.html">Journal</a></div><div><b>Company</b><a href="../about.html">About SOLA</a><a href="../faq.html">FAQ</a><a href="../contact.html">Contact</a></div><div><b>Connect</b><a href="https://wa.me/84981778670">WhatsApp</a><a href="mailto:sales@solamedicalsupply.com">Email sales</a></div></div><div class="footer-bottom"><span>© 2026 SOLA Medical Supply</span><span>Educational content for professional buyers</span></div></div></footer><script src="../assets/js/main.js"></script></body></html>'''
+    credits=image_credits(image_sources or [])
+    return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{title} | SOLA</title><meta name="description" content="{desc}"><link rel="canonical" href="https://www.solamedicalsupply.com/blog/{slug}.html"><link rel="icon" href="../assets/icons/logo.png"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets/css/style.css"></head><body class="article-page"><nav class="nav"><div class="wrap nav-inner"><a class="brand" href="../index.html"><img src="../assets/icons/logoNgang.png" alt="SOLA Medical Supply"></a><div class="article-nav"><a href="index.html">← Journal</a><a class="btn primary" href="../products.html">Build a quote list</a></div></div></nav><main><header class="article-hero"><div class="wrap article-wrap"><span>{html.escape(category.upper())} · {html.escape(a['read_time'])}</span><h1>{title}</h1><p>{desc}</p><div class="article-meta">SOLA Knowledge Team · {date}</div></div></header><div class="article-cover wrap"><img src="{image}" alt="{title}" loading="lazy"></div><article class="article-body article-wrap"><p class="article-intro">{html.escape(a['excerpt'])}</p>{body}<div class="article-end"><h2>Planning a wholesale request?</h2><p>Send product names, quantities and destination for a tailored discussion.</p><a class="btn primary" href="https://wa.me/84981778670">Contact SOLA on WhatsApp →</a></div><p class="disclaimer">General educational content for professional buyers. Not medical, legal, regulatory or import advice.</p>{credits}</article></main><footer class="footer new-footer"><div class="wrap"><div class="footer-top"><div><img src="../assets/icons/logoNgang.png" alt="SOLA"><p>Professional aesthetic wholesale supply for clinics, spas, resellers and distributors worldwide.</p></div><div><b>Explore</b><a href="../products.html">Products</a><a href="../brands.html">Brands</a><a href="index.html">Journal</a></div><div><b>Company</b><a href="../about.html">About SOLA</a><a href="../faq.html">FAQ</a><a href="../contact.html">Contact</a></div><div><b>Connect</b><a href="https://wa.me/84981778670">WhatsApp</a><a href="mailto:sales@solamedicalsupply.com">Email sales</a></div></div><div class="footer-bottom"><span>© 2026 SOLA Medical Supply</span><span>Educational content for professional buyers</span></div></div></footer><script src="../assets/js/main.js"></script></body></html>'''
 
 def add_card(a,slug,category,image):
     source=INDEX.read_text(encoding="utf-8")
@@ -325,11 +387,13 @@ def main():
     if not topic: print("No pending topics."); return
     article=generate_valid_article(topic); slug=slugify(topic["title"]); target=BLOG/f"{slug}.html"
     if target.exists(): raise RuntimeError(f"Refusing to overwrite {target.name}")
-    cover=generate_cover(topic,article,slug)
-    illustrations=generate_inline_images(topic,article,slug,cover)
-    now=datetime.now(timezone.utc); target.write_text(page(article,slug,topic["category"],now.strftime("%B %d, %Y"),cover,topic,illustrations),encoding="utf-8"); add_card(article,slug,topic["category"],cover)
+    source_urls=used_image_sources(data)
+    cover,cover_source=generate_cover(topic,slug,source_urls)
+    illustrations,inline_sources=generate_inline_images(topic,article,slug,cover,source_urls)
+    image_sources=([cover_source] if cover_source else [])+inline_sources
+    now=datetime.now(timezone.utc); target.write_text(page(article,slug,topic["category"],now.strftime("%B %d, %Y"),cover,topic,illustrations,image_sources),encoding="utf-8"); add_card(article,slug,topic["category"],cover)
     illustration_paths=[src for src,_,_ in illustrations]
-    topic.update({"status":"published","slug":slug,"published_at":now.isoformat(),"cover":cover,"illustrations":illustration_paths}); data["published"].append({"title":article["title"],"slug":slug,"published_at":now.isoformat(),"cover":cover,"illustrations":illustration_paths})
+    topic.update({"status":"published","slug":slug,"published_at":now.isoformat(),"cover":cover,"illustrations":illustration_paths,"image_sources":image_sources}); data["published"].append({"title":article["title"],"slug":slug,"published_at":now.isoformat(),"cover":cover,"illustrations":illustration_paths,"image_sources":image_sources})
     QUEUE.write_text(json.dumps(data,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     redirect_count=sync_blog_redirects()
     print(f"Published {target.name}; synchronized {redirect_count} blog redirect(s)")

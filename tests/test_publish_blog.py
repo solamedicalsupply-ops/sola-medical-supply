@@ -65,5 +65,77 @@ class GenerateValidArticleTests(unittest.TestCase):
                 publish_blog.generate_valid_article(self.topic)
 
 
+class RealImageTests(unittest.TestCase):
+    def test_accepts_full_resolution_public_domain_image(self):
+        page = {
+            "title": "File:Medical supplies.jpg",
+            "imageinfo": [{
+                "url": "https://upload.wikimedia.org/example/medical-supplies.jpg",
+                "descriptionurl": "https://commons.wikimedia.org/wiki/File:Medical_supplies.jpg",
+                "width": 2400,
+                "height": 1600,
+                "size": 2_000_000,
+                "mime": "image/jpeg",
+                "extmetadata": {
+                    "LicenseShortName": {"value": "Public domain"},
+                    "Artist": {"value": "Example photographer"},
+                },
+            }],
+        }
+        result = publish_blog.commons_candidate(page, set())
+        self.assertEqual(result["width"], 2400)
+        self.assertEqual(result["original_url"], page["imageinfo"][0]["url"])
+
+    def test_rejects_thumbnail_sized_image(self):
+        page = {
+            "title": "File:Small image.jpg",
+            "imageinfo": [{
+                "url": "https://upload.wikimedia.org/example/small.jpg",
+                "descriptionurl": "https://commons.wikimedia.org/wiki/File:Small_image.jpg",
+                "width": 900,
+                "height": 700,
+                "size": 500_000,
+                "mime": "image/jpeg",
+                "extmetadata": {"LicenseShortName": {"value": "CC0"}},
+            }],
+        }
+        self.assertIsNone(publish_blog.commons_candidate(page, set()))
+
+    def test_accepts_attributable_creative_commons_license(self):
+        page = {
+            "title": "File:Licensed image.jpg",
+            "imageinfo": [{
+                "url": "https://upload.wikimedia.org/example/licensed.jpg",
+                "descriptionurl": "https://commons.wikimedia.org/wiki/File:Licensed_image.jpg",
+                "width": 2400,
+                "height": 1600,
+                "size": 2_000_000,
+                "mime": "image/jpeg",
+                "extmetadata": {
+                    "LicenseShortName": {"value": "CC BY-SA 4.0"},
+                    "LicenseUrl": {"value": "https://creativecommons.org/licenses/by-sa/4.0/"},
+                },
+            }],
+        }
+        result = publish_blog.commons_candidate(page, set())
+        self.assertEqual(result["license"], "CC BY-SA 4.0")
+        self.assertIn("creativecommons.org", result["license_url"])
+
+    def test_rejects_unlicensed_image(self):
+        page = {
+            "title": "File:Unlicensed image.jpg",
+            "imageinfo": [{
+                "url": "https://upload.wikimedia.org/example/unlicensed.jpg",
+                "descriptionurl": "https://commons.wikimedia.org/wiki/File:Unlicensed_image.jpg",
+                "width": 2400,
+                "height": 1600,
+                "size": 2_000_000,
+                "mime": "image/jpeg",
+                "extmetadata": {"LicenseShortName": {"value": "All rights reserved"}},
+            }],
+        }
+        self.assertIsNone(publish_blog.commons_candidate(page, set()))
+
+
 if __name__ == "__main__":
     unittest.main()
