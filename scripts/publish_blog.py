@@ -190,10 +190,13 @@ def search_commons(query):
     request=urllib.request.Request(f"{COMMONS_API}?{params}",headers={"User-Agent":COMMONS_USER_AGENT})
     with urllib.request.urlopen(request,timeout=30) as response:
         result=json.loads(response.read().decode())
-    return result.get("query",{}).get("pages",[])
+    return (result.get("query") or {}).get("pages") or []
 
 def commons_candidate(page, used_sources):
-    info=(page.get("imageinfo") or [{}])[0]
+    if not isinstance(page,dict): return None
+    imageinfo=page.get("imageinfo") or []
+    if not imageinfo or not isinstance(imageinfo[0],dict): return None
+    info=imageinfo[0]
     metadata=info.get("extmetadata") or {}
     source_url=info.get("descriptionurl") or metadata_value(metadata,"CanonicalPageURL")
     license_name=plain_metadata(metadata_value(metadata,"LicenseShortName"))
@@ -250,6 +253,7 @@ def find_real_image(topic,slug,role,suffix,used_sources):
 def used_image_sources(data):
     sources=set()
     for item in [*(data.get("topics") or []),*(data.get("published") or [])]:
+        if not isinstance(item,dict): continue
         for source in item.get("image_sources") or []:
             if isinstance(source,dict) and source.get("source_url"): sources.add(source["source_url"])
     return sources

@@ -2,7 +2,7 @@ import importlib.util
 import sys
 import unittest
 from pathlib import Path
-from unittest.mock import patch
+from unittest.mock import MagicMock, patch
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -66,6 +66,16 @@ class GenerateValidArticleTests(unittest.TestCase):
 
 
 class RealImageTests(unittest.TestCase):
+    def test_empty_commons_query_returns_no_results(self):
+        response = MagicMock()
+        response.__enter__.return_value.read.return_value = b'{"query": null}'
+        with patch.object(publish_blog.urllib.request, "urlopen", return_value=response):
+            self.assertEqual(publish_blog.search_commons("no results"), [])
+
+    def test_ignores_empty_commons_page(self):
+        self.assertIsNone(publish_blog.commons_candidate(None, set()))
+        self.assertIsNone(publish_blog.commons_candidate({"imageinfo": [None]}, set()))
+
     def test_accepts_full_resolution_public_domain_image(self):
         page = {
             "title": "File:Medical supplies.jpg",
