@@ -136,6 +136,21 @@ class RealImageTests(unittest.TestCase):
         }
         self.assertIsNone(publish_blog.commons_candidate(page, set()))
 
+    def test_handles_null_metadata_fields(self):
+        page = {
+            "title": "File:Incomplete metadata.jpg",
+            "imageinfo": [{
+                "url": "https://upload.wikimedia.org/example/incomplete.jpg",
+                "descriptionurl": "https://commons.wikimedia.org/wiki/File:Incomplete_metadata.jpg",
+                "width": 2400,
+                "height": 1600,
+                "size": 2_000_000,
+                "mime": "image/jpeg",
+                "extmetadata": {"LicenseShortName": None, "Artist": None},
+            }],
+        }
+        self.assertIsNone(publish_blog.commons_candidate(page, set()))
+
 
 if __name__ == "__main__":
     unittest.main()

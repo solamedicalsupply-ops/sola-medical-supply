@@ -156,6 +156,10 @@ def sync_blog_redirects():
 def plain_metadata(value):
     return html.unescape(re.sub(r"<[^>]+>", " ", value or "")).strip()
 
+def metadata_value(metadata,key):
+    item=metadata.get(key) if isinstance(metadata,dict) else None
+    return item.get("value","") if isinstance(item,dict) else ""
+
 def allowed_commons_license(value):
     normalized=plain_metadata(value).lower()
     return (
@@ -191,8 +195,8 @@ def search_commons(query):
 def commons_candidate(page, used_sources):
     info=(page.get("imageinfo") or [{}])[0]
     metadata=info.get("extmetadata") or {}
-    source_url=info.get("descriptionurl") or metadata.get("CanonicalPageURL",{}).get("value","")
-    license_name=plain_metadata(metadata.get("LicenseShortName",{}).get("value",""))
+    source_url=info.get("descriptionurl") or metadata_value(metadata,"CanonicalPageURL")
+    license_name=plain_metadata(metadata_value(metadata,"LicenseShortName"))
     title=plain_metadata(page.get("title","").removeprefix("File:"))
     unsuitable=("navy","army","military","dvids","air force","marine corps","guardsmen","afghanistan","iraq","ukraine","war ")
     if any(term in title.lower() for term in unsuitable): return None
@@ -208,9 +212,9 @@ def commons_candidate(page, used_sources):
         "title":title,
         "source_url":source_url,
         "original_url":original_url,
-        "creator":plain_metadata(metadata.get("Artist",{}).get("value",""))[:180],
+        "creator":plain_metadata(metadata_value(metadata,"Artist"))[:180],
         "license":license_name or "Public domain",
-        "license_url":plain_metadata(metadata.get("LicenseUrl",{}).get("value","")),
+        "license_url":plain_metadata(metadata_value(metadata,"LicenseUrl")),
         "width":width,
         "height":height,
         "mime":info["mime"]
