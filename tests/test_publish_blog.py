@@ -72,6 +72,12 @@ class RealImageTests(unittest.TestCase):
         with patch.object(publish_blog.urllib.request, "urlopen", return_value=response):
             self.assertEqual(publish_blog.search_commons("no results"), [])
 
+    def test_null_commons_response_returns_no_results(self):
+        response = MagicMock()
+        response.__enter__.return_value.read.return_value = b'null'
+        with patch.object(publish_blog.urllib.request, "urlopen", return_value=response):
+            self.assertEqual(publish_blog.search_commons("null response"), [])
+
     def test_ignores_empty_commons_page(self):
         self.assertIsNone(publish_blog.commons_candidate(None, set()))
         self.assertIsNone(publish_blog.commons_candidate({"imageinfo": [None]}, set()))

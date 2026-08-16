@@ -1,4 +1,4 @@
-import argparse, html, json, os, re, sys, urllib.error, urllib.parse, urllib.request
+import argparse, html, json, os, re, sys, traceback, urllib.error, urllib.parse, urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -190,6 +190,7 @@ def search_commons(query):
     request=urllib.request.Request(f"{COMMONS_API}?{params}",headers={"User-Agent":COMMONS_USER_AGENT})
     with urllib.request.urlopen(request,timeout=30) as response:
         result=json.loads(response.read().decode())
+    if not isinstance(result,dict): return []
     return (result.get("query") or {}).get("pages") or []
 
 def commons_candidate(page, used_sources):
@@ -408,4 +409,4 @@ def main():
 
 if __name__=="__main__":
     try: main()
-    except Exception as exc: print(f"ERROR: {exc}",file=sys.stderr); sys.exit(1)
+    except Exception as exc: traceback.print_exc(); print(f"ERROR: {exc}",file=sys.stderr); sys.exit(1)
