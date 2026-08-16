@@ -443,8 +443,16 @@
       "keyword": "popular aesthetic products clinics Malaysia",
       "title": "Popular Aesthetic Products for Clinics in Malaysia",
       "category": "Malaysia Market",
-      "status": "pending",
-      "format": "buyer_guide"
+      "status": "published",
+      "format": "buyer_guide",
+      "slug": "popular-aesthetic-products-for-clinics-in-malaysia",
+      "published_at": "2026-08-16T03:31:52.941309+00:00",
+      "cover": "../assets/images/blog/popular-aesthetic-products-for-clinics-in-malaysia.png",
+      "illustrations": [
+        "../assets/images/blog/popular-aesthetic-products-for-clinics-in-malaysia-concept.png",
+        "../assets/images/blog/popular-aesthetic-products-for-clinics-in-malaysia-buyer-checklist.png",
+        "../assets/images/blog/popular-aesthetic-products-for-clinics-in-malaysia-logistics-documentation.png"
+      ]
     },
     {
       "keyword": "gouri for clinics",
@@ -1996,6 +2004,17 @@
         "../assets/images/blog/allergan-100u-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide-concept.png",
         "../assets/images/blog/allergan-100u-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide-buyer-checklist.png",
         "../assets/images/blog/allergan-100u-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide-logistics-documentation.png"
+      ]
+    },
+    {
+      "title": "Popular Aesthetic Products for Clinics in Malaysia",
+      "slug": "popular-aesthetic-products-for-clinics-in-malaysia",
+      "published_at": "2026-08-16T03:31:52.941309+00:00",
+      "cover": "../assets/images/blog/popular-aesthetic-products-for-clinics-in-malaysia.png",
+      "illustrations": [
+        "../assets/images/blog/popular-aesthetic-products-for-clinics-in-malaysia-concept.png",
+        "../assets/images/blog/popular-aesthetic-products-for-clinics-in-malaysia-buyer-checklist.png",
+        "../assets/images/blog/popular-aesthetic-products-for-clinics-in-malaysia-logistics-documentation.png"
       ]
     }
   ]
