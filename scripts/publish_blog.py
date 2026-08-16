@@ -1,6 +1,8 @@
 import argparse, html, json, os, re, sys, traceback, urllib.error, urllib.parse, urllib.request
 from datetime import datetime, timezone
+from io import BytesIO
 from pathlib import Path
+from PIL import Image, ImageOps
 
 ROOT = Path(__file__).resolve().parents[1]
 QUEUE, BLOG = ROOT / "data" / "blog_queue.json", ROOT / "blog"
@@ -14,6 +16,9 @@ COMMONS_API = "https://commons.wikimedia.org/w/api.php"
 COMMONS_MIN_WIDTH = 1600
 COMMONS_MAX_BYTES = 8 * 1024 * 1024
 COMMONS_USER_AGENT = "SOLA-Journal/1.0 (sales@solamedicalsupply.com)"
+BLOG_DESKTOP_WIDTH = 2400
+BLOG_MOBILE_WIDTH = 960
+BLOG_WEBP_QUALITY = 82
 
 def env(name):
     value = os.getenv(name, "").strip()
@@ -224,17 +229,40 @@ def commons_candidate(page, used_sources):
         "mime":info["mime"]
     }
 
+def save_responsive_webp(content,stem):
+    BLOG_IMAGES.mkdir(parents=True,exist_ok=True)
+    with Image.open(BytesIO(content)) as opened:
+        image=ImageOps.exif_transpose(opened)
+        has_alpha=image.mode in {"RGBA","LA"} or (image.mode=="P" and "transparency" in image.info)
+        image=image.convert("RGBA" if has_alpha else "RGB")
+        original_width,original_height=image.size
+
+        def save_variant(max_width,suffix,quality):
+            variant=image.copy()
+            if variant.width>max_width:
+                height=max(1,round(variant.height*max_width/variant.width))
+                variant=variant.resize((max_width,height),Image.Resampling.LANCZOS)
+            target=BLOG_IMAGES/f"{stem}{suffix}.webp"
+            variant.save(target,"WEBP",quality=quality,method=6,optimize=True)
+            return target,variant.width,variant.height
+
+        main_path,width,height=save_variant(BLOG_DESKTOP_WIDTH,"",BLOG_WEBP_QUALITY)
+        mobile_path,mobile_width,mobile_height=save_variant(BLOG_MOBILE_WIDTH,"-mobile",78)
+    return {
+        "src":f"../assets/images/blog/{main_path.name}",
+        "mobile_src":f"../assets/images/blog/{mobile_path.name}",
+        "display_width":width,"display_height":height,
+        "mobile_width":mobile_width,"mobile_height":mobile_height,
+        "original_width":original_width,"original_height":original_height
+    }
+
 def download_commons_original(candidate,slug,suffix):
-    extensions={"image/jpeg":"jpg","image/png":"png","image/webp":"webp"}
-    target=BLOG_IMAGES/f"{slug}-{suffix}.{extensions[candidate['mime']]}"
     request=urllib.request.Request(candidate["original_url"],headers={"User-Agent":COMMONS_USER_AGENT})
     with urllib.request.urlopen(request,timeout=90) as response:
         content=response.read(COMMONS_MAX_BYTES+1)
     if len(content)>COMMONS_MAX_BYTES: raise RuntimeError("Original image exceeds download size limit")
-    BLOG_IMAGES.mkdir(parents=True,exist_ok=True)
-    target.write_bytes(content)
     result=dict(candidate)
-    result["src"]=f"../assets/images/blog/{target.name}"
+    result.update(save_responsive_webp(content,f"{slug}-{suffix}"))
     return result
 
 def find_real_image(topic,slug,role,suffix,used_sources):
@@ -288,14 +316,33 @@ def normalize_article_image(src):
     if src.startswith("assets/"): return f"../{src}"
     return src
 
-def article_illustration(src,alt,caption):
-    src=html.escape(normalize_article_image(src),quote=True)
-    alt=html.escape(alt,quote=True)
-    caption=html.escape(caption)
-    return f'''<figure class="article-illustration"><img src="{src}" alt="{alt}" loading="lazy"><figcaption>{caption}</figcaption></figure>'''
+def image_source(src,image_sources):
+    key=normalize_article_image(src)
+    return next((source for source in image_sources or [] if normalize_article_image(source.get("src",""))==key),None)
 
-def article_visual_grid(items):
-    cards="".join(article_illustration(src,alt,caption) for src,alt,caption in items if src)
+def image_markup(src,alt,image_sources=None,sizes="(max-width: 700px) 100vw, 820px",priority=False):
+    normalized=normalize_article_image(src)
+    source=image_source(normalized,image_sources)
+    attributes=[f'''src="{html.escape(normalized,quote=True)}"''',f'''alt="{html.escape(alt,quote=True)}"''']
+    if source and source.get("mobile_src"):
+        mobile=html.escape(normalize_article_image(source["mobile_src"]),quote=True)
+        desktop=html.escape(normalized,quote=True)
+        attributes.extend([
+            f'''srcset="{mobile} {source.get('mobile_width',BLOG_MOBILE_WIDTH)}w, {desktop} {source.get('display_width',BLOG_DESKTOP_WIDTH)}w"''',
+            f'''sizes="{html.escape(sizes,quote=True)}"''',
+            f'''width="{source.get('display_width',BLOG_DESKTOP_WIDTH)}"''',
+            f'''height="{source.get('display_height','')}"'''
+        ])
+    attributes.append('fetchpriority="high"' if priority else 'loading="lazy"')
+    attributes.append('decoding="async"')
+    return f'''<img {' '.join(attributes)}>'''
+
+def article_illustration(src,alt,caption,image_sources=None):
+    caption=html.escape(caption)
+    return f'''<figure class="article-illustration">{image_markup(src,alt,image_sources)}<figcaption>{caption}</figcaption></figure>'''
+
+def article_visual_grid(items,image_sources=None):
+    cards="".join(article_illustration(src,alt,caption,image_sources) for src,alt,caption in items if src)
     return f'''<div class="article-visual-grid">{cards}</div>''' if cards else ""
 
 def insert_after_nth_h2(body,n,block):
@@ -365,26 +412,27 @@ def image_credits(sources):
         links.append(f'''<a href="{url}" rel="nofollow noopener" target="_blank">{label}</a> by {creator} ({license_credit}, {dimensions})''')
     return f'''<p class="disclaimer">Image sources: {'; '.join(links)}.</p>'''
 
-def inject_inline_illustrations(body,topic,cover,illustrations=None):
+def inject_inline_illustrations(body,topic,cover,illustrations=None,image_sources=None):
     topic=topic or {}
     illustrations=illustrations or []
     if illustrations:
-        body=insert_after_nth_h2(body,3,article_illustration(*illustrations[0]))
+        body=insert_after_nth_h2(body,3,article_illustration(*illustrations[0],image_sources))
     if len(illustrations)>1:
-        body=insert_after_nth_h2(body,6,article_visual_grid(illustrations[1:3]))
+        body=insert_after_nth_h2(body,6,article_visual_grid(illustrations[1:3],image_sources))
     return body
 
 def page(a,slug,category,date,image,topic=None,illustrations=None,image_sources=None):
-    body=inject_inline_illustrations(a["html_body"],topic or {},image,illustrations)
+    body=inject_inline_illustrations(a["html_body"],topic or {},image,illustrations,image_sources)
     title,desc=html.escape(a["title"]),html.escape(a["meta_description"],quote=True)
-    image=html.escape(image,quote=True)
+    cover_image=image_markup(image,a["title"],image_sources,"(max-width: 700px) 100vw, 1120px",True)
     credits=image_credits(image_sources or [])
-    return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{title} | SOLA</title><meta name="description" content="{desc}"><link rel="canonical" href="https://www.solamedicalsupply.com/blog/{slug}.html"><link rel="icon" href="../assets/icons/logo.png"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets/css/style.css"></head><body class="article-page"><nav class="nav"><div class="wrap nav-inner"><a class="brand" href="../index.html"><img src="../assets/icons/logoNgang.png" alt="SOLA Medical Supply"></a><div class="article-nav"><a href="index.html">← Journal</a><a class="btn primary" href="../products.html">Build a quote list</a></div></div></nav><main><header class="article-hero"><div class="wrap article-wrap"><span>{html.escape(category.upper())} · {html.escape(a['read_time'])}</span><h1>{title}</h1><p>{desc}</p><div class="article-meta">SOLA Knowledge Team · {date}</div></div></header><div class="article-cover wrap"><img src="{image}" alt="{title}" loading="lazy"></div><article class="article-body article-wrap"><p class="article-intro">{html.escape(a['excerpt'])}</p>{body}<div class="article-end"><h2>Planning a wholesale request?</h2><p>Send product names, quantities and destination for a tailored discussion.</p><a class="btn primary" href="https://wa.me/84981778670">Contact SOLA on WhatsApp →</a></div><p class="disclaimer">General educational content for professional buyers. Not medical, legal, regulatory or import advice.</p>{credits}</article></main><footer class="footer new-footer"><div class="wrap"><div class="footer-top"><div><img src="../assets/icons/logoNgang.png" alt="SOLA"><p>Professional aesthetic wholesale supply for clinics, spas, resellers and distributors worldwide.</p></div><div><b>Explore</b><a href="../products.html">Products</a><a href="../brands.html">Brands</a><a href="index.html">Journal</a></div><div><b>Company</b><a href="../about.html">About SOLA</a><a href="../faq.html">FAQ</a><a href="../contact.html">Contact</a></div><div><b>Connect</b><a href="https://wa.me/84981778670">WhatsApp</a><a href="mailto:sales@solamedicalsupply.com">Email sales</a></div></div><div class="footer-bottom"><span>© 2026 SOLA Medical Supply</span><span>Educational content for professional buyers</span></div></div></footer><script src="../assets/js/main.js"></script></body></html>'''
+    return f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{title} | SOLA</title><meta name="description" content="{desc}"><link rel="canonical" href="https://www.solamedicalsupply.com/blog/{slug}.html"><link rel="icon" href="../assets/icons/logo.png"><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="../assets/css/style.css"></head><body class="article-page"><nav class="nav"><div class="wrap nav-inner"><a class="brand" href="../index.html"><img src="../assets/icons/logoNgang.png" alt="SOLA Medical Supply"></a><div class="article-nav"><a href="index.html">← Journal</a><a class="btn primary" href="../products.html">Build a quote list</a></div></div></nav><main><header class="article-hero"><div class="wrap article-wrap"><span>{html.escape(category.upper())} · {html.escape(a['read_time'])}</span><h1>{title}</h1><p>{desc}</p><div class="article-meta">SOLA Knowledge Team · {date}</div></div></header><div class="article-cover wrap">{cover_image}</div><article class="article-body article-wrap"><p class="article-intro">{html.escape(a['excerpt'])}</p>{body}<div class="article-end"><h2>Planning a wholesale request?</h2><p>Send product names, quantities and destination for a tailored discussion.</p><a class="btn primary" href="https://wa.me/84981778670">Contact SOLA on WhatsApp →</a></div><p class="disclaimer">General educational content for professional buyers. Not medical, legal, regulatory or import advice.</p>{credits}</article></main><footer class="footer new-footer"><div class="wrap"><div class="footer-top"><div><img src="../assets/icons/logoNgang.png" alt="SOLA"><p>Professional aesthetic wholesale supply for clinics, spas, resellers and distributors worldwide.</p></div><div><b>Explore</b><a href="../products.html">Products</a><a href="../brands.html">Brands</a><a href="index.html">Journal</a></div><div><b>Company</b><a href="../about.html">About SOLA</a><a href="../faq.html">FAQ</a><a href="../contact.html">Contact</a></div><div><b>Connect</b><a href="https://wa.me/84981778670">WhatsApp</a><a href="mailto:sales@solamedicalsupply.com">Email sales</a></div></div><div class="footer-bottom"><span>© 2026 SOLA Medical Supply</span><span>Educational content for professional buyers</span></div></div></footer><script src="../assets/js/main.js"></script></body></html>'''
 
-def add_card(a,slug,category,image):
+def add_card(a,slug,category,image,image_sources=None):
     source=INDEX.read_text(encoding="utf-8")
     if START not in source or END not in source: raise RuntimeError("Journal index lacks AUTO_POSTS markers")
-    card=f'''\n<a class="story-card" href="{slug}.html"><img src="{html.escape(image,quote=True)}" alt="{html.escape(a['title'])}" loading="lazy"><div><span>{html.escape(category.upper())} · {html.escape(a['read_time'].upper())}</span><h3>{html.escape(a['title'])}</h3><p>{html.escape(a['excerpt'])}</p><b>Read article →</b></div></a>'''
+    card_image=image_markup(image,a["title"],image_sources,"(max-width: 700px) 100vw, 380px")
+    card=f'''\n<a class="story-card" href="{slug}.html">{card_image}<div><span>{html.escape(category.upper())} · {html.escape(a['read_time'].upper())}</span><h3>{html.escape(a['title'])}</h3><p>{html.escape(a['excerpt'])}</p><b>Read article →</b></div></a>'''
     INDEX.write_text(source.replace(START,START+card,1),encoding="utf-8")
 
 def main():
@@ -400,7 +448,7 @@ def main():
     cover,cover_source=generate_cover(topic,slug,source_urls)
     illustrations,inline_sources=generate_inline_images(topic,article,slug,cover,source_urls)
     image_sources=([cover_source] if cover_source else [])+inline_sources
-    now=datetime.now(timezone.utc); target.write_text(page(article,slug,topic["category"],now.strftime("%B %d, %Y"),cover,topic,illustrations,image_sources),encoding="utf-8"); add_card(article,slug,topic["category"],cover)
+    now=datetime.now(timezone.utc); target.write_text(page(article,slug,topic["category"],now.strftime("%B %d, %Y"),cover,topic,illustrations,image_sources),encoding="utf-8"); add_card(article,slug,topic["category"],cover,image_sources)
     illustration_paths=[src for src,_,_ in illustrations]
     topic.update({"status":"published","slug":slug,"published_at":now.isoformat(),"cover":cover,"illustrations":illustration_paths,"image_sources":image_sources}); data["published"].append({"title":article["title"],"slug":slug,"published_at":now.isoformat(),"cover":cover,"illustrations":illustration_paths,"image_sources":image_sources})
     QUEUE.write_text(json.dumps(data,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")

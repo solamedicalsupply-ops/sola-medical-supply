@@ -1,8 +1,12 @@
 import importlib.util
+import tempfile
 import sys
 import unittest
+from io import BytesIO
 from pathlib import Path
 from unittest.mock import MagicMock, patch
+
+from PIL import Image
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -66,6 +70,33 @@ class GenerateValidArticleTests(unittest.TestCase):
 
 
 class RealImageTests(unittest.TestCase):
+    def test_creates_responsive_webp_variants_without_upscaling(self):
+        source = BytesIO()
+        Image.new("RGB", (2000, 1000), "white").save(source, "JPEG", quality=90)
+        with tempfile.TemporaryDirectory() as directory, patch.object(
+            publish_blog, "BLOG_IMAGES", Path(directory)
+        ):
+            result = publish_blog.save_responsive_webp(source.getvalue(), "sample")
+            with Image.open(Path(directory) / "sample.webp") as desktop:
+                self.assertEqual(desktop.size, (2000, 1000))
+            with Image.open(Path(directory) / "sample-mobile.webp") as mobile:
+                self.assertEqual(mobile.size, (960, 480))
+        self.assertEqual(result["display_width"], 2000)
+        self.assertEqual(result["mobile_width"], 960)
+
+    def test_responsive_markup_uses_srcset_and_priority(self):
+        source = {
+            "src": "../assets/images/blog/photo.webp",
+            "mobile_src": "../assets/images/blog/photo-mobile.webp",
+            "display_width": 2400,
+            "display_height": 1600,
+            "mobile_width": 960,
+        }
+        markup = publish_blog.image_markup(source["src"], "Photo", [source], priority=True)
+        self.assertIn("srcset=", markup)
+        self.assertIn('fetchpriority="high"', markup)
+        self.assertNotIn('loading="lazy"', markup)
+
     def test_empty_commons_query_returns_no_results(self):
         response = MagicMock()
         response.__enter__.return_value.read.return_value = b'{"query": null}'
