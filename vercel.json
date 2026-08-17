@@ -108,6 +108,11 @@
       "permanent": true
     },
     {
+      "source": "/how-to-order-from-sola-medical-supply",
+      "destination": "/blog/how-to-order-from-sola-medical-supply",
+      "permanent": true
+    },
+    {
       "source": "/how-to-verify-original-aesthetic-products-before-ordering",
       "destination": "/blog/how-to-verify-original-aesthetic-products-before-ordering",
       "permanent": true

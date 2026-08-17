@@ -543,8 +543,75 @@
       "keyword": "how to order from SOLA Medical Supply",
       "title": "How to Order from SOLA Medical Supply",
       "category": "Ordering",
-      "status": "pending",
-      "format": "buyer_guide"
+      "status": "published",
+      "format": "buyer_guide",
+      "slug": "how-to-order-from-sola-medical-supply",
+      "published_at": "2026-08-17T03:30:04.619236+00:00",
+      "cover": "../assets/images/blog/how-to-order-from-sola-medical-supply-cover.webp",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/blog/how-to-order-from-sola-medical-supply-buyer-checklist.webp",
+        "../assets/images/blog/how-to-order-from-sola-medical-supply-logistics-documentation.webp"
+      ],
+      "image_sources": [
+        {
+          "title": "Interior of Snow Clinic Ansan branch in March 2026.jpg 01.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Interior_of_Snow_Clinic_Ansan_branch_in_March_2026.jpg_01.jpg",
+          "original_url": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Interior_of_Snow_Clinic_Ansan_branch_in_March_2026.jpg_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "creator": "ELIZABETH XIONG",
+          "license": "CC BY 4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0",
+          "width": 4284,
+          "height": 5712,
+          "mime": "image/jpeg",
+          "src": "../assets/images/blog/how-to-order-from-sola-medical-supply-cover.webp",
+          "mobile_src": "../assets/images/blog/how-to-order-from-sola-medical-supply-cover-mobile.webp",
+          "display_width": 2400,
+          "display_height": 3200,
+          "mobile_width": 960,
+          "mobile_height": 1280,
+          "original_width": 4284,
+          "original_height": 5712
+        },
+        {
+          "title": "Medicine storage container 02.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Medicine_storage_container_02.jpg",
+          "original_url": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Medicine_storage_container_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "creator": "",
+          "license": "CC0",
+          "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "width": 2736,
+          "height": 3648,
+          "mime": "image/jpeg",
+          "src": "../assets/images/blog/how-to-order-from-sola-medical-supply-buyer-checklist.webp",
+          "mobile_src": "../assets/images/blog/how-to-order-from-sola-medical-supply-buyer-checklist-mobile.webp",
+          "display_width": 2400,
+          "display_height": 3200,
+          "mobile_width": 960,
+          "mobile_height": 1280,
+          "original_width": 2736,
+          "original_height": 3648
+        },
+        {
+          "title": "Sorting medical supplies (8662666).jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Sorting_medical_supplies_(8662666).jpg",
+          "original_url": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Sorting_medical_supplies_%288662666%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "creator": "U.S. Army AMLC by  C.J. Lovelace",
+          "license": "Public domain",
+          "license_url": "",
+          "width": 1872,
+          "height": 2347,
+          "mime": "image/jpeg",
+          "src": "../assets/images/blog/how-to-order-from-sola-medical-supply-logistics-documentation.webp",
+          "mobile_src": "../assets/images/blog/how-to-order-from-sola-medical-supply-logistics-documentation-mobile.webp",
+          "display_width": 1872,
+          "display_height": 2347,
+          "mobile_width": 960,
+          "mobile_height": 1204,
+          "original_width": 1872,
+          "original_height": 2347
+        }
+      ]
     },
     {
       "keyword": "wholesale france body sourcing",
@@ -2173,6 +2240,76 @@
           "display_height": 1567,
           "mobile_width": 960,
           "mobile_height": 669
+        }
+      ]
+    },
+    {
+      "title": "How to Order from SOLA Medical Supply",
+      "slug": "how-to-order-from-sola-medical-supply",
+      "published_at": "2026-08-17T03:30:04.619236+00:00",
+      "cover": "../assets/images/blog/how-to-order-from-sola-medical-supply-cover.webp",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/blog/how-to-order-from-sola-medical-supply-buyer-checklist.webp",
+        "../assets/images/blog/how-to-order-from-sola-medical-supply-logistics-documentation.webp"
+      ],
+      "image_sources": [
+        {
+          "title": "Interior of Snow Clinic Ansan branch in March 2026.jpg 01.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Interior_of_Snow_Clinic_Ansan_branch_in_March_2026.jpg_01.jpg",
+          "original_url": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Interior_of_Snow_Clinic_Ansan_branch_in_March_2026.jpg_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "creator": "ELIZABETH XIONG",
+          "license": "CC BY 4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0",
+          "width": 4284,
+          "height": 5712,
+          "mime": "image/jpeg",
+          "src": "../assets/images/blog/how-to-order-from-sola-medical-supply-cover.webp",
+          "mobile_src": "../assets/images/blog/how-to-order-from-sola-medical-supply-cover-mobile.webp",
+          "display_width": 2400,
+          "display_height": 3200,
+          "mobile_width": 960,
+          "mobile_height": 1280,
+          "original_width": 4284,
+          "original_height": 5712
+        },
+        {
+          "title": "Medicine storage container 02.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Medicine_storage_container_02.jpg",
+          "original_url": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Medicine_storage_container_02.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "creator": "",
+          "license": "CC0",
+          "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "width": 2736,
+          "height": 3648,
+          "mime": "image/jpeg",
+          "src": "../assets/images/blog/how-to-order-from-sola-medical-supply-buyer-checklist.webp",
+          "mobile_src": "../assets/images/blog/how-to-order-from-sola-medical-supply-buyer-checklist-mobile.webp",
+          "display_width": 2400,
+          "display_height": 3200,
+          "mobile_width": 960,
+          "mobile_height": 1280,
+          "original_width": 2736,
+          "original_height": 3648
+        },
+        {
+          "title": "Sorting medical supplies (8662666).jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Sorting_medical_supplies_(8662666).jpg",
+          "original_url": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Sorting_medical_supplies_%288662666%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "creator": "U.S. Army AMLC by  C.J. Lovelace",
+          "license": "Public domain",
+          "license_url": "",
+          "width": 1872,
+          "height": 2347,
+          "mime": "image/jpeg",
+          "src": "../assets/images/blog/how-to-order-from-sola-medical-supply-logistics-documentation.webp",
+          "mobile_src": "../assets/images/blog/how-to-order-from-sola-medical-supply-logistics-documentation-mobile.webp",
+          "display_width": 1872,
+          "display_height": 2347,
+          "mobile_width": 960,
+          "mobile_height": 1204,
+          "original_width": 1872,
+          "original_height": 2347
         }
       ]
     }
