@@ -138,6 +138,11 @@
       "permanent": true
     },
     {
+      "source": "/payment-methods-for-international-aesthetic-wholesale-orders",
+      "destination": "/blog/payment-methods-for-international-aesthetic-wholesale-orders",
+      "permanent": true
+    },
+    {
       "source": "/pdrn-skin-booster-wholesale-guide",
       "destination": "/blog/pdrn-skin-booster-wholesale-guide",
       "permanent": true

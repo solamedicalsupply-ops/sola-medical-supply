@@ -691,8 +691,75 @@
       "keyword": "payment methods international aesthetic wholesale orders",
       "title": "Payment Methods for International Aesthetic Wholesale Orders",
       "category": "Payment",
-      "status": "pending",
-      "format": "buyer_guide"
+      "status": "published",
+      "format": "buyer_guide",
+      "slug": "payment-methods-for-international-aesthetic-wholesale-orders",
+      "published_at": "2026-08-19T03:27:37.227045+00:00",
+      "cover": "../assets/images/blog/payment-methods-for-international-aesthetic-wholesale-orders-cover.webp",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/blog/payment-methods-for-international-aesthetic-wholesale-orders-buyer-checklist.webp",
+        "../assets/images/blog/payment-methods-for-international-aesthetic-wholesale-orders-logistics-documentation.webp"
+      ],
+      "image_sources": [
+        {
+          "title": "Interior of Snow Clinic Ansan branch in March 2026.jpg 03.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Interior_of_Snow_Clinic_Ansan_branch_in_March_2026.jpg_03.jpg",
+          "original_url": "https://upload.wikimedia.org/wikipedia/commons/5/55/Interior_of_Snow_Clinic_Ansan_branch_in_March_2026.jpg_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "creator": "ELIZABETH XIONG",
+          "license": "CC BY 4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0",
+          "width": 4284,
+          "height": 5712,
+          "mime": "image/jpeg",
+          "src": "../assets/images/blog/payment-methods-for-international-aesthetic-wholesale-orders-cover.webp",
+          "mobile_src": "../assets/images/blog/payment-methods-for-international-aesthetic-wholesale-orders-cover-mobile.webp",
+          "display_width": 2400,
+          "display_height": 3200,
+          "mobile_width": 960,
+          "mobile_height": 1280,
+          "original_width": 4284,
+          "original_height": 5712
+        },
+        {
+          "title": "Medicine storage container 05.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Medicine_storage_container_05.jpg",
+          "original_url": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Medicine_storage_container_05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "creator": "",
+          "license": "CC0",
+          "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "width": 2736,
+          "height": 3648,
+          "mime": "image/jpeg",
+          "src": "../assets/images/blog/payment-methods-for-international-aesthetic-wholesale-orders-buyer-checklist.webp",
+          "mobile_src": "../assets/images/blog/payment-methods-for-international-aesthetic-wholesale-orders-buyer-checklist-mobile.webp",
+          "display_width": 2400,
+          "display_height": 3200,
+          "mobile_width": 960,
+          "mobile_height": 1280,
+          "original_width": 2736,
+          "original_height": 3648
+        },
+        {
+          "title": "Civil Affairs Team delivers medical supplies to state distribution center (6174348).jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Civil_Affairs_Team_delivers_medical_supplies_to_state_distribution_center_(6174348).jpg",
+          "original_url": "https://upload.wikimedia.org/wikipedia/commons/4/43/Civil_Affairs_Team_delivers_medical_supplies_to_state_distribution_center_%286174348%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "creator": "U.S. Army 241MPAD by Staff Sgt.  Scott Longstreet",
+          "license": "Public domain",
+          "license_url": "",
+          "width": 1600,
+          "height": 1200,
+          "mime": "image/jpeg",
+          "src": "../assets/images/blog/payment-methods-for-international-aesthetic-wholesale-orders-logistics-documentation.webp",
+          "mobile_src": "../assets/images/blog/payment-methods-for-international-aesthetic-wholesale-orders-logistics-documentation-mobile.webp",
+          "display_width": 1600,
+          "display_height": 1200,
+          "mobile_width": 960,
+          "mobile_height": 720,
+          "original_width": 1600,
+          "original_height": 1200
+        }
+      ]
     },
     {
       "keyword": "aqualyx distributor",
@@ -2447,6 +2514,76 @@
           "mobile_height": 639,
           "original_width": 5615,
           "original_height": 3736
+        }
+      ]
+    },
+    {
+      "title": "Payment Methods for International Aesthetic Wholesale Orders",
+      "slug": "payment-methods-for-international-aesthetic-wholesale-orders",
+      "published_at": "2026-08-19T03:27:37.227045+00:00",
+      "cover": "../assets/images/blog/payment-methods-for-international-aesthetic-wholesale-orders-cover.webp",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/blog/payment-methods-for-international-aesthetic-wholesale-orders-buyer-checklist.webp",
+        "../assets/images/blog/payment-methods-for-international-aesthetic-wholesale-orders-logistics-documentation.webp"
+      ],
+      "image_sources": [
+        {
+          "title": "Interior of Snow Clinic Ansan branch in March 2026.jpg 03.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Interior_of_Snow_Clinic_Ansan_branch_in_March_2026.jpg_03.jpg",
+          "original_url": "https://upload.wikimedia.org/wikipedia/commons/5/55/Interior_of_Snow_Clinic_Ansan_branch_in_March_2026.jpg_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "creator": "ELIZABETH XIONG",
+          "license": "CC BY 4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0",
+          "width": 4284,
+          "height": 5712,
+          "mime": "image/jpeg",
+          "src": "../assets/images/blog/payment-methods-for-international-aesthetic-wholesale-orders-cover.webp",
+          "mobile_src": "../assets/images/blog/payment-methods-for-international-aesthetic-wholesale-orders-cover-mobile.webp",
+          "display_width": 2400,
+          "display_height": 3200,
+          "mobile_width": 960,
+          "mobile_height": 1280,
+          "original_width": 4284,
+          "original_height": 5712
+        },
+        {
+          "title": "Medicine storage container 05.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Medicine_storage_container_05.jpg",
+          "original_url": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Medicine_storage_container_05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "creator": "",
+          "license": "CC0",
+          "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "width": 2736,
+          "height": 3648,
+          "mime": "image/jpeg",
+          "src": "../assets/images/blog/payment-methods-for-international-aesthetic-wholesale-orders-buyer-checklist.webp",
+          "mobile_src": "../assets/images/blog/payment-methods-for-international-aesthetic-wholesale-orders-buyer-checklist-mobile.webp",
+          "display_width": 2400,
+          "display_height": 3200,
+          "mobile_width": 960,
+          "mobile_height": 1280,
+          "original_width": 2736,
+          "original_height": 3648
+        },
+        {
+          "title": "Civil Affairs Team delivers medical supplies to state distribution center (6174348).jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Civil_Affairs_Team_delivers_medical_supplies_to_state_distribution_center_(6174348).jpg",
+          "original_url": "https://upload.wikimedia.org/wikipedia/commons/4/43/Civil_Affairs_Team_delivers_medical_supplies_to_state_distribution_center_%286174348%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "creator": "U.S. Army 241MPAD by Staff Sgt.  Scott Longstreet",
+          "license": "Public domain",
+          "license_url": "",
+          "width": 1600,
+          "height": 1200,
+          "mime": "image/jpeg",
+          "src": "../assets/images/blog/payment-methods-for-international-aesthetic-wholesale-orders-logistics-documentation.webp",
+          "mobile_src": "../assets/images/blog/payment-methods-for-international-aesthetic-wholesale-orders-logistics-documentation-mobile.webp",
+          "display_width": 1600,
+          "display_height": 1200,
+          "mobile_width": 960,
+          "mobile_height": 720,
+          "original_width": 1600,
+          "original_height": 1200
         }
       ]
     }
