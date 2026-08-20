@@ -766,7 +766,74 @@
       "title": "A Procurement Guide to Aqualyx for Spas, Clinics and Resellers",
       "category": "Lipolysis",
       "image": "../assets/images/bestSeller/aqualyx.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "a-procurement-guide-to-aqualyx-for-spas-clinics-and-resellers",
+      "published_at": "2026-08-20T03:27:23.039669+00:00",
+      "cover": "../assets/images/blog/a-procurement-guide-to-aqualyx-for-spas-clinics-and-resellers-cover.webp",
+      "illustrations": [
+        "../assets/images/bestSeller/aqualyx.png",
+        "../assets/images/blog/a-procurement-guide-to-aqualyx-for-spas-clinics-and-resellers-buyer-checklist.webp",
+        "../assets/images/blog/a-procurement-guide-to-aqualyx-for-spas-clinics-and-resellers-logistics-documentation.webp"
+      ],
+      "image_sources": [
+        {
+          "title": "Interior of Snow Clinic Ansan branch in March 2026.jpg 04.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Interior_of_Snow_Clinic_Ansan_branch_in_March_2026.jpg_04.jpg",
+          "original_url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Interior_of_Snow_Clinic_Ansan_branch_in_March_2026.jpg_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "creator": "ELIZABETH XIONG",
+          "license": "CC BY 4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0",
+          "width": 4284,
+          "height": 5712,
+          "mime": "image/jpeg",
+          "src": "../assets/images/blog/a-procurement-guide-to-aqualyx-for-spas-clinics-and-resellers-cover.webp",
+          "mobile_src": "../assets/images/blog/a-procurement-guide-to-aqualyx-for-spas-clinics-and-resellers-cover-mobile.webp",
+          "display_width": 2400,
+          "display_height": 3200,
+          "mobile_width": 960,
+          "mobile_height": 1280,
+          "original_width": 4284,
+          "original_height": 5712
+        },
+        {
+          "title": "Medicine storage container 06.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Medicine_storage_container_06.jpg",
+          "original_url": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Medicine_storage_container_06.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "creator": "",
+          "license": "CC0",
+          "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "width": 2736,
+          "height": 3648,
+          "mime": "image/jpeg",
+          "src": "../assets/images/blog/a-procurement-guide-to-aqualyx-for-spas-clinics-and-resellers-buyer-checklist.webp",
+          "mobile_src": "../assets/images/blog/a-procurement-guide-to-aqualyx-for-spas-clinics-and-resellers-buyer-checklist-mobile.webp",
+          "display_width": 2400,
+          "display_height": 3200,
+          "mobile_width": 960,
+          "mobile_height": 1280,
+          "original_width": 2736,
+          "original_height": 3648
+        },
+        {
+          "title": "Moving medical supplies (8662665).jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Moving_medical_supplies_(8662665).jpg",
+          "original_url": "https://upload.wikimedia.org/wikipedia/commons/1/12/Moving_medical_supplies_%288662665%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "creator": "U.S. Army AMLC by  C.J. Lovelace",
+          "license": "Public domain",
+          "license_url": "",
+          "width": 2160,
+          "height": 2229,
+          "mime": "image/jpeg",
+          "src": "../assets/images/blog/a-procurement-guide-to-aqualyx-for-spas-clinics-and-resellers-logistics-documentation.webp",
+          "mobile_src": "../assets/images/blog/a-procurement-guide-to-aqualyx-for-spas-clinics-and-resellers-logistics-documentation-mobile.webp",
+          "display_width": 2160,
+          "display_height": 2229,
+          "mobile_width": 960,
+          "mobile_height": 991,
+          "original_width": 2160,
+          "original_height": 2229
+        }
+      ]
     },
     {
       "keyword": "tracking proof packing proof aesthetic wholesale",
@@ -2584,6 +2651,76 @@
           "mobile_height": 720,
           "original_width": 1600,
           "original_height": 1200
+        }
+      ]
+    },
+    {
+      "title": "A Procurement Guide to Aqualyx for Spas, Clinics and Resellers",
+      "slug": "a-procurement-guide-to-aqualyx-for-spas-clinics-and-resellers",
+      "published_at": "2026-08-20T03:27:23.039669+00:00",
+      "cover": "../assets/images/blog/a-procurement-guide-to-aqualyx-for-spas-clinics-and-resellers-cover.webp",
+      "illustrations": [
+        "../assets/images/bestSeller/aqualyx.png",
+        "../assets/images/blog/a-procurement-guide-to-aqualyx-for-spas-clinics-and-resellers-buyer-checklist.webp",
+        "../assets/images/blog/a-procurement-guide-to-aqualyx-for-spas-clinics-and-resellers-logistics-documentation.webp"
+      ],
+      "image_sources": [
+        {
+          "title": "Interior of Snow Clinic Ansan branch in March 2026.jpg 04.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Interior_of_Snow_Clinic_Ansan_branch_in_March_2026.jpg_04.jpg",
+          "original_url": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Interior_of_Snow_Clinic_Ansan_branch_in_March_2026.jpg_04.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "creator": "ELIZABETH XIONG",
+          "license": "CC BY 4.0",
+          "license_url": "https://creativecommons.org/licenses/by/4.0",
+          "width": 4284,
+          "height": 5712,
+          "mime": "image/jpeg",
+          "src": "../assets/images/blog/a-procurement-guide-to-aqualyx-for-spas-clinics-and-resellers-cover.webp",
+          "mobile_src": "../assets/images/blog/a-procurement-guide-to-aqualyx-for-spas-clinics-and-resellers-cover-mobile.webp",
+          "display_width": 2400,
+          "display_height": 3200,
+          "mobile_width": 960,
+          "mobile_height": 1280,
+          "original_width": 4284,
+          "original_height": 5712
+        },
+        {
+          "title": "Medicine storage container 06.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Medicine_storage_container_06.jpg",
+          "original_url": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Medicine_storage_container_06.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "creator": "",
+          "license": "CC0",
+          "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "width": 2736,
+          "height": 3648,
+          "mime": "image/jpeg",
+          "src": "../assets/images/blog/a-procurement-guide-to-aqualyx-for-spas-clinics-and-resellers-buyer-checklist.webp",
+          "mobile_src": "../assets/images/blog/a-procurement-guide-to-aqualyx-for-spas-clinics-and-resellers-buyer-checklist-mobile.webp",
+          "display_width": 2400,
+          "display_height": 3200,
+          "mobile_width": 960,
+          "mobile_height": 1280,
+          "original_width": 2736,
+          "original_height": 3648
+        },
+        {
+          "title": "Moving medical supplies (8662665).jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Moving_medical_supplies_(8662665).jpg",
+          "original_url": "https://upload.wikimedia.org/wikipedia/commons/1/12/Moving_medical_supplies_%288662665%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "creator": "U.S. Army AMLC by  C.J. Lovelace",
+          "license": "Public domain",
+          "license_url": "",
+          "width": 2160,
+          "height": 2229,
+          "mime": "image/jpeg",
+          "src": "../assets/images/blog/a-procurement-guide-to-aqualyx-for-spas-clinics-and-resellers-logistics-documentation.webp",
+          "mobile_src": "../assets/images/blog/a-procurement-guide-to-aqualyx-for-spas-clinics-and-resellers-logistics-documentation-mobile.webp",
+          "display_width": 2160,
+          "display_height": 2229,
+          "mobile_width": 960,
+          "mobile_height": 991,
+          "original_width": 2160,
+          "original_height": 2229
         }
       ]
     }
