@@ -968,8 +968,56 @@
       "keyword": "wholesale aesthetic supply distributors",
       "title": "Wholesale Aesthetic Supply for Distributors",
       "category": "Distribution",
-      "status": "pending",
-      "format": "buyer_guide"
+      "status": "published",
+      "format": "buyer_guide",
+      "slug": "wholesale-aesthetic-supply-for-distributors",
+      "published_at": "2026-08-23T03:31:28.934495+00:00",
+      "cover": "../assets/images/productCatalogue.png",
+      "illustrations": [
+        "../assets/images/warehouse-2.png",
+        "../assets/images/blog/wholesale-aesthetic-supply-for-distributors-buyer-checklist.webp",
+        "../assets/images/blog/wholesale-aesthetic-supply-for-distributors-logistics-documentation.webp"
+      ],
+      "image_sources": [
+        {
+          "title": "Medicine storage container 08.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Medicine_storage_container_08.jpg",
+          "original_url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Medicine_storage_container_08.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "creator": "",
+          "license": "CC0",
+          "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "width": 2736,
+          "height": 3648,
+          "mime": "image/jpeg",
+          "src": "../assets/images/blog/wholesale-aesthetic-supply-for-distributors-buyer-checklist.webp",
+          "mobile_src": "../assets/images/blog/wholesale-aesthetic-supply-for-distributors-buyer-checklist-mobile.webp",
+          "display_width": 2400,
+          "display_height": 3200,
+          "mobile_width": 960,
+          "mobile_height": 1280,
+          "original_width": 2736,
+          "original_height": 3648
+        },
+        {
+          "title": "Balikatan 25- U S , Philippine forces construct multi-purpose warehouse, prepare medical supplies to local community (8962075).jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Balikatan_25-_U_S_,_Philippine_forces_construct_multi-purpose_warehouse,_prepare_medical_supplies_to_local_community_(8962075).jpg",
+          "original_url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Balikatan_25-_U_S_%2C_Philippine_forces_construct_multi-purpose_warehouse%2C_prepare_medical_supplies_to_local_community_%288962075%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "creator": "Lance Cpl.  Roger Annoh",
+          "license": "Public domain",
+          "license_url": "",
+          "width": 8192,
+          "height": 5464,
+          "mime": "image/jpeg",
+          "src": "../assets/images/blog/wholesale-aesthetic-supply-for-distributors-logistics-documentation.webp",
+          "mobile_src": "../assets/images/blog/wholesale-aesthetic-supply-for-distributors-logistics-documentation-mobile.webp",
+          "display_width": 2400,
+          "display_height": 1601,
+          "mobile_width": 960,
+          "mobile_height": 640,
+          "original_width": 8192,
+          "original_height": 5464
+        }
+      ]
     },
     {
       "keyword": "buy samsung pharm whitening wholesale",
@@ -2957,6 +3005,57 @@
           "mobile_height": 540,
           "original_width": 7767,
           "original_height": 4369
+        }
+      ]
+    },
+    {
+      "title": "Wholesale Aesthetic Supply for Distributors",
+      "slug": "wholesale-aesthetic-supply-for-distributors",
+      "published_at": "2026-08-23T03:31:28.934495+00:00",
+      "cover": "../assets/images/productCatalogue.png",
+      "illustrations": [
+        "../assets/images/warehouse-2.png",
+        "../assets/images/blog/wholesale-aesthetic-supply-for-distributors-buyer-checklist.webp",
+        "../assets/images/blog/wholesale-aesthetic-supply-for-distributors-logistics-documentation.webp"
+      ],
+      "image_sources": [
+        {
+          "title": "Medicine storage container 08.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Medicine_storage_container_08.jpg",
+          "original_url": "https://upload.wikimedia.org/wikipedia/commons/f/fd/Medicine_storage_container_08.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "creator": "",
+          "license": "CC0",
+          "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "width": 2736,
+          "height": 3648,
+          "mime": "image/jpeg",
+          "src": "../assets/images/blog/wholesale-aesthetic-supply-for-distributors-buyer-checklist.webp",
+          "mobile_src": "../assets/images/blog/wholesale-aesthetic-supply-for-distributors-buyer-checklist-mobile.webp",
+          "display_width": 2400,
+          "display_height": 3200,
+          "mobile_width": 960,
+          "mobile_height": 1280,
+          "original_width": 2736,
+          "original_height": 3648
+        },
+        {
+          "title": "Balikatan 25- U S , Philippine forces construct multi-purpose warehouse, prepare medical supplies to local community (8962075).jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Balikatan_25-_U_S_,_Philippine_forces_construct_multi-purpose_warehouse,_prepare_medical_supplies_to_local_community_(8962075).jpg",
+          "original_url": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Balikatan_25-_U_S_%2C_Philippine_forces_construct_multi-purpose_warehouse%2C_prepare_medical_supplies_to_local_community_%288962075%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "creator": "Lance Cpl.  Roger Annoh",
+          "license": "Public domain",
+          "license_url": "",
+          "width": 8192,
+          "height": 5464,
+          "mime": "image/jpeg",
+          "src": "../assets/images/blog/wholesale-aesthetic-supply-for-distributors-logistics-documentation.webp",
+          "mobile_src": "../assets/images/blog/wholesale-aesthetic-supply-for-distributors-logistics-documentation-mobile.webp",
+          "display_width": 2400,
+          "display_height": 1601,
+          "mobile_width": 960,
+          "mobile_height": 640,
+          "original_width": 8192,
+          "original_height": 5464
         }
       ]
     }
