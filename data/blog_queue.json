@@ -1208,7 +1208,55 @@
       "title": "What to Check Before Ordering Medicain 2% from a Wholesale Supplier",
       "category": "Numbing & Supplies",
       "image": "../assets/images/products/medicain2.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "what-to-check-before-ordering-medicain-2-from-a-wholesale-supplier",
+      "published_at": "2026-08-27T13:04:31.930596+00:00",
+      "cover": "../assets/images/products/medicain2.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/blog/what-to-check-before-ordering-medicain-2-from-a-wholesale-supplier-buyer-checklist.webp",
+        "../assets/images/blog/what-to-check-before-ordering-medicain-2-from-a-wholesale-supplier-logistics-documentation.webp"
+      ],
+      "image_sources": [
+        {
+          "title": "Stocking supplies (6085537).jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Stocking_supplies_(6085537).jpg",
+          "original_url": "https://upload.wikimedia.org/wikipedia/commons/2/29/Stocking_supplies_%286085537%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "creator": "U.S. Army AMLC by  Ellen Crown",
+          "license": "Public domain",
+          "license_url": "",
+          "width": 2100,
+          "height": 1724,
+          "mime": "image/jpeg",
+          "src": "../assets/images/blog/what-to-check-before-ordering-medicain-2-from-a-wholesale-supplier-buyer-checklist.webp",
+          "mobile_src": "../assets/images/blog/what-to-check-before-ordering-medicain-2-from-a-wholesale-supplier-buyer-checklist-mobile.webp",
+          "display_width": 2100,
+          "display_height": 1724,
+          "mobile_width": 960,
+          "mobile_height": 788,
+          "original_width": 2100,
+          "original_height": 1724
+        },
+        {
+          "title": "Balikatan 25- U S , Philippine forces construct multi-purpose warehouse, prepare medical supplies to local community (8962080).jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Balikatan_25-_U_S_,_Philippine_forces_construct_multi-purpose_warehouse,_prepare_medical_supplies_to_local_community_(8962080).jpg",
+          "original_url": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Balikatan_25-_U_S_%2C_Philippine_forces_construct_multi-purpose_warehouse%2C_prepare_medical_supplies_to_local_community_%288962080%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "creator": "U.S. Marine Corps photo by Lance Cpl.  Roger Annoh",
+          "license": "Public domain",
+          "license_url": "",
+          "width": 7177,
+          "height": 4787,
+          "mime": "image/jpeg",
+          "src": "../assets/images/blog/what-to-check-before-ordering-medicain-2-from-a-wholesale-supplier-logistics-documentation.webp",
+          "mobile_src": "../assets/images/blog/what-to-check-before-ordering-medicain-2-from-a-wholesale-supplier-logistics-documentation-mobile.webp",
+          "display_width": 2400,
+          "display_height": 1601,
+          "mobile_width": 960,
+          "mobile_height": 640,
+          "original_width": 7177,
+          "original_height": 4787
+        }
+      ]
     },
     {
       "keyword": "wholesale j-cain numbing cream 15.6% sourcing",
@@ -3391,6 +3439,57 @@
           "mobile_height": 640,
           "original_width": 7698,
           "original_height": 5135
+        }
+      ]
+    },
+    {
+      "title": "What to Check Before Ordering Medicain 2% from a Wholesale Supplier",
+      "slug": "what-to-check-before-ordering-medicain-2-from-a-wholesale-supplier",
+      "published_at": "2026-08-27T13:04:31.930596+00:00",
+      "cover": "../assets/images/products/medicain2.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/blog/what-to-check-before-ordering-medicain-2-from-a-wholesale-supplier-buyer-checklist.webp",
+        "../assets/images/blog/what-to-check-before-ordering-medicain-2-from-a-wholesale-supplier-logistics-documentation.webp"
+      ],
+      "image_sources": [
+        {
+          "title": "Stocking supplies (6085537).jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Stocking_supplies_(6085537).jpg",
+          "original_url": "https://upload.wikimedia.org/wikipedia/commons/2/29/Stocking_supplies_%286085537%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "creator": "U.S. Army AMLC by  Ellen Crown",
+          "license": "Public domain",
+          "license_url": "",
+          "width": 2100,
+          "height": 1724,
+          "mime": "image/jpeg",
+          "src": "../assets/images/blog/what-to-check-before-ordering-medicain-2-from-a-wholesale-supplier-buyer-checklist.webp",
+          "mobile_src": "../assets/images/blog/what-to-check-before-ordering-medicain-2-from-a-wholesale-supplier-buyer-checklist-mobile.webp",
+          "display_width": 2100,
+          "display_height": 1724,
+          "mobile_width": 960,
+          "mobile_height": 788,
+          "original_width": 2100,
+          "original_height": 1724
+        },
+        {
+          "title": "Balikatan 25- U S , Philippine forces construct multi-purpose warehouse, prepare medical supplies to local community (8962080).jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Balikatan_25-_U_S_,_Philippine_forces_construct_multi-purpose_warehouse,_prepare_medical_supplies_to_local_community_(8962080).jpg",
+          "original_url": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Balikatan_25-_U_S_%2C_Philippine_forces_construct_multi-purpose_warehouse%2C_prepare_medical_supplies_to_local_community_%288962080%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "creator": "U.S. Marine Corps photo by Lance Cpl.  Roger Annoh",
+          "license": "Public domain",
+          "license_url": "",
+          "width": 7177,
+          "height": 4787,
+          "mime": "image/jpeg",
+          "src": "../assets/images/blog/what-to-check-before-ordering-medicain-2-from-a-wholesale-supplier-logistics-documentation.webp",
+          "mobile_src": "../assets/images/blog/what-to-check-before-ordering-medicain-2-from-a-wholesale-supplier-logistics-documentation-mobile.webp",
+          "display_width": 2400,
+          "display_height": 1601,
+          "mobile_width": 960,
+          "mobile_height": 640,
+          "original_width": 7177,
+          "original_height": 4787
         }
       ]
     }
