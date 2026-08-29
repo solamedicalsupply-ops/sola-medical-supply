@@ -1318,7 +1318,55 @@
       "title": "A Procurement Guide to Admedic for Spas, Clinics and Resellers",
       "category": "Injection Supplies",
       "image": "../assets/images/products/admedic.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "a-procurement-guide-to-admedic-for-spas-clinics-and-resellers",
+      "published_at": "2026-08-29T09:21:27.596895+00:00",
+      "cover": "../assets/images/products/admedic.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/blog/a-procurement-guide-to-admedic-for-spas-clinics-and-resellers-buyer-checklist.webp",
+        "../assets/images/blog/a-procurement-guide-to-admedic-for-spas-clinics-and-resellers-logistics-documentation.webp"
+      ],
+      "image_sources": [
+        {
+          "title": "HMHN Bunce Inventories Medical Supplies (8224952).jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:HMHN_Bunce_Inventories_Medical_Supplies_(8224952).jpg",
+          "original_url": "https://upload.wikimedia.org/wikipedia/commons/4/4e/HMHN_Bunce_Inventories_Medical_Supplies_%288224952%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "creator": "U.S. Navy photo by Petty Officer 1st Class  Ryre Arciaga",
+          "license": "Public domain",
+          "license_url": "",
+          "width": 6000,
+          "height": 4000,
+          "mime": "image/jpeg",
+          "src": "../assets/images/blog/a-procurement-guide-to-admedic-for-spas-clinics-and-resellers-buyer-checklist.webp",
+          "mobile_src": "../assets/images/blog/a-procurement-guide-to-admedic-for-spas-clinics-and-resellers-buyer-checklist-mobile.webp",
+          "display_width": 2400,
+          "display_height": 1600,
+          "mobile_width": 960,
+          "mobile_height": 640,
+          "original_width": 6000,
+          "original_height": 4000
+        },
+        {
+          "title": "Balikatan 25- U S , Philippine forces construct multi-purpose warehouse, prepare medical supplies to local community (8962081).jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Balikatan_25-_U_S_,_Philippine_forces_construct_multi-purpose_warehouse,_prepare_medical_supplies_to_local_community_(8962081).jpg",
+          "original_url": "https://upload.wikimedia.org/wikipedia/commons/4/40/Balikatan_25-_U_S_%2C_Philippine_forces_construct_multi-purpose_warehouse%2C_prepare_medical_supplies_to_local_community_%288962081%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "creator": "Lance Cpl.  Roger Annoh",
+          "license": "Public domain",
+          "license_url": "",
+          "width": 5663,
+          "height": 3777,
+          "mime": "image/jpeg",
+          "src": "../assets/images/blog/a-procurement-guide-to-admedic-for-spas-clinics-and-resellers-logistics-documentation.webp",
+          "mobile_src": "../assets/images/blog/a-procurement-guide-to-admedic-for-spas-clinics-and-resellers-logistics-documentation-mobile.webp",
+          "display_width": 2400,
+          "display_height": 1601,
+          "mobile_width": 960,
+          "mobile_height": 640,
+          "original_width": 5663,
+          "original_height": 3777
+        }
+      ]
     },
     {
       "keyword": "34g meso needle wholesale",
@@ -3589,6 +3637,57 @@
           "mobile_height": 640,
           "original_width": 7103,
           "original_height": 4738
+        }
+      ]
+    },
+    {
+      "title": "A Procurement Guide to Admedic for Spas, Clinics and Resellers",
+      "slug": "a-procurement-guide-to-admedic-for-spas-clinics-and-resellers",
+      "published_at": "2026-08-29T09:21:27.596895+00:00",
+      "cover": "../assets/images/products/admedic.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/blog/a-procurement-guide-to-admedic-for-spas-clinics-and-resellers-buyer-checklist.webp",
+        "../assets/images/blog/a-procurement-guide-to-admedic-for-spas-clinics-and-resellers-logistics-documentation.webp"
+      ],
+      "image_sources": [
+        {
+          "title": "HMHN Bunce Inventories Medical Supplies (8224952).jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:HMHN_Bunce_Inventories_Medical_Supplies_(8224952).jpg",
+          "original_url": "https://upload.wikimedia.org/wikipedia/commons/4/4e/HMHN_Bunce_Inventories_Medical_Supplies_%288224952%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "creator": "U.S. Navy photo by Petty Officer 1st Class  Ryre Arciaga",
+          "license": "Public domain",
+          "license_url": "",
+          "width": 6000,
+          "height": 4000,
+          "mime": "image/jpeg",
+          "src": "../assets/images/blog/a-procurement-guide-to-admedic-for-spas-clinics-and-resellers-buyer-checklist.webp",
+          "mobile_src": "../assets/images/blog/a-procurement-guide-to-admedic-for-spas-clinics-and-resellers-buyer-checklist-mobile.webp",
+          "display_width": 2400,
+          "display_height": 1600,
+          "mobile_width": 960,
+          "mobile_height": 640,
+          "original_width": 6000,
+          "original_height": 4000
+        },
+        {
+          "title": "Balikatan 25- U S , Philippine forces construct multi-purpose warehouse, prepare medical supplies to local community (8962081).jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Balikatan_25-_U_S_,_Philippine_forces_construct_multi-purpose_warehouse,_prepare_medical_supplies_to_local_community_(8962081).jpg",
+          "original_url": "https://upload.wikimedia.org/wikipedia/commons/4/40/Balikatan_25-_U_S_%2C_Philippine_forces_construct_multi-purpose_warehouse%2C_prepare_medical_supplies_to_local_community_%288962081%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "creator": "Lance Cpl.  Roger Annoh",
+          "license": "Public domain",
+          "license_url": "",
+          "width": 5663,
+          "height": 3777,
+          "mime": "image/jpeg",
+          "src": "../assets/images/blog/a-procurement-guide-to-admedic-for-spas-clinics-and-resellers-logistics-documentation.webp",
+          "mobile_src": "../assets/images/blog/a-procurement-guide-to-admedic-for-spas-clinics-and-resellers-logistics-documentation-mobile.webp",
+          "display_width": 2400,
+          "display_height": 1601,
+          "mobile_width": 960,
+          "mobile_height": 640,
+          "original_width": 5663,
+          "original_height": 3777
         }
       ]
     }
