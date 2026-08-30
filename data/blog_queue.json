@@ -1373,7 +1373,36 @@
       "title": "Sourcing 34G Meso Needle Wholesale: A Buyer's Guide for Clinics and Distributors",
       "category": "Meso & Needles",
       "image": "../assets/images/products/34GMesoNeedle.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "sourcing-34g-meso-needle-wholesale-a-buyer-s-guide-for-clinics-and-distributor",
+      "published_at": "2026-08-30T08:31:53.687733+00:00",
+      "cover": "../assets/images/products/34GMesoNeedle.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/blog/sourcing-34g-meso-needle-wholesale-a-buyer-s-guide-for-clinics-and-distributor-logistics-documentation.webp"
+      ],
+      "image_sources": [
+        {
+          "title": "Otsuka Warehouse 67-2011-01.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Otsuka_Warehouse_67-2011-01.jpg",
+          "original_url": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Otsuka_Warehouse_67-2011-01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "creator": "Gohachiyasu1214",
+          "license": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+          "width": 3888,
+          "height": 2592,
+          "mime": "image/jpeg",
+          "src": "../assets/images/blog/sourcing-34g-meso-needle-wholesale-a-buyer-s-guide-for-clinics-and-distributor-logistics-documentation.webp",
+          "mobile_src": "../assets/images/blog/sourcing-34g-meso-needle-wholesale-a-buyer-s-guide-for-clinics-and-distributor-logistics-documentation-mobile.webp",
+          "display_width": 2400,
+          "display_height": 1600,
+          "mobile_width": 960,
+          "mobile_height": 640,
+          "original_width": 3888,
+          "original_height": 2592
+        }
+      ]
     },
     {
       "keyword": "buy milanie wholesale",
@@ -3688,6 +3717,38 @@
           "mobile_height": 640,
           "original_width": 5663,
           "original_height": 3777
+        }
+      ]
+    },
+    {
+      "title": "Sourcing 34G Meso Needle Wholesale: A Buyer's Guide for Clinics and Distributors",
+      "slug": "sourcing-34g-meso-needle-wholesale-a-buyer-s-guide-for-clinics-and-distributor",
+      "published_at": "2026-08-30T08:31:53.687733+00:00",
+      "cover": "../assets/images/products/34GMesoNeedle.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/blog/sourcing-34g-meso-needle-wholesale-a-buyer-s-guide-for-clinics-and-distributor-logistics-documentation.webp"
+      ],
+      "image_sources": [
+        {
+          "title": "Otsuka Warehouse 67-2011-01.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Otsuka_Warehouse_67-2011-01.jpg",
+          "original_url": "https://upload.wikimedia.org/wikipedia/commons/b/b8/Otsuka_Warehouse_67-2011-01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "creator": "Gohachiyasu1214",
+          "license": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+          "width": 3888,
+          "height": 2592,
+          "mime": "image/jpeg",
+          "src": "../assets/images/blog/sourcing-34g-meso-needle-wholesale-a-buyer-s-guide-for-clinics-and-distributor-logistics-documentation.webp",
+          "mobile_src": "../assets/images/blog/sourcing-34g-meso-needle-wholesale-a-buyer-s-guide-for-clinics-and-distributor-logistics-documentation-mobile.webp",
+          "display_width": 2400,
+          "display_height": 1600,
+          "mobile_width": 960,
+          "mobile_height": 640,
+          "original_width": 3888,
+          "original_height": 2592
         }
       ]
     }
