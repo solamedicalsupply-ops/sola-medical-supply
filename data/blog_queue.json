@@ -1409,7 +1409,36 @@
       "title": "How Professional Buyers Evaluate Milanie Before Ordering Wholesale",
       "category": "Dermal Fillers",
       "image": "../assets/images/products/milanie.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "how-professional-buyers-evaluate-milanie-before-ordering-wholesale",
+      "published_at": "2026-08-31T08:52:55.692265+00:00",
+      "cover": "../assets/images/products/milanie.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/blog/how-professional-buyers-evaluate-milanie-before-ordering-wholesale-logistics-documentation.webp"
+      ],
+      "image_sources": [
+        {
+          "title": "Lyman-Eliel Drug Company Building (McKesson Building), N 1st Avenue and 3rd Street, Warehouse District, Minneapolis, MN.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Lyman-Eliel_Drug_Company_Building_(McKesson_Building),_N_1st_Avenue_and_3rd_Street,_Warehouse_District,_Minneapolis,_MN.jpg",
+          "original_url": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Lyman-Eliel_Drug_Company_Building_%28McKesson_Building%29%2C_N_1st_Avenue_and_3rd_Street%2C_Warehouse_District%2C_Minneapolis%2C_MN.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "creator": "w_lemay",
+          "license": "CC BY-SA 2.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+          "width": 3024,
+          "height": 4032,
+          "mime": "image/jpeg",
+          "src": "../assets/images/blog/how-professional-buyers-evaluate-milanie-before-ordering-wholesale-logistics-documentation.webp",
+          "mobile_src": "../assets/images/blog/how-professional-buyers-evaluate-milanie-before-ordering-wholesale-logistics-documentation-mobile.webp",
+          "display_width": 2400,
+          "display_height": 3200,
+          "mobile_width": 960,
+          "mobile_height": 1280,
+          "original_width": 3024,
+          "original_height": 4032
+        }
+      ]
     },
     {
       "keyword": "hyaron wholesale supplier",
@@ -3749,6 +3778,38 @@
           "mobile_height": 640,
           "original_width": 3888,
           "original_height": 2592
+        }
+      ]
+    },
+    {
+      "title": "How Professional Buyers Evaluate Milanie Before Ordering Wholesale",
+      "slug": "how-professional-buyers-evaluate-milanie-before-ordering-wholesale",
+      "published_at": "2026-08-31T08:52:55.692265+00:00",
+      "cover": "../assets/images/products/milanie.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/blog/how-professional-buyers-evaluate-milanie-before-ordering-wholesale-logistics-documentation.webp"
+      ],
+      "image_sources": [
+        {
+          "title": "Lyman-Eliel Drug Company Building (McKesson Building), N 1st Avenue and 3rd Street, Warehouse District, Minneapolis, MN.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Lyman-Eliel_Drug_Company_Building_(McKesson_Building),_N_1st_Avenue_and_3rd_Street,_Warehouse_District,_Minneapolis,_MN.jpg",
+          "original_url": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Lyman-Eliel_Drug_Company_Building_%28McKesson_Building%29%2C_N_1st_Avenue_and_3rd_Street%2C_Warehouse_District%2C_Minneapolis%2C_MN.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "creator": "w_lemay",
+          "license": "CC BY-SA 2.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+          "width": 3024,
+          "height": 4032,
+          "mime": "image/jpeg",
+          "src": "../assets/images/blog/how-professional-buyers-evaluate-milanie-before-ordering-wholesale-logistics-documentation.webp",
+          "mobile_src": "../assets/images/blog/how-professional-buyers-evaluate-milanie-before-ordering-wholesale-logistics-documentation-mobile.webp",
+          "display_width": 2400,
+          "display_height": 3200,
+          "mobile_width": 960,
+          "mobile_height": 1280,
+          "original_width": 3024,
+          "original_height": 4032
         }
       ]
     }
