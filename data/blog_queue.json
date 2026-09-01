@@ -1445,7 +1445,36 @@
       "title": "Hyaron for Aesthetic Clinics: A Practical Wholesale Sourcing Guide",
       "category": "Skin Boosters",
       "image": "../assets/images/bestSeller/hyaron.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "hyaron-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide",
+      "published_at": "2026-09-01T07:58:56.910633+00:00",
+      "cover": "../assets/images/bestSeller/hyaron.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/blog/hyaron-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide-logistics-documentation.webp"
+      ],
+      "image_sources": [
+        {
+          "title": "Lyman-Eliel Drug Company Building (McKesson Building), N 1st Avenue and 3rd Street, Warehouse District, Minneapolis, MN - 51763063314.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Lyman-Eliel_Drug_Company_Building_(McKesson_Building),_N_1st_Avenue_and_3rd_Street,_Warehouse_District,_Minneapolis,_MN_-_51763063314.jpg",
+          "original_url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Lyman-Eliel_Drug_Company_Building_%28McKesson_Building%29%2C_N_1st_Avenue_and_3rd_Street%2C_Warehouse_District%2C_Minneapolis%2C_MN_-_51763063314.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "creator": "w_lemay",
+          "license": "CC BY-SA 2.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+          "width": 2742,
+          "height": 3656,
+          "mime": "image/jpeg",
+          "src": "../assets/images/blog/hyaron-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide-logistics-documentation.webp",
+          "mobile_src": "../assets/images/blog/hyaron-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide-logistics-documentation-mobile.webp",
+          "display_width": 2400,
+          "display_height": 3200,
+          "mobile_width": 960,
+          "mobile_height": 1280,
+          "original_width": 2742,
+          "original_height": 3656
+        }
+      ]
     },
     {
       "keyword": "exoten for clinics",
@@ -3810,6 +3839,38 @@
           "mobile_height": 1280,
           "original_width": 3024,
           "original_height": 4032
+        }
+      ]
+    },
+    {
+      "title": "Hyaron for Aesthetic Clinics: A Practical Wholesale Sourcing Guide",
+      "slug": "hyaron-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide",
+      "published_at": "2026-09-01T07:58:56.910633+00:00",
+      "cover": "../assets/images/bestSeller/hyaron.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/blog/hyaron-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide-logistics-documentation.webp"
+      ],
+      "image_sources": [
+        {
+          "title": "Lyman-Eliel Drug Company Building (McKesson Building), N 1st Avenue and 3rd Street, Warehouse District, Minneapolis, MN - 51763063314.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Lyman-Eliel_Drug_Company_Building_(McKesson_Building),_N_1st_Avenue_and_3rd_Street,_Warehouse_District,_Minneapolis,_MN_-_51763063314.jpg",
+          "original_url": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Lyman-Eliel_Drug_Company_Building_%28McKesson_Building%29%2C_N_1st_Avenue_and_3rd_Street%2C_Warehouse_District%2C_Minneapolis%2C_MN_-_51763063314.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "creator": "w_lemay",
+          "license": "CC BY-SA 2.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+          "width": 2742,
+          "height": 3656,
+          "mime": "image/jpeg",
+          "src": "../assets/images/blog/hyaron-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide-logistics-documentation.webp",
+          "mobile_src": "../assets/images/blog/hyaron-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide-logistics-documentation-mobile.webp",
+          "display_width": 2400,
+          "display_height": 3200,
+          "mobile_width": 960,
+          "mobile_height": 1280,
+          "original_width": 2742,
+          "original_height": 3656
         }
       ]
     }
