@@ -1481,7 +1481,36 @@
       "title": "What to Check Before Ordering Exoten from a Wholesale Supplier",
       "category": "Exosome & Meso",
       "image": "../assets/images/products/exoten.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "what-to-check-before-ordering-exoten-from-a-wholesale-supplier",
+      "published_at": "2026-09-02T07:18:43.471241+00:00",
+      "cover": "../assets/images/products/exoten.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/blog/what-to-check-before-ordering-exoten-from-a-wholesale-supplier-logistics-documentation.webp"
+      ],
+      "image_sources": [
+        {
+          "title": "Lyman-Eliel Drug Company Building (McKesson Building), N 1st Avenue and 3rd Street, Warehouse District, Minneapolis, MN - 51762413526.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Lyman-Eliel_Drug_Company_Building_(McKesson_Building),_N_1st_Avenue_and_3rd_Street,_Warehouse_District,_Minneapolis,_MN_-_51762413526.jpg",
+          "original_url": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Lyman-Eliel_Drug_Company_Building_%28McKesson_Building%29%2C_N_1st_Avenue_and_3rd_Street%2C_Warehouse_District%2C_Minneapolis%2C_MN_-_51762413526.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "creator": "w_lemay",
+          "license": "CC BY-SA 2.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+          "width": 3641,
+          "height": 3100,
+          "mime": "image/jpeg",
+          "src": "../assets/images/blog/what-to-check-before-ordering-exoten-from-a-wholesale-supplier-logistics-documentation.webp",
+          "mobile_src": "../assets/images/blog/what-to-check-before-ordering-exoten-from-a-wholesale-supplier-logistics-documentation-mobile.webp",
+          "display_width": 2400,
+          "display_height": 2043,
+          "mobile_width": 960,
+          "mobile_height": 817,
+          "original_width": 3641,
+          "original_height": 3100
+        }
+      ]
     },
     {
       "keyword": "wholesale wondertox 200u sourcing",
@@ -3871,6 +3900,38 @@
           "mobile_height": 1280,
           "original_width": 2742,
           "original_height": 3656
+        }
+      ]
+    },
+    {
+      "title": "What to Check Before Ordering Exoten from a Wholesale Supplier",
+      "slug": "what-to-check-before-ordering-exoten-from-a-wholesale-supplier",
+      "published_at": "2026-09-02T07:18:43.471241+00:00",
+      "cover": "../assets/images/products/exoten.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/blog/what-to-check-before-ordering-exoten-from-a-wholesale-supplier-logistics-documentation.webp"
+      ],
+      "image_sources": [
+        {
+          "title": "Lyman-Eliel Drug Company Building (McKesson Building), N 1st Avenue and 3rd Street, Warehouse District, Minneapolis, MN - 51762413526.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Lyman-Eliel_Drug_Company_Building_(McKesson_Building),_N_1st_Avenue_and_3rd_Street,_Warehouse_District,_Minneapolis,_MN_-_51762413526.jpg",
+          "original_url": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Lyman-Eliel_Drug_Company_Building_%28McKesson_Building%29%2C_N_1st_Avenue_and_3rd_Street%2C_Warehouse_District%2C_Minneapolis%2C_MN_-_51762413526.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "creator": "w_lemay",
+          "license": "CC BY-SA 2.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+          "width": 3641,
+          "height": 3100,
+          "mime": "image/jpeg",
+          "src": "../assets/images/blog/what-to-check-before-ordering-exoten-from-a-wholesale-supplier-logistics-documentation.webp",
+          "mobile_src": "../assets/images/blog/what-to-check-before-ordering-exoten-from-a-wholesale-supplier-logistics-documentation-mobile.webp",
+          "display_width": 2400,
+          "display_height": 2043,
+          "mobile_width": 960,
+          "mobile_height": 817,
+          "original_width": 3641,
+          "original_height": 3100
         }
       ]
     }
