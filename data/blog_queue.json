@@ -1517,7 +1517,36 @@
       "title": "Buying Wondertox 200U Wholesale: Documentation, Handling and Shipping Essentials",
       "category": "Botulinum Toxin",
       "image": "../assets/images/products/woundertox200u.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "buying-wondertox-200u-wholesale-documentation-handling-and-shipping-essentials",
+      "published_at": "2026-09-03T07:22:01.826195+00:00",
+      "cover": "../assets/images/products/woundertox200u.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/blog/buying-wondertox-200u-wholesale-documentation-handling-and-shipping-essentials-logistics-documentation.webp"
+      ],
+      "image_sources": [
+        {
+          "title": "Ijede Rd Ikorodu Pharmaceuticals Factory For Crsterlight Overseas Agency Ltd Nigeria 1985 Designed by Michael Olutusen Onafowokan Foundation Plan Warehouse Drwg209-Wh-S1 028.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Ijede_Rd_Ikorodu_Pharmaceuticals_Factory_For_Crsterlight_Overseas_Agency_Ltd_Nigeria_1985_Designed_by_Michael_Olutusen_Onafowokan_Foundation_Plan_Warehouse_Drwg209-Wh-S1_028.jpg",
+          "original_url": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Ijede_Rd_Ikorodu_Pharmaceuticals_Factory_For_Crsterlight_Overseas_Agency_Ltd_Nigeria_1985_Designed_by_Michael_Olutusen_Onafowokan_Foundation_Plan_Warehouse_Drwg209-Wh-S1_028.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "creator": "Onafowokan Michael Olutusen",
+          "license": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+          "width": 3937,
+          "height": 2636,
+          "mime": "image/jpeg",
+          "src": "../assets/images/blog/buying-wondertox-200u-wholesale-documentation-handling-and-shipping-essentials-logistics-documentation.webp",
+          "mobile_src": "../assets/images/blog/buying-wondertox-200u-wholesale-documentation-handling-and-shipping-essentials-logistics-documentation-mobile.webp",
+          "display_width": 2400,
+          "display_height": 1607,
+          "mobile_width": 960,
+          "mobile_height": 643,
+          "original_width": 3937,
+          "original_height": 2636
+        }
+      ]
     },
     {
       "keyword": "sculptra distributor",
@@ -3932,6 +3961,38 @@
           "mobile_height": 817,
           "original_width": 3641,
           "original_height": 3100
+        }
+      ]
+    },
+    {
+      "title": "Buying Wondertox 200U Wholesale: Documentation, Handling and Shipping Essentials",
+      "slug": "buying-wondertox-200u-wholesale-documentation-handling-and-shipping-essentials",
+      "published_at": "2026-09-03T07:22:01.826195+00:00",
+      "cover": "../assets/images/products/woundertox200u.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/blog/buying-wondertox-200u-wholesale-documentation-handling-and-shipping-essentials-logistics-documentation.webp"
+      ],
+      "image_sources": [
+        {
+          "title": "Ijede Rd Ikorodu Pharmaceuticals Factory For Crsterlight Overseas Agency Ltd Nigeria 1985 Designed by Michael Olutusen Onafowokan Foundation Plan Warehouse Drwg209-Wh-S1 028.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Ijede_Rd_Ikorodu_Pharmaceuticals_Factory_For_Crsterlight_Overseas_Agency_Ltd_Nigeria_1985_Designed_by_Michael_Olutusen_Onafowokan_Foundation_Plan_Warehouse_Drwg209-Wh-S1_028.jpg",
+          "original_url": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Ijede_Rd_Ikorodu_Pharmaceuticals_Factory_For_Crsterlight_Overseas_Agency_Ltd_Nigeria_1985_Designed_by_Michael_Olutusen_Onafowokan_Foundation_Plan_Warehouse_Drwg209-Wh-S1_028.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "creator": "Onafowokan Michael Olutusen",
+          "license": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+          "width": 3937,
+          "height": 2636,
+          "mime": "image/jpeg",
+          "src": "../assets/images/blog/buying-wondertox-200u-wholesale-documentation-handling-and-shipping-essentials-logistics-documentation.webp",
+          "mobile_src": "../assets/images/blog/buying-wondertox-200u-wholesale-documentation-handling-and-shipping-essentials-logistics-documentation-mobile.webp",
+          "display_width": 2400,
+          "display_height": 1607,
+          "mobile_width": 960,
+          "mobile_height": 643,
+          "original_width": 3937,
+          "original_height": 2636
         }
       ]
     }
