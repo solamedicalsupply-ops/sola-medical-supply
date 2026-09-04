@@ -1553,7 +1553,36 @@
       "title": "A Procurement Guide to Sculptra for Spas, Clinics and Resellers",
       "category": "Biostimulators",
       "image": "../assets/images/bestSeller/Sculptra.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "a-procurement-guide-to-sculptra-for-spas-clinics-and-resellers",
+      "published_at": "2026-09-04T07:24:32.081334+00:00",
+      "cover": "../assets/images/bestSeller/Sculptra.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/blog/a-procurement-guide-to-sculptra-for-spas-clinics-and-resellers-logistics-documentation.webp"
+      ],
+      "image_sources": [
+        {
+          "title": "Ijede Rd Ikorodu Pharmaceuticals Factory For Crsterlight Overseas Agency Ltd Nigeria 1985 Designed by Michael Olutusen Onafowokan Stanchions Gutter Details Warehouse Drwg209-Wh-S2 029.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Ijede_Rd_Ikorodu_Pharmaceuticals_Factory_For_Crsterlight_Overseas_Agency_Ltd_Nigeria_1985_Designed_by_Michael_Olutusen_Onafowokan_Stanchions_Gutter_Details_Warehouse_Drwg209-Wh-S2_029.jpg",
+          "original_url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Ijede_Rd_Ikorodu_Pharmaceuticals_Factory_For_Crsterlight_Overseas_Agency_Ltd_Nigeria_1985_Designed_by_Michael_Olutusen_Onafowokan_Stanchions_Gutter_Details_Warehouse_Drwg209-Wh-S2_029.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "creator": "Onafowokan Michael Olutusen",
+          "license": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+          "width": 3936,
+          "height": 2632,
+          "mime": "image/jpeg",
+          "src": "../assets/images/blog/a-procurement-guide-to-sculptra-for-spas-clinics-and-resellers-logistics-documentation.webp",
+          "mobile_src": "../assets/images/blog/a-procurement-guide-to-sculptra-for-spas-clinics-and-resellers-logistics-documentation-mobile.webp",
+          "display_width": 2400,
+          "display_height": 1605,
+          "mobile_width": 960,
+          "mobile_height": 642,
+          "original_width": 3936,
+          "original_height": 2632
+        }
+      ]
     },
     {
       "keyword": "jariot body wholesale",
@@ -3993,6 +4022,38 @@
           "mobile_height": 643,
           "original_width": 3937,
           "original_height": 2636
+        }
+      ]
+    },
+    {
+      "title": "A Procurement Guide to Sculptra for Spas, Clinics and Resellers",
+      "slug": "a-procurement-guide-to-sculptra-for-spas-clinics-and-resellers",
+      "published_at": "2026-09-04T07:24:32.081334+00:00",
+      "cover": "../assets/images/bestSeller/Sculptra.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/blog/a-procurement-guide-to-sculptra-for-spas-clinics-and-resellers-logistics-documentation.webp"
+      ],
+      "image_sources": [
+        {
+          "title": "Ijede Rd Ikorodu Pharmaceuticals Factory For Crsterlight Overseas Agency Ltd Nigeria 1985 Designed by Michael Olutusen Onafowokan Stanchions Gutter Details Warehouse Drwg209-Wh-S2 029.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Ijede_Rd_Ikorodu_Pharmaceuticals_Factory_For_Crsterlight_Overseas_Agency_Ltd_Nigeria_1985_Designed_by_Michael_Olutusen_Onafowokan_Stanchions_Gutter_Details_Warehouse_Drwg209-Wh-S2_029.jpg",
+          "original_url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Ijede_Rd_Ikorodu_Pharmaceuticals_Factory_For_Crsterlight_Overseas_Agency_Ltd_Nigeria_1985_Designed_by_Michael_Olutusen_Onafowokan_Stanchions_Gutter_Details_Warehouse_Drwg209-Wh-S2_029.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "creator": "Onafowokan Michael Olutusen",
+          "license": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+          "width": 3936,
+          "height": 2632,
+          "mime": "image/jpeg",
+          "src": "../assets/images/blog/a-procurement-guide-to-sculptra-for-spas-clinics-and-resellers-logistics-documentation.webp",
+          "mobile_src": "../assets/images/blog/a-procurement-guide-to-sculptra-for-spas-clinics-and-resellers-logistics-documentation-mobile.webp",
+          "display_width": 2400,
+          "display_height": 1605,
+          "mobile_width": 960,
+          "mobile_height": 642,
+          "original_width": 3936,
+          "original_height": 2632
         }
       ]
     }
