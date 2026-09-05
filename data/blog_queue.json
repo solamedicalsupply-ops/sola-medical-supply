@@ -1589,7 +1589,36 @@
       "title": "Sourcing Jariot Body Wholesale: A Buyer's Guide for Clinics and Distributors",
       "category": "Body Fillers",
       "image": "../assets/images/products/jariotBody.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "sourcing-jariot-body-wholesale-a-buyer-s-guide-for-clinics-and-distributors",
+      "published_at": "2026-09-05T07:05:52.350271+00:00",
+      "cover": "../assets/images/products/jariotBody.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/blog/sourcing-jariot-body-wholesale-a-buyer-s-guide-for-clinics-and-distributors-logistics-documentation.webp"
+      ],
+      "image_sources": [
+        {
+          "title": "Lyman-Eliel Drug Company Building (McKesson Building), N 1st Avenue and 3rd Street, Warehouse District, Minneapolis, MN - 51762412626.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Lyman-Eliel_Drug_Company_Building_(McKesson_Building),_N_1st_Avenue_and_3rd_Street,_Warehouse_District,_Minneapolis,_MN_-_51762412626.jpg",
+          "original_url": "https://upload.wikimedia.org/wikipedia/commons/8/82/Lyman-Eliel_Drug_Company_Building_%28McKesson_Building%29%2C_N_1st_Avenue_and_3rd_Street%2C_Warehouse_District%2C_Minneapolis%2C_MN_-_51762412626.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "creator": "w_lemay",
+          "license": "CC BY-SA 2.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+          "width": 3795,
+          "height": 2846,
+          "mime": "image/jpeg",
+          "src": "../assets/images/blog/sourcing-jariot-body-wholesale-a-buyer-s-guide-for-clinics-and-distributors-logistics-documentation.webp",
+          "mobile_src": "../assets/images/blog/sourcing-jariot-body-wholesale-a-buyer-s-guide-for-clinics-and-distributors-logistics-documentation-mobile.webp",
+          "display_width": 2400,
+          "display_height": 1800,
+          "mobile_width": 960,
+          "mobile_height": 720,
+          "original_width": 3795,
+          "original_height": 2846
+        }
+      ]
     },
     {
       "keyword": "buy gana v line wholesale",
@@ -4054,6 +4083,38 @@
           "mobile_height": 642,
           "original_width": 3936,
           "original_height": 2632
+        }
+      ]
+    },
+    {
+      "title": "Sourcing Jariot Body Wholesale: A Buyer's Guide for Clinics and Distributors",
+      "slug": "sourcing-jariot-body-wholesale-a-buyer-s-guide-for-clinics-and-distributors",
+      "published_at": "2026-09-05T07:05:52.350271+00:00",
+      "cover": "../assets/images/products/jariotBody.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/blog/sourcing-jariot-body-wholesale-a-buyer-s-guide-for-clinics-and-distributors-logistics-documentation.webp"
+      ],
+      "image_sources": [
+        {
+          "title": "Lyman-Eliel Drug Company Building (McKesson Building), N 1st Avenue and 3rd Street, Warehouse District, Minneapolis, MN - 51762412626.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Lyman-Eliel_Drug_Company_Building_(McKesson_Building),_N_1st_Avenue_and_3rd_Street,_Warehouse_District,_Minneapolis,_MN_-_51762412626.jpg",
+          "original_url": "https://upload.wikimedia.org/wikipedia/commons/8/82/Lyman-Eliel_Drug_Company_Building_%28McKesson_Building%29%2C_N_1st_Avenue_and_3rd_Street%2C_Warehouse_District%2C_Minneapolis%2C_MN_-_51762412626.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "creator": "w_lemay",
+          "license": "CC BY-SA 2.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+          "width": 3795,
+          "height": 2846,
+          "mime": "image/jpeg",
+          "src": "../assets/images/blog/sourcing-jariot-body-wholesale-a-buyer-s-guide-for-clinics-and-distributors-logistics-documentation.webp",
+          "mobile_src": "../assets/images/blog/sourcing-jariot-body-wholesale-a-buyer-s-guide-for-clinics-and-distributors-logistics-documentation-mobile.webp",
+          "display_width": 2400,
+          "display_height": 1800,
+          "mobile_width": 960,
+          "mobile_height": 720,
+          "original_width": 3795,
+          "original_height": 2846
         }
       ]
     }
