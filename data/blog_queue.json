@@ -1697,7 +1697,36 @@
       "title": "What to Check Before Ordering Laennec from a Wholesale Supplier",
       "category": "IV & Wellness",
       "image": "../assets/images/products/leannec.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "what-to-check-before-ordering-laennec-from-a-wholesale-supplier",
+      "published_at": "2026-09-08T07:24:50.685103+00:00",
+      "cover": "../assets/images/products/leannec.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/blog/what-to-check-before-ordering-laennec-from-a-wholesale-supplier-logistics-documentation.webp"
+      ],
+      "image_sources": [
+        {
+          "title": "Ijede Rd Ikorodu Pharmaceuticals Factory For Crsterlight Overseas Agency Ltd Nigeria 1985 Designed by Michael Olutusen Onafowokan Warehouse Ground Floor Plan Drwg 03 017.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Ijede_Rd_Ikorodu_Pharmaceuticals_Factory_For_Crsterlight_Overseas_Agency_Ltd_Nigeria_1985_Designed_by_Michael_Olutusen_Onafowokan_Warehouse_Ground_Floor_Plan_Drwg_03_017.jpg",
+          "original_url": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Ijede_Rd_Ikorodu_Pharmaceuticals_Factory_For_Crsterlight_Overseas_Agency_Ltd_Nigeria_1985_Designed_by_Michael_Olutusen_Onafowokan_Warehouse_Ground_Floor_Plan_Drwg_03_017.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "creator": "Onafowokan Michael Olutusen",
+          "license": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+          "width": 3937,
+          "height": 2258,
+          "mime": "image/jpeg",
+          "src": "../assets/images/blog/what-to-check-before-ordering-laennec-from-a-wholesale-supplier-logistics-documentation.webp",
+          "mobile_src": "../assets/images/blog/what-to-check-before-ordering-laennec-from-a-wholesale-supplier-logistics-documentation-mobile.webp",
+          "display_width": 2400,
+          "display_height": 1376,
+          "mobile_width": 960,
+          "mobile_height": 551,
+          "original_width": 3937,
+          "original_height": 2258
+        }
+      ]
     },
     {
       "keyword": "wholesale hyalaze sourcing",
@@ -4237,6 +4266,38 @@
           "mobile_height": 542,
           "original_width": 3937,
           "original_height": 2222
+        }
+      ]
+    },
+    {
+      "title": "What to Check Before Ordering Laennec from a Wholesale Supplier",
+      "slug": "what-to-check-before-ordering-laennec-from-a-wholesale-supplier",
+      "published_at": "2026-09-08T07:24:50.685103+00:00",
+      "cover": "../assets/images/products/leannec.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/blog/what-to-check-before-ordering-laennec-from-a-wholesale-supplier-logistics-documentation.webp"
+      ],
+      "image_sources": [
+        {
+          "title": "Ijede Rd Ikorodu Pharmaceuticals Factory For Crsterlight Overseas Agency Ltd Nigeria 1985 Designed by Michael Olutusen Onafowokan Warehouse Ground Floor Plan Drwg 03 017.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Ijede_Rd_Ikorodu_Pharmaceuticals_Factory_For_Crsterlight_Overseas_Agency_Ltd_Nigeria_1985_Designed_by_Michael_Olutusen_Onafowokan_Warehouse_Ground_Floor_Plan_Drwg_03_017.jpg",
+          "original_url": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Ijede_Rd_Ikorodu_Pharmaceuticals_Factory_For_Crsterlight_Overseas_Agency_Ltd_Nigeria_1985_Designed_by_Michael_Olutusen_Onafowokan_Warehouse_Ground_Floor_Plan_Drwg_03_017.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "creator": "Onafowokan Michael Olutusen",
+          "license": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+          "width": 3937,
+          "height": 2258,
+          "mime": "image/jpeg",
+          "src": "../assets/images/blog/what-to-check-before-ordering-laennec-from-a-wholesale-supplier-logistics-documentation.webp",
+          "mobile_src": "../assets/images/blog/what-to-check-before-ordering-laennec-from-a-wholesale-supplier-logistics-documentation-mobile.webp",
+          "display_width": 2400,
+          "display_height": 1376,
+          "mobile_width": 960,
+          "mobile_height": 551,
+          "original_width": 3937,
+          "original_height": 2258
         }
       ]
     }
