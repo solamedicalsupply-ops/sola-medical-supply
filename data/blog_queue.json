@@ -1733,7 +1733,36 @@
       "title": "Buying Hyalaze Wholesale: Documentation, Handling and Shipping Essentials",
       "category": "Hyaluronidase",
       "image": "../assets/images/products/hyazale.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "buying-hyalaze-wholesale-documentation-handling-and-shipping-essentials",
+      "published_at": "2026-09-09T07:33:57.869855+00:00",
+      "cover": "../assets/images/products/hyazale.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/blog/buying-hyalaze-wholesale-documentation-handling-and-shipping-essentials-logistics-documentation.webp"
+      ],
+      "image_sources": [
+        {
+          "title": "Ijede Rd Ikorodu Pharmaceuticals Factory For Crsterlight Overseas Agency Ltd Nigeria 1985 Designed by Michael Olutusen Onafowokan Warehouse Roof Plan Drwg05 012.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Ijede_Rd_Ikorodu_Pharmaceuticals_Factory_For_Crsterlight_Overseas_Agency_Ltd_Nigeria_1985_Designed_by_Michael_Olutusen_Onafowokan_Warehouse_Roof_Plan_Drwg05_012.jpg",
+          "original_url": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Ijede_Rd_Ikorodu_Pharmaceuticals_Factory_For_Crsterlight_Overseas_Agency_Ltd_Nigeria_1985_Designed_by_Michael_Olutusen_Onafowokan_Warehouse_Roof_Plan_Drwg05_012.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "creator": "Onafowokan Michael Olutusen",
+          "license": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+          "width": 3937,
+          "height": 2341,
+          "mime": "image/jpeg",
+          "src": "../assets/images/blog/buying-hyalaze-wholesale-documentation-handling-and-shipping-essentials-logistics-documentation.webp",
+          "mobile_src": "../assets/images/blog/buying-hyalaze-wholesale-documentation-handling-and-shipping-essentials-logistics-documentation-mobile.webp",
+          "display_width": 2400,
+          "display_height": 1427,
+          "mobile_width": 960,
+          "mobile_height": 571,
+          "original_width": 3937,
+          "original_height": 2341
+        }
+      ]
     },
     {
       "keyword": "j-cain numbing cream 29.9% distributor",
@@ -4298,6 +4327,38 @@
           "mobile_height": 551,
           "original_width": 3937,
           "original_height": 2258
+        }
+      ]
+    },
+    {
+      "title": "Buying Hyalaze Wholesale: Documentation, Handling and Shipping Essentials",
+      "slug": "buying-hyalaze-wholesale-documentation-handling-and-shipping-essentials",
+      "published_at": "2026-09-09T07:33:57.869855+00:00",
+      "cover": "../assets/images/products/hyazale.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/blog/buying-hyalaze-wholesale-documentation-handling-and-shipping-essentials-logistics-documentation.webp"
+      ],
+      "image_sources": [
+        {
+          "title": "Ijede Rd Ikorodu Pharmaceuticals Factory For Crsterlight Overseas Agency Ltd Nigeria 1985 Designed by Michael Olutusen Onafowokan Warehouse Roof Plan Drwg05 012.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:Ijede_Rd_Ikorodu_Pharmaceuticals_Factory_For_Crsterlight_Overseas_Agency_Ltd_Nigeria_1985_Designed_by_Michael_Olutusen_Onafowokan_Warehouse_Roof_Plan_Drwg05_012.jpg",
+          "original_url": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Ijede_Rd_Ikorodu_Pharmaceuticals_Factory_For_Crsterlight_Overseas_Agency_Ltd_Nigeria_1985_Designed_by_Michael_Olutusen_Onafowokan_Warehouse_Roof_Plan_Drwg05_012.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "creator": "Onafowokan Michael Olutusen",
+          "license": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+          "width": 3937,
+          "height": 2341,
+          "mime": "image/jpeg",
+          "src": "../assets/images/blog/buying-hyalaze-wholesale-documentation-handling-and-shipping-essentials-logistics-documentation.webp",
+          "mobile_src": "../assets/images/blog/buying-hyalaze-wholesale-documentation-handling-and-shipping-essentials-logistics-documentation-mobile.webp",
+          "display_width": 2400,
+          "display_height": 1427,
+          "mobile_width": 960,
+          "mobile_height": 571,
+          "original_width": 3937,
+          "original_height": 2341
         }
       ]
     }
