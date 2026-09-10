@@ -1769,7 +1769,36 @@
       "title": "A Procurement Guide to J-Cain Numbing Cream 29.9% for Spas, Clinics and Resellers",
       "category": "Numbing & Supplies",
       "image": "../assets/images/products/jCainNumbingCream29.9.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "a-procurement-guide-to-j-cain-numbing-cream-29-9-for-spas-clinics-and-reseller",
+      "published_at": "2026-09-10T07:29:54.698369+00:00",
+      "cover": "../assets/images/products/jCainNumbingCream29.9.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/blog/a-procurement-guide-to-j-cain-numbing-cream-29-9-for-spas-clinics-and-reseller-logistics-documentation.webp"
+      ],
+      "image_sources": [
+        {
+          "title": "ZAS Corporation Warehouse Building.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:ZAS_Corporation_Warehouse_Building.jpg",
+          "original_url": "https://upload.wikimedia.org/wikipedia/commons/8/81/ZAS_Corporation_Warehouse_Building.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "creator": "Zascomm",
+          "license": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+          "width": 6000,
+          "height": 4000,
+          "mime": "image/jpeg",
+          "src": "../assets/images/blog/a-procurement-guide-to-j-cain-numbing-cream-29-9-for-spas-clinics-and-reseller-logistics-documentation.webp",
+          "mobile_src": "../assets/images/blog/a-procurement-guide-to-j-cain-numbing-cream-29-9-for-spas-clinics-and-reseller-logistics-documentation-mobile.webp",
+          "display_width": 2400,
+          "display_height": 1600,
+          "mobile_width": 960,
+          "mobile_height": 640,
+          "original_width": 6000,
+          "original_height": 4000
+        }
+      ]
     },
     {
       "keyword": "bac water wholesale",
@@ -4359,6 +4388,38 @@
           "mobile_height": 571,
           "original_width": 3937,
           "original_height": 2341
+        }
+      ]
+    },
+    {
+      "title": "A Procurement Guide to J-Cain Numbing Cream 29.9% for Spas, Clinics and Resellers",
+      "slug": "a-procurement-guide-to-j-cain-numbing-cream-29-9-for-spas-clinics-and-reseller",
+      "published_at": "2026-09-10T07:29:54.698369+00:00",
+      "cover": "../assets/images/products/jCainNumbingCream29.9.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/blog/a-procurement-guide-to-j-cain-numbing-cream-29-9-for-spas-clinics-and-reseller-logistics-documentation.webp"
+      ],
+      "image_sources": [
+        {
+          "title": "ZAS Corporation Warehouse Building.jpg",
+          "source_url": "https://commons.wikimedia.org/wiki/File:ZAS_Corporation_Warehouse_Building.jpg",
+          "original_url": "https://upload.wikimedia.org/wikipedia/commons/8/81/ZAS_Corporation_Warehouse_Building.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+          "creator": "Zascomm",
+          "license": "CC BY-SA 4.0",
+          "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+          "width": 6000,
+          "height": 4000,
+          "mime": "image/jpeg",
+          "src": "../assets/images/blog/a-procurement-guide-to-j-cain-numbing-cream-29-9-for-spas-clinics-and-reseller-logistics-documentation.webp",
+          "mobile_src": "../assets/images/blog/a-procurement-guide-to-j-cain-numbing-cream-29-9-for-spas-clinics-and-reseller-logistics-documentation-mobile.webp",
+          "display_width": 2400,
+          "display_height": 1600,
+          "mobile_width": 960,
+          "mobile_height": 640,
+          "original_width": 6000,
+          "original_height": 4000
         }
       ]
     }
