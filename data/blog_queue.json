@@ -1805,7 +1805,16 @@
       "title": "Sourcing BAC Water Wholesale: A Buyer's Guide for Clinics and Distributors",
       "category": "Injection Supplies",
       "image": "../assets/images/products/bacwater.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "sourcing-bac-water-wholesale-a-buyer-s-guide-for-clinics-and-distributors",
+      "published_at": "2026-09-11T07:28:04.375199+00:00",
+      "cover": "../assets/images/products/bacwater.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "buy meso 30g sungshim wholesale",
@@ -4422,6 +4431,18 @@
           "original_height": 4000
         }
       ]
+    },
+    {
+      "title": "Sourcing BAC Water Wholesale: A Buyer's Guide for Clinics and Distributors",
+      "slug": "sourcing-bac-water-wholesale-a-buyer-s-guide-for-clinics-and-distributors",
+      "published_at": "2026-09-11T07:28:04.375199+00:00",
+      "cover": "../assets/images/products/bacwater.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     }
   ]
 }
