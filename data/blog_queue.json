@@ -1821,7 +1821,16 @@
       "title": "How Professional Buyers Evaluate Meso 30g Sungshim Before Ordering Wholesale",
       "category": "Meso & Needles",
       "image": "../assets/images/products/meso30gSungshim.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "how-professional-buyers-evaluate-meso-30g-sungshim-before-ordering-wholesale",
+      "published_at": "2026-09-12T07:20:20.028160+00:00",
+      "cover": "../assets/images/products/meso30gSungshim.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "lips wholesale supplier",
@@ -4437,6 +4446,18 @@
       "slug": "sourcing-bac-water-wholesale-a-buyer-s-guide-for-clinics-and-distributors",
       "published_at": "2026-09-11T07:28:04.375199+00:00",
       "cover": "../assets/images/products/bacwater.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "How Professional Buyers Evaluate Meso 30g Sungshim Before Ordering Wholesale",
+      "slug": "how-professional-buyers-evaluate-meso-30g-sungshim-before-ordering-wholesale",
+      "published_at": "2026-09-12T07:20:20.028160+00:00",
+      "cover": "../assets/images/products/meso30gSungshim.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
