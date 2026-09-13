@@ -1837,7 +1837,16 @@
       "title": "Lips for Aesthetic Clinics: A Practical Wholesale Sourcing Guide",
       "category": "Dermal Fillers",
       "image": "../assets/images/products/lips.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "lips-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide",
+      "published_at": "2026-09-13T07:38:53.106892+00:00",
+      "cover": "../assets/images/products/lips.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "nctf for clinics",
@@ -4458,6 +4467,18 @@
       "slug": "how-professional-buyers-evaluate-meso-30g-sungshim-before-ordering-wholesale",
       "published_at": "2026-09-12T07:20:20.028160+00:00",
       "cover": "../assets/images/products/meso30gSungshim.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "Lips for Aesthetic Clinics: A Practical Wholesale Sourcing Guide",
+      "slug": "lips-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide",
+      "published_at": "2026-09-13T07:38:53.106892+00:00",
+      "cover": "../assets/images/products/lips.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
