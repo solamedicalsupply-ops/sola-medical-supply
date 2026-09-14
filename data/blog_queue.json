@@ -1853,7 +1853,16 @@
       "title": "What to Check Before Ordering NCTF from a Wholesale Supplier",
       "category": "Skin Boosters",
       "image": "../assets/images/bestSeller/nctf.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "what-to-check-before-ordering-nctf-from-a-wholesale-supplier",
+      "published_at": "2026-09-14T08:05:46.104544+00:00",
+      "cover": "../assets/images/bestSeller/nctf.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "wholesale gtm 3% sourcing",
@@ -4479,6 +4488,18 @@
       "slug": "lips-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide",
       "published_at": "2026-09-13T07:38:53.106892+00:00",
       "cover": "../assets/images/products/lips.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "What to Check Before Ordering NCTF from a Wholesale Supplier",
+      "slug": "what-to-check-before-ordering-nctf-from-a-wholesale-supplier",
+      "published_at": "2026-09-14T08:05:46.104544+00:00",
+      "cover": "../assets/images/bestSeller/nctf.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
