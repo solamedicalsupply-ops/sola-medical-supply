@@ -1869,7 +1869,16 @@
       "title": "Buying GTM 3% Wholesale: Documentation, Handling and Shipping Essentials",
       "category": "Exosome & Meso",
       "image": "../assets/images/products/gtm3.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "buying-gtm-3-wholesale-documentation-handling-and-shipping-essentials",
+      "published_at": "2026-09-15T08:00:34.670024+00:00",
+      "cover": "../assets/images/products/gtm3.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "wondertox 100u distributor",
@@ -4500,6 +4509,18 @@
       "slug": "what-to-check-before-ordering-nctf-from-a-wholesale-supplier",
       "published_at": "2026-09-14T08:05:46.104544+00:00",
       "cover": "../assets/images/bestSeller/nctf.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "Buying GTM 3% Wholesale: Documentation, Handling and Shipping Essentials",
+      "slug": "buying-gtm-3-wholesale-documentation-handling-and-shipping-essentials",
+      "published_at": "2026-09-15T08:00:34.670024+00:00",
+      "cover": "../assets/images/products/gtm3.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
