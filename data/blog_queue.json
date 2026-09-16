@@ -1885,7 +1885,16 @@
       "title": "A Procurement Guide to Wondertox 100U for Spas, Clinics and Resellers",
       "category": "Botulinum Toxin",
       "image": "../assets/images/products/wuondertox100u.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "a-procurement-guide-to-wondertox-100u-for-spas-clinics-and-resellers",
+      "published_at": "2026-09-16T07:53:11.184469+00:00",
+      "cover": "../assets/images/products/wuondertox100u.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "radiesse wholesale",
@@ -4521,6 +4530,18 @@
       "slug": "buying-gtm-3-wholesale-documentation-handling-and-shipping-essentials",
       "published_at": "2026-09-15T08:00:34.670024+00:00",
       "cover": "../assets/images/products/gtm3.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "A Procurement Guide to Wondertox 100U for Spas, Clinics and Resellers",
+      "slug": "a-procurement-guide-to-wondertox-100u-for-spas-clinics-and-resellers",
+      "published_at": "2026-09-16T07:53:11.184469+00:00",
+      "cover": "../assets/images/products/wuondertox100u.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
