@@ -1901,7 +1901,16 @@
       "title": "Sourcing Radiesse Wholesale: A Buyer's Guide for Clinics and Distributors",
       "category": "Biostimulators",
       "image": "../assets/images/products/radiesse.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "sourcing-radiesse-wholesale-a-buyer-s-guide-for-clinics-and-distributors",
+      "published_at": "2026-09-17T07:57:54.915649+00:00",
+      "cover": "../assets/images/products/radiesse.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "buy helios body wholesale",
@@ -4542,6 +4551,18 @@
       "slug": "a-procurement-guide-to-wondertox-100u-for-spas-clinics-and-resellers",
       "published_at": "2026-09-16T07:53:11.184469+00:00",
       "cover": "../assets/images/products/wuondertox100u.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "Sourcing Radiesse Wholesale: A Buyer's Guide for Clinics and Distributors",
+      "slug": "sourcing-radiesse-wholesale-a-buyer-s-guide-for-clinics-and-distributors",
+      "published_at": "2026-09-17T07:57:54.915649+00:00",
+      "cover": "../assets/images/products/radiesse.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
