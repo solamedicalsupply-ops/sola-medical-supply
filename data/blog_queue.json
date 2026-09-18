@@ -1917,7 +1917,16 @@
       "title": "How Professional Buyers Evaluate Helios Body Before Ordering Wholesale",
       "category": "Body Fillers",
       "image": "../assets/images/products/heliosBody.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "how-professional-buyers-evaluate-helios-body-before-ordering-wholesale",
+      "published_at": "2026-09-18T07:36:15.305418+00:00",
+      "cover": "../assets/images/products/heliosBody.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "slim queen wholesale supplier",
@@ -4563,6 +4572,18 @@
       "slug": "sourcing-radiesse-wholesale-a-buyer-s-guide-for-clinics-and-distributors",
       "published_at": "2026-09-17T07:57:54.915649+00:00",
       "cover": "../assets/images/products/radiesse.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "How Professional Buyers Evaluate Helios Body Before Ordering Wholesale",
+      "slug": "how-professional-buyers-evaluate-helios-body-before-ordering-wholesale",
+      "published_at": "2026-09-18T07:36:15.305418+00:00",
+      "cover": "../assets/images/products/heliosBody.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
