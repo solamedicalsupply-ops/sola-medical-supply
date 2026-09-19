@@ -1933,7 +1933,16 @@
       "title": "Slim Queen for Aesthetic Clinics: A Practical Wholesale Sourcing Guide",
       "category": "Lipolysis",
       "image": "../assets/images/products/slimqueen.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "slim-queen-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide",
+      "published_at": "2026-09-19T07:31:26.041013+00:00",
+      "cover": "../assets/images/products/slimqueen.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "mounjaro 10mg for clinics",
@@ -4584,6 +4593,18 @@
       "slug": "how-professional-buyers-evaluate-helios-body-before-ordering-wholesale",
       "published_at": "2026-09-18T07:36:15.305418+00:00",
       "cover": "../assets/images/products/heliosBody.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "Slim Queen for Aesthetic Clinics: A Practical Wholesale Sourcing Guide",
+      "slug": "slim-queen-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide",
+      "published_at": "2026-09-19T07:31:26.041013+00:00",
+      "cover": "../assets/images/products/slimqueen.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
