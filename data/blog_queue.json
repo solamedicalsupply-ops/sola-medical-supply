@@ -1965,7 +1965,16 @@
       "title": "Buying Melsmon Wholesale: Documentation, Handling and Shipping Essentials",
       "category": "IV & Wellness",
       "image": "../assets/images/products/melsmon.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "buying-melsmon-wholesale-documentation-handling-and-shipping-essentials",
+      "published_at": "2026-09-21T08:11:15.570031+00:00",
+      "cover": "../assets/images/products/melsmon.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "j-cain numbing cream 59.9% distributor",
@@ -4626,6 +4635,18 @@
       "slug": "what-to-check-before-ordering-mounjaro-10mg-from-a-wholesale-supplier",
       "published_at": "2026-09-20T07:54:46.208486+00:00",
       "cover": "../assets/images/bestSeller/moujaro10mg.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "Buying Melsmon Wholesale: Documentation, Handling and Shipping Essentials",
+      "slug": "buying-melsmon-wholesale-documentation-handling-and-shipping-essentials",
+      "published_at": "2026-09-21T08:11:15.570031+00:00",
+      "cover": "../assets/images/products/melsmon.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
