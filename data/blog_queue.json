@@ -1981,7 +1981,16 @@
       "title": "A Procurement Guide to J-Cain Numbing Cream 59.9% for Spas, Clinics and Resellers",
       "category": "Numbing & Supplies",
       "image": "../assets/images/products/jCainNumbingCream59.9.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "a-procurement-guide-to-j-cain-numbing-cream-59-9-for-spas-clinics-and-reseller",
+      "published_at": "2026-09-22T07:56:39.966420+00:00",
+      "cover": "../assets/images/products/jCainNumbingCream59.9.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "hyadew wholesale",
@@ -4647,6 +4656,18 @@
       "slug": "buying-melsmon-wholesale-documentation-handling-and-shipping-essentials",
       "published_at": "2026-09-21T08:11:15.570031+00:00",
       "cover": "../assets/images/products/melsmon.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "A Procurement Guide to J-Cain Numbing Cream 59.9% for Spas, Clinics and Resellers",
+      "slug": "a-procurement-guide-to-j-cain-numbing-cream-59-9-for-spas-clinics-and-reseller",
+      "published_at": "2026-09-22T07:56:39.966420+00:00",
+      "cover": "../assets/images/products/jCainNumbingCream59.9.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
