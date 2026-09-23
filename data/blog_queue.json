@@ -1997,7 +1997,16 @@
       "title": "Sourcing Hyadew Wholesale: A Buyer's Guide for Clinics and Distributors",
       "category": "Dermal Fillers",
       "image": "../assets/images/products/hyadew.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "sourcing-hyadew-wholesale-a-buyer-s-guide-for-clinics-and-distributors",
+      "published_at": "2026-09-23T07:57:10.647935+00:00",
+      "cover": "../assets/images/products/hyadew.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "buy profhilo wholesale",
@@ -4668,6 +4677,18 @@
       "slug": "a-procurement-guide-to-j-cain-numbing-cream-59-9-for-spas-clinics-and-reseller",
       "published_at": "2026-09-22T07:56:39.966420+00:00",
       "cover": "../assets/images/products/jCainNumbingCream59.9.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "Sourcing Hyadew Wholesale: A Buyer's Guide for Clinics and Distributors",
+      "slug": "sourcing-hyadew-wholesale-a-buyer-s-guide-for-clinics-and-distributors",
+      "published_at": "2026-09-23T07:57:10.647935+00:00",
+      "cover": "../assets/images/products/hyadew.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
