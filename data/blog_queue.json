@@ -2013,7 +2013,16 @@
       "title": "How Professional Buyers Evaluate Profhilo Before Ordering Wholesale",
       "category": "Skin Boosters",
       "image": "../assets/images/bestSeller/profhilo.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "how-professional-buyers-evaluate-profhilo-before-ordering-wholesale",
+      "published_at": "2026-09-24T07:47:49.910554+00:00",
+      "cover": "../assets/images/bestSeller/profhilo.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "gtm 8% wholesale supplier",
@@ -4689,6 +4698,18 @@
       "slug": "sourcing-hyadew-wholesale-a-buyer-s-guide-for-clinics-and-distributors",
       "published_at": "2026-09-23T07:57:10.647935+00:00",
       "cover": "../assets/images/products/hyadew.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "How Professional Buyers Evaluate Profhilo Before Ordering Wholesale",
+      "slug": "how-professional-buyers-evaluate-profhilo-before-ordering-wholesale",
+      "published_at": "2026-09-24T07:47:49.910554+00:00",
+      "cover": "../assets/images/bestSeller/profhilo.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
