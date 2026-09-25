@@ -2029,7 +2029,16 @@
       "title": "GTM 8% for Aesthetic Clinics: A Practical Wholesale Sourcing Guide",
       "category": "Exosome & Meso",
       "image": "../assets/images/products/gtm8.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "gtm-8-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide",
+      "published_at": "2026-09-25T08:09:04.248201+00:00",
+      "cover": "../assets/images/products/gtm8.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "xeomin for clinics",
@@ -4710,6 +4719,18 @@
       "slug": "how-professional-buyers-evaluate-profhilo-before-ordering-wholesale",
       "published_at": "2026-09-24T07:47:49.910554+00:00",
       "cover": "../assets/images/bestSeller/profhilo.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "GTM 8% for Aesthetic Clinics: A Practical Wholesale Sourcing Guide",
+      "slug": "gtm-8-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide",
+      "published_at": "2026-09-25T08:09:04.248201+00:00",
+      "cover": "../assets/images/products/gtm8.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
