@@ -2045,7 +2045,16 @@
       "title": "What to Check Before Ordering Xeomin from a Wholesale Supplier",
       "category": "Botulinum Toxin",
       "image": "../assets/images/products/xeomin.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "what-to-check-before-ordering-xeomin-from-a-wholesale-supplier",
+      "published_at": "2026-09-26T07:58:55.287417+00:00",
+      "cover": "../assets/images/products/xeomin.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "wholesale sculptra 5ml sourcing",
@@ -4731,6 +4740,18 @@
       "slug": "gtm-8-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide",
       "published_at": "2026-09-25T08:09:04.248201+00:00",
       "cover": "../assets/images/products/gtm8.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "What to Check Before Ordering Xeomin from a Wholesale Supplier",
+      "slug": "what-to-check-before-ordering-xeomin-from-a-wholesale-supplier",
+      "published_at": "2026-09-26T07:58:55.287417+00:00",
+      "cover": "../assets/images/products/xeomin.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
