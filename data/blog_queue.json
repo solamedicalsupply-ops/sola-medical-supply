@@ -2061,7 +2061,16 @@
       "title": "Buying Sculptra 5ml Wholesale: Documentation, Handling and Shipping Essentials",
       "category": "Biostimulators",
       "image": "../assets/images/products/Sculptra5ml.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "buying-sculptra-5ml-wholesale-documentation-handling-and-shipping-essentials",
+      "published_at": "2026-09-27T08:31:48.096933+00:00",
+      "cover": "../assets/images/products/Sculptra5ml.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "helios vip distributor",
@@ -4752,6 +4761,18 @@
       "slug": "what-to-check-before-ordering-xeomin-from-a-wholesale-supplier",
       "published_at": "2026-09-26T07:58:55.287417+00:00",
       "cover": "../assets/images/products/xeomin.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "Buying Sculptra 5ml Wholesale: Documentation, Handling and Shipping Essentials",
+      "slug": "buying-sculptra-5ml-wholesale-documentation-handling-and-shipping-essentials",
+      "published_at": "2026-09-27T08:31:48.096933+00:00",
+      "cover": "../assets/images/products/Sculptra5ml.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
