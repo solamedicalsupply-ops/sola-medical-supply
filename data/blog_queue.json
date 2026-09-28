@@ -2077,7 +2077,16 @@
       "title": "A Procurement Guide to Helios VIP for Spas, Clinics and Resellers",
       "category": "Body Fillers",
       "image": "../assets/images/products/heliosVip.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "a-procurement-guide-to-helios-vip-for-spas-clinics-and-resellers",
+      "published_at": "2026-09-28T08:56:15.047102+00:00",
+      "cover": "../assets/images/products/heliosVip.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "v line sol wholesale",
@@ -4773,6 +4782,18 @@
       "slug": "buying-sculptra-5ml-wholesale-documentation-handling-and-shipping-essentials",
       "published_at": "2026-09-27T08:31:48.096933+00:00",
       "cover": "../assets/images/products/Sculptra5ml.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "A Procurement Guide to Helios VIP for Spas, Clinics and Resellers",
+      "slug": "a-procurement-guide-to-helios-vip-for-spas-clinics-and-resellers",
+      "published_at": "2026-09-28T08:56:15.047102+00:00",
+      "cover": "../assets/images/products/heliosVip.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
