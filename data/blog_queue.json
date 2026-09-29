@@ -2093,7 +2093,16 @@
       "title": "Sourcing V Line Sol Wholesale: A Buyer's Guide for Clinics and Distributors",
       "category": "Lipolysis",
       "image": "../assets/images/products/vlineSol.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "sourcing-v-line-sol-wholesale-a-buyer-s-guide-for-clinics-and-distributors",
+      "published_at": "2026-09-29T08:59:25.758050+00:00",
+      "cover": "../assets/images/products/vlineSol.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "buy semaglutide 10mg wholesale",
@@ -4794,6 +4803,18 @@
       "slug": "a-procurement-guide-to-helios-vip-for-spas-clinics-and-resellers",
       "published_at": "2026-09-28T08:56:15.047102+00:00",
       "cover": "../assets/images/products/heliosVip.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "Sourcing V Line Sol Wholesale: A Buyer's Guide for Clinics and Distributors",
+      "slug": "sourcing-v-line-sol-wholesale-a-buyer-s-guide-for-clinics-and-distributors",
+      "published_at": "2026-09-29T08:59:25.758050+00:00",
+      "cover": "../assets/images/products/vlineSol.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
