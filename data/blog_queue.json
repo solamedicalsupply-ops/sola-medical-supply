@@ -2109,7 +2109,16 @@
       "title": "How Professional Buyers Evaluate Semaglutide 10mg Before Ordering Wholesale",
       "category": "Weight Management",
       "image": "../assets/images/products/semaglutide.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "how-professional-buyers-evaluate-semaglutide-10mg-before-ordering-wholesale",
+      "published_at": "2026-09-30T08:58:51.475433+00:00",
+      "cover": "../assets/images/products/semaglutide.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "nad+ wholesale supplier",
@@ -4815,6 +4824,18 @@
       "slug": "sourcing-v-line-sol-wholesale-a-buyer-s-guide-for-clinics-and-distributors",
       "published_at": "2026-09-29T08:59:25.758050+00:00",
       "cover": "../assets/images/products/vlineSol.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "How Professional Buyers Evaluate Semaglutide 10mg Before Ordering Wholesale",
+      "slug": "how-professional-buyers-evaluate-semaglutide-10mg-before-ordering-wholesale",
+      "published_at": "2026-09-30T08:58:51.475433+00:00",
+      "cover": "../assets/images/products/semaglutide.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
