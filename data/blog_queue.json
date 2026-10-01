@@ -2125,7 +2125,16 @@
       "title": "NAD+ for Aesthetic Clinics: A Practical Wholesale Sourcing Guide",
       "category": "IV & Wellness",
       "image": "../assets/images/products/nad.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "nad-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide",
+      "published_at": "2026-10-01T09:23:46.371276+00:00",
+      "cover": "../assets/images/products/nad.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "chaumcaine for clinics",
@@ -4836,6 +4845,18 @@
       "slug": "how-professional-buyers-evaluate-semaglutide-10mg-before-ordering-wholesale",
       "published_at": "2026-09-30T08:58:51.475433+00:00",
       "cover": "../assets/images/products/semaglutide.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "NAD+ for Aesthetic Clinics: A Practical Wholesale Sourcing Guide",
+      "slug": "nad-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide",
+      "published_at": "2026-10-01T09:23:46.371276+00:00",
+      "cover": "../assets/images/products/nad.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
