@@ -2141,7 +2141,16 @@
       "title": "What to Check Before Ordering Chaumcaine from a Wholesale Supplier",
       "category": "Numbing & Supplies",
       "image": "../assets/images/products/chaumcain.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "what-to-check-before-ordering-chaumcaine-from-a-wholesale-supplier",
+      "published_at": "2026-10-02T08:57:04.621101+00:00",
+      "cover": "../assets/images/products/chaumcain.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "wholesale elasty sourcing",
@@ -4857,6 +4866,18 @@
       "slug": "nad-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide",
       "published_at": "2026-10-01T09:23:46.371276+00:00",
       "cover": "../assets/images/products/nad.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "What to Check Before Ordering Chaumcaine from a Wholesale Supplier",
+      "slug": "what-to-check-before-ordering-chaumcaine-from-a-wholesale-supplier",
+      "published_at": "2026-10-02T08:57:04.621101+00:00",
+      "cover": "../assets/images/products/chaumcain.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
