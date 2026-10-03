@@ -2157,7 +2157,16 @@
       "title": "Buying Elasty Wholesale: Documentation, Handling and Shipping Essentials",
       "category": "Dermal Fillers",
       "image": "../assets/images/products/elasty.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "buying-elasty-wholesale-documentation-handling-and-shipping-essentials",
+      "published_at": "2026-10-03T08:32:12.125971+00:00",
+      "cover": "../assets/images/products/elasty.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "profhilo structura distributor",
@@ -4878,6 +4887,18 @@
       "slug": "what-to-check-before-ordering-chaumcaine-from-a-wholesale-supplier",
       "published_at": "2026-10-02T08:57:04.621101+00:00",
       "cover": "../assets/images/products/chaumcain.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "Buying Elasty Wholesale: Documentation, Handling and Shipping Essentials",
+      "slug": "buying-elasty-wholesale-documentation-handling-and-shipping-essentials",
+      "published_at": "2026-10-03T08:32:12.125971+00:00",
+      "cover": "../assets/images/products/elasty.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
