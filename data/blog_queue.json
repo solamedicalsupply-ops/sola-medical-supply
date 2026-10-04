@@ -2173,7 +2173,16 @@
       "title": "A Procurement Guide to Profhilo Structura for Spas, Clinics and Resellers",
       "category": "Skin Boosters",
       "image": "../assets/images/bestSeller/profhiloStructura.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "a-procurement-guide-to-profhilo-structura-for-spas-clinics-and-resellers",
+      "published_at": "2026-10-04T08:44:09.008761+00:00",
+      "cover": "../assets/images/bestSeller/profhiloStructura.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "meso jarrior wholesale",
@@ -4899,6 +4908,18 @@
       "slug": "buying-elasty-wholesale-documentation-handling-and-shipping-essentials",
       "published_at": "2026-10-03T08:32:12.125971+00:00",
       "cover": "../assets/images/products/elasty.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "A Procurement Guide to Profhilo Structura for Spas, Clinics and Resellers",
+      "slug": "a-procurement-guide-to-profhilo-structura-for-spas-clinics-and-resellers",
+      "published_at": "2026-10-04T08:44:09.008761+00:00",
+      "cover": "../assets/images/bestSeller/profhiloStructura.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
