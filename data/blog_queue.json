@@ -2189,7 +2189,16 @@
       "title": "Sourcing Meso Jarrior Wholesale: A Buyer's Guide for Clinics and Distributors",
       "category": "Exosome & Meso",
       "image": "../assets/images/products/mesoJarrior.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "sourcing-meso-jarrior-wholesale-a-buyer-s-guide-for-clinics-and-distributors",
+      "published_at": "2026-10-05T09:34:48.869112+00:00",
+      "cover": "../assets/images/products/mesoJarrior.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "buy neuronox 100u wholesale",
@@ -4920,6 +4929,18 @@
       "slug": "a-procurement-guide-to-profhilo-structura-for-spas-clinics-and-resellers",
       "published_at": "2026-10-04T08:44:09.008761+00:00",
       "cover": "../assets/images/bestSeller/profhiloStructura.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "Sourcing Meso Jarrior Wholesale: A Buyer's Guide for Clinics and Distributors",
+      "slug": "sourcing-meso-jarrior-wholesale-a-buyer-s-guide-for-clinics-and-distributors",
+      "published_at": "2026-10-05T09:34:48.869112+00:00",
+      "cover": "../assets/images/products/mesoJarrior.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
