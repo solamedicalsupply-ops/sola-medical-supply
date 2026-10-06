@@ -2205,7 +2205,16 @@
       "title": "How Professional Buyers Evaluate Neuronox 100U Before Ordering Wholesale",
       "category": "Botulinum Toxin",
       "image": "../assets/images/products/neuronox100u.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "how-professional-buyers-evaluate-neuronox-100u-before-ordering-wholesale",
+      "published_at": "2026-10-06T09:21:40.650725+00:00",
+      "cover": "../assets/images/products/neuronox100u.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "sculptra wholesale supplier",
@@ -4941,6 +4950,18 @@
       "slug": "sourcing-meso-jarrior-wholesale-a-buyer-s-guide-for-clinics-and-distributors",
       "published_at": "2026-10-05T09:34:48.869112+00:00",
       "cover": "../assets/images/products/mesoJarrior.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "How Professional Buyers Evaluate Neuronox 100U Before Ordering Wholesale",
+      "slug": "how-professional-buyers-evaluate-neuronox-100u-before-ordering-wholesale",
+      "published_at": "2026-10-06T09:21:40.650725+00:00",
+      "cover": "../assets/images/products/neuronox100u.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
