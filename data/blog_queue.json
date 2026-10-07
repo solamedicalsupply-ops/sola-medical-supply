@@ -2221,7 +2221,16 @@
       "title": "Sculptra for Aesthetic Clinics: A Practical Wholesale Sourcing Guide",
       "category": "Biostimulators",
       "image": "../assets/images/products/Sculptra1.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "sculptra-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide",
+      "published_at": "2026-10-07T09:11:38.444508+00:00",
+      "cover": "../assets/images/products/Sculptra1.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "pink fill body for clinics",
@@ -4962,6 +4971,18 @@
       "slug": "how-professional-buyers-evaluate-neuronox-100u-before-ordering-wholesale",
       "published_at": "2026-10-06T09:21:40.650725+00:00",
       "cover": "../assets/images/products/neuronox100u.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "Sculptra for Aesthetic Clinics: A Practical Wholesale Sourcing Guide",
+      "slug": "sculptra-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide",
+      "published_at": "2026-10-07T09:11:38.444508+00:00",
+      "cover": "../assets/images/products/Sculptra1.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
