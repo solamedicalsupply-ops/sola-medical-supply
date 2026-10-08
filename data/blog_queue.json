@@ -2237,7 +2237,16 @@
       "title": "What to Check Before Ordering Pink Fill Body from a Wholesale Supplier",
       "category": "Body Fillers",
       "image": "../assets/images/products/pinkFillBody.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "what-to-check-before-ordering-pink-fill-body-from-a-wholesale-supplier",
+      "published_at": "2026-10-08T09:25:31.478110+00:00",
+      "cover": "../assets/images/products/pinkFillBody.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "wholesale kabelline sourcing",
@@ -4983,6 +4992,18 @@
       "slug": "sculptra-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide",
       "published_at": "2026-10-07T09:11:38.444508+00:00",
       "cover": "../assets/images/products/Sculptra1.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "What to Check Before Ordering Pink Fill Body from a Wholesale Supplier",
+      "slug": "what-to-check-before-ordering-pink-fill-body-from-a-wholesale-supplier",
+      "published_at": "2026-10-08T09:25:31.478110+00:00",
+      "cover": "../assets/images/products/pinkFillBody.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
