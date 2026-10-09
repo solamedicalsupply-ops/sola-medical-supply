@@ -2253,7 +2253,16 @@
       "title": "Buying Kabelline Wholesale: Documentation, Handling and Shipping Essentials",
       "category": "Lipolysis",
       "image": "../assets/images/products/kabelline.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "buying-kabelline-wholesale-documentation-handling-and-shipping-essentials",
+      "published_at": "2026-10-09T09:34:28.541385+00:00",
+      "cover": "../assets/images/products/kabelline.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "tirzepatide 30mg distributor",
@@ -5004,6 +5013,18 @@
       "slug": "what-to-check-before-ordering-pink-fill-body-from-a-wholesale-supplier",
       "published_at": "2026-10-08T09:25:31.478110+00:00",
       "cover": "../assets/images/products/pinkFillBody.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "Buying Kabelline Wholesale: Documentation, Handling and Shipping Essentials",
+      "slug": "buying-kabelline-wholesale-documentation-handling-and-shipping-essentials",
+      "published_at": "2026-10-09T09:34:28.541385+00:00",
+      "cover": "../assets/images/products/kabelline.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
