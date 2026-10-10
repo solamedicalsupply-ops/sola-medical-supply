@@ -2269,7 +2269,16 @@
       "title": "A Procurement Guide to Tirzepatide 30mg for Spas, Clinics and Resellers",
       "category": "Weight Management",
       "image": "../assets/images/products/tirzepatide30Mg.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "a-procurement-guide-to-tirzepatide-30mg-for-spas-clinics-and-resellers",
+      "published_at": "2026-10-10T08:55:16.700680+00:00",
+      "cover": "../assets/images/products/tirzepatide30Mg.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "ruby luxury wholesale",
@@ -5025,6 +5034,18 @@
       "slug": "buying-kabelline-wholesale-documentation-handling-and-shipping-essentials",
       "published_at": "2026-10-09T09:34:28.541385+00:00",
       "cover": "../assets/images/products/kabelline.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "A Procurement Guide to Tirzepatide 30mg for Spas, Clinics and Resellers",
+      "slug": "a-procurement-guide-to-tirzepatide-30mg-for-spas-clinics-and-resellers",
+      "published_at": "2026-10-10T08:55:16.700680+00:00",
+      "cover": "../assets/images/products/tirzepatide30Mg.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
