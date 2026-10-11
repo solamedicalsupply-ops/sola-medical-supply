@@ -2285,7 +2285,16 @@
       "title": "Sourcing Ruby Luxury Wholesale: A Buyer's Guide for Clinics and Distributors",
       "category": "IV & Wellness",
       "image": "../assets/images/products/rubyluxury.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "sourcing-ruby-luxury-wholesale-a-buyer-s-guide-for-clinics-and-distributors",
+      "published_at": "2026-10-11T09:15:37.921293+00:00",
+      "cover": "../assets/images/products/rubyluxury.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "buy mi-cain pro wholesale",
@@ -5046,6 +5055,18 @@
       "slug": "a-procurement-guide-to-tirzepatide-30mg-for-spas-clinics-and-resellers",
       "published_at": "2026-10-10T08:55:16.700680+00:00",
       "cover": "../assets/images/products/tirzepatide30Mg.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "Sourcing Ruby Luxury Wholesale: A Buyer's Guide for Clinics and Distributors",
+      "slug": "sourcing-ruby-luxury-wholesale-a-buyer-s-guide-for-clinics-and-distributors",
+      "published_at": "2026-10-11T09:15:37.921293+00:00",
+      "cover": "../assets/images/products/rubyluxury.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
