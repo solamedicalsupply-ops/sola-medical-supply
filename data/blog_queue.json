@@ -2301,7 +2301,16 @@
       "title": "How Professional Buyers Evaluate Mi-Cain Pro Before Ordering Wholesale",
       "category": "Numbing & Supplies",
       "image": "../assets/images/products/miCainpro.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "how-professional-buyers-evaluate-mi-cain-pro-before-ordering-wholesale",
+      "published_at": "2026-10-12T09:42:08.527145+00:00",
+      "cover": "../assets/images/products/miCainpro.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "restylane kysse wholesale supplier",
@@ -5067,6 +5076,18 @@
       "slug": "sourcing-ruby-luxury-wholesale-a-buyer-s-guide-for-clinics-and-distributors",
       "published_at": "2026-10-11T09:15:37.921293+00:00",
       "cover": "../assets/images/products/rubyluxury.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "How Professional Buyers Evaluate Mi-Cain Pro Before Ordering Wholesale",
+      "slug": "how-professional-buyers-evaluate-mi-cain-pro-before-ordering-wholesale",
+      "published_at": "2026-10-12T09:42:08.527145+00:00",
+      "cover": "../assets/images/products/miCainpro.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
