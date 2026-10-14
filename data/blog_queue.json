@@ -2333,7 +2333,16 @@
       "title": "What to Check Before Ordering Rejuran HB from a Wholesale Supplier",
       "category": "Skin Boosters",
       "image": "../assets/images/bestSeller/rejuranHB.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "what-to-check-before-ordering-rejuran-hb-from-a-wholesale-supplier",
+      "published_at": "2026-10-14T07:59:07.402252+00:00",
+      "cover": "../assets/images/bestSeller/rejuranHB.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "wholesale hutox 100u sourcing",
@@ -5109,6 +5118,18 @@
       "slug": "restylane-kysse-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide",
       "published_at": "2026-10-13T09:43:06.392267+00:00",
       "cover": "../assets/images/products/restylaneKysse.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "What to Check Before Ordering Rejuran HB from a Wholesale Supplier",
+      "slug": "what-to-check-before-ordering-rejuran-hb-from-a-wholesale-supplier",
+      "published_at": "2026-10-14T07:59:07.402252+00:00",
+      "cover": "../assets/images/bestSeller/rejuranHB.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
