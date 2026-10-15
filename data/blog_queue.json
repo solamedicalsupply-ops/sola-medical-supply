@@ -2349,7 +2349,16 @@
       "title": "Buying Hutox 100U Wholesale: Documentation, Handling and Shipping Essentials",
       "category": "Botulinum Toxin",
       "image": "../assets/images/products/hutox100U.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "buying-hutox-100u-wholesale-documentation-handling-and-shipping-essentials",
+      "published_at": "2026-10-15T07:42:34.977477+00:00",
+      "cover": "../assets/images/products/hutox100U.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "maxxyfill body distributor",
@@ -5130,6 +5139,18 @@
       "slug": "what-to-check-before-ordering-rejuran-hb-from-a-wholesale-supplier",
       "published_at": "2026-10-14T07:59:07.402252+00:00",
       "cover": "../assets/images/bestSeller/rejuranHB.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "Buying Hutox 100U Wholesale: Documentation, Handling and Shipping Essentials",
+      "slug": "buying-hutox-100u-wholesale-documentation-handling-and-shipping-essentials",
+      "published_at": "2026-10-15T07:42:34.977477+00:00",
+      "cover": "../assets/images/products/hutox100U.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
