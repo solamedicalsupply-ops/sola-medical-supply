@@ -2365,7 +2365,16 @@
       "title": "A Procurement Guide to Maxxyfill Body for Spas, Clinics and Resellers",
       "category": "Body Fillers",
       "image": "../assets/images/products/mexxyFillBosy.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "a-procurement-guide-to-maxxyfill-body-for-spas-clinics-and-resellers",
+      "published_at": "2026-10-16T07:29:18.261303+00:00",
+      "cover": "../assets/images/products/mexxyFillBosy.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "lemon bottle wholesale",
@@ -5151,6 +5160,18 @@
       "slug": "buying-hutox-100u-wholesale-documentation-handling-and-shipping-essentials",
       "published_at": "2026-10-15T07:42:34.977477+00:00",
       "cover": "../assets/images/products/hutox100U.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "A Procurement Guide to Maxxyfill Body for Spas, Clinics and Resellers",
+      "slug": "a-procurement-guide-to-maxxyfill-body-for-spas-clinics-and-resellers",
+      "published_at": "2026-10-16T07:29:18.261303+00:00",
+      "cover": "../assets/images/products/mexxyFillBosy.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
