@@ -2397,7 +2397,16 @@
       "title": "How Professional Buyers Evaluate Mounjaro 12.5mg Before Ordering Wholesale",
       "category": "Weight Management",
       "image": "../assets/images/products/moujaro12.5mg.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "how-professional-buyers-evaluate-mounjaro-12-5mg-before-ordering-wholesale",
+      "published_at": "2026-10-18T07:24:22.711380+00:00",
+      "cover": "../assets/images/products/moujaro12.5mg.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "glutax 5gs micro wholesale supplier",
@@ -5193,6 +5202,18 @@
       "slug": "sourcing-lemon-bottle-wholesale-a-buyer-s-guide-for-clinics-and-distributors",
       "published_at": "2026-10-17T07:10:13.224562+00:00",
       "cover": "../assets/images/products/lemonBottle.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "How Professional Buyers Evaluate Mounjaro 12.5mg Before Ordering Wholesale",
+      "slug": "how-professional-buyers-evaluate-mounjaro-12-5mg-before-ordering-wholesale",
+      "published_at": "2026-10-18T07:24:22.711380+00:00",
+      "cover": "../assets/images/products/moujaro12.5mg.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
