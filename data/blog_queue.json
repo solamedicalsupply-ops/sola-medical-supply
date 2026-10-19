@@ -2413,7 +2413,16 @@
       "title": "Glutax 5GS Micro for Aesthetic Clinics: A Practical Wholesale Sourcing Guide",
       "category": "IV & Wellness",
       "image": "../assets/images/products/glutax5gsmicro.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "glutax-5gs-micro-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide",
+      "published_at": "2026-10-19T08:03:35.314295+00:00",
+      "cover": "../assets/images/products/glutax5gsmicro.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "neuramis for clinics",
@@ -5214,6 +5223,18 @@
       "slug": "how-professional-buyers-evaluate-mounjaro-12-5mg-before-ordering-wholesale",
       "published_at": "2026-10-18T07:24:22.711380+00:00",
       "cover": "../assets/images/products/moujaro12.5mg.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "Glutax 5GS Micro for Aesthetic Clinics: A Practical Wholesale Sourcing Guide",
+      "slug": "glutax-5gs-micro-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide",
+      "published_at": "2026-10-19T08:03:35.314295+00:00",
+      "cover": "../assets/images/products/glutax5gsmicro.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
