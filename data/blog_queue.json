@@ -2429,7 +2429,16 @@
       "title": "What to Check Before Ordering Neuramis from a Wholesale Supplier",
       "category": "Dermal Fillers",
       "image": "../assets/images/products/neuramis.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "what-to-check-before-ordering-neuramis-from-a-wholesale-supplier",
+      "published_at": "2026-10-20T07:54:20.887722+00:00",
+      "cover": "../assets/images/products/neuramis.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "wholesale rejuran healer sourcing",
@@ -5235,6 +5244,18 @@
       "slug": "glutax-5gs-micro-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide",
       "published_at": "2026-10-19T08:03:35.314295+00:00",
       "cover": "../assets/images/products/glutax5gsmicro.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "What to Check Before Ordering Neuramis from a Wholesale Supplier",
+      "slug": "what-to-check-before-ordering-neuramis-from-a-wholesale-supplier",
+      "published_at": "2026-10-20T07:54:20.887722+00:00",
+      "cover": "../assets/images/products/neuramis.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
