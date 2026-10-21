@@ -2445,7 +2445,16 @@
       "title": "Buying Rejuran Healer Wholesale: Documentation, Handling and Shipping Essentials",
       "category": "Skin Boosters",
       "image": "../assets/images/bestSeller/rejuranHealer.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "buying-rejuran-healer-wholesale-documentation-handling-and-shipping-essentials",
+      "published_at": "2026-10-21T07:58:19.902649+00:00",
+      "cover": "../assets/images/bestSeller/rejuranHealer.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "neuronox 100u distributor",
@@ -5256,6 +5265,18 @@
       "slug": "what-to-check-before-ordering-neuramis-from-a-wholesale-supplier",
       "published_at": "2026-10-20T07:54:20.887722+00:00",
       "cover": "../assets/images/products/neuramis.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "Buying Rejuran Healer Wholesale: Documentation, Handling and Shipping Essentials",
+      "slug": "buying-rejuran-healer-wholesale-documentation-handling-and-shipping-essentials",
+      "published_at": "2026-10-21T07:58:19.902649+00:00",
+      "cover": "../assets/images/bestSeller/rejuranHealer.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
