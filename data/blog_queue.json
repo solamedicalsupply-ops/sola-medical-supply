@@ -2461,7 +2461,16 @@
       "title": "A Procurement Guide to Neuronox 100U for Spas, Clinics and Resellers",
       "category": "Botulinum Toxin",
       "image": "../assets/images/products/neuronox100u.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "a-procurement-guide-to-neuronox-100u-for-spas-clinics-and-resellers",
+      "published_at": "2026-10-22T07:55:22.056075+00:00",
+      "cover": "../assets/images/products/neuronox100u.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "jariot body wholesale",
@@ -5277,6 +5286,18 @@
       "slug": "buying-rejuran-healer-wholesale-documentation-handling-and-shipping-essentials",
       "published_at": "2026-10-21T07:58:19.902649+00:00",
       "cover": "../assets/images/bestSeller/rejuranHealer.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "A Procurement Guide to Neuronox 100U for Spas, Clinics and Resellers",
+      "slug": "a-procurement-guide-to-neuronox-100u-for-spas-clinics-and-resellers",
+      "published_at": "2026-10-22T07:55:22.056075+00:00",
+      "cover": "../assets/images/products/neuronox100u.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
