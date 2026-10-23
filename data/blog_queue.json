@@ -2477,7 +2477,16 @@
       "title": "Sourcing Jariot Body Wholesale: A Buyer's Guide for Clinics and Distributors (Jariot Body)",
       "category": "Body Fillers",
       "image": "../assets/images/products/jariotBody.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "sourcing-jariot-body-wholesale-a-buyer-s-guide-for-clinics-and-distributors-ja",
+      "published_at": "2026-10-23T07:53:56.096017+00:00",
+      "cover": "../assets/images/products/jariotBody.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "buy lipolab wholesale",
@@ -5298,6 +5307,18 @@
       "slug": "a-procurement-guide-to-neuronox-100u-for-spas-clinics-and-resellers",
       "published_at": "2026-10-22T07:55:22.056075+00:00",
       "cover": "../assets/images/products/neuronox100u.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "Sourcing Jariot Body Wholesale: A Buyer's Guide for Clinics and Distributors",
+      "slug": "sourcing-jariot-body-wholesale-a-buyer-s-guide-for-clinics-and-distributors-ja",
+      "published_at": "2026-10-23T07:53:56.096017+00:00",
+      "cover": "../assets/images/products/jariotBody.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
