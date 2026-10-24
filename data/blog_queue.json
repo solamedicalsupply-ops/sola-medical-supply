@@ -2493,7 +2493,16 @@
       "title": "How Professional Buyers Evaluate Lipolab Before Ordering Wholesale",
       "category": "Lipolysis",
       "image": "../assets/images/products/lipolab.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "how-professional-buyers-evaluate-lipolab-before-ordering-wholesale",
+      "published_at": "2026-10-24T07:34:40.662078+00:00",
+      "cover": "../assets/images/products/lipolab.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "mounjaro 15mg wholesale supplier",
@@ -5319,6 +5328,18 @@
       "slug": "sourcing-jariot-body-wholesale-a-buyer-s-guide-for-clinics-and-distributors-ja",
       "published_at": "2026-10-23T07:53:56.096017+00:00",
       "cover": "../assets/images/products/jariotBody.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "How Professional Buyers Evaluate Lipolab Before Ordering Wholesale",
+      "slug": "how-professional-buyers-evaluate-lipolab-before-ordering-wholesale",
+      "published_at": "2026-10-24T07:34:40.662078+00:00",
+      "cover": "../assets/images/products/lipolab.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
