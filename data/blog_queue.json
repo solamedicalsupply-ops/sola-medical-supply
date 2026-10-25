@@ -2509,7 +2509,16 @@
       "title": "Mounjaro 15mg for Aesthetic Clinics: A Practical Wholesale Sourcing Guide",
       "category": "Weight Management",
       "image": "../assets/images/products/mounjaro15mg.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "mounjaro-15mg-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide",
+      "published_at": "2026-10-25T07:47:36.385703+00:00",
+      "cover": "../assets/images/products/mounjaro15mg.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "glutax 10000000 for clinics",
@@ -5340,6 +5349,18 @@
       "slug": "how-professional-buyers-evaluate-lipolab-before-ordering-wholesale",
       "published_at": "2026-10-24T07:34:40.662078+00:00",
       "cover": "../assets/images/products/lipolab.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "Mounjaro 15mg for Aesthetic Clinics: A Practical Wholesale Sourcing Guide",
+      "slug": "mounjaro-15mg-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide",
+      "published_at": "2026-10-25T07:47:36.385703+00:00",
+      "cover": "../assets/images/products/mounjaro15mg.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
