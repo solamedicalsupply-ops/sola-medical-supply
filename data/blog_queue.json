@@ -2525,7 +2525,16 @@
       "title": "What to Check Before Ordering Glutax 10000000 from a Wholesale Supplier",
       "category": "IV & Wellness",
       "image": "../assets/images/products/glutax10m.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "what-to-check-before-ordering-glutax-10000000-from-a-wholesale-supplier",
+      "published_at": "2026-10-26T08:05:07.925524+00:00",
+      "cover": "../assets/images/products/glutax10m.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "wholesale revolax sourcing",
@@ -5361,6 +5370,18 @@
       "slug": "mounjaro-15mg-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide",
       "published_at": "2026-10-25T07:47:36.385703+00:00",
       "cover": "../assets/images/products/mounjaro15mg.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "What to Check Before Ordering Glutax 10000000 from a Wholesale Supplier",
+      "slug": "what-to-check-before-ordering-glutax-10000000-from-a-wholesale-supplier",
+      "published_at": "2026-10-26T08:05:07.925524+00:00",
+      "cover": "../assets/images/products/glutax10m.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
