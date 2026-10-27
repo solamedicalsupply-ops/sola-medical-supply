@@ -2541,7 +2541,16 @@
       "title": "Buying Revolax Wholesale: Documentation, Handling and Shipping Essentials",
       "category": "Dermal Fillers",
       "image": "../assets/images/products/revolax.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "buying-revolax-wholesale-documentation-handling-and-shipping-essentials",
+      "published_at": "2026-10-27T08:20:17.260300+00:00",
+      "cover": "../assets/images/products/revolax.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "rejuran i distributor",
@@ -5382,6 +5391,18 @@
       "slug": "what-to-check-before-ordering-glutax-10000000-from-a-wholesale-supplier",
       "published_at": "2026-10-26T08:05:07.925524+00:00",
       "cover": "../assets/images/products/glutax10m.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "Buying Revolax Wholesale: Documentation, Handling and Shipping Essentials",
+      "slug": "buying-revolax-wholesale-documentation-handling-and-shipping-essentials",
+      "published_at": "2026-10-27T08:20:17.260300+00:00",
+      "cover": "../assets/images/products/revolax.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
