@@ -2557,7 +2557,16 @@
       "title": "A Procurement Guide to Rejuran I for Spas, Clinics and Resellers",
       "category": "Skin Boosters",
       "image": "../assets/images/bestSeller/rejuranI.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "a-procurement-guide-to-rejuran-i-for-spas-clinics-and-resellers",
+      "published_at": "2026-10-28T08:56:41.072625+00:00",
+      "cover": "../assets/images/bestSeller/rejuranI.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "kaimax 100 wholesale",
@@ -5403,6 +5412,18 @@
       "slug": "buying-revolax-wholesale-documentation-handling-and-shipping-essentials",
       "published_at": "2026-10-27T08:20:17.260300+00:00",
       "cover": "../assets/images/products/revolax.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "A Procurement Guide to Rejuran I for Spas, Clinics and Resellers",
+      "slug": "a-procurement-guide-to-rejuran-i-for-spas-clinics-and-resellers",
+      "published_at": "2026-10-28T08:56:41.072625+00:00",
+      "cover": "../assets/images/bestSeller/rejuranI.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
