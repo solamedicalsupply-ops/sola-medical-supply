@@ -2573,7 +2573,16 @@
       "title": "Sourcing Kaimax 100 Wholesale: A Buyer's Guide for Clinics and Distributors",
       "category": "Botulinum Toxin",
       "image": "../assets/images/products/kaimax.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "sourcing-kaimax-100-wholesale-a-buyer-s-guide-for-clinics-and-distributors",
+      "published_at": "2026-10-29T08:52:29.548671+00:00",
+      "cover": "../assets/images/products/kaimax.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "buy jariot vip wholesale",
@@ -5424,6 +5433,18 @@
       "slug": "a-procurement-guide-to-rejuran-i-for-spas-clinics-and-resellers",
       "published_at": "2026-10-28T08:56:41.072625+00:00",
       "cover": "../assets/images/bestSeller/rejuranI.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "Sourcing Kaimax 100 Wholesale: A Buyer's Guide for Clinics and Distributors",
+      "slug": "sourcing-kaimax-100-wholesale-a-buyer-s-guide-for-clinics-and-distributors",
+      "published_at": "2026-10-29T08:52:29.548671+00:00",
+      "cover": "../assets/images/products/kaimax.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
