@@ -2589,7 +2589,16 @@
       "title": "How Professional Buyers Evaluate Jariot VIP Before Ordering Wholesale",
       "category": "Body Fillers",
       "image": "../assets/images/products/jariotVip.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "how-professional-buyers-evaluate-jariot-vip-before-ordering-wholesale",
+      "published_at": "2026-10-30T08:57:11.062094+00:00",
+      "cover": "../assets/images/products/jariotVip.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "lri pro wholesale supplier",
@@ -5445,6 +5454,18 @@
       "slug": "sourcing-kaimax-100-wholesale-a-buyer-s-guide-for-clinics-and-distributors",
       "published_at": "2026-10-29T08:52:29.548671+00:00",
       "cover": "../assets/images/products/kaimax.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "How Professional Buyers Evaluate Jariot VIP Before Ordering Wholesale",
+      "slug": "how-professional-buyers-evaluate-jariot-vip-before-ordering-wholesale",
+      "published_at": "2026-10-30T08:57:11.062094+00:00",
+      "cover": "../assets/images/products/jariotVip.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
