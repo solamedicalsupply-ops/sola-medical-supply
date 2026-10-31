@@ -2605,7 +2605,16 @@
       "title": "LRI Pro for Aesthetic Clinics: A Practical Wholesale Sourcing Guide",
       "category": "Lipolysis",
       "image": "../assets/images/products/lriPro.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "lri-pro-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide",
+      "published_at": "2026-10-31T08:48:37.684323+00:00",
+      "cover": "../assets/images/products/lriPro.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "ozempic for clinics",
@@ -5466,6 +5475,18 @@
       "slug": "how-professional-buyers-evaluate-jariot-vip-before-ordering-wholesale",
       "published_at": "2026-10-30T08:57:11.062094+00:00",
       "cover": "../assets/images/products/jariotVip.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "LRI Pro for Aesthetic Clinics: A Practical Wholesale Sourcing Guide",
+      "slug": "lri-pro-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide",
+      "published_at": "2026-10-31T08:48:37.684323+00:00",
+      "cover": "../assets/images/products/lriPro.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
