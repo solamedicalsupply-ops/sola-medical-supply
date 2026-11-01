@@ -2621,7 +2621,16 @@
       "title": "What to Check Before Ordering Ozempic from a Wholesale Supplier",
       "category": "Weight Management",
       "image": "../assets/images/products/ozempic.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "what-to-check-before-ordering-ozempic-from-a-wholesale-supplier",
+      "published_at": "2026-11-01T09:39:29.955668+00:00",
+      "cover": "../assets/images/products/ozempic.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "wholesale glutax 22000000 sourcing",
@@ -5487,6 +5496,18 @@
       "slug": "lri-pro-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide",
       "published_at": "2026-10-31T08:48:37.684323+00:00",
       "cover": "../assets/images/products/lriPro.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "What to Check Before Ordering Ozempic from a Wholesale Supplier",
+      "slug": "what-to-check-before-ordering-ozempic-from-a-wholesale-supplier",
+      "published_at": "2026-11-01T09:39:29.955668+00:00",
+      "cover": "../assets/images/products/ozempic.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
