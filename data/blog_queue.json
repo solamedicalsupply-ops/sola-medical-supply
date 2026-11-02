@@ -2637,7 +2637,16 @@
       "title": "Buying Glutax 22000000 Wholesale: Documentation, Handling and Shipping Essentials",
       "category": "IV & Wellness",
       "image": "../assets/images/products/glutax22m.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "buying-glutax-22000000-wholesale-documentation-handling-and-shipping-essential",
+      "published_at": "2026-11-02T09:54:44.183380+00:00",
+      "cover": "../assets/images/products/glutax22m.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "restylane eyelight distributor",
@@ -5508,6 +5517,18 @@
       "slug": "what-to-check-before-ordering-ozempic-from-a-wholesale-supplier",
       "published_at": "2026-11-01T09:39:29.955668+00:00",
       "cover": "../assets/images/products/ozempic.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "Buying Glutax 22000000 Wholesale: Documentation, Handling and Shipping Essentials",
+      "slug": "buying-glutax-22000000-wholesale-documentation-handling-and-shipping-essential",
+      "published_at": "2026-11-02T09:54:44.183380+00:00",
+      "cover": "../assets/images/products/glutax22m.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
