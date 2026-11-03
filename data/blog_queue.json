@@ -2653,7 +2653,16 @@
       "title": "A Procurement Guide to Restylane Eyelight for Spas, Clinics and Resellers",
       "category": "Dermal Fillers",
       "image": "../assets/images/products/RestylaneEyelight.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "a-procurement-guide-to-restylane-eyelight-for-spas-clinics-and-resellers",
+      "published_at": "2026-11-03T09:59:17.185905+00:00",
+      "cover": "../assets/images/products/RestylaneEyelight.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "rejuran s wholesale",
@@ -5529,6 +5538,18 @@
       "slug": "buying-glutax-22000000-wholesale-documentation-handling-and-shipping-essential",
       "published_at": "2026-11-02T09:54:44.183380+00:00",
       "cover": "../assets/images/products/glutax22m.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "A Procurement Guide to Restylane Eyelight for Spas, Clinics and Resellers",
+      "slug": "a-procurement-guide-to-restylane-eyelight-for-spas-clinics-and-resellers",
+      "published_at": "2026-11-03T09:59:17.185905+00:00",
+      "cover": "../assets/images/products/RestylaneEyelight.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
