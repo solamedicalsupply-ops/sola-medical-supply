@@ -2669,7 +2669,16 @@
       "title": "Sourcing Rejuran S Wholesale: A Buyer's Guide for Clinics and Distributors",
       "category": "Skin Boosters",
       "image": "../assets/images/bestSeller/rejuranS.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "sourcing-rejuran-s-wholesale-a-buyer-s-guide-for-clinics-and-distributors",
+      "published_at": "2026-11-05T09:48:27.844727+00:00",
+      "cover": "../assets/images/bestSeller/rejuranS.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "buy kaimax 200u wholesale",
@@ -5550,6 +5559,18 @@
       "slug": "a-procurement-guide-to-restylane-eyelight-for-spas-clinics-and-resellers",
       "published_at": "2026-11-03T09:59:17.185905+00:00",
       "cover": "../assets/images/products/RestylaneEyelight.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "Sourcing Rejuran S Wholesale: A Buyer's Guide for Clinics and Distributors",
+      "slug": "sourcing-rejuran-s-wholesale-a-buyer-s-guide-for-clinics-and-distributors",
+      "published_at": "2026-11-05T09:48:27.844727+00:00",
+      "cover": "../assets/images/bestSeller/rejuranS.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
