@@ -26,7 +26,14 @@ const homeCategories = [
   { name: 'Accessories & Consumables', label: 'Accessories & consumables', note: 'Professional supplies for order planning', icon: 'AC', bg: 'cat-bg-supplies' }
 ];
 const fastProductNames = [
-  'Ultrafill', 'Sardenya', 'Rejuran HB', 'Profhilo', 'Asce', 'Botulax 100 Unit', 'Lemon Bottle', 'Mounjaro 2.5mg'
+  'Rejuran Healer — New Packaging',
+  'Mounjaro 2.5mg ( 2 pens)',
+  'Mounjaro 5mg ( 2 pens)',
+  'NCTF — 5 Vials',
+  'Lemon Bottle',
+  'Juvéderm Ultra 3 — New Packaging',
+  'Profhilo',
+  'Jalupro Super Hydro'
 ];
 const partnerBrands = [
   { name: 'Juvederm', logo: 'assets/images/brand-logos/juvederm.png', filter: 'Juvederm' },

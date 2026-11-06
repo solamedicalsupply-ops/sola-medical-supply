@@ -154,7 +154,7 @@ window.SOLA_PRODUCTS = [
   { name: 'Mounjaro 12.5mg ( 2 pens)', category: 'Fat Dissolving / Weight Loss', brand: 'Mounjaro', origin: 'Korea', tag: 'Weight Management', image: 'assets/images/products/mounjaro15mg.png' },
   { name: 'Mounjaro 10mg ( 2 pens)', category: 'Fat Dissolving / Weight Loss', brand: 'Mounjaro', origin: 'Korea', tag: 'Weight Management', image: 'assets/images/bestSeller/moujaro10mg.png' },
   { name: 'Mounjaro 7.5mg ( 2 pens)', category: 'Fat Dissolving / Weight Loss', brand: 'Mounjaro', origin: 'Korea', tag: 'Weight Management', image: 'assets/images/bestSeller/moujaro7.5mg.png' },
-  { name: 'Mounjaro 5mg ( 2 pens)', category: 'Fat Dissolving / Weight Loss', brand: 'Mounjaro', origin: 'Korea', tag: 'Weight Management', image: 'assets/images/products/mounjaro15mg.png' },
+  { name: 'Mounjaro 5mg ( 2 pens)', category: 'Fat Dissolving / Weight Loss', brand: 'Mounjaro', origin: 'Korea', tag: 'Weight Management', image: 'assets/images/bestSeller/moujaro5mg.png' },
   { name: 'Mounjaro 2.5mg ( 2 pens)', category: 'Fat Dissolving / Weight Loss', brand: 'Mounjaro', origin: 'Korea', tag: 'Weight Management', image: 'assets/images/bestSeller/moujaro2.5mg.png' },
   { name: 'Retatrutide BioaminoLabs 60mg', category: 'Fat Dissolving / Weight Loss', brand: 'Retatrutide', origin: 'Korea', tag: 'Weight Management', image: 'assets/images/generated/products/retatrutide-bioaminolabs-60mg.webp' },
   { name: 'Retatrutide BioaminoLabs 30mg', category: 'Fat Dissolving / Weight Loss', brand: 'Retatrutide', origin: 'Korea', tag: 'Weight Management', image: 'assets/images/generated/products/retatrutide-bioaminolabs-30mg.webp' },
