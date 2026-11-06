@@ -2685,7 +2685,16 @@
       "title": "How Professional Buyers Evaluate Kaimax 200U Before Ordering Wholesale",
       "category": "Botulinum Toxin",
       "image": "../assets/images/products/kaimax200u.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "how-professional-buyers-evaluate-kaimax-200u-before-ordering-wholesale",
+      "published_at": "2026-11-06T09:48:09.461101+00:00",
+      "cover": "../assets/images/products/kaimax200u.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "lri v line wholesale supplier",
@@ -5571,6 +5580,18 @@
       "slug": "sourcing-rejuran-s-wholesale-a-buyer-s-guide-for-clinics-and-distributors",
       "published_at": "2026-11-05T09:48:27.844727+00:00",
       "cover": "../assets/images/bestSeller/rejuranS.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "How Professional Buyers Evaluate Kaimax 200U Before Ordering Wholesale",
+      "slug": "how-professional-buyers-evaluate-kaimax-200u-before-ordering-wholesale",
+      "published_at": "2026-11-06T09:48:09.461101+00:00",
+      "cover": "../assets/images/products/kaimax200u.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
