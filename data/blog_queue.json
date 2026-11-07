@@ -2701,7 +2701,16 @@
       "title": "LRI V Line for Aesthetic Clinics: A Practical Wholesale Sourcing Guide",
       "category": "Lipolysis",
       "image": "../assets/images/products/lriVline.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "lri-v-line-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide",
+      "published_at": "2026-11-07T09:11:49.714622+00:00",
+      "cover": "../assets/images/products/lriVline.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "glutax 35000000 for clinics",
@@ -5592,6 +5601,18 @@
       "slug": "how-professional-buyers-evaluate-kaimax-200u-before-ordering-wholesale",
       "published_at": "2026-11-06T09:48:09.461101+00:00",
       "cover": "../assets/images/products/kaimax200u.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "LRI V Line for Aesthetic Clinics: A Practical Wholesale Sourcing Guide",
+      "slug": "lri-v-line-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide",
+      "published_at": "2026-11-07T09:11:49.714622+00:00",
+      "cover": "../assets/images/products/lriVline.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
