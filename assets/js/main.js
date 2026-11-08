@@ -3,6 +3,42 @@ const $ = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => [...r.querySelectorAll(s)];
 const allProducts = window.SOLA_PRODUCTS || [];
 
+// Keep recognizable, high-demand brands at the front of the catalogue without
+// letting a single brand take over the entire first page. Products retain their
+// existing catalogue order inside each priority tier.
+const popularBrandTiers = [
+  ['juvederm', 'restylane', 'rejuran', 'profhilo', 'mounjaro', 'ozempic', 'saxenda', 'sculptra', 'radiesse', 'belotero', 'xeomin', 'dysport', 'nctf', 'jalupro'],
+  ['botulax', 'nabota', 'meditoxin', 'neuronox', 'revolax', 'asce']
+];
+const normalizeProductText = value => String(value || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+function popularBrandMatch(product) {
+  // Match the product name rather than catalogue metadata so an incorrect brand
+  // field cannot promote an unrelated product.
+  const searchable = normalizeProductText(product.name);
+  for (let tier = 0; tier < popularBrandTiers.length; tier += 1) {
+    const brandIndex = popularBrandTiers[tier].findIndex(brand => searchable.includes(brand));
+    if (brandIndex !== -1) return { tier, brandIndex, key: `${tier}:${popularBrandTiers[tier][brandIndex]}` };
+  }
+  return { tier: popularBrandTiers.length, brandIndex: 0, key: 'other' };
+}
+function sortProductsByBrandPriority(products) {
+  const brandRounds = new Map();
+  return products
+    .map((product, index) => {
+      const match = popularBrandMatch(product);
+      const round = match.tier === popularBrandTiers.length ? 0 : (brandRounds.get(match.key) || 0);
+      if (match.tier !== popularBrandTiers.length) brandRounds.set(match.key, round + 1);
+      return { product, index, round, ...match };
+    })
+    .sort((a, b) => {
+      if (a.tier !== b.tier) return a.tier - b.tier;
+      if (a.tier === popularBrandTiers.length) return a.index - b.index;
+      return a.round - b.round || a.brandIndex - b.brandIndex || a.index - b.index;
+    })
+    .map(item => item.product);
+}
+const defaultProductOrder = sortProductsByBrandPriority(allProducts);
+
 $$('[data-product-count]').forEach(element => {
   element.textContent = String(allProducts.length);
 });
@@ -417,7 +453,7 @@ setupSiteHeader();
 $$('[data-wa]').forEach(a => a.href = wa(a.dataset.wa || undefined));
 
 let visibleCount = 24;
-let filteredProducts = allProducts;
+let filteredProducts = defaultProductOrder;
 
 function productFlag(p) {
   if (['Botulinum Toxin', 'Meso / Skin Boosters', 'Fat Dissolving / Weight Loss', 'Hair Booster / Scalp Booster'].includes(p.category)) return 'Fast-moving SKU';
@@ -516,7 +552,7 @@ function setupProductSections() {
       ? allProducts.filter(p => p.featured)
       : mode === 'fast'
         ? fastProducts
-        : allProducts;
+        : defaultProductOrder;
     renderGrid(grid, list);
   });
 }
@@ -626,12 +662,12 @@ function setupFilters() {
   };
   const apply = () => {
     const q = search.value.toLowerCase().trim(); visibleCount = 24;
-    filteredProducts = allProducts.filter(p =>
+    filteredProducts = sortProductsByBrandPriority(allProducts.filter(p =>
       (cat.value === 'All' || p.category === cat.value) &&
       (brand.value === 'All' || p.brand === brand.value) &&
       (!origin || origin.value === 'All' || (p.origin || 'International') === origin.value) &&
       (!q || `${p.name} ${p.brand} ${p.category} ${p.origin || ''} ${p.tag || ''}`.toLowerCase().includes(q))
-    );
+    ));
     renderGrid(grid, filteredProducts);
     renderActiveFilters();
     setQuickState();
