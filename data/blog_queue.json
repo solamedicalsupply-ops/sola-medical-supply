@@ -2717,7 +2717,16 @@
       "title": "What to Check Before Ordering Glutax 35000000 from a Wholesale Supplier",
       "category": "IV & Wellness",
       "image": "../assets/images/products/glutax35m.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "what-to-check-before-ordering-glutax-35000000-from-a-wholesale-supplier",
+      "published_at": "2026-11-08T09:26:02.289668+00:00",
+      "cover": "../assets/images/products/glutax35m.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "wholesale dermalax sourcing",
@@ -5613,6 +5622,18 @@
       "slug": "lri-v-line-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide",
       "published_at": "2026-11-07T09:11:49.714622+00:00",
       "cover": "../assets/images/products/lriVline.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "What to Check Before Ordering Glutax 35000000 from a Wholesale Supplier",
+      "slug": "what-to-check-before-ordering-glutax-35000000-from-a-wholesale-supplier",
+      "published_at": "2026-11-08T09:26:02.289668+00:00",
+      "cover": "../assets/images/products/glutax35m.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
