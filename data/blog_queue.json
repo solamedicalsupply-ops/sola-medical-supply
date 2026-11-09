@@ -2733,7 +2733,16 @@
       "title": "Buying Dermalax Wholesale: Documentation, Handling and Shipping Essentials",
       "category": "Dermal Fillers",
       "image": "../assets/images/products/dermalax.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "buying-dermalax-wholesale-documentation-handling-and-shipping-essentials",
+      "published_at": "2026-11-09T10:14:38.804734+00:00",
+      "cover": "../assets/images/products/dermalax.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "luhilo distributor",
@@ -5634,6 +5643,18 @@
       "slug": "what-to-check-before-ordering-glutax-35000000-from-a-wholesale-supplier",
       "published_at": "2026-11-08T09:26:02.289668+00:00",
       "cover": "../assets/images/products/glutax35m.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "Buying Dermalax Wholesale: Documentation, Handling and Shipping Essentials",
+      "slug": "buying-dermalax-wholesale-documentation-handling-and-shipping-essentials",
+      "published_at": "2026-11-09T10:14:38.804734+00:00",
+      "cover": "../assets/images/products/dermalax.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
