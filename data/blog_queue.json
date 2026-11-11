@@ -2765,7 +2765,16 @@
       "title": "Sourcing Kingtox Wholesale: A Buyer's Guide for Clinics and Distributors",
       "category": "Botulinum Toxin",
       "image": "../assets/images/products/kingTox.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "sourcing-kingtox-wholesale-a-buyer-s-guide-for-clinics-and-distributors",
+      "published_at": "2026-11-11T09:48:24.822081+00:00",
+      "cover": "../assets/images/products/kingTox.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "buy muscle inhibitors wholesale",
@@ -5676,6 +5685,18 @@
       "slug": "a-procurement-guide-to-luhilo-for-spas-clinics-and-resellers",
       "published_at": "2026-11-10T10:19:23.324857+00:00",
       "cover": "../assets/images/bestSeller/luhilo.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "Sourcing Kingtox Wholesale: A Buyer's Guide for Clinics and Distributors",
+      "slug": "sourcing-kingtox-wholesale-a-buyer-s-guide-for-clinics-and-distributors",
+      "published_at": "2026-11-11T09:48:24.822081+00:00",
+      "cover": "../assets/images/products/kingTox.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
