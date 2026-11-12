@@ -2781,7 +2781,16 @@
       "title": "How Professional Buyers Evaluate Muscle Inhibitors Before Ordering Wholesale",
       "category": "Lipolysis",
       "image": "../assets/images/products/muscleInhibitors.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "how-professional-buyers-evaluate-muscle-inhibitors-before-ordering-wholesale",
+      "published_at": "2026-11-12T10:12:51.094145+00:00",
+      "cover": "../assets/images/products/muscleInhibitors.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "gluthione 1200mg wholesale supplier",
@@ -5697,6 +5706,18 @@
       "slug": "sourcing-kingtox-wholesale-a-buyer-s-guide-for-clinics-and-distributors",
       "published_at": "2026-11-11T09:48:24.822081+00:00",
       "cover": "../assets/images/products/kingTox.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "How Professional Buyers Evaluate Muscle Inhibitors Before Ordering Wholesale",
+      "slug": "how-professional-buyers-evaluate-muscle-inhibitors-before-ordering-wholesale",
+      "published_at": "2026-11-12T10:12:51.094145+00:00",
+      "cover": "../assets/images/products/muscleInhibitors.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
