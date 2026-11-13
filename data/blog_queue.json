@@ -2797,7 +2797,16 @@
       "title": "Gluthione 1200mg for Aesthetic Clinics: A Practical Wholesale Sourcing Guide",
       "category": "IV & Wellness",
       "image": "../assets/images/products/gluthione.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "gluthione-1200mg-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide",
+      "published_at": "2026-11-13T09:55:41.327486+00:00",
+      "cover": "../assets/images/products/gluthione.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "white fill pro for clinics",
@@ -5718,6 +5727,18 @@
       "slug": "how-professional-buyers-evaluate-muscle-inhibitors-before-ordering-wholesale",
       "published_at": "2026-11-12T10:12:51.094145+00:00",
       "cover": "../assets/images/products/muscleInhibitors.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "Gluthione 1200mg for Aesthetic Clinics: A Practical Wholesale Sourcing Guide",
+      "slug": "gluthione-1200mg-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide",
+      "published_at": "2026-11-13T09:55:41.327486+00:00",
+      "cover": "../assets/images/products/gluthione.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
