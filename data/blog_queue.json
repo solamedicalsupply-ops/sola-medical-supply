@@ -2813,7 +2813,16 @@
       "title": "What to Check Before Ordering White Fill Pro from a Wholesale Supplier",
       "category": "Dermal Fillers",
       "image": "../assets/images/products/whiteFillPro.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "what-to-check-before-ordering-white-fill-pro-from-a-wholesale-supplier",
+      "published_at": "2026-11-14T09:21:28.708225+00:00",
+      "cover": "../assets/images/products/whiteFillPro.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "wholesale karisma sourcing",
@@ -5739,6 +5748,18 @@
       "slug": "gluthione-1200mg-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide",
       "published_at": "2026-11-13T09:55:41.327486+00:00",
       "cover": "../assets/images/products/gluthione.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "What to Check Before Ordering White Fill Pro from a Wholesale Supplier",
+      "slug": "what-to-check-before-ordering-white-fill-pro-from-a-wholesale-supplier",
+      "published_at": "2026-11-14T09:21:28.708225+00:00",
+      "cover": "../assets/images/products/whiteFillPro.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
