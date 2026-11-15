@@ -2829,7 +2829,16 @@
       "title": "Buying Karisma Wholesale: Documentation, Handling and Shipping Essentials",
       "category": "Skin Boosters",
       "image": "../assets/images/bestSeller/karisma.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "buying-karisma-wholesale-documentation-handling-and-shipping-essentials",
+      "published_at": "2026-11-15T09:51:19.124132+00:00",
+      "cover": "../assets/images/bestSeller/karisma.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "blacktox distributor",
@@ -5760,6 +5769,18 @@
       "slug": "what-to-check-before-ordering-white-fill-pro-from-a-wholesale-supplier",
       "published_at": "2026-11-14T09:21:28.708225+00:00",
       "cover": "../assets/images/products/whiteFillPro.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "Buying Karisma Wholesale: Documentation, Handling and Shipping Essentials",
+      "slug": "buying-karisma-wholesale-documentation-handling-and-shipping-essentials",
+      "published_at": "2026-11-15T09:51:19.124132+00:00",
+      "cover": "../assets/images/bestSeller/karisma.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
