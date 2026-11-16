@@ -2845,7 +2845,16 @@
       "title": "A Procurement Guide to Blacktox for Spas, Clinics and Resellers",
       "category": "Botulinum Toxin",
       "image": "../assets/images/products/blacktox.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "a-procurement-guide-to-blacktox-for-spas-clinics-and-resellers",
+      "published_at": "2026-11-16T10:08:22.983765+00:00",
+      "cover": "../assets/images/products/blacktox.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "placenta wholesale",
@@ -5781,6 +5790,18 @@
       "slug": "buying-karisma-wholesale-documentation-handling-and-shipping-essentials",
       "published_at": "2026-11-15T09:51:19.124132+00:00",
       "cover": "../assets/images/bestSeller/karisma.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "A Procurement Guide to Blacktox for Spas, Clinics and Resellers",
+      "slug": "a-procurement-guide-to-blacktox-for-spas-clinics-and-resellers",
+      "published_at": "2026-11-16T10:08:22.983765+00:00",
+      "cover": "../assets/images/products/blacktox.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
