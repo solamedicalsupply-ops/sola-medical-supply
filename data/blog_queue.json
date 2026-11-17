@@ -2861,7 +2861,16 @@
       "title": "Sourcing Placenta Wholesale: A Buyer's Guide for Clinics and Distributors",
       "category": "IV & Wellness",
       "image": "../assets/images/products/placenta.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "sourcing-placenta-wholesale-a-buyer-s-guide-for-clinics-and-distributors",
+      "published_at": "2026-11-17T11:04:12.535926+00:00",
+      "cover": "../assets/images/products/placenta.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "buy teoxane wholesale",
@@ -5802,6 +5811,18 @@
       "slug": "a-procurement-guide-to-blacktox-for-spas-clinics-and-resellers",
       "published_at": "2026-11-16T10:08:22.983765+00:00",
       "cover": "../assets/images/products/blacktox.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "Sourcing Placenta Wholesale: A Buyer's Guide for Clinics and Distributors",
+      "slug": "sourcing-placenta-wholesale-a-buyer-s-guide-for-clinics-and-distributors",
+      "published_at": "2026-11-17T11:04:12.535926+00:00",
+      "cover": "../assets/images/products/placenta.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
