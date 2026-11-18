@@ -2877,7 +2877,16 @@
       "title": "How Professional Buyers Evaluate Teoxane Before Ordering Wholesale",
       "category": "Dermal Fillers",
       "image": "../assets/images/products/teoxane.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "how-professional-buyers-evaluate-teoxane-before-ordering-wholesale",
+      "published_at": "2026-11-18T10:39:19.532301+00:00",
+      "cover": "../assets/images/products/teoxane.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "jalupro wholesale supplier",
@@ -5823,6 +5832,18 @@
       "slug": "sourcing-placenta-wholesale-a-buyer-s-guide-for-clinics-and-distributors",
       "published_at": "2026-11-17T11:04:12.535926+00:00",
       "cover": "../assets/images/products/placenta.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "How Professional Buyers Evaluate Teoxane Before Ordering Wholesale",
+      "slug": "how-professional-buyers-evaluate-teoxane-before-ordering-wholesale",
+      "published_at": "2026-11-18T10:39:19.532301+00:00",
+      "cover": "../assets/images/products/teoxane.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
