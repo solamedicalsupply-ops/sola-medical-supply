@@ -2893,7 +2893,16 @@
       "title": "Jalupro for Aesthetic Clinics: A Practical Wholesale Sourcing Guide",
       "category": "Skin Boosters",
       "image": "../assets/images/products/jalupro.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "jalupro-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide",
+      "published_at": "2026-11-19T10:43:40.221327+00:00",
+      "cover": "../assets/images/products/jalupro.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "botulax 300u for clinics",
@@ -5844,6 +5853,18 @@
       "slug": "how-professional-buyers-evaluate-teoxane-before-ordering-wholesale",
       "published_at": "2026-11-18T10:39:19.532301+00:00",
       "cover": "../assets/images/products/teoxane.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "Jalupro for Aesthetic Clinics: A Practical Wholesale Sourcing Guide",
+      "slug": "jalupro-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide",
+      "published_at": "2026-11-19T10:43:40.221327+00:00",
+      "cover": "../assets/images/products/jalupro.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
