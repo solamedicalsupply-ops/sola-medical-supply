@@ -1,5 +1,5 @@
 .sola-christmas-banner, .sola-wholesale-offer {
-    --christmas-gold: #ffdf9a;
+    --christmas-gold: var(--holiday-gold);
     --christmas-cream: #fff8ee;
     --christmas-art: url("../images/sola-christmas-night.webp");
     color: var(--christmas-cream);
@@ -196,7 +196,7 @@
     gap: 8px;
     padding: 12px 17px;
     border-radius: 8px;
-    background: linear-gradient(110deg, #f4c36e, #ffedba 55%, #e9ad55);
+    background: var(--holiday-gold-button);
     color: #2b1014;
     font-weight: 700;
     text-align: center;
@@ -5427,3 +5427,126 @@ body.sola-nav-locked { overflow: hidden; }
 @media (prefers-reduced-motion: reduce) {
     .sola-site-header *, .sola-site-header *::before, .sola-site-header *::after { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
 }
+
+/* Christmas palette shared by the public site. */
+:root {
+    --holiday-wine: #4d1423;
+    --holiday-red: #8a2435;
+    --holiday-gold: #ffdf9a;
+    --holiday-brass: #9b692f;
+    --holiday-cream: #fffaf1;
+    --holiday-sand: #f6ecda;
+    --holiday-line: #e9d8ba;
+    --holiday-muted: #6b574c;
+    --holiday-ink: #321c20;
+    --holiday-gold-button: linear-gradient(110deg, #f4c36e, #ffedba 55%, #e9ad55);
+    --pink: var(--holiday-red);
+    --pink2: #a7303e;
+    --forest: var(--holiday-wine);
+    --coral: var(--holiday-red);
+    --sage: var(--holiday-sand);
+    --sand: var(--holiday-sand);
+    --paper: var(--holiday-cream);
+    --ink: var(--holiday-ink);
+    --muted: var(--holiday-muted);
+    --line: var(--holiday-line);
+    --sola-nav-pink: var(--holiday-red);
+    --sola-nav-pink-dark: var(--holiday-wine);
+    --sola-nav-pink-soft: var(--holiday-sand);
+    --sola-nav-text: var(--holiday-ink);
+    --sola-nav-muted: var(--holiday-muted);
+    --sola-nav-line: var(--holiday-line);
+    --sola-nav-surface: var(--holiday-cream);
+}
+
+.sola-site-header .sola-topbar {
+    color: var(--holiday-cream);
+    background: var(--holiday-wine);
+    border-color: var(--holiday-brass);
+}
+
+.sola-site-header .sola-topbar-wa { color: var(--holiday-gold) !important; }
+.sola-topbar :focus-visible { outline-color: var(--holiday-gold); }
+
+.sola-mega-intro, .sola-mega-card, .sola-search-suggestions a:hover {
+    background: var(--holiday-sand);
+}
+
+.sola-quote-cta, .sola-quote-cta:hover, .sola-quote-cta[aria-disabled="true"],
+.btn.primary, .btn.primary:hover, .pricelist-teaser-btn, .pricelist-teaser-btn:hover {
+    background: var(--holiday-gold-button);
+    color: var(--holiday-ink);
+    border-color: var(--holiday-brass);
+}
+
+.sola-quote-cta:hover, .btn.primary:hover, .pricelist-teaser-btn:hover {
+    box-shadow: 0 3px 14px #9b692f38;
+}
+
+.whatsapp {
+    color: #fffaf1;
+    background: #224337;
+    box-shadow: 0 10px 24px #122a2540;
+}
+
+.whatsapp::before { background: #a8d89e; }
+
+.hero-overlay {
+    background: linear-gradient(90deg, #fff8edef 0%, #fff8ede8 28%, #fff8edc7 48%, #fff8ed66 68%, #fff8ed2e 100%);
+}
+
+@media (max-width: 991px) {
+    .hero-overlay { background: linear-gradient(180deg, #fff8edf2 0%, #fff8eddb 45%, #fff8ed8c 100%); }
+}
+
+.hero-dots .dot.active { background: var(--holiday-red); }
+
+.product-filter-panel, .buyer-support-grid article, .category-hub-card, .channel-card {
+    background: linear-gradient(155deg, #fffdfa, var(--holiday-sand));
+    border-color: var(--holiday-line);
+}
+
+.product-flags span:first-child { background: var(--holiday-red); color: #fff; }
+.product { border-color: var(--holiday-line); }
+.product:hover { border-color: var(--holiday-brass); }
+
+.telegram-channel-card {
+    background: linear-gradient(120deg, var(--holiday-sand), #fffdfa 60%, #e9f0e6);
+    border-color: var(--holiday-line);
+}
+
+.cta-panel, .pricelist-teaser-inner { background-color: var(--holiday-wine); }
+.cta-panel > div > span, .pricelist-teaser-inner span, .moq-banner-cta { color: var(--holiday-gold); }
+
+.tracking-page {
+    --track-pink: var(--holiday-red);
+    --track-pink-dark: var(--holiday-red);
+    --track-pink-deep: var(--holiday-wine);
+    --track-soft: var(--holiday-sand);
+    --track-ink: var(--holiday-ink);
+    --track-muted: var(--holiday-muted);
+    --track-line: var(--holiday-line);
+}
+
+body.tracking-page { background: linear-gradient(180deg, var(--holiday-sand), var(--holiday-cream) 55%, #fffdfa); }
+
+.footer.sola-footer {
+    color: var(--holiday-cream);
+    background: linear-gradient(115deg, var(--holiday-wine), #280b14);
+    border-color: var(--holiday-brass);
+}
+
+.sola-footer-logo {
+    padding: 7px 12px;
+    border-radius: 8px;
+    background: var(--holiday-cream);
+}
+
+.sola-footer-links h2, .sola-footer a:hover {
+    color: var(--holiday-gold);
+}
+
+.sola-footer .sola-footer-support { color: var(--holiday-gold) !important; }
+.sola-footer a:focus-visible { outline-color: var(--holiday-gold); }
+.sola-footer-bottom, .sola-footer .sola-footer-contact > span { color: #f0d8c5; }
+.sola-footer-bottom { border-color: #f8d99955; }
