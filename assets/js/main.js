@@ -762,3 +762,44 @@ function setupPremiumMotion() {
 }
 
 setupPremiumMotion();
+
+function setupWholesaleOffer() {
+  if (document.body.classList.contains('tracking-page')) return;
+
+  const storageKey = 'sola-wholesale-offer-seen';
+  try {
+    if (sessionStorage.getItem(storageKey)) return;
+  } catch {
+    // The offer can still open when browser storage is unavailable.
+  }
+
+  const offer = document.createElement('dialog');
+  if (typeof offer.showModal !== 'function') return;
+
+  window.setTimeout(() => {
+    if (document.hidden || document.activeElement?.matches('input, textarea, select, [contenteditable="true"]') ||
+        $('dialog[open], [aria-modal="true"]:not([hidden]), #sola-quote-panel:not([hidden])')) return;
+
+    offer.className = 'sola-wholesale-offer';
+    offer.setAttribute('aria-labelledby', 'sola-offer-title');
+    offer.setAttribute('aria-describedby', 'sola-offer-description');
+    offer.innerHTML = `
+      <button class="sola-offer-close" type="button" aria-label="Close promotion" autofocus>${navIcon('close')}</button>
+      <h2 id="sola-offer-title">SOLA wholesale offers</h2>
+      <p id="sola-offer-description">Planning your next order? Message our team for current offers based on your product list, quantities and destination.</p>
+      <a class="sola-offer-cta" href="${wa('Hello SOLA Medical Supply, could you share your current wholesale offers?')}" target="_blank" rel="noopener noreferrer">${navIcon('message', 20)} Ask on WhatsApp</a>`;
+
+    $('.sola-offer-close', offer).addEventListener('click', () => offer.close());
+    $('.sola-offer-cta', offer).addEventListener('click', () => offer.close());
+    offer.addEventListener('close', () => offer.remove(), { once: true });
+    document.body.append(offer);
+    offer.showModal();
+    try {
+      sessionStorage.setItem(storageKey, '1');
+    } catch {
+      // Storage access is optional.
+    }
+  }, 2500);
+}
+
+setupWholesaleOffer();

@@ -1,3 +1,68 @@
+.sola-wholesale-offer {
+    position: fixed;
+    inset: 0;
+    width: min(460px, calc(100% - 32px));
+    max-height: calc(100% - 32px);
+    margin: auto;
+    padding: 56px clamp(20px, 6vw, 36px) 32px;
+    overflow: auto;
+    border: 1px solid var(--line);
+    border-top: 5px solid var(--pink);
+    border-radius: 24px;
+    color: var(--ink);
+    background: var(--cream);
+    box-shadow: var(--shadow);
+}
+
+.sola-wholesale-offer::backdrop {
+    background: rgba(11, 11, 15, .62);
+}
+
+.sola-wholesale-offer h2 {
+    margin: 0 0 12px;
+    font-size: clamp(26px, 6vw, 36px);
+    line-height: 1.14;
+    letter-spacing: -.035em;
+}
+
+.sola-wholesale-offer p {
+    margin: 0 0 24px;
+    color: var(--muted);
+}
+
+.sola-offer-close, .sola-offer-cta {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.sola-offer-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 44px;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    color: var(--ink);
+    background: var(--card);
+}
+
+.sola-wholesale-offer .sola-offer-cta {
+    width: 100%;
+    gap: 8px;
+    padding: 12px 16px;
+    border-radius: 12px;
+    background: #12653c;
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+}
+
+.sola-wholesale-offer .sola-offer-cta:hover { background: #0d512f; }
+.sola-wholesale-offer :is(button, a):focus-visible { outline: 3px solid #a51d61; outline-offset: 2px; }
+
 :root {
     --dark: #0b0b0f;
     --ink: #15151b;
