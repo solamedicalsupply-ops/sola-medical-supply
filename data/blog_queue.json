@@ -2909,7 +2909,16 @@
       "title": "What to Check Before Ordering Botulax 300U from a Wholesale Supplier",
       "category": "Botulinum Toxin",
       "image": "../assets/images/products/botulax300U.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "what-to-check-before-ordering-botulax-300u-from-a-wholesale-supplier",
+      "published_at": "2026-11-20T10:25:09.851024+00:00",
+      "cover": "../assets/images/products/botulax300U.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "wholesale cindella set sourcing",
@@ -5865,6 +5874,18 @@
       "slug": "jalupro-for-aesthetic-clinics-a-practical-wholesale-sourcing-guide",
       "published_at": "2026-11-19T10:43:40.221327+00:00",
       "cover": "../assets/images/products/jalupro.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "What to Check Before Ordering Botulax 300U from a Wholesale Supplier",
+      "slug": "what-to-check-before-ordering-botulax-300u-from-a-wholesale-supplier",
+      "published_at": "2026-11-20T10:25:09.851024+00:00",
+      "cover": "../assets/images/products/botulax300U.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
