@@ -764,9 +764,12 @@ function setupPremiumMotion() {
 setupPremiumMotion();
 
 function setupWholesaleOffer() {
+  const christmasLink = wa('Hello SOLA Medical Supply, I would like to order with the Christmas offer. Could you help confirm availability for my order?');
+  const bannerLink = $('[data-christmas-whatsapp]');
+  if (bannerLink) bannerLink.href = christmasLink;
   if (document.body.classList.contains('tracking-page')) return;
 
-  const storageKey = 'sola-wholesale-offer-seen';
+  const storageKey = 'sola-christmas-offer-seen';
   try {
     if (sessionStorage.getItem(storageKey)) return;
   } catch {
@@ -785,9 +788,10 @@ function setupWholesaleOffer() {
     offer.setAttribute('aria-describedby', 'sola-offer-description');
     offer.innerHTML = `
       <button class="sola-offer-close" type="button" aria-label="Close promotion" autofocus>${navIcon('close')}</button>
-      <h2 id="sola-offer-title">SOLA wholesale offers</h2>
-      <p id="sola-offer-description">Planning your next order? Message our team for current offers based on your product list, quantities and destination.</p>
-      <a class="sola-offer-cta" href="${wa('Hello SOLA Medical Supply, could you share your current wholesale offers?')}" target="_blank" rel="noopener noreferrer">${navIcon('message', 20)} Ask on WhatsApp</a>`;
+      <p class="sola-christmas-label">SOLA Christmas Offer</p>
+      <h2 id="sola-offer-title">Buy any 5 boxes.<br><strong>Get 10% off.</strong></h2>
+      <p id="sola-offer-description" class="sola-christmas-shipping">Free shipping on all orders</p>
+      <a class="sola-offer-cta" href="${christmasLink}" target="_blank" rel="noopener noreferrer">${navIcon('message', 20)} Claim offer on WhatsApp</a>`;
 
     $('.sola-offer-close', offer).addEventListener('click', () => offer.close());
     $('.sola-offer-cta', offer).addEventListener('click', () => offer.close());

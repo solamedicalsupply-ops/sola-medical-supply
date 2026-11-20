@@ -1,3 +1,69 @@
+.sola-christmas-banner, .sola-wholesale-offer {
+    --christmas-gold: #ffe099;
+    --christmas-cream: #fff8eb;
+    color: var(--christmas-cream);
+    background: radial-gradient(ellipse at 75% 5%, #a22628 0%, transparent 60%), linear-gradient(125deg, #4f101b, #760f1d 65%, #480912);
+}
+
+.sola-christmas-banner {
+    border-bottom: 3px solid #d7a84d;
+}
+
+.sola-christmas-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 300px);
+    align-items: center;
+    gap: clamp(24px, 6vw, 84px);
+    padding-block: clamp(28px, 5vw, 64px);
+}
+
+.sola-christmas-grid img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid #d7a84d;
+    border-radius: 16px;
+    box-shadow: 0 16px 48px #26050f80;
+}
+
+.sola-christmas-label {
+    margin: 0 0 12px;
+    color: var(--christmas-gold);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+}
+
+.sola-christmas-banner h2 {
+    margin: 0 0 16px;
+    font-family: Georgia, serif;
+    font-size: clamp(38px, 6vw, 78px);
+    font-weight: 400;
+    line-height: 1.04;
+    letter-spacing: -.045em;
+}
+
+.sola-christmas-banner h2 strong, .sola-wholesale-offer h2 strong {
+    color: var(--christmas-gold);
+}
+
+.sola-christmas-shipping {
+    margin: 0 0 24px;
+    font-size: clamp(16px, 2vw, 20px);
+    font-weight: 600;
+}
+
+@media (max-width: 640px) {
+    .sola-christmas-grid {
+        grid-template-columns: minmax(0, 1fr);
+        justify-items: center;
+        text-align: center;
+    }
+
+    .sola-christmas-grid img { max-width: 240px; }
+}
+
 .sola-wholesale-offer {
     position: fixed;
     inset: 0;
@@ -6,11 +72,9 @@
     margin: auto;
     padding: 56px clamp(20px, 6vw, 36px) 32px;
     overflow: auto;
-    border: 1px solid var(--line);
-    border-top: 5px solid var(--pink);
+    border: 1px solid #d7a84d;
+    border-top: 5px solid #d7a84d;
     border-radius: 24px;
-    color: var(--ink);
-    background: var(--cream);
     box-shadow: var(--shadow);
 }
 
@@ -20,14 +84,11 @@
 
 .sola-wholesale-offer h2 {
     margin: 0 0 12px;
-    font-size: clamp(26px, 6vw, 36px);
+    font-family: Georgia, serif;
+    font-size: clamp(32px, 7vw, 46px);
+    font-weight: 400;
     line-height: 1.14;
     letter-spacing: -.035em;
-}
-
-.sola-wholesale-offer p {
-    margin: 0 0 24px;
-    color: var(--muted);
 }
 
 .sola-offer-close, .sola-offer-cta {
@@ -43,25 +104,25 @@
     top: 8px;
     right: 8px;
     width: 44px;
-    border: 1px solid var(--line);
+    border: 1px solid #ffe09980;
     border-radius: 50%;
-    color: var(--ink);
-    background: var(--card);
+    color: var(--christmas-cream);
+    background: #4f101b;
 }
 
-.sola-wholesale-offer .sola-offer-cta {
-    width: 100%;
+.sola-christmas-banner .sola-offer-cta, .sola-wholesale-offer .sola-offer-cta {
     gap: 8px;
     padding: 12px 16px;
     border-radius: 12px;
-    background: #12653c;
-    color: #fff;
+    background: var(--christmas-gold);
+    color: #431019;
     font-weight: 700;
     text-align: center;
 }
 
-.sola-wholesale-offer .sola-offer-cta:hover { background: #0d512f; }
-.sola-wholesale-offer :is(button, a):focus-visible { outline: 3px solid #a51d61; outline-offset: 2px; }
+.sola-wholesale-offer .sola-offer-cta { width: 100%; }
+.sola-christmas-banner .sola-offer-cta:hover, .sola-wholesale-offer .sola-offer-cta:hover { background: #fff0c7; }
+.sola-christmas-banner a:focus-visible, .sola-wholesale-offer :is(button, a):focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
 
 :root {
     --dark: #0b0b0f;
