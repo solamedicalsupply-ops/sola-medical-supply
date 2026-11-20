@@ -5220,7 +5220,7 @@ body.sola-nav-locked { overflow: hidden; }
     border: 1px solid var(--sola-nav-pink);
     border-radius: 6px;
     background: var(--sola-nav-pink);
-    color: #fff !important;
+    color: var(--holiday-ink);
     font-size: 13px;
     font-weight: 600;
     line-height: 1.5;
@@ -5473,7 +5473,8 @@ body.sola-nav-locked { overflow: hidden; }
 }
 
 .sola-quote-cta, .sola-quote-cta:hover, .sola-quote-cta[aria-disabled="true"],
-.btn.primary, .btn.primary:hover, .pricelist-teaser-btn, .pricelist-teaser-btn:hover {
+.btn.primary, .btn.primary:hover, .cta-panel .cta-btn, .cta-panel .cta-btn:hover,
+.pricelist-teaser-btn, .pricelist-teaser-btn:hover {
     background: var(--holiday-gold-button);
     color: var(--holiday-ink);
     border-color: var(--holiday-brass);
@@ -5516,7 +5517,10 @@ body.sola-nav-locked { overflow: hidden; }
 }
 
 .cta-panel, .pricelist-teaser-inner { background-color: var(--holiday-wine); }
+.cta-panel h2 { color: var(--holiday-cream); }
 .cta-panel > div > span, .pricelist-teaser-inner span, .moq-banner-cta { color: var(--holiday-gold); }
+.pricelist-perks li span { color: var(--holiday-gold); }
+.pricelist-form .input::placeholder, .pricelist-disclaimer { color: #f0d8c5; }
 
 .tracking-page {
     --track-pink: var(--holiday-red);
