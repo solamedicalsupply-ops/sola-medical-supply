@@ -766,7 +766,11 @@ setupPremiumMotion();
 function setupWholesaleOffer() {
   const christmasLink = wa('Hello SOLA Medical Supply, I would like to order with the Christmas offer. Could you help confirm availability for my order?');
   const bannerLink = $('[data-christmas-whatsapp]');
-  if (bannerLink) bannerLink.href = christmasLink;
+  let offerTimer;
+  if (bannerLink) {
+    bannerLink.href = christmasLink;
+    bannerLink.addEventListener('click', () => window.clearTimeout(offerTimer));
+  }
   if (document.body.classList.contains('tracking-page')) return;
 
   const storageKey = 'sola-christmas-offer-seen';
@@ -779,7 +783,7 @@ function setupWholesaleOffer() {
   const offer = document.createElement('dialog');
   if (typeof offer.showModal !== 'function') return;
 
-  window.setTimeout(() => {
+  offerTimer = window.setTimeout(() => {
     if (document.hidden || document.activeElement?.matches('input, textarea, select, [contenteditable="true"]') ||
         $('dialog[open], [aria-modal="true"]:not([hidden]), #sola-quote-panel:not([hidden])')) return;
 
@@ -788,10 +792,15 @@ function setupWholesaleOffer() {
     offer.setAttribute('aria-describedby', 'sola-offer-description');
     offer.innerHTML = `
       <button class="sola-offer-close" type="button" aria-label="Close promotion" autofocus>${navIcon('close')}</button>
-      <p class="sola-christmas-label">SOLA Christmas Offer</p>
-      <h2 id="sola-offer-title">Buy any 5 boxes.<br><strong>Get 10% off.</strong></h2>
-      <p id="sola-offer-description" class="sola-christmas-shipping">Free shipping on all orders</p>
-      <a class="sola-offer-cta" href="${christmasLink}" target="_blank" rel="noopener noreferrer">${navIcon('message', 20)} Claim offer on WhatsApp</a>`;
+      <div class="sola-offer-layout">
+        <div class="sola-offer-art" aria-hidden="true"><div class="sola-christmas-snow"></div></div>
+        <div class="sola-offer-copy">
+          <p class="sola-christmas-label">SOLA Christmas Offer</p>
+          <h2 id="sola-offer-title"><strong>10% off</strong><br>when you buy any 5 boxes</h2>
+          <p id="sola-offer-description" class="sola-offer-shipping">Free shipping on all orders</p>
+          <a class="sola-offer-cta" href="${christmasLink}" target="_blank" rel="noopener noreferrer">${navIcon('message', 20)} Claim offer on WhatsApp</a>
+        </div>
+      </div>`;
 
     $('.sola-offer-close', offer).addEventListener('click', () => offer.close());
     $('.sola-offer-cta', offer).addEventListener('click', () => offer.close());

@@ -1,95 +1,176 @@
 .sola-christmas-banner, .sola-wholesale-offer {
-    --christmas-gold: #ffe099;
-    --christmas-cream: #fff8eb;
+    --christmas-gold: #ffdf9a;
+    --christmas-cream: #fff8ee;
+    --christmas-art: url("../images/sola-christmas-night.webp");
     color: var(--christmas-cream);
-    background: radial-gradient(ellipse at 75% 5%, #a22628 0%, transparent 60%), linear-gradient(125deg, #4f101b, #760f1d 65%, #480912);
+    background: #280b14;
 }
 
 .sola-christmas-banner {
-    border-bottom: 3px solid #d7a84d;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    border-bottom: 1px solid #b98b47;
+    background-image: linear-gradient(90deg, #1d070feb 0%, #280b14d9 27%, #280b141a 70%), var(--christmas-art);
+    background-size: cover;
+    background-position: center, center 58%;
 }
 
 .sola-christmas-grid {
+    position: relative;
+    z-index: 1;
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 300px);
     align-items: center;
-    gap: clamp(24px, 6vw, 84px);
-    padding-block: clamp(28px, 5vw, 64px);
+    min-height: clamp(480px, 43vw, 640px);
+    padding-block: clamp(54px, 7vw, 96px);
 }
 
-.sola-christmas-grid img {
-    display: block;
-    width: 100%;
-    height: auto;
-    border: 1px solid #d7a84d;
-    border-radius: 16px;
-    box-shadow: 0 16px 48px #26050f80;
-}
+.sola-christmas-copy { max-width: 590px; }
 
 .sola-christmas-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     margin: 0 0 12px;
     color: var(--christmas-gold);
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 700;
-    letter-spacing: .13em;
+    letter-spacing: .18em;
     text-transform: uppercase;
 }
 
+.sola-christmas-label::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    flex: none;
+    background: currentColor;
+    clip-path: polygon(50% 0%, 61% 38%, 100% 50%, 61% 62%, 50% 100%, 38% 62%, 0% 50%, 38% 38%);
+}
+
 .sola-christmas-banner h2 {
-    margin: 0 0 16px;
-    font-family: Georgia, serif;
-    font-size: clamp(38px, 6vw, 78px);
-    font-weight: 400;
-    line-height: 1.04;
-    letter-spacing: -.045em;
-}
-
-.sola-christmas-banner h2 strong, .sola-wholesale-offer h2 strong {
-    color: var(--christmas-gold);
-}
-
-.sola-christmas-shipping {
     margin: 0 0 24px;
-    font-size: clamp(16px, 2vw, 20px);
-    font-weight: 600;
+    color: var(--christmas-cream);
+    font-family: Georgia, serif;
+    font-size: clamp(60px, 8.6vw, 124px);
+    font-weight: 400;
+    line-height: .86;
+    letter-spacing: -.065em;
 }
 
-@media (max-width: 640px) {
-    .sola-christmas-grid {
-        grid-template-columns: minmax(0, 1fr);
-        justify-items: center;
-        text-align: center;
-    }
-
-    .sola-christmas-grid img { max-width: 240px; }
+.sola-christmas-banner h2 em {
+    color: var(--christmas-gold);
+    font-weight: 400;
 }
+
+.sola-christmas-deal {
+    display: inline-flex;
+    margin-bottom: 20px;
+    padding: 10px 0;
+    border-block: 1px solid #fbe0a366;
+}
+
+.sola-christmas-deal p {
+    margin: 0;
+    padding-inline: clamp(12px, 2.5vw, 26px);
+    line-height: 1.25;
+}
+
+.sola-christmas-deal p:first-child { padding-left: 0; }
+.sola-christmas-deal p + p { border-left: 1px solid #fbe0a366; }
+.sola-christmas-deal strong, .sola-christmas-deal span { display: block; }
+.sola-christmas-deal strong { color: var(--christmas-gold); font-size: clamp(17px, 2.2vw, 24px); }
+.sola-christmas-deal span { margin-top: 4px; font-size: 14px; }
+
+.sola-christmas-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 6px 18px; }
+
+.sola-christmas-poster {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    gap: 5px;
+    color: var(--christmas-cream);
+    font-size: 13px;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.sola-christmas-snow, .sola-christmas-lights {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.sola-christmas-snow::before, .sola-christmas-snow::after {
+    position: absolute;
+    content: "";
+    inset: -220px -70px 0;
+    background-image: radial-gradient(2px 2px at 27px 19px, #fff8ed 85%, transparent), radial-gradient(1.5px 1.5px at 91px 77px, #ffefca 85%, transparent), radial-gradient(1px 1px at 49px 126px, #fff 85%, transparent);
+    background-size: 161px 220px;
+    opacity: .58;
+    animation: sola-snowfall 15s linear infinite;
+}
+
+.sola-christmas-snow::after {
+    background-image: radial-gradient(1px 1px at 18px 90px, #fff 85%, transparent), radial-gradient(1px 1px at 117px 153px, #fff 85%, transparent);
+    opacity: .38;
+    animation-duration: 26s;
+    animation-direction: reverse;
+}
+
+.sola-christmas-lights::before {
+    position: absolute;
+    content: "";
+    inset: 0;
+    background: radial-gradient(circle at 65% 23%, #ffd78468, transparent 4%), radial-gradient(circle at 90% 38%, #ffbe6558, transparent 5%), radial-gradient(circle at 77% 84%, #ffdc6b55, transparent 6%);
+    animation: sola-light-glow 4s ease-in-out infinite alternate;
+}
+
+@keyframes sola-snowfall { to { transform: translate(40px, 220px); } }
+@keyframes sola-light-glow { from { opacity: .25; } to { opacity: .9; } }
+@keyframes sola-offer-arrive { from { opacity: 0; transform: translateY(14px) scale(.98); } }
 
 .sola-wholesale-offer {
     position: fixed;
     inset: 0;
-    width: min(460px, calc(100% - 32px));
-    max-height: calc(100% - 32px);
+    width: min(720px, calc(100% - 28px));
+    max-height: calc(100% - 28px);
     margin: auto;
-    padding: 56px clamp(20px, 6vw, 36px) 32px;
+    padding: 0;
     overflow: auto;
     border: 1px solid #d7a84d;
-    border-top: 5px solid #d7a84d;
-    border-radius: 24px;
-    box-shadow: var(--shadow);
+    border-radius: 22px;
+    box-shadow: 0 24px 96px #13050bd9;
 }
 
-.sola-wholesale-offer::backdrop {
-    background: rgba(11, 11, 15, .62);
+.sola-wholesale-offer[open] { animation: sola-offer-arrive .32s ease-out both; }
+.sola-wholesale-offer::backdrop { background: #160711b5; backdrop-filter: blur(5px); }
+
+.sola-offer-layout { display: grid; grid-template-columns: 38% minmax(0, 1fr); }
+.sola-offer-art {
+    position: relative;
+    overflow: hidden;
+    background: var(--christmas-art) 83% 57% / cover, #571523;
 }
 
+.sola-offer-copy { padding: 42px clamp(22px, 4.5vw, 44px) 34px; }
+.sola-offer-copy .sola-christmas-label { padding-right: 26px; }
 .sola-wholesale-offer h2 {
-    margin: 0 0 12px;
-    font-family: Georgia, serif;
-    font-size: clamp(32px, 7vw, 46px);
-    font-weight: 400;
-    line-height: 1.14;
+    margin: 0 0 16px;
+    color: var(--christmas-cream);
+    font: 400 clamp(24px, 4vw, 34px)/1.12 Georgia, serif;
     letter-spacing: -.035em;
 }
+
+.sola-wholesale-offer h2 strong {
+    color: var(--christmas-gold);
+    font-size: clamp(44px, 8vw, 76px);
+    font-weight: 400;
+    line-height: 1.12;
+}
+
+.sola-offer-shipping { margin: 0 0 22px; color: var(--christmas-cream); }
 
 .sola-offer-close, .sola-offer-cta {
     display: inline-flex;
@@ -101,28 +182,52 @@
 
 .sola-offer-close {
     position: absolute;
-    top: 8px;
-    right: 8px;
+    z-index: 2;
+    top: 9px;
+    right: 9px;
     width: 44px;
     border: 1px solid #ffe09980;
     border-radius: 50%;
     color: var(--christmas-cream);
-    background: #4f101b;
+    background: #280b14;
 }
 
 .sola-christmas-banner .sola-offer-cta, .sola-wholesale-offer .sola-offer-cta {
     gap: 8px;
-    padding: 12px 16px;
-    border-radius: 12px;
-    background: var(--christmas-gold);
-    color: #431019;
+    padding: 12px 17px;
+    border-radius: 8px;
+    background: linear-gradient(110deg, #f4c36e, #ffedba 55%, #e9ad55);
+    color: #2b1014;
     font-weight: 700;
     text-align: center;
+    transition: box-shadow .2s ease;
 }
 
 .sola-wholesale-offer .sola-offer-cta { width: 100%; }
-.sola-christmas-banner .sola-offer-cta:hover, .sola-wholesale-offer .sola-offer-cta:hover { background: #fff0c7; }
+.sola-offer-cta:hover { box-shadow: 0 0 26px #ffdc9170; }
 .sola-christmas-banner a:focus-visible, .sola-wholesale-offer :is(button, a):focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+
+@media (max-width: 640px) {
+    .sola-christmas-banner {
+        background-image: linear-gradient(0deg, #200710 5%, #280b14f2 47%, #280b141a 84%), var(--christmas-art);
+        background-position: center, 72% top;
+        background-size: cover, auto 100%;
+    }
+
+    .sola-christmas-grid { min-height: auto; padding-block: clamp(142px, 43vw, 220px) 26px; }
+    .sola-christmas-banner h2 { font-size: clamp(46px, 13vw, 72px); }
+    .sola-offer-layout { grid-template-columns: 1fr; }
+    .sola-offer-art { height: clamp(84px, 26vw, 154px); background-position: 80% 61%; }
+    .sola-offer-copy { padding-block: 20px 24px; }
+    .sola-offer-copy .sola-christmas-label { padding-right: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .sola-christmas-snow, .sola-christmas-lights { display: none; }
+    .sola-wholesale-offer[open] { animation: none; }
+    .sola-offer-cta { transition: none; }
+}
+
 
 :root {
     --dark: #0b0b0f;
