@@ -2925,7 +2925,16 @@
       "title": "Buying Cindella Set Wholesale: Documentation, Handling and Shipping Essentials",
       "category": "IV & Wellness",
       "image": "../assets/images/products/cindellaSet.png",
-      "status": "pending"
+      "status": "published",
+      "slug": "buying-cindella-set-wholesale-documentation-handling-and-shipping-essentials",
+      "published_at": "2026-11-21T10:08:36.877263+00:00",
+      "cover": "../assets/images/products/cindellaSet.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
     },
     {
       "keyword": "restylane lyft distributor",
@@ -5886,6 +5895,18 @@
       "slug": "what-to-check-before-ordering-botulax-300u-from-a-wholesale-supplier",
       "published_at": "2026-11-20T10:25:09.851024+00:00",
       "cover": "../assets/images/products/botulax300U.png",
+      "illustrations": [
+        "../assets/images/productCatalogue.png",
+        "../assets/images/warehouse-2.png",
+        "../assets/images/shipping.png"
+      ],
+      "image_sources": []
+    },
+    {
+      "title": "Buying Cindella Set Wholesale: Documentation, Handling and Shipping Essentials",
+      "slug": "buying-cindella-set-wholesale-documentation-handling-and-shipping-essentials",
+      "published_at": "2026-11-21T10:08:36.877263+00:00",
+      "cover": "../assets/images/products/cindellaSet.png",
       "illustrations": [
         "../assets/images/productCatalogue.png",
         "../assets/images/warehouse-2.png",
