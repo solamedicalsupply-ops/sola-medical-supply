@@ -5485,12 +5485,66 @@ body.sola-nav-locked { overflow: hidden; }
 }
 
 .whatsapp {
-    color: #fffaf1;
-    background: #224337;
-    box-shadow: 0 10px 24px #122a2540;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    right: max(16px, env(safe-area-inset-right));
+    left: auto;
+    bottom: max(16px, calc(env(safe-area-inset-bottom) + 10px));
+    padding: 11px 18px 11px 47px;
+    border: 1px solid #c28c45;
+    color: var(--holiday-ink);
+    background: linear-gradient(112deg, transparent 40%, #fff9dd 50%, transparent 60%) 150% 0 / 300% 100%, var(--holiday-gold-button);
+    box-shadow: 0 7px 20px #280b1459, inset 0 1px #fff6d8;
+    animation: sola-ribbon-shine 1.3s .35s ease-out both;
 }
 
-.whatsapp::before { background: #a8d89e; }
+.whatsapp::before, .whatsapp::after {
+    content: "";
+    position: absolute;
+    margin: 0;
+    pointer-events: none;
+}
+
+.whatsapp::before {
+    z-index: 1;
+    left: 13px;
+    top: calc(50% - 11px);
+    width: 26px;
+    height: 16px;
+    border-radius: 0;
+    background:
+        radial-gradient(ellipse 4px 5px at 50% 53%, #fff1bf 36%, #af7232 90%, transparent),
+        radial-gradient(ellipse 7px 6px at 26% 42%, #9c592b 22%, #f5ce82 52%, #fff2bd 70%, #ab662c 89%, transparent),
+        radial-gradient(ellipse 7px 6px at 74% 42%, #9c592b 22%, #f5ce82 52%, #fff2bd 70%, #ab662c 89%, transparent);
+}
+
+.whatsapp::after {
+    left: 17px;
+    top: calc(50% - 2px);
+    width: 18px;
+    height: 12px;
+    background: linear-gradient(115deg, #ad652c, #fff0bb 43%, #b67135 55%, #f5c980);
+    clip-path: polygon(38% 0, 62% 0, 100% 95%, 70% 73%, 58% 100%, 50% 37%, 42% 100%, 29% 73%, 0 95%);
+}
+
+.whatsapp:hover { box-shadow: 0 7px 24px #280b1466, inset 0 0 14px #fff9db; }
+.whatsapp:focus-visible { outline: 2px solid var(--holiday-cream); box-shadow: 0 0 0 4px var(--holiday-wine); }
+.quote-drawer:not(.open) + .whatsapp { bottom: max(16px, calc(env(safe-area-inset-bottom) + 10px)); }
+
+@keyframes sola-ribbon-shine {
+    from { background-position: 0% 0, center; }
+    to { background-position: 150% 0, center; }
+}
+
+@media (max-width: 600px) {
+    .quote-drawer:not(.open) + .whatsapp { display: inline-flex; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .whatsapp { animation: none; }
+}
 
 .hero-overlay {
     background: linear-gradient(90deg, #fff8edef 0%, #fff8ede8 28%, #fff8edc7 48%, #fff8ed66 68%, #fff8ed2e 100%);
